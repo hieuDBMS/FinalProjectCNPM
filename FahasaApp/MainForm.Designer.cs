@@ -86,10 +86,10 @@
             this.searchBox = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.picIconUser = new System.Windows.Forms.PictureBox();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.labelUsername = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panelShowBoooks = new System.Windows.Forms.Panel();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.tableLayoutMain.SuspendLayout();
             this.panelSideMenu.SuspendLayout();
@@ -1045,12 +1045,6 @@
             this.picIconUser.TabIndex = 2;
             this.picIconUser.TabStop = false;
             // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "search (1).png");
-            // 
             // labelUsername
             // 
             this.labelUsername.AutoSize = true;
@@ -1071,9 +1065,9 @@
             this.label2.Margin = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.label2.Name = "label2";
             this.label2.Padding = new System.Windows.Forms.Padding(20);
-            this.label2.Size = new System.Drawing.Size(280, 69);
+            this.label2.Size = new System.Drawing.Size(341, 69);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Các Sách Bán Chạy";
+            this.label2.Text = "Các Sách Bán Chạy Nhất";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // panelShowBoooks
@@ -1083,6 +1077,12 @@
             this.panelShowBoooks.Name = "panelShowBoooks";
             this.panelShowBoooks.Size = new System.Drawing.Size(1105, 779);
             this.panelShowBoooks.TabIndex = 2;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "search (1).png");
             // 
             // MainForm
             // 
