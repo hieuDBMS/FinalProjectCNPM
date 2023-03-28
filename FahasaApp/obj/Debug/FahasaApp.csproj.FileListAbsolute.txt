@@ -9,3 +9,15 @@ C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FINAL PROJECT\FahasaApp\F
 C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FINAL PROJECT\FahasaApp\FahasaApp\obj\Debug\FahasaApp.exe
 C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FINAL PROJECT\FahasaApp\FahasaApp\obj\Debug\FahasaApp.pdb
 C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FINAL PROJECT\FahasaApp\FahasaApp\obj\Debug\FahasaApp.MainForm.resources
+C:\Users\dongp\Source\Repos\hieuDBMS\FinalProjectCNPM\FahasaApp\bin\Debug\FahasaApp.exe.config
+C:\Users\dongp\Source\Repos\hieuDBMS\FinalProjectCNPM\FahasaApp\bin\Debug\FahasaApp.exe
+C:\Users\dongp\Source\Repos\hieuDBMS\FinalProjectCNPM\FahasaApp\bin\Debug\FahasaApp.pdb
+C:\Users\dongp\Source\Repos\hieuDBMS\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.csproj.AssemblyReference.cache
+C:\Users\dongp\Source\Repos\hieuDBMS\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.csproj.SuggestedBindingRedirects.cache
+C:\Users\dongp\Source\Repos\hieuDBMS\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.MainForm.resources
+C:\Users\dongp\Source\Repos\hieuDBMS\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.Properties.Resources.resources
+C:\Users\dongp\Source\Repos\hieuDBMS\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.csproj.GenerateResource.cache
+C:\Users\dongp\Source\Repos\hieuDBMS\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.csproj.CoreCompileInputs.cache
+C:\Users\dongp\Source\Repos\hieuDBMS\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.exe
+C:\Users\dongp\Source\Repos\hieuDBMS\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.pdb
+C:\Users\dongp\Source\Repos\hieuDBMS\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.LoginNRegister.resources

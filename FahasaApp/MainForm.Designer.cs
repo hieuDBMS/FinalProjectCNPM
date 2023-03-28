@@ -110,18 +110,19 @@
             // tableLayoutMain
             // 
             this.tableLayoutMain.ColumnCount = 2;
-            this.tableLayoutMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 307F));
+            this.tableLayoutMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 409F));
             this.tableLayoutMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutMain.Controls.Add(this.panelSideMenu, 0, 0);
             this.tableLayoutMain.Controls.Add(this.tableLayoutShowScreen, 1, 0);
             this.tableLayoutMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tableLayoutMain.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutMain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutMain.Name = "tableLayoutMain";
             this.tableLayoutMain.RowCount = 1;
             this.tableLayoutMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 1061F));
-            this.tableLayoutMain.Size = new System.Drawing.Size(1424, 985);
+            this.tableLayoutMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 1306F));
+            this.tableLayoutMain.Size = new System.Drawing.Size(1896, 1202);
             this.tableLayoutMain.TabIndex = 0;
             // 
             // panelSideMenu
@@ -150,7 +151,7 @@
             this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
             this.panelSideMenu.Margin = new System.Windows.Forms.Padding(0);
             this.panelSideMenu.Name = "panelSideMenu";
-            this.panelSideMenu.Size = new System.Drawing.Size(307, 985);
+            this.panelSideMenu.Size = new System.Drawing.Size(409, 1202);
             this.panelSideMenu.TabIndex = 1;
             // 
             // panelForeignLanguageBooksSubMenu
@@ -160,10 +161,10 @@
             this.panelForeignLanguageBooksSubMenu.Controls.Add(this.button41);
             this.panelForeignLanguageBooksSubMenu.Controls.Add(this.button42);
             this.panelForeignLanguageBooksSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelForeignLanguageBooksSubMenu.Location = new System.Drawing.Point(0, 1856);
+            this.panelForeignLanguageBooksSubMenu.Location = new System.Drawing.Point(0, 2287);
             this.panelForeignLanguageBooksSubMenu.Margin = new System.Windows.Forms.Padding(0);
             this.panelForeignLanguageBooksSubMenu.Name = "panelForeignLanguageBooksSubMenu";
-            this.panelForeignLanguageBooksSubMenu.Size = new System.Drawing.Size(290, 190);
+            this.panelForeignLanguageBooksSubMenu.Size = new System.Drawing.Size(388, 234);
             this.panelForeignLanguageBooksSubMenu.TabIndex = 18;
             // 
             // button39
@@ -174,11 +175,11 @@
             this.button39.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
             this.button39.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button39.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button39.Location = new System.Drawing.Point(0, 141);
+            this.button39.Location = new System.Drawing.Point(0, 174);
             this.button39.Margin = new System.Windows.Forms.Padding(0);
             this.button39.Name = "button39";
-            this.button39.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button39.Size = new System.Drawing.Size(290, 47);
+            this.button39.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button39.Size = new System.Drawing.Size(388, 58);
             this.button39.TabIndex = 3;
             this.button39.Text = "Tiếng Hàn";
             this.button39.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -192,11 +193,11 @@
             this.button40.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
             this.button40.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button40.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button40.Location = new System.Drawing.Point(0, 94);
+            this.button40.Location = new System.Drawing.Point(0, 116);
             this.button40.Margin = new System.Windows.Forms.Padding(0);
             this.button40.Name = "button40";
-            this.button40.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button40.Size = new System.Drawing.Size(290, 47);
+            this.button40.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button40.Size = new System.Drawing.Size(388, 58);
             this.button40.TabIndex = 2;
             this.button40.Text = "Tiếng Hoa";
             this.button40.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -210,11 +211,11 @@
             this.button41.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
             this.button41.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button41.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button41.Location = new System.Drawing.Point(0, 47);
+            this.button41.Location = new System.Drawing.Point(0, 58);
             this.button41.Margin = new System.Windows.Forms.Padding(0);
             this.button41.Name = "button41";
-            this.button41.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button41.Size = new System.Drawing.Size(290, 47);
+            this.button41.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button41.Size = new System.Drawing.Size(388, 58);
             this.button41.TabIndex = 1;
             this.button41.Text = "Tiếng Nhật";
             this.button41.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -231,8 +232,8 @@
             this.button42.Location = new System.Drawing.Point(0, 0);
             this.button42.Margin = new System.Windows.Forms.Padding(0);
             this.button42.Name = "button42";
-            this.button42.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button42.Size = new System.Drawing.Size(290, 47);
+            this.button42.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button42.Size = new System.Drawing.Size(388, 58);
             this.button42.TabIndex = 0;
             this.button42.Text = "Tiếng Anh";
             this.button42.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -245,10 +246,10 @@
             this.btnForeignLanguagesBook.FlatAppearance.BorderSize = 0;
             this.btnForeignLanguagesBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnForeignLanguagesBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnForeignLanguagesBook.Location = new System.Drawing.Point(0, 1809);
+            this.btnForeignLanguagesBook.Location = new System.Drawing.Point(0, 2229);
             this.btnForeignLanguagesBook.Margin = new System.Windows.Forms.Padding(0);
             this.btnForeignLanguagesBook.Name = "btnForeignLanguagesBook";
-            this.btnForeignLanguagesBook.Size = new System.Drawing.Size(290, 47);
+            this.btnForeignLanguagesBook.Size = new System.Drawing.Size(388, 58);
             this.btnForeignLanguagesBook.TabIndex = 17;
             this.btnForeignLanguagesBook.Text = "Sách Học Ngoại Ngữ";
             this.btnForeignLanguagesBook.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -262,10 +263,10 @@
             this.panelText_ReferenceBookSubMenu.Controls.Add(this.button36);
             this.panelText_ReferenceBookSubMenu.Controls.Add(this.button37);
             this.panelText_ReferenceBookSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelText_ReferenceBookSubMenu.Location = new System.Drawing.Point(0, 1619);
+            this.panelText_ReferenceBookSubMenu.Location = new System.Drawing.Point(0, 1995);
             this.panelText_ReferenceBookSubMenu.Margin = new System.Windows.Forms.Padding(0);
             this.panelText_ReferenceBookSubMenu.Name = "panelText_ReferenceBookSubMenu";
-            this.panelText_ReferenceBookSubMenu.Size = new System.Drawing.Size(290, 190);
+            this.panelText_ReferenceBookSubMenu.Size = new System.Drawing.Size(388, 234);
             this.panelText_ReferenceBookSubMenu.TabIndex = 16;
             // 
             // button34
@@ -276,11 +277,11 @@
             this.button34.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
             this.button34.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button34.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button34.Location = new System.Drawing.Point(0, 141);
+            this.button34.Location = new System.Drawing.Point(0, 174);
             this.button34.Margin = new System.Windows.Forms.Padding(0);
             this.button34.Name = "button34";
-            this.button34.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button34.Size = new System.Drawing.Size(290, 47);
+            this.button34.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button34.Size = new System.Drawing.Size(388, 58);
             this.button34.TabIndex = 3;
             this.button34.Text = "Mẫu Giáo";
             this.button34.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -294,11 +295,11 @@
             this.button35.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
             this.button35.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button35.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button35.Location = new System.Drawing.Point(0, 94);
+            this.button35.Location = new System.Drawing.Point(0, 116);
             this.button35.Margin = new System.Windows.Forms.Padding(0);
             this.button35.Name = "button35";
-            this.button35.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button35.Size = new System.Drawing.Size(290, 47);
+            this.button35.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button35.Size = new System.Drawing.Size(388, 58);
             this.button35.TabIndex = 2;
             this.button35.Text = "Luyện Thi THPT Quốc Gia";
             this.button35.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -312,11 +313,11 @@
             this.button36.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
             this.button36.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button36.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button36.Location = new System.Drawing.Point(0, 47);
+            this.button36.Location = new System.Drawing.Point(0, 58);
             this.button36.Margin = new System.Windows.Forms.Padding(0);
             this.button36.Name = "button36";
-            this.button36.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button36.Size = new System.Drawing.Size(290, 47);
+            this.button36.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button36.Size = new System.Drawing.Size(388, 58);
             this.button36.TabIndex = 1;
             this.button36.Text = "Sách Tham Khảo";
             this.button36.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -333,8 +334,8 @@
             this.button37.Location = new System.Drawing.Point(0, 0);
             this.button37.Margin = new System.Windows.Forms.Padding(0);
             this.button37.Name = "button37";
-            this.button37.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button37.Size = new System.Drawing.Size(290, 47);
+            this.button37.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button37.Size = new System.Drawing.Size(388, 58);
             this.button37.TabIndex = 0;
             this.button37.Text = "Sách Giáo Khoa";
             this.button37.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -347,10 +348,10 @@
             this.btnText_ReferenceBook.FlatAppearance.BorderSize = 0;
             this.btnText_ReferenceBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnText_ReferenceBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnText_ReferenceBook.Location = new System.Drawing.Point(0, 1572);
+            this.btnText_ReferenceBook.Location = new System.Drawing.Point(0, 1937);
             this.btnText_ReferenceBook.Margin = new System.Windows.Forms.Padding(0);
             this.btnText_ReferenceBook.Name = "btnText_ReferenceBook";
-            this.btnText_ReferenceBook.Size = new System.Drawing.Size(290, 47);
+            this.btnText_ReferenceBook.Size = new System.Drawing.Size(388, 58);
             this.btnText_ReferenceBook.TabIndex = 15;
             this.btnText_ReferenceBook.Text = "Giáo Khoa - Tham Khảo";
             this.btnText_ReferenceBook.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -364,10 +365,10 @@
             this.panelBiography_MemoirsSubMenu.Controls.Add(this.button27);
             this.panelBiography_MemoirsSubMenu.Controls.Add(this.button28);
             this.panelBiography_MemoirsSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelBiography_MemoirsSubMenu.Location = new System.Drawing.Point(0, 1382);
+            this.panelBiography_MemoirsSubMenu.Location = new System.Drawing.Point(0, 1703);
             this.panelBiography_MemoirsSubMenu.Margin = new System.Windows.Forms.Padding(0);
             this.panelBiography_MemoirsSubMenu.Name = "panelBiography_MemoirsSubMenu";
-            this.panelBiography_MemoirsSubMenu.Size = new System.Drawing.Size(290, 190);
+            this.panelBiography_MemoirsSubMenu.Size = new System.Drawing.Size(388, 234);
             this.panelBiography_MemoirsSubMenu.TabIndex = 14;
             // 
             // button25
@@ -378,11 +379,11 @@
             this.button25.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
             this.button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button25.Location = new System.Drawing.Point(0, 141);
+            this.button25.Location = new System.Drawing.Point(0, 174);
             this.button25.Margin = new System.Windows.Forms.Padding(0);
             this.button25.Name = "button25";
-            this.button25.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button25.Size = new System.Drawing.Size(290, 47);
+            this.button25.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button25.Size = new System.Drawing.Size(388, 58);
             this.button25.TabIndex = 3;
             this.button25.Text = "Nghệ Thuật Giải Trí";
             this.button25.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -396,11 +397,11 @@
             this.button26.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
             this.button26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button26.Location = new System.Drawing.Point(0, 94);
+            this.button26.Location = new System.Drawing.Point(0, 116);
             this.button26.Margin = new System.Windows.Forms.Padding(0);
             this.button26.Name = "button26";
-            this.button26.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button26.Size = new System.Drawing.Size(290, 47);
+            this.button26.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button26.Size = new System.Drawing.Size(388, 58);
             this.button26.TabIndex = 2;
             this.button26.Text = "Kinh Tế";
             this.button26.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -414,11 +415,11 @@
             this.button27.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
             this.button27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button27.Location = new System.Drawing.Point(0, 47);
+            this.button27.Location = new System.Drawing.Point(0, 58);
             this.button27.Margin = new System.Windows.Forms.Padding(0);
             this.button27.Name = "button27";
-            this.button27.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button27.Size = new System.Drawing.Size(290, 47);
+            this.button27.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button27.Size = new System.Drawing.Size(388, 58);
             this.button27.TabIndex = 1;
             this.button27.Text = "Chính Trị";
             this.button27.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -435,8 +436,8 @@
             this.button28.Location = new System.Drawing.Point(0, 0);
             this.button28.Margin = new System.Windows.Forms.Padding(0);
             this.button28.Name = "button28";
-            this.button28.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button28.Size = new System.Drawing.Size(290, 47);
+            this.button28.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button28.Size = new System.Drawing.Size(388, 58);
             this.button28.TabIndex = 0;
             this.button28.Text = "Câu Chuyện Cuộc Đời";
             this.button28.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -449,10 +450,10 @@
             this.btnBiography_MemoirBook.FlatAppearance.BorderSize = 0;
             this.btnBiography_MemoirBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBiography_MemoirBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBiography_MemoirBook.Location = new System.Drawing.Point(0, 1335);
+            this.btnBiography_MemoirBook.Location = new System.Drawing.Point(0, 1645);
             this.btnBiography_MemoirBook.Margin = new System.Windows.Forms.Padding(0);
             this.btnBiography_MemoirBook.Name = "btnBiography_MemoirBook";
-            this.btnBiography_MemoirBook.Size = new System.Drawing.Size(290, 47);
+            this.btnBiography_MemoirBook.Size = new System.Drawing.Size(388, 58);
             this.btnBiography_MemoirBook.TabIndex = 13;
             this.btnBiography_MemoirBook.Text = "Tiểu Sử - Hồi Ký";
             this.btnBiography_MemoirBook.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -466,10 +467,10 @@
             this.panelRaiseUpChildSubMenu.Controls.Add(this.button22);
             this.panelRaiseUpChildSubMenu.Controls.Add(this.button23);
             this.panelRaiseUpChildSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelRaiseUpChildSubMenu.Location = new System.Drawing.Point(0, 1145);
+            this.panelRaiseUpChildSubMenu.Location = new System.Drawing.Point(0, 1411);
             this.panelRaiseUpChildSubMenu.Margin = new System.Windows.Forms.Padding(0);
             this.panelRaiseUpChildSubMenu.Name = "panelRaiseUpChildSubMenu";
-            this.panelRaiseUpChildSubMenu.Size = new System.Drawing.Size(290, 190);
+            this.panelRaiseUpChildSubMenu.Size = new System.Drawing.Size(388, 234);
             this.panelRaiseUpChildSubMenu.TabIndex = 11;
             // 
             // button20
@@ -480,11 +481,11 @@
             this.button20.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
             this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button20.Location = new System.Drawing.Point(0, 141);
+            this.button20.Location = new System.Drawing.Point(0, 174);
             this.button20.Margin = new System.Windows.Forms.Padding(0);
             this.button20.Name = "button20";
-            this.button20.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button20.Size = new System.Drawing.Size(290, 47);
+            this.button20.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button20.Size = new System.Drawing.Size(388, 58);
             this.button20.TabIndex = 3;
             this.button20.Text = "Phát Triển Kỹ Năng Cho Trẻ";
             this.button20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -498,11 +499,11 @@
             this.button21.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
             this.button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button21.Location = new System.Drawing.Point(0, 94);
+            this.button21.Location = new System.Drawing.Point(0, 116);
             this.button21.Margin = new System.Windows.Forms.Padding(0);
             this.button21.Name = "button21";
-            this.button21.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button21.Size = new System.Drawing.Size(290, 47);
+            this.button21.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button21.Size = new System.Drawing.Size(388, 58);
             this.button21.TabIndex = 2;
             this.button21.Text = "Phát Triển Trí Tuệ Cho Trẻ";
             this.button21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -516,11 +517,11 @@
             this.button22.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
             this.button22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button22.Location = new System.Drawing.Point(0, 47);
+            this.button22.Location = new System.Drawing.Point(0, 58);
             this.button22.Margin = new System.Windows.Forms.Padding(0);
             this.button22.Name = "button22";
-            this.button22.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button22.Size = new System.Drawing.Size(290, 47);
+            this.button22.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button22.Size = new System.Drawing.Size(388, 58);
             this.button22.TabIndex = 1;
             this.button22.Text = "Phương Pháp Giáo Dục Trẻ";
             this.button22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -537,8 +538,8 @@
             this.button23.Location = new System.Drawing.Point(0, 0);
             this.button23.Margin = new System.Windows.Forms.Padding(0);
             this.button23.Name = "button23";
-            this.button23.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button23.Size = new System.Drawing.Size(290, 47);
+            this.button23.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button23.Size = new System.Drawing.Size(388, 58);
             this.button23.TabIndex = 0;
             this.button23.Text = "Cẩm Nang Làm Cha Mẹ";
             this.button23.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -551,10 +552,10 @@
             this.btnRaiseUpChildBook.FlatAppearance.BorderSize = 0;
             this.btnRaiseUpChildBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRaiseUpChildBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRaiseUpChildBook.Location = new System.Drawing.Point(0, 1098);
+            this.btnRaiseUpChildBook.Location = new System.Drawing.Point(0, 1353);
             this.btnRaiseUpChildBook.Margin = new System.Windows.Forms.Padding(0);
             this.btnRaiseUpChildBook.Name = "btnRaiseUpChildBook";
-            this.btnRaiseUpChildBook.Size = new System.Drawing.Size(290, 47);
+            this.btnRaiseUpChildBook.Size = new System.Drawing.Size(388, 58);
             this.btnRaiseUpChildBook.TabIndex = 10;
             this.btnRaiseUpChildBook.Text = "Nuôi Dạy Con";
             this.btnRaiseUpChildBook.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -568,10 +569,10 @@
             this.panelPsychology_LifeSkillsSubMenu.Controls.Add(this.button17);
             this.panelPsychology_LifeSkillsSubMenu.Controls.Add(this.button18);
             this.panelPsychology_LifeSkillsSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelPsychology_LifeSkillsSubMenu.Location = new System.Drawing.Point(0, 908);
+            this.panelPsychology_LifeSkillsSubMenu.Location = new System.Drawing.Point(0, 1119);
             this.panelPsychology_LifeSkillsSubMenu.Margin = new System.Windows.Forms.Padding(0);
             this.panelPsychology_LifeSkillsSubMenu.Name = "panelPsychology_LifeSkillsSubMenu";
-            this.panelPsychology_LifeSkillsSubMenu.Size = new System.Drawing.Size(290, 190);
+            this.panelPsychology_LifeSkillsSubMenu.Size = new System.Drawing.Size(388, 234);
             this.panelPsychology_LifeSkillsSubMenu.TabIndex = 9;
             // 
             // button15
@@ -582,11 +583,11 @@
             this.button15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button15.Location = new System.Drawing.Point(0, 141);
+            this.button15.Location = new System.Drawing.Point(0, 174);
             this.button15.Margin = new System.Windows.Forms.Padding(0);
             this.button15.Name = "button15";
-            this.button15.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button15.Size = new System.Drawing.Size(290, 47);
+            this.button15.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button15.Size = new System.Drawing.Size(388, 58);
             this.button15.TabIndex = 3;
             this.button15.Text = "Sách Cho Tuổi Mới Lớn";
             this.button15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -600,11 +601,11 @@
             this.button16.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
             this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button16.Location = new System.Drawing.Point(0, 94);
+            this.button16.Location = new System.Drawing.Point(0, 116);
             this.button16.Margin = new System.Windows.Forms.Padding(0);
             this.button16.Name = "button16";
-            this.button16.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button16.Size = new System.Drawing.Size(290, 47);
+            this.button16.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button16.Size = new System.Drawing.Size(388, 58);
             this.button16.TabIndex = 2;
             this.button16.Text = "Tâm Lý";
             this.button16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -618,11 +619,11 @@
             this.button17.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
             this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button17.Location = new System.Drawing.Point(0, 47);
+            this.button17.Location = new System.Drawing.Point(0, 58);
             this.button17.Margin = new System.Windows.Forms.Padding(0);
             this.button17.Name = "button17";
-            this.button17.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button17.Size = new System.Drawing.Size(290, 47);
+            this.button17.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button17.Size = new System.Drawing.Size(388, 58);
             this.button17.TabIndex = 1;
             this.button17.Text = "Rèn Luyện Nhân Cách";
             this.button17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -639,8 +640,8 @@
             this.button18.Location = new System.Drawing.Point(0, 0);
             this.button18.Margin = new System.Windows.Forms.Padding(0);
             this.button18.Name = "button18";
-            this.button18.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button18.Size = new System.Drawing.Size(290, 47);
+            this.button18.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button18.Size = new System.Drawing.Size(388, 58);
             this.button18.TabIndex = 0;
             this.button18.Text = "Kỹ Năng Sống";
             this.button18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -653,10 +654,10 @@
             this.btnPsychology_LifeSkillsBook.FlatAppearance.BorderSize = 0;
             this.btnPsychology_LifeSkillsBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPsychology_LifeSkillsBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPsychology_LifeSkillsBook.Location = new System.Drawing.Point(0, 861);
+            this.btnPsychology_LifeSkillsBook.Location = new System.Drawing.Point(0, 1061);
             this.btnPsychology_LifeSkillsBook.Margin = new System.Windows.Forms.Padding(0);
             this.btnPsychology_LifeSkillsBook.Name = "btnPsychology_LifeSkillsBook";
-            this.btnPsychology_LifeSkillsBook.Size = new System.Drawing.Size(290, 47);
+            this.btnPsychology_LifeSkillsBook.Size = new System.Drawing.Size(388, 58);
             this.btnPsychology_LifeSkillsBook.TabIndex = 8;
             this.btnPsychology_LifeSkillsBook.Text = "Tâm Lý - Kỹ Năng Sống";
             this.btnPsychology_LifeSkillsBook.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -670,10 +671,10 @@
             this.panelEconomySubMenu.Controls.Add(this.button12);
             this.panelEconomySubMenu.Controls.Add(this.button13);
             this.panelEconomySubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelEconomySubMenu.Location = new System.Drawing.Point(0, 671);
+            this.panelEconomySubMenu.Location = new System.Drawing.Point(0, 827);
             this.panelEconomySubMenu.Margin = new System.Windows.Forms.Padding(0);
             this.panelEconomySubMenu.Name = "panelEconomySubMenu";
-            this.panelEconomySubMenu.Size = new System.Drawing.Size(290, 190);
+            this.panelEconomySubMenu.Size = new System.Drawing.Size(388, 234);
             this.panelEconomySubMenu.TabIndex = 7;
             // 
             // button10
@@ -684,11 +685,11 @@
             this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(0, 141);
+            this.button10.Location = new System.Drawing.Point(0, 174);
             this.button10.Margin = new System.Windows.Forms.Padding(0);
             this.button10.Name = "button10";
-            this.button10.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button10.Size = new System.Drawing.Size(290, 47);
+            this.button10.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button10.Size = new System.Drawing.Size(388, 58);
             this.button10.TabIndex = 3;
             this.button10.Text = "Phân Tích Kinh Tế";
             this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -702,11 +703,11 @@
             this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.Location = new System.Drawing.Point(0, 94);
+            this.button11.Location = new System.Drawing.Point(0, 116);
             this.button11.Margin = new System.Windows.Forms.Padding(0);
             this.button11.Name = "button11";
-            this.button11.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button11.Size = new System.Drawing.Size(290, 47);
+            this.button11.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button11.Size = new System.Drawing.Size(388, 58);
             this.button11.TabIndex = 2;
             this.button11.Text = "Marketing - Bán Hàng";
             this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -720,11 +721,11 @@
             this.button12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.Location = new System.Drawing.Point(0, 47);
+            this.button12.Location = new System.Drawing.Point(0, 58);
             this.button12.Margin = new System.Windows.Forms.Padding(0);
             this.button12.Name = "button12";
-            this.button12.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button12.Size = new System.Drawing.Size(290, 47);
+            this.button12.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button12.Size = new System.Drawing.Size(388, 58);
             this.button12.TabIndex = 1;
             this.button12.Text = "Quản Trị - Lãnh Đạo";
             this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -741,8 +742,8 @@
             this.button13.Location = new System.Drawing.Point(0, 0);
             this.button13.Margin = new System.Windows.Forms.Padding(0);
             this.button13.Name = "button13";
-            this.button13.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button13.Size = new System.Drawing.Size(290, 47);
+            this.button13.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button13.Size = new System.Drawing.Size(388, 58);
             this.button13.TabIndex = 0;
             this.button13.Text = "Nhân Vật - Bài Học Kinh Doanh";
             this.button13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -755,10 +756,10 @@
             this.btnEconomyBook.FlatAppearance.BorderSize = 0;
             this.btnEconomyBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEconomyBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEconomyBook.Location = new System.Drawing.Point(0, 624);
+            this.btnEconomyBook.Location = new System.Drawing.Point(0, 769);
             this.btnEconomyBook.Margin = new System.Windows.Forms.Padding(0);
             this.btnEconomyBook.Name = "btnEconomyBook";
-            this.btnEconomyBook.Size = new System.Drawing.Size(290, 47);
+            this.btnEconomyBook.Size = new System.Drawing.Size(388, 58);
             this.btnEconomyBook.TabIndex = 6;
             this.btnEconomyBook.Text = "Kinh Tế";
             this.btnEconomyBook.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -772,9 +773,10 @@
             this.panelLiteratureSubMenu.Controls.Add(this.button7);
             this.panelLiteratureSubMenu.Controls.Add(this.button8);
             this.panelLiteratureSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLiteratureSubMenu.Location = new System.Drawing.Point(0, 434);
+            this.panelLiteratureSubMenu.Location = new System.Drawing.Point(0, 535);
+            this.panelLiteratureSubMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelLiteratureSubMenu.Name = "panelLiteratureSubMenu";
-            this.panelLiteratureSubMenu.Size = new System.Drawing.Size(290, 190);
+            this.panelLiteratureSubMenu.Size = new System.Drawing.Size(388, 234);
             this.panelLiteratureSubMenu.TabIndex = 5;
             // 
             // button1
@@ -785,11 +787,11 @@
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(0, 141);
+            this.button1.Location = new System.Drawing.Point(0, 174);
             this.button1.Margin = new System.Windows.Forms.Padding(0);
             this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(290, 47);
+            this.button1.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(388, 58);
             this.button1.TabIndex = 3;
             this.button1.Text = "Ngôn Tình";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -803,11 +805,11 @@
             this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(0, 94);
+            this.button6.Location = new System.Drawing.Point(0, 116);
             this.button6.Margin = new System.Windows.Forms.Padding(0);
             this.button6.Name = "button6";
-            this.button6.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button6.Size = new System.Drawing.Size(290, 47);
+            this.button6.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button6.Size = new System.Drawing.Size(388, 58);
             this.button6.TabIndex = 2;
             this.button6.Text = "Light Novel";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -821,11 +823,11 @@
             this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(0, 47);
+            this.button7.Location = new System.Drawing.Point(0, 58);
             this.button7.Margin = new System.Windows.Forms.Padding(0);
             this.button7.Name = "button7";
-            this.button7.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button7.Size = new System.Drawing.Size(290, 47);
+            this.button7.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button7.Size = new System.Drawing.Size(388, 58);
             this.button7.TabIndex = 1;
             this.button7.Text = "Truyện Ngắn - Tản Văn";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -842,8 +844,8 @@
             this.button8.Location = new System.Drawing.Point(0, 0);
             this.button8.Margin = new System.Windows.Forms.Padding(0);
             this.button8.Name = "button8";
-            this.button8.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button8.Size = new System.Drawing.Size(290, 47);
+            this.button8.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button8.Size = new System.Drawing.Size(388, 58);
             this.button8.TabIndex = 0;
             this.button8.Text = "Tiểu Thuyết";
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -856,10 +858,10 @@
             this.btnLiteratureBook.FlatAppearance.BorderSize = 0;
             this.btnLiteratureBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLiteratureBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLiteratureBook.Location = new System.Drawing.Point(0, 387);
+            this.btnLiteratureBook.Location = new System.Drawing.Point(0, 477);
             this.btnLiteratureBook.Margin = new System.Windows.Forms.Padding(0);
             this.btnLiteratureBook.Name = "btnLiteratureBook";
-            this.btnLiteratureBook.Size = new System.Drawing.Size(290, 47);
+            this.btnLiteratureBook.Size = new System.Drawing.Size(388, 58);
             this.btnLiteratureBook.TabIndex = 4;
             this.btnLiteratureBook.Text = "Văn Học";
             this.btnLiteratureBook.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -873,9 +875,10 @@
             this.panelChildrenBookSubmenu.Controls.Add(this.button3);
             this.panelChildrenBookSubmenu.Controls.Add(this.button2);
             this.panelChildrenBookSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelChildrenBookSubmenu.Location = new System.Drawing.Point(0, 197);
+            this.panelChildrenBookSubmenu.Location = new System.Drawing.Point(0, 243);
+            this.panelChildrenBookSubmenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelChildrenBookSubmenu.Name = "panelChildrenBookSubmenu";
-            this.panelChildrenBookSubmenu.Size = new System.Drawing.Size(290, 190);
+            this.panelChildrenBookSubmenu.Size = new System.Drawing.Size(388, 234);
             this.panelChildrenBookSubmenu.TabIndex = 3;
             // 
             // button5
@@ -886,11 +889,11 @@
             this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(0, 141);
+            this.button5.Location = new System.Drawing.Point(0, 174);
             this.button5.Margin = new System.Windows.Forms.Padding(0);
             this.button5.Name = "button5";
-            this.button5.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button5.Size = new System.Drawing.Size(290, 47);
+            this.button5.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button5.Size = new System.Drawing.Size(388, 58);
             this.button5.TabIndex = 3;
             this.button5.Text = "Vừa Học Vừa Chơi";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -904,11 +907,11 @@
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(0, 94);
+            this.button4.Location = new System.Drawing.Point(0, 116);
             this.button4.Margin = new System.Windows.Forms.Padding(0);
             this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(290, 47);
+            this.button4.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button4.Size = new System.Drawing.Size(388, 58);
             this.button4.TabIndex = 2;
             this.button4.Text = "Sách Tranh Kỹ Năng Sống";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -922,11 +925,11 @@
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(0, 47);
+            this.button3.Location = new System.Drawing.Point(0, 58);
             this.button3.Margin = new System.Windows.Forms.Padding(0);
             this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(290, 47);
+            this.button3.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button3.Size = new System.Drawing.Size(388, 58);
             this.button3.TabIndex = 1;
             this.button3.Text = "Kiến Thức Bách Khoa";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -943,8 +946,8 @@
             this.button2.Location = new System.Drawing.Point(0, 0);
             this.button2.Margin = new System.Windows.Forms.Padding(0);
             this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(290, 47);
+            this.button2.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.button2.Size = new System.Drawing.Size(388, 58);
             this.button2.TabIndex = 0;
             this.button2.Text = "Manga - Comic";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -957,10 +960,10 @@
             this.btnChildrenBook.FlatAppearance.BorderSize = 0;
             this.btnChildrenBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChildrenBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChildrenBook.Location = new System.Drawing.Point(0, 150);
+            this.btnChildrenBook.Location = new System.Drawing.Point(0, 185);
             this.btnChildrenBook.Margin = new System.Windows.Forms.Padding(0);
             this.btnChildrenBook.Name = "btnChildrenBook";
-            this.btnChildrenBook.Size = new System.Drawing.Size(290, 47);
+            this.btnChildrenBook.Size = new System.Drawing.Size(388, 58);
             this.btnChildrenBook.TabIndex = 0;
             this.btnChildrenBook.Text = "Sách Thiếu Nhi";
             this.btnChildrenBook.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -976,7 +979,7 @@
             this.panelLogoSideMenu.Location = new System.Drawing.Point(0, 0);
             this.panelLogoSideMenu.Margin = new System.Windows.Forms.Padding(0);
             this.panelLogoSideMenu.Name = "panelLogoSideMenu";
-            this.panelLogoSideMenu.Size = new System.Drawing.Size(290, 150);
+            this.panelLogoSideMenu.Size = new System.Drawing.Size(388, 185);
             this.panelLogoSideMenu.TabIndex = 2;
             // 
             // tableLayoutShowScreen
@@ -988,13 +991,14 @@
             this.tableLayoutShowScreen.Controls.Add(this.label2, 0, 1);
             this.tableLayoutShowScreen.Controls.Add(this.panelShowBoooks, 0, 2);
             this.tableLayoutShowScreen.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutShowScreen.Location = new System.Drawing.Point(310, 3);
+            this.tableLayoutShowScreen.Location = new System.Drawing.Point(413, 4);
+            this.tableLayoutShowScreen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutShowScreen.Name = "tableLayoutShowScreen";
             this.tableLayoutShowScreen.RowCount = 3;
             this.tableLayoutShowScreen.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutShowScreen.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutShowScreen.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.tableLayoutShowScreen.Size = new System.Drawing.Size(1111, 979);
+            this.tableLayoutShowScreen.Size = new System.Drawing.Size(1479, 1194);
             this.tableLayoutShowScreen.TabIndex = 2;
             // 
             // flowLayoutPanelSearch
@@ -1008,16 +1012,16 @@
             this.flowLayoutPanelSearch.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanelSearch.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanelSearch.Name = "flowLayoutPanelSearch";
-            this.flowLayoutPanelSearch.Size = new System.Drawing.Size(1111, 97);
+            this.flowLayoutPanelSearch.Size = new System.Drawing.Size(1479, 119);
             this.flowLayoutPanelSearch.TabIndex = 0;
             // 
             // searchBox
             // 
             this.searchBox.Dock = System.Windows.Forms.DockStyle.Top;
-            this.searchBox.Location = new System.Drawing.Point(100, 35);
-            this.searchBox.Margin = new System.Windows.Forms.Padding(100, 35, 0, 20);
+            this.searchBox.Location = new System.Drawing.Point(133, 43);
+            this.searchBox.Margin = new System.Windows.Forms.Padding(133, 43, 0, 25);
             this.searchBox.Name = "searchBox";
-            this.searchBox.Size = new System.Drawing.Size(611, 26);
+            this.searchBox.Size = new System.Drawing.Size(813, 30);
             this.searchBox.TabIndex = 0;
             this.searchBox.Tag = "";
             // 
@@ -1026,10 +1030,10 @@
             this.pictureBox1.BackColor = System.Drawing.Color.LightCoral;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(711, 35);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0, 35, 0, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(946, 43);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0, 43, 0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(45, 26);
+            this.pictureBox1.Size = new System.Drawing.Size(60, 32);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -1037,10 +1041,10 @@
             // picIconUser
             // 
             this.picIconUser.Image = ((System.Drawing.Image)(resources.GetObject("picIconUser.Image")));
-            this.picIconUser.Location = new System.Drawing.Point(856, 25);
-            this.picIconUser.Margin = new System.Windows.Forms.Padding(100, 25, 0, 0);
+            this.picIconUser.Location = new System.Drawing.Point(1139, 31);
+            this.picIconUser.Margin = new System.Windows.Forms.Padding(133, 31, 0, 0);
             this.picIconUser.Name = "picIconUser";
-            this.picIconUser.Size = new System.Drawing.Size(43, 40);
+            this.picIconUser.Size = new System.Drawing.Size(57, 49);
             this.picIconUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picIconUser.TabIndex = 2;
             this.picIconUser.TabStop = false;
@@ -1049,10 +1053,10 @@
             // 
             this.labelUsername.AutoSize = true;
             this.labelUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUsername.Location = new System.Drawing.Point(919, 35);
-            this.labelUsername.Margin = new System.Windows.Forms.Padding(20, 35, 0, 0);
+            this.labelUsername.Location = new System.Drawing.Point(1223, 43);
+            this.labelUsername.Margin = new System.Windows.Forms.Padding(27, 43, 0, 0);
             this.labelUsername.Name = "labelUsername";
-            this.labelUsername.Size = new System.Drawing.Size(89, 20);
+            this.labelUsername.Size = new System.Drawing.Size(112, 25);
             this.labelUsername.TabIndex = 3;
             this.labelUsername.Text = "Tài Khoản";
             // 
@@ -1061,11 +1065,11 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(20, 97);
-            this.label2.Margin = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.label2.Location = new System.Drawing.Point(27, 119);
+            this.label2.Margin = new System.Windows.Forms.Padding(27, 0, 0, 0);
             this.label2.Name = "label2";
-            this.label2.Padding = new System.Windows.Forms.Padding(20);
-            this.label2.Size = new System.Drawing.Size(341, 69);
+            this.label2.Padding = new System.Windows.Forms.Padding(27, 25, 27, 25);
+            this.label2.Size = new System.Drawing.Size(428, 86);
             this.label2.TabIndex = 1;
             this.label2.Text = "Các Sách Bán Chạy Nhất";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -1073,9 +1077,10 @@
             // panelShowBoooks
             // 
             this.panelShowBoooks.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelShowBoooks.Location = new System.Drawing.Point(3, 197);
+            this.panelShowBoooks.Location = new System.Drawing.Point(4, 242);
+            this.panelShowBoooks.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelShowBoooks.Name = "panelShowBoooks";
-            this.panelShowBoooks.Size = new System.Drawing.Size(1105, 779);
+            this.panelShowBoooks.Size = new System.Drawing.Size(1471, 948);
             this.panelShowBoooks.TabIndex = 2;
             // 
             // imageList1
@@ -1086,14 +1091,16 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1424, 985);
+            this.ClientSize = new System.Drawing.Size(1896, 1202);
             this.Controls.Add(this.tableLayoutMain);
-            this.MaximumSize = new System.Drawing.Size(1440, 1024);
-            this.MinimumSize = new System.Drawing.Size(1440, 1024);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximumSize = new System.Drawing.Size(1914, 1249);
+            this.MinimumSize = new System.Drawing.Size(1914, 1018);
             this.Name = "MainForm";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.tableLayoutMain.ResumeLayout(false);
             this.panelSideMenu.ResumeLayout(false);
             this.panelForeignLanguageBooksSubMenu.ResumeLayout(false);
