@@ -1,6 +1,6 @@
 ﻿namespace FahasaApp
 {
-    partial class LoginNRegister
+    partial class RegisterForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginNRegister));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterForm));
             this.label2 = new System.Windows.Forms.Label();
             this.TextHo = new System.Windows.Forms.TextBox();
             this.textTen = new System.Windows.Forms.TextBox();

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace FahasaApp
 {
-    public partial class LoginNRegister : Form
+    public partial class RegisterForm : Form
     {
         bool isclearform1 = false;
         bool isclearform2 = false;
@@ -18,7 +18,7 @@ namespace FahasaApp
         bool isclearform4 = false;
         bool isclearform5 = false;
         bool isclearform6 = false;
-        public LoginNRegister()
+        public RegisterForm()
         {
             InitializeComponent();
         }
