@@ -141,6 +141,7 @@
             this.LoginButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LoginButton.AutoSize = true;
             this.LoginButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.LoginButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LoginButton.Font = new System.Drawing.Font("Open Sans Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginButton.ForeColor = System.Drawing.Color.White;
             this.LoginButton.Location = new System.Drawing.Point(458, 364);
@@ -149,18 +150,18 @@
             this.LoginButton.TabIndex = 25;
             this.LoginButton.Text = "Đăng nhập";
             this.LoginButton.UseVisualStyleBackColor = false;
-            this.LoginButton.Click += new System.EventHandler(this.button1_Click);
+            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Open Sans Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label11.Location = new System.Drawing.Point(475, 400);
+            this.label11.Location = new System.Drawing.Point(459, 400);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(260, 18);
+            this.label11.Size = new System.Drawing.Size(244, 18);
             this.label11.TabIndex = 26;
-            this.label11.Text = "--------------------------- hoặc ---------------------------";
+            this.label11.Text = "------------------------- hoặc -------------------------";
             // 
             // pictureBox1
             // 
@@ -199,6 +200,7 @@
             this.RegisterButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.RegisterButton.AutoSize = true;
             this.RegisterButton.BackColor = System.Drawing.Color.White;
+            this.RegisterButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.RegisterButton.Font = new System.Drawing.Font("Open Sans Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RegisterButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.RegisterButton.Location = new System.Drawing.Point(458, 421);
@@ -207,6 +209,7 @@
             this.RegisterButton.TabIndex = 30;
             this.RegisterButton.Text = "Tạo tài khoản";
             this.RegisterButton.UseVisualStyleBackColor = false;
+            this.RegisterButton.Click += new System.EventHandler(this.RegisterButton_Click);
             // 
             // LoginForm
             // 

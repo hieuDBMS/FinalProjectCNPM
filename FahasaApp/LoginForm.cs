@@ -78,11 +78,6 @@ namespace FahasaApp
                 textBoxPassword.PasswordChar = '\0';
             }
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }
         private void reloadForm()
         {
             textBoxUsername.Text = "        Số điện thoại hoặc email";
@@ -96,7 +91,19 @@ namespace FahasaApp
             Checkbox.Checked = false;
         }
 
-       
+        private void LoginButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainForm mf = new MainForm();
+            mf.Show();
+        }
+
+        private void RegisterButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            RegisterForm RG = new RegisterForm();
+            RG.Show();
+        }
     }
 
 }
