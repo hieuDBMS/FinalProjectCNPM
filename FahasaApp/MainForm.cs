@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -32,6 +33,43 @@ namespace FahasaApp
 
             this.StartPosition = FormStartPosition.Manual;
             this.Location = new Point(left, top);
+
+            //Init first data for Mainform
+            try
+            {
+                SqlConnection conn = new SqlConnection(Program.getConnectString());
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("[GetAllBooks]", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                conn.Close();
+                if (dt.Rows.Count > 0 )
+                {
+                    dt.Columns.Add("BookInfor");
+                    dt.Columns.Add("PriceInfor");
+                    foreach (DataRow row in dt.Rows)
+                    {                   
+                        row["BookInfor"] = row["BookTitle"] + "\n\n" + getNameCategory((int)row["CategoryID"]) + "\n\n" + getNameAuthor((int)row["AuthorID"]) + "\n";
+                        String StatusBar = "Còn hàng";
+                        if ( (int)row["BookQuantity"] == 0 )
+                        {
+                            StatusBar = "Hết Hàng";
+                        }
+                
+                        row["PriceInfor"] = row["Price"] + "\n\n" + "Tình Trạng: " + StatusBar;
+                    }
+                    dataGridViewBookShow.AutoGenerateColumns = false;
+                    dataGridViewBookShow.DataSource = dt;
+                    dataGridViewBookShow.ClearSelection();
+                }
+                
+            }
+            catch(Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
         private void initControlLists()
         {
@@ -177,6 +215,50 @@ namespace FahasaApp
             searchBox.ForeColor = Color.Silver;
         }
 
+        //Get All data about Author
+        private DataTable getAuthorBy_ID(int ID)
+        {
+            SqlConnection conn = new SqlConnection(Program.getConnectString());
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("[GetAuthorByID]", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@ID",ID));
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            conn.Close();
+            return dt;
+        }
+        //Get data about Name of Author
+        private String getNameAuthor(int ID)
+        {
+            DataTable dt = getAuthorBy_ID(ID);
+            DataRow firstRow = dt.Rows[0];
+            String authorName = firstRow["AuthorName"].ToString();
+            return authorName;
+        }
 
+        private DataTable getCategoryBy_ID(int ID)
+        {
+            SqlConnection conn = new SqlConnection(Program.getConnectString());
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("[GetCategoryByID]", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@ID", ID));
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            conn.Close();
+            return dt;
+        }
+        private String getNameCategory(int ID)
+        {
+            DataTable dt = getCategoryBy_ID(ID);
+            MessageBox.Show(dt.Rows.Count.ToString());
+            DataRow firstRow = dt.Rows[0];
+            String categoryName = firstRow["CategoryName"].ToString();
+            String subCategoryNAme = firstRow["SubCategoryName"].ToString();
+            return categoryName + " - " +subCategoryNAme;
+        }
     }
 }

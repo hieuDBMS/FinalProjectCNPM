@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.FlowLayoutPanel flowLayoutPanelIconUser;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBoxAccountIcon = new System.Windows.Forms.PictureBox();
             this.btnText_ReferenceBook = new System.Windows.Forms.Button();
             this.tableLayoutShowScreen = new System.Windows.Forms.TableLayoutPanel();
@@ -101,10 +103,15 @@
             this.panelLogoSideMenu = new System.Windows.Forms.Panel();
             this.imageList20 = new System.Windows.Forms.ImageList(this.components);
             this.imageList40 = new System.Windows.Forms.ImageList(this.components);
+            this.dataGridViewBookShow = new System.Windows.Forms.DataGridView();
+            this.BookImage = new System.Windows.Forms.DataGridViewImageColumn();
+            this.InformationOfBook = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QuantityAndPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             flowLayoutPanelIconUser = new System.Windows.Forms.FlowLayoutPanel();
             flowLayoutPanelIconUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAccountIcon)).BeginInit();
             this.tableLayoutShowScreen.SuspendLayout();
+            this.panelShowBoooks.SuspendLayout();
             this.tableLayoutPanelSearch_Account.SuspendLayout();
             this.flowLayoutPanelSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSearchIcon)).BeginInit();
@@ -123,6 +130,7 @@
             this.panelLiteratureSubMenu.SuspendLayout();
             this.tableLayoutMain.SuspendLayout();
             this.panelSideMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBookShow)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanelIconUser
@@ -198,6 +206,7 @@
             // 
             // panelShowBoooks
             // 
+            this.panelShowBoooks.Controls.Add(this.dataGridViewBookShow);
             this.panelShowBoooks.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelShowBoooks.Location = new System.Drawing.Point(3, 193);
             this.panelShowBoooks.Name = "panelShowBoooks";
@@ -1231,6 +1240,77 @@
             this.imageList40.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList40.Images.SetKeyName(0, "icons8-favorite-40.png");
             // 
+            // dataGridViewBookShow
+            // 
+            this.dataGridViewBookShow.AllowUserToAddRows = false;
+            this.dataGridViewBookShow.AllowUserToDeleteRows = false;
+            this.dataGridViewBookShow.AllowUserToResizeColumns = false;
+            this.dataGridViewBookShow.AllowUserToResizeRows = false;
+            this.dataGridViewBookShow.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewBookShow.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewBookShow.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewBookShow.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataGridViewBookShow.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewBookShow.ColumnHeadersVisible = false;
+            this.dataGridViewBookShow.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.BookImage,
+            this.InformationOfBook,
+            this.QuantityAndPrice});
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewBookShow.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewBookShow.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewBookShow.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewBookShow.MultiSelect = false;
+            this.dataGridViewBookShow.Name = "dataGridViewBookShow";
+            this.dataGridViewBookShow.ReadOnly = true;
+            this.dataGridViewBookShow.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewBookShow.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewBookShow.RowHeadersVisible = false;
+            this.dataGridViewBookShow.RowTemplate.Height = 125;
+            this.dataGridViewBookShow.RowTemplate.ReadOnly = true;
+            this.dataGridViewBookShow.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewBookShow.Size = new System.Drawing.Size(1105, 759);
+            this.dataGridViewBookShow.TabIndex = 0;
+            // 
+            // BookImage
+            // 
+            this.BookImage.DataPropertyName = "Image";
+            this.BookImage.FillWeight = 50F;
+            this.BookImage.HeaderText = "Image";
+            this.BookImage.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.BookImage.Name = "BookImage";
+            this.BookImage.ReadOnly = true;
+            // 
+            // InformationOfBook
+            // 
+            this.InformationOfBook.DataPropertyName = "BookInfor";
+            this.InformationOfBook.FillWeight = 120F;
+            this.InformationOfBook.HeaderText = "Information";
+            this.InformationOfBook.Name = "InformationOfBook";
+            this.InformationOfBook.ReadOnly = true;
+            // 
+            // QuantityAndPrice
+            // 
+            this.QuantityAndPrice.DataPropertyName = "PriceInfor";
+            this.QuantityAndPrice.FillWeight = 80F;
+            this.QuantityAndPrice.HeaderText = "QuantityAndPrice";
+            this.QuantityAndPrice.Name = "QuantityAndPrice";
+            this.QuantityAndPrice.ReadOnly = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1246,6 +1326,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAccountIcon)).EndInit();
             this.tableLayoutShowScreen.ResumeLayout(false);
             this.tableLayoutShowScreen.PerformLayout();
+            this.panelShowBoooks.ResumeLayout(false);
             this.tableLayoutPanelSearch_Account.ResumeLayout(false);
             this.flowLayoutPanelSearch.ResumeLayout(false);
             this.flowLayoutPanelSearch.PerformLayout();
@@ -1266,6 +1347,7 @@
             this.panelLiteratureSubMenu.ResumeLayout(false);
             this.tableLayoutMain.ResumeLayout(false);
             this.panelSideMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBookShow)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1342,6 +1424,10 @@
         private System.Windows.Forms.ImageList imageList20;
         private System.Windows.Forms.PictureBox pictureBoxFavoriteIcon;
         private System.Windows.Forms.ImageList imageList40;
+        private System.Windows.Forms.DataGridView dataGridViewBookShow;
+        private System.Windows.Forms.DataGridViewImageColumn BookImage;
+        private System.Windows.Forms.DataGridViewTextBoxColumn InformationOfBook;
+        private System.Windows.Forms.DataGridViewTextBoxColumn QuantityAndPrice;
     }
 }
 
