@@ -97,6 +97,8 @@ namespace FahasaApp
             pictureBoxIconToggle.Image = imageList20.Images[0];
             //Initate icon for favorite books
             pictureBoxFavoriteIcon.Image = imageList40.Images[0];
+            //Initate icon for shop cart picturebox
+            pictureBoxShopCart.Image = imageList40.Images[1];
         }
 
         private void hideSubMenu()
@@ -215,7 +217,7 @@ namespace FahasaApp
             searchBox.ForeColor = Color.Silver;
         }
 
-        //Get All data about Author
+        //Get All data about Author by ID
         private DataTable getAuthorBy_ID(int ID)
         {
             SqlConnection conn = new SqlConnection(Program.getConnectString());
@@ -238,6 +240,7 @@ namespace FahasaApp
             return authorName;
         }
 
+        //Get All data about Category by ID
         private DataTable getCategoryBy_ID(int ID)
         {
             SqlConnection conn = new SqlConnection(Program.getConnectString());
@@ -251,10 +254,11 @@ namespace FahasaApp
             conn.Close();
             return dt;
         }
+
+        //Get data about Name of Category
         private String getNameCategory(int ID)
         {
             DataTable dt = getCategoryBy_ID(ID);
-            MessageBox.Show(dt.Rows.Count.ToString());
             DataRow firstRow = dt.Rows[0];
             String categoryName = firstRow["CategoryName"].ToString();
             String subCategoryNAme = firstRow["SubCategoryName"].ToString();
