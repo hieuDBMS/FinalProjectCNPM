@@ -55,7 +55,10 @@ namespace FahasaApp
             typeBookControl.Add(btnRaiseUpChildBook);
             typeBookControl.Add(btnText_ReferenceBook);
 
-
+            //Initate icon for toggle pictureBox
+            pictureBoxIconToggle.Image = imageList20.Images[0];
+            //Initate icon for favorite books
+            pictureBoxFavoriteIcon.Image = imageList40.Images[0];
         }
 
         private void hideSubMenu()
@@ -64,7 +67,9 @@ namespace FahasaApp
             {
                 SubMenu.Visible = false;
             }
+            panelToggleDownAccount.Visible = false;
         }
+
         private void showSubmenu(Panel subMenu)
         {
             if (subMenu.Visible == false)
@@ -77,6 +82,36 @@ namespace FahasaApp
             {
                 subMenu.Visible = false;
             }
+        }
+
+        private void pictureBoxIconToggle_Click(object sender, EventArgs e)
+        {
+            // Suspend layout updates
+            panelToggleDownAccount.SuspendLayout();
+
+            if (panelToggleDownAccount.Visible)
+            {
+                panelToggleDownAccount.Visible = false;
+                pictureBoxIconToggle.Image = imageList20.Images[0];
+            }
+            else
+            {
+                panelToggleDownAccount.Visible = true;
+                pictureBoxIconToggle.Image = imageList20.Images[1];
+            }
+
+            // Resume layout updates
+            panelToggleDownAccount.ResumeLayout();
+        }
+        private void labelUsername_Click(object sender, EventArgs e)
+        {
+            // Suspend layout updates
+            panelToggleDownAccount.SuspendLayout();
+
+            panelToggleDownAccount.Visible = !panelToggleDownAccount.Visible;
+
+            // Resume layout updates
+            panelToggleDownAccount.ResumeLayout(); 
         }
 
         private void btnChildrenBook_Click(object sender, EventArgs e)
@@ -125,6 +160,23 @@ namespace FahasaApp
 
         }
 
-       
+        private void searchBox_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void searchBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            searchBox.Text = string.Empty;
+            searchBox.ForeColor = Color.Black;
+        }
+
+        private void searchBox_Leave(object sender, EventArgs e)
+        {
+            searchBox.Text = "    Nhập thông tin sách bạn muốn tìm kiếm...\r\n";
+            searchBox.ForeColor = Color.Silver;
+        }
+
+
     }
 }

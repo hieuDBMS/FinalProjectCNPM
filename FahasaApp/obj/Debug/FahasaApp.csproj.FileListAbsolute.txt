@@ -22,3 +22,16 @@ C:\Users\dongp\Source\Repos\hieuDBMS\FinalProjectCNPM\FahasaApp\obj\Debug\Fahasa
 C:\Users\dongp\Source\Repos\hieuDBMS\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.pdb
 C:\Users\dongp\Source\Repos\hieuDBMS\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.RegisterForm.resources
 C:\Users\dongp\Source\Repos\hieuDBMS\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.LoginForm.resources
+C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\bin\Debug\FahasaApp.exe.config
+C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\bin\Debug\FahasaApp.exe
+C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\bin\Debug\FahasaApp.pdb
+C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.csproj.AssemblyReference.cache
+C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.csproj.SuggestedBindingRedirects.cache
+C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.LoginForm.resources
+C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.RegisterForm.resources
+C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.MainForm.resources
+C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.Properties.Resources.resources
+C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.csproj.GenerateResource.cache
+C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.csproj.CoreCompileInputs.cache
+C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.exe
+C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.pdb
