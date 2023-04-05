@@ -15,6 +15,8 @@ namespace FahasaApp
     {
         List<Panel> subMenuControl = new List<Panel>();
         List<Button> typeBookControl = new List<Button>();
+        private int rowCount = 0;
+        DataTable dtTest = new DataTable();
         public MainForm()
         {
             InitializeComponent();
@@ -39,7 +41,7 @@ namespace FahasaApp
             {
                 SqlConnection conn = new SqlConnection(Program.getConnectString());
                 conn.Open();
-                SqlCommand cmd = new SqlCommand("[GetAllBooks]", conn);
+                SqlCommand cmd = new SqlCommand("[GetFirst10Books]", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
@@ -47,6 +49,7 @@ namespace FahasaApp
                 conn.Close();
                 if (dt.Rows.Count > 0 )
                 {
+                    rowCount = dt.Rows.Count;
                     dt.Columns.Add("BookInfor");
                     dt.Columns.Add("PriceInfor");
                     foreach (DataRow row in dt.Rows)
@@ -58,11 +61,12 @@ namespace FahasaApp
                             StatusBar = "Hết Hàng";
                         }
                 
-                        row["PriceInfor"] = row["Price"] + "\n\n" + "Tình Trạng: " + StatusBar;
+                        row["PriceInfor"] = "\n" + row["Price"] + "\n\n" + "Tình Trạng: " + StatusBar;
                     }
                     dataGridViewBookShow.AutoGenerateColumns = false;
                     dataGridViewBookShow.DataSource = dt;
                     dataGridViewBookShow.ClearSelection();
+                    dtTest = dt;
                 }
                 
             }
@@ -263,6 +267,82 @@ namespace FahasaApp
             String categoryName = firstRow["CategoryName"].ToString();
             String subCategoryNAme = firstRow["SubCategoryName"].ToString();
             return categoryName + " - " +subCategoryNAme;
+        }
+
+        private void test()
+        {
+            MessageBox.Show("Hello");
+        }
+
+        //Handle event choose book to add to cart
+        private void dataGridViewBookShow_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dataGridViewBookShow.Columns["AddShopCart"].Index)
+            {
+                int rowIndex = e.RowIndex;
+                DataGridViewRow row = dataGridViewBookShow.Rows[rowIndex];
+                String test = row.Cells[1].Value.ToString();
+                MessageBox.Show(test);
+            }
+        }
+
+        private void dataGridViewBookShow_Scroll(object sender, ScrollEventArgs e)
+        {
+            int totalHeight = 0;
+            foreach (DataGridViewRow row in dataGridViewBookShow.Rows)
+                totalHeight += row.Height;
+
+            if (totalHeight - dataGridViewBookShow.Height < dataGridViewBookShow.VerticalScrollingOffset)
+            {
+                SqlConnection conn = new SqlConnection(Program.getConnectString());
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("[GetNext10Books]", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@CURRENT_COUNT_ROW", rowCount));
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                if (dt.Rows.Count > 0)
+                {
+                    dt.Columns.Add("BookInfor");
+                    dt.Columns.Add("PriceInfor");
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        row["BookInfor"] = row["BookTitle"] + "\n\n" + getNameCategory((int)row["CategoryID"]) + "\n\n" + getNameAuthor((int)row["AuthorID"]) + "\n";
+                        String StatusBar = "Còn hàng";
+                        if ((int)row["BookQuantity"] == 0)
+                        {
+                            StatusBar = "Hết Hàng";
+                        }
+
+                        row["PriceInfor"] = "\n" + row["Price"] + "\n\n" + "Tình Trạng: " + StatusBar;
+                    }
+                    dataGridViewBookShow.Invoke((MethodInvoker)delegate ()
+                    {
+                        dtTest.Merge(dt);
+                        dataGridViewBookShow.DataSource = null;
+                        dataGridViewBookShow.Rows.Clear();
+                        dataGridViewBookShow.DataSource = dtTest;
+                        dataGridViewBookShow.Invalidate();
+                        dataGridViewBookShow.Refresh();
+                        dataGridViewBookShow.Update();
+                        dataGridViewBookShow.CurrentCell = dataGridViewBookShow.Rows[rowCount - 1].Cells[0];
+                        dataGridViewBookShow.ClearSelection();
+                        if (dt.Rows.Count == 10)
+                        {
+                            rowCount += 10;
+                        }
+                        else
+                        {
+                            rowCount += dt.Rows.Count;
+                        }
+
+                    });
+                    conn.Close();
+                }
+               
+            }
         }
     }
 }

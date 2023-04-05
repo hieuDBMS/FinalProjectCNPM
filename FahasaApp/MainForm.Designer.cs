@@ -40,6 +40,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panelShowBoooks = new System.Windows.Forms.Panel();
             this.dataGridViewBookShow = new System.Windows.Forms.DataGridView();
+            this.BookImage = new System.Windows.Forms.DataGridViewImageColumn();
+            this.InformationOfBook = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QuantityAndPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AddShopCart = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tableLayoutPanelSearch_Account = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanelSearch = new System.Windows.Forms.FlowLayoutPanel();
             this.searchBox = new System.Windows.Forms.TextBox();
@@ -52,6 +56,7 @@
             this.btnSignUp = new System.Windows.Forms.Button();
             this.btnSignIn = new System.Windows.Forms.Button();
             this.pictureBoxFavoriteIcon = new System.Windows.Forms.PictureBox();
+            this.pictureBoxShopCart = new System.Windows.Forms.PictureBox();
             this.btnForeignLanguagesBook = new System.Windows.Forms.Button();
             this.panelText_ReferenceBookSubMenu = new System.Windows.Forms.Panel();
             this.button34 = new System.Windows.Forms.Button();
@@ -105,11 +110,7 @@
             this.panelLogoSideMenu = new System.Windows.Forms.Panel();
             this.imageList20 = new System.Windows.Forms.ImageList(this.components);
             this.imageList40 = new System.Windows.Forms.ImageList(this.components);
-            this.pictureBoxShopCart = new System.Windows.Forms.PictureBox();
-            this.BookImage = new System.Windows.Forms.DataGridViewImageColumn();
-            this.InformationOfBook = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QuantityAndPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AddShopCart = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             flowLayoutPanelIconUser = new System.Windows.Forms.FlowLayoutPanel();
             flowLayoutPanelIconUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAccountIcon)).BeginInit();
@@ -124,6 +125,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIconToggle)).BeginInit();
             this.panelToggleDownAccount.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFavoriteIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShopCart)).BeginInit();
             this.panelText_ReferenceBookSubMenu.SuspendLayout();
             this.panelForeignLanguageBooksSubMenu.SuspendLayout();
             this.panelBiography_MemoirsSubMenu.SuspendLayout();
@@ -134,7 +136,6 @@
             this.panelLiteratureSubMenu.SuspendLayout();
             this.tableLayoutMain.SuspendLayout();
             this.panelSideMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShopCart)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanelIconUser
@@ -264,6 +265,50 @@
             this.dataGridViewBookShow.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewBookShow.Size = new System.Drawing.Size(1105, 759);
             this.dataGridViewBookShow.TabIndex = 0;
+            this.dataGridViewBookShow.VirtualMode = true;
+            this.dataGridViewBookShow.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewBookShow_CellClick);
+            this.dataGridViewBookShow.Scroll += new System.Windows.Forms.ScrollEventHandler(this.dataGridViewBookShow_Scroll);
+            // 
+            // BookImage
+            // 
+            this.BookImage.DataPropertyName = "Image";
+            this.BookImage.FillWeight = 50F;
+            this.BookImage.HeaderText = "Image";
+            this.BookImage.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.BookImage.Name = "BookImage";
+            this.BookImage.ReadOnly = true;
+            // 
+            // InformationOfBook
+            // 
+            this.InformationOfBook.DataPropertyName = "BookInfor";
+            this.InformationOfBook.FillWeight = 120F;
+            this.InformationOfBook.HeaderText = "Information";
+            this.InformationOfBook.Name = "InformationOfBook";
+            this.InformationOfBook.ReadOnly = true;
+            // 
+            // QuantityAndPrice
+            // 
+            this.QuantityAndPrice.DataPropertyName = "PriceInfor";
+            this.QuantityAndPrice.FillWeight = 80F;
+            this.QuantityAndPrice.HeaderText = "QuantityAndPrice";
+            this.QuantityAndPrice.Name = "QuantityAndPrice";
+            this.QuantityAndPrice.ReadOnly = true;
+            // 
+            // AddShopCart
+            // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(10, 30, 10, 30);
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.AddShopCart.DefaultCellStyle = dataGridViewCellStyle1;
+            this.AddShopCart.FillWeight = 25F;
+            this.AddShopCart.HeaderText = "Add Cart";
+            this.AddShopCart.Name = "AddShopCart";
+            this.AddShopCart.ReadOnly = true;
+            this.AddShopCart.Text = "Add To Cart";
+            this.AddShopCart.UseColumnTextForButtonValue = true;
             // 
             // tableLayoutPanelSearch_Account
             // 
@@ -425,6 +470,15 @@
             this.pictureBoxFavoriteIcon.Size = new System.Drawing.Size(40, 40);
             this.pictureBoxFavoriteIcon.TabIndex = 3;
             this.pictureBoxFavoriteIcon.TabStop = false;
+            // 
+            // pictureBoxShopCart
+            // 
+            this.pictureBoxShopCart.Location = new System.Drawing.Point(1058, 25);
+            this.pictureBoxShopCart.Margin = new System.Windows.Forms.Padding(5, 25, 0, 0);
+            this.pictureBoxShopCart.Name = "pictureBoxShopCart";
+            this.pictureBoxShopCart.Size = new System.Drawing.Size(40, 40);
+            this.pictureBoxShopCart.TabIndex = 4;
+            this.pictureBoxShopCart.TabStop = false;
             // 
             // btnForeignLanguagesBook
             // 
@@ -1219,7 +1273,7 @@
             this.tableLayoutMain.Name = "tableLayoutMain";
             this.tableLayoutMain.RowCount = 1;
             this.tableLayoutMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 1061F));
+            this.tableLayoutMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 961F));
             this.tableLayoutMain.Size = new System.Drawing.Size(1424, 961);
             this.tableLayoutMain.TabIndex = 1;
             // 
@@ -1295,55 +1349,10 @@
             this.imageList40.Images.SetKeyName(0, "icons8-favorite-40.png");
             this.imageList40.Images.SetKeyName(1, "");
             // 
-            // pictureBoxShopCart
+            // contextMenuStrip1
             // 
-            this.pictureBoxShopCart.Location = new System.Drawing.Point(1058, 25);
-            this.pictureBoxShopCart.Margin = new System.Windows.Forms.Padding(5, 25, 0, 0);
-            this.pictureBoxShopCart.Name = "pictureBoxShopCart";
-            this.pictureBoxShopCart.Size = new System.Drawing.Size(40, 40);
-            this.pictureBoxShopCart.TabIndex = 4;
-            this.pictureBoxShopCart.TabStop = false;
-            // 
-            // BookImage
-            // 
-            this.BookImage.DataPropertyName = "Image";
-            this.BookImage.FillWeight = 50F;
-            this.BookImage.HeaderText = "Image";
-            this.BookImage.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.BookImage.Name = "BookImage";
-            this.BookImage.ReadOnly = true;
-            // 
-            // InformationOfBook
-            // 
-            this.InformationOfBook.DataPropertyName = "BookInfor";
-            this.InformationOfBook.FillWeight = 120F;
-            this.InformationOfBook.HeaderText = "Information";
-            this.InformationOfBook.Name = "InformationOfBook";
-            this.InformationOfBook.ReadOnly = true;
-            // 
-            // QuantityAndPrice
-            // 
-            this.QuantityAndPrice.DataPropertyName = "PriceInfor";
-            this.QuantityAndPrice.FillWeight = 80F;
-            this.QuantityAndPrice.HeaderText = "QuantityAndPrice";
-            this.QuantityAndPrice.Name = "QuantityAndPrice";
-            this.QuantityAndPrice.ReadOnly = true;
-            // 
-            // AddShopCart
-            // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(10, 30, 10, 30);
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.AddShopCart.DefaultCellStyle = dataGridViewCellStyle1;
-            this.AddShopCart.FillWeight = 25F;
-            this.AddShopCart.HeaderText = "Add Cart";
-            this.AddShopCart.Name = "AddShopCart";
-            this.AddShopCart.ReadOnly = true;
-            this.AddShopCart.Text = "Add To Cart";
-            this.AddShopCart.UseColumnTextForButtonValue = true;
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // MainForm
             // 
@@ -1372,6 +1381,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIconToggle)).EndInit();
             this.panelToggleDownAccount.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFavoriteIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShopCart)).EndInit();
             this.panelText_ReferenceBookSubMenu.ResumeLayout(false);
             this.panelForeignLanguageBooksSubMenu.ResumeLayout(false);
             this.panelBiography_MemoirsSubMenu.ResumeLayout(false);
@@ -1382,7 +1392,6 @@
             this.panelLiteratureSubMenu.ResumeLayout(false);
             this.tableLayoutMain.ResumeLayout(false);
             this.panelSideMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShopCart)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1461,6 +1470,7 @@
         private System.Windows.Forms.ImageList imageList40;
         private System.Windows.Forms.DataGridView dataGridViewBookShow;
         private System.Windows.Forms.PictureBox pictureBoxShopCart;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.DataGridViewImageColumn BookImage;
         private System.Windows.Forms.DataGridViewTextBoxColumn InformationOfBook;
         private System.Windows.Forms.DataGridViewTextBoxColumn QuantityAndPrice;
