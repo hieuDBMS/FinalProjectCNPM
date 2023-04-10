@@ -269,11 +269,6 @@ namespace FahasaApp
             return categoryName + " - " +subCategoryNAme;
         }
 
-        private void test()
-        {
-            MessageBox.Show("Hello");
-        }
-
         //Handle event choose book to add to cart
         private void dataGridViewBookShow_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -303,6 +298,7 @@ namespace FahasaApp
                 DataTable dt = new DataTable();
                 da.Fill(dt);
 
+                //Add columns to show books information briefly
                 if (dt.Rows.Count > 0)
                 {
                     dt.Columns.Add("BookInfor");

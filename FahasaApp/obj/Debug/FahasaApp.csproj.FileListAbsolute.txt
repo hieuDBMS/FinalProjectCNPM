@@ -35,3 +35,4 @@ C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaAp
 C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.csproj.CoreCompileInputs.cache
 C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.exe
 C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.pdb
+C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.DetailProduct.resources
