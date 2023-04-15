@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace FahasaApp
 {
@@ -15,8 +16,14 @@ namespace FahasaApp
     {
         List<Panel> subMenuControl = new List<Panel>();
         List<Button> typeBookControl = new List<Button>();
-        private int rowCount = 0;
-        DataTable dtTest = new DataTable();
+        private int rowCount = 0;   // for load more data to mainform
+        private int rowCountCateogy = 0; // for load more data of category datagridview
+        DataTable currentDataTable = new DataTable();
+        DataTable allBooks = new DataTable();
+        int currentCategoryID = -1;
+        public int currentRowCell = 0; //may be used for detail product
+        public bool findBooks = false; // for handle scroll event
+        public bool isStartingFocus = true;
         public MainForm()
         {
             InitializeComponent();
@@ -47,26 +54,15 @@ namespace FahasaApp
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 conn.Close();
+                da.Dispose();
                 if (dt.Rows.Count > 0 )
                 {
                     rowCount = dt.Rows.Count;
-                    dt.Columns.Add("BookInfor");
-                    dt.Columns.Add("PriceInfor");
-                    foreach (DataRow row in dt.Rows)
-                    {                   
-                        row["BookInfor"] = row["BookTitle"] + "\n\n" + getNameCategory((int)row["CategoryID"]) + "\n\n" + getNameAuthor((int)row["AuthorID"]) + "\n";
-                        String StatusBar = "Còn hàng";
-                        if ( (int)row["BookQuantity"] == 0 )
-                        {
-                            StatusBar = "Hết Hàng";
-                        }
-                
-                        row["PriceInfor"] = "\n" + row["Price"] + "\n\n" + "Tình Trạng: " + StatusBar;
-                    }
+                    dt = createColumn_And_ChangeInformationOfColumn(dt);
                     dataGridViewBookShow.AutoGenerateColumns = false;
                     dataGridViewBookShow.DataSource = dt;
                     dataGridViewBookShow.ClearSelection();
-                    dtTest = dt;
+                    currentDataTable = dt;
                 }
                 
             }
@@ -158,16 +154,29 @@ namespace FahasaApp
             panelToggleDownAccount.ResumeLayout(); 
         }
 
+        //Find book in Childrent Books
         private void btnChildrenBook_Click(object sender, EventArgs e)
         {
             showSubmenu(panelChildrenBookSubmenu);
         }
+        private void btnFindManga_Comic_Click(object sender, EventArgs e)
+        {
+            getBookByCategoryID(17);
 
+            searchBox.ForeColor = Color.Silver;          
+            searchBox.Text = "    Nhập thông tin sách bạn muốn tìm kiếm...\r\n";
+            isStartingFocus = true;
+            searchBox_Leave(sender, e);
+        }
+        //
+
+        //Find book in Literature Books
         private void btnLiteratureBook_Click(object sender, EventArgs e)
         {
             showSubmenu(panelLiteratureSubMenu);
 
         }
+        //
 
         private void btnEconomyBook_Click(object sender, EventArgs e)
         {
@@ -203,23 +212,56 @@ namespace FahasaApp
             showSubmenu(panelForeignLanguageBooksSubMenu);
 
         }
-
-        private void searchBox_TextChanged(object sender, EventArgs e)
+        private void btnHome_Click(object sender, EventArgs e)
         {
-            
+            hideSubMenu();
+            searchBox.Text = string.Empty; //clear current text, replace the filtered with currentDatatable and set notice text for search box
+            searchBox_Leave(sender,e);  //this line will
+            dataGridViewBookShow.CurrentCell = dataGridViewBookShow.Rows[0].Cells[0];  // move to the top of the datatable
+
+            // Replace the datatable of category book with currentDatatable
+            if(currentCategoryID != -1)
+            {
+                currentCategoryID = -1;
+                updateDatagrideViewBySubCategory(currentDataTable,false);
+            }
         }
 
-        private void searchBox_MouseClick(object sender, MouseEventArgs e)
+        private void updateDatagrideViewBySubCategory(DataTable dt, bool flagToCreate)
         {
-            searchBox.Text = string.Empty;
-            searchBox.ForeColor = Color.Black;
+            dataGridViewBookShow.Invoke((MethodInvoker)delegate ()
+            {
+                dataGridViewBookShow.DataSource = null;
+                dataGridViewBookShow.Rows.Clear();
+                if (flagToCreate)
+                    dataGridViewBookShow.DataSource = createColumn_And_ChangeInformationOfColumn(dt);
+                else
+                    dataGridViewBookShow.DataSource = dt;
+
+                dataGridViewBookShow.Invalidate();
+                dataGridViewBookShow.Refresh();
+                dataGridViewBookShow.Update();
+                dataGridViewBookShow.ClearSelection();               
+            });
         }
 
-        private void searchBox_Leave(object sender, EventArgs e)
+        private void getBookByCategoryID(int categoryID)
         {
-            searchBox.Text = "    Nhập thông tin sách bạn muốn tìm kiếm...\r\n";
-            searchBox.ForeColor = Color.Silver;
+            SqlConnection conn = new SqlConnection(Program.getConnectString());
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("[GetBooksByCategory]", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@ID", categoryID));
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            conn.Close();
+            da.Dispose();
+            currentCategoryID = categoryID;
+            rowCountCateogy = dt.Rows.Count;
+            updateDatagrideViewBySubCategory(dt, true);
         }
+
 
         //Get All data about Author by ID
         private DataTable getAuthorBy_ID(int ID)
@@ -233,6 +275,7 @@ namespace FahasaApp
             DataTable dt = new DataTable();
             da.Fill(dt);
             conn.Close();
+            da.Dispose();
             return dt;
         }
         //Get data about Name of Author
@@ -256,6 +299,7 @@ namespace FahasaApp
             DataTable dt = new DataTable();
             da.Fill(dt);
             conn.Close();
+            da.Dispose();
             return dt;
         }
 
@@ -269,76 +313,281 @@ namespace FahasaApp
             return categoryName + " - " +subCategoryNAme;
         }
 
+        //Get All data about Publisher by ID
+        private DataTable getPublisherBy_ID(int ID)
+        {
+            SqlConnection conn = new SqlConnection(Program.getConnectString());
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("[GetPublisherByID]", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@ID", ID));
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            conn.Close();
+            da.Dispose();
+            return dt;
+        }
+
+        //Get data about Name of Publisher
+        private String getNamePublisher(int ID)
+        {
+            DataTable dt = getPublisherBy_ID(ID);
+            DataRow firstRow = dt.Rows[0];
+            String publisherName = firstRow["Name"].ToString();
+            return publisherName;
+        }
+
         //Handle event choose book to add to cart
         private void dataGridViewBookShow_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == dataGridViewBookShow.Columns["AddShopCart"].Index)
             {
                 int rowIndex = e.RowIndex;
+                currentRowCell = rowIndex;
                 DataGridViewRow row = dataGridViewBookShow.Rows[rowIndex];
                 String test = row.Cells[1].Value.ToString();
                 MessageBox.Show(test);
+            }
+            else
+            {
+                currentRowCell = e.RowIndex;
             }
         }
 
         private void dataGridViewBookShow_Scroll(object sender, ScrollEventArgs e)
         {
-            int totalHeight = 0;
-            foreach (DataGridViewRow row in dataGridViewBookShow.Rows)
-                totalHeight += row.Height;
-
-            if (totalHeight - dataGridViewBookShow.Height < dataGridViewBookShow.VerticalScrollingOffset)
+            if(!findBooks)
             {
-                SqlConnection conn = new SqlConnection(Program.getConnectString());
-                conn.Open();
-                SqlCommand cmd = new SqlCommand("[GetNext10Books]", conn);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add(new SqlParameter("@CURRENT_COUNT_ROW", rowCount));
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
+                int totalHeight = 0;
+                foreach (DataGridViewRow row in dataGridViewBookShow.Rows)
+                    totalHeight += row.Height;
 
-                //Add columns to show books information briefly
-                if (dt.Rows.Count > 0)
+                if (totalHeight - dataGridViewBookShow.Height < dataGridViewBookShow.VerticalScrollingOffset)
                 {
-                    dt.Columns.Add("BookInfor");
-                    dt.Columns.Add("PriceInfor");
-                    foreach (DataRow row in dt.Rows)
-                    {
-                        row["BookInfor"] = row["BookTitle"] + "\n\n" + getNameCategory((int)row["CategoryID"]) + "\n\n" + getNameAuthor((int)row["AuthorID"]) + "\n";
-                        String StatusBar = "Còn hàng";
-                        if ((int)row["BookQuantity"] == 0)
-                        {
-                            StatusBar = "Hết Hàng";
-                        }
+                    int RowCount = -1;
+                    if (currentCategoryID != -1)
+                        RowCount = rowCountCateogy;
+                    else
+                        RowCount = rowCount;
 
-                        row["PriceInfor"] = "\n" + row["Price"] + "\n\n" + "Tình Trạng: " + StatusBar;
+                    SqlConnection conn = new SqlConnection(Program.getConnectString());
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("[GetNext10Books]", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@CURRENT_COUNT_ROW", RowCount));
+                    cmd.Parameters.Add(new SqlParameter("@CATEGORY_ID", currentCategoryID));
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    
+                    //Add columns to show books information briefly
+                    if (dt.Rows.Count > 0)
+                    {
+                        dt = createColumn_And_ChangeInformationOfColumn(dt);
+                        dataGridViewBookShow.Invoke((MethodInvoker)delegate ()
+                        {
+                            currentDataTable.Merge(dt);
+                            dataGridViewBookShow.DataSource = null;
+                            dataGridViewBookShow.Rows.Clear();
+                            dataGridViewBookShow.DataSource = currentDataTable;
+                            dataGridViewBookShow.Invalidate();
+                            dataGridViewBookShow.Refresh();
+                            dataGridViewBookShow.Update();
+                            dataGridViewBookShow.CurrentCell = dataGridViewBookShow.Rows[rowCount].Cells[0];
+                            dataGridViewBookShow.ClearSelection();
+                            //add rowcount for home
+                            if(currentCategoryID == -1)
+                            {
+                                if (dt.Rows.Count == 10)
+                                {
+                                    rowCount += 10;
+                                }
+                                else
+                                {
+                                    rowCount += dt.Rows.Count;
+                                }
+                            }
+                            //add rowcount for category
+                            else
+                            {
+                                if (dt.Rows.Count == 10)
+                                {
+                                    rowCountCateogy += 10;
+                                }
+                                else
+                                {
+                                    rowCountCateogy += dt.Rows.Count;
+                                }
+                            }
+                            
+                        });
+                        conn.Close();
                     }
-                    dataGridViewBookShow.Invoke((MethodInvoker)delegate ()
-                    {
-                        dtTest.Merge(dt);
-                        dataGridViewBookShow.DataSource = null;
-                        dataGridViewBookShow.Rows.Clear();
-                        dataGridViewBookShow.DataSource = dtTest;
-                        dataGridViewBookShow.Invalidate();
-                        dataGridViewBookShow.Refresh();
-                        dataGridViewBookShow.Update();
-                        dataGridViewBookShow.CurrentCell = dataGridViewBookShow.Rows[rowCount - 1].Cells[0];
-                        dataGridViewBookShow.ClearSelection();
-                        if (dt.Rows.Count == 10)
-                        {
-                            rowCount += 10;
-                        }
-                        else
-                        {
-                            rowCount += dt.Rows.Count;
-                        }
 
-                    });
-                    conn.Close();
                 }
-               
+            }
+            
+        }
+
+        //Add BookInfor and PriceInfor column for dt, and customer the data of that column
+        private DataTable createColumn_And_ChangeInformationOfColumn(DataTable dt)
+        {
+            dt.Columns.Add("BookInfor");
+            dt.Columns.Add("PriceInfor");
+            foreach (DataRow row in dt.Rows)
+            {
+                row["BookInfor"] = row["BookTitle"] + "\n\n" + getNameCategory((int)row["CategoryID"]) + "\n\n" + getNameAuthor((int)row["AuthorID"]) + "\n";
+                String StatusBar = "Còn hàng";
+                if ((int)row["BookQuantity"] == 0)
+                {
+                    StatusBar = "Hết Hàng";
+                }
+
+                row["PriceInfor"] = "\n" + row["Price"] + "\n\n" + "Tình Trạng: " + StatusBar;
+            }
+            return dt;
+        }
+
+        //Handle event click mouse on searchBox
+        private void searchBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (searchBox.Text == "    Nhập thông tin sách bạn muốn tìm kiếm...\r\n")
+            {
+                searchBox.Text = string.Empty;
+                searchBox.ForeColor = Color.Black;
+                isStartingFocus = false;
             }
         }
+
+        //Handle event click mouse on searchBox
+        private void searchBox_Leave(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(searchBox.Text))
+            {
+                searchBox.Text = "    Nhập thông tin sách bạn muốn tìm kiếm...\r\n";
+                searchBox.ForeColor = Color.Silver;
+                isStartingFocus = true;
+            }    
+        }
+
+        private void searchBox_TextChanged(object sender, EventArgs e)
+        {
+            if (searchBox.Text != "    Nhập thông tin sách bạn muốn tìm kiếm...\r\n")
+            {
+                //Get all books from data if Search function is triggered
+                if(allBooks.Rows.Count == 0) 
+                {
+                    getAllBooks();                  
+                }
+
+                if (allBooks.Rows.Count > 0)
+                {
+                    // Create a new DataTable with the same schema as the original table
+                    DataTable filteredTable = allBooks.Clone();
+                    
+                    string searchContent = searchBox.Text.ToLower().Trim();
+                    int count = 0;
+                    //Find book once the searchContent is not empty
+                    if (!String.IsNullOrEmpty(searchContent))
+                    {
+                        foreach (DataRow row in allBooks.Rows)
+                        {
+                            //find book title
+                            if (row["BookTitle"].ToString().ToLower().Trim().Contains(searchContent) )
+                            {
+                                filteredTable.ImportRow(row);
+                                count += 1;
+                            }
+                            //Find publication date
+                            else if (DateTime.Parse(row["PublicationDate"].ToString()).ToString("d/M/yyyy").Trim().Contains(searchContent) )
+                            {
+                                filteredTable.ImportRow(row);
+                                count += 1;
+                            }
+                            //Find author
+                            else if (getNameAuthor(int.Parse(row["AuthorID"].ToString())).ToLower().Trim().Contains(searchContent) )
+                            {
+                                filteredTable.ImportRow(row);
+                                count += 1;
+                            }
+                            //Find category
+                            else if (getNameCategory(int.Parse(row["CategoryID"].ToString())).ToLower().Trim().Contains(searchContent) )
+                            {
+                                filteredTable.ImportRow(row);
+                                count += 1;
+                            }
+                            //Find publisher
+                            else if (getNamePublisher(int.Parse(row["PublisherID"].ToString())).ToLower().Trim().Contains(searchContent))
+                            {
+                                filteredTable.ImportRow(row);
+                                count += 1;
+                            }
+                        }
+                        //MessageBox.Show(count.ToString());
+                    }
+
+                    //When found the book
+                    if (filteredTable.Rows.Count > 0)
+                    {
+                        filteredTable = createColumn_And_ChangeInformationOfColumn(filteredTable);
+                        findBooks = true;
+                        txtNoticeBookNotFound.Visible = false;
+                        //MessageBox.Show(currentDataTable.Rows.Count.ToString() + "can find > 0" + "/" + searchContent);
+                    }
+                    //When book can not be found
+                    if (filteredTable.Rows.Count == 0 && searchContent != "")
+                    {
+                        txtNoticeBookNotFound.Visible = true;
+                        findBooks = true;
+                        //MessageBox.Show(currentDataTable.Rows.Count.ToString() + "can be found" + "/" + searchContent);
+                    }
+                    //When the text in the searchBox is deleted emptily and is not a startingfocus, back to the currentDatable of books
+                    if (filteredTable.Rows.Count == 0 && searchContent == "" && !isStartingFocus)
+                    {
+                        filteredTable = currentDataTable;                        
+                        txtNoticeBookNotFound.Visible = false;
+                        findBooks = false;
+                        //remove all book when search function end
+                        removeAllBooks();
+                        //MessageBox.Show(currentDataTable.Rows.Count.ToString() + "search box is empty");
+                    }
+                    //Update datagrid when the textchange and the search box is not a starting focus
+                    if (!isStartingFocus)
+                    {
+                        dataGridViewBookShow.Invoke((MethodInvoker)delegate ()
+                        {
+                            dataGridViewBookShow.DataSource = null;
+                            dataGridViewBookShow.Rows.Clear();
+                            dataGridViewBookShow.DataSource = filteredTable;
+                            dataGridViewBookShow.Invalidate();
+                            dataGridViewBookShow.Refresh();
+                            dataGridViewBookShow.Update();
+                            dataGridViewBookShow.ClearSelection();                           
+                        });
+                    }               
+                }
+            }
+            
+        }
+
+        private void getAllBooks()
+        {
+            SqlConnection conn = new SqlConnection(Program.getConnectString());
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("[GetAllBooks]", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(allBooks);
+            conn.Close();
+            da.Dispose();
+        }
+
+        private void removeAllBooks()
+        {
+            allBooks.Clear();
+        }
+
+
     }
 }

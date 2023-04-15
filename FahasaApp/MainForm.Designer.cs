@@ -31,14 +31,15 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.FlowLayoutPanel flowLayoutPanelIconUser;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBoxAccountIcon = new System.Windows.Forms.PictureBox();
             this.btnText_ReferenceBook = new System.Windows.Forms.Button();
             this.tableLayoutShowScreen = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.panelShowBoooks = new System.Windows.Forms.Panel();
+            this.txtNoticeBookNotFound = new System.Windows.Forms.Label();
             this.dataGridViewBookShow = new System.Windows.Forms.DataGridView();
             this.BookImage = new System.Windows.Forms.DataGridViewImageColumn();
             this.InformationOfBook = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,53 +60,54 @@
             this.pictureBoxShopCart = new System.Windows.Forms.PictureBox();
             this.btnForeignLanguagesBook = new System.Windows.Forms.Button();
             this.panelText_ReferenceBookSubMenu = new System.Windows.Forms.Panel();
-            this.button34 = new System.Windows.Forms.Button();
-            this.button35 = new System.Windows.Forms.Button();
-            this.button36 = new System.Windows.Forms.Button();
-            this.button37 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnFindMauGiao = new System.Windows.Forms.Button();
+            this.btnFindSachChoGiaoVien = new System.Windows.Forms.Button();
+            this.btnFindSachThamKhao = new System.Windows.Forms.Button();
+            this.btnFindSachGiaoKhoa = new System.Windows.Forms.Button();
+            this.btnFindMarketing_BanHang = new System.Windows.Forms.Button();
+            this.btnFindTieuThuyet = new System.Windows.Forms.Button();
             this.panelForeignLanguageBooksSubMenu = new System.Windows.Forms.Panel();
-            this.button39 = new System.Windows.Forms.Button();
-            this.button40 = new System.Windows.Forms.Button();
-            this.button41 = new System.Windows.Forms.Button();
-            this.button42 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
+            this.btnFindSachTiengHan = new System.Windows.Forms.Button();
+            this.btnFindSachTiengHoa = new System.Windows.Forms.Button();
+            this.btnFindSachTiengNhat = new System.Windows.Forms.Button();
+            this.btnFindSachTiengAnh = new System.Windows.Forms.Button();
+            this.btnFindLightNovel = new System.Windows.Forms.Button();
+            this.btnFindNgonTinh = new System.Windows.Forms.Button();
+            this.btnFindNhanVat_BaiHocKinhDoanh = new System.Windows.Forms.Button();
+            this.btnFindQuanTri_LanhDao = new System.Windows.Forms.Button();
+            this.btnFindTruyenNgan_TanVan = new System.Windows.Forms.Button();
+            this.btnFindPhanTichKinhTe = new System.Windows.Forms.Button();
             this.panelBiography_MemoirsSubMenu = new System.Windows.Forms.Panel();
-            this.button25 = new System.Windows.Forms.Button();
-            this.button26 = new System.Windows.Forms.Button();
-            this.button27 = new System.Windows.Forms.Button();
-            this.button28 = new System.Windows.Forms.Button();
+            this.btnFindNgheThuatGiaiTri = new System.Windows.Forms.Button();
+            this.btnFindKinhTe = new System.Windows.Forms.Button();
+            this.btnFindChinhTri = new System.Windows.Forms.Button();
+            this.btnFindCauChuyenCuocDoi = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.btnRaiseUpChildBook = new System.Windows.Forms.Button();
             this.panelPsychology_LifeSkillsSubMenu = new System.Windows.Forms.Panel();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
+            this.btnFindSachChoTuoiMoiLon = new System.Windows.Forms.Button();
+            this.btnFindTamLy = new System.Windows.Forms.Button();
+            this.btnFindRenLuyenNhanCach = new System.Windows.Forms.Button();
+            this.btnFindKyNangSong = new System.Windows.Forms.Button();
             this.btnBiography_MemoirBook = new System.Windows.Forms.Button();
             this.panelRaiseUpChildSubMenu = new System.Windows.Forms.Panel();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
+            this.btnFindPhatTrienKyNangChoTre = new System.Windows.Forms.Button();
+            this.btnFindPhatTrienTriTueChoTre = new System.Windows.Forms.Button();
+            this.btnFindPhuongPhapGiaoDucTre = new System.Windows.Forms.Button();
+            this.btnFindCamNangLamChaMe = new System.Windows.Forms.Button();
             this.btnPsychology_LifeSkillsBook = new System.Windows.Forms.Button();
             this.panelEconomySubMenu = new System.Windows.Forms.Panel();
             this.btnLiteratureBook = new System.Windows.Forms.Button();
             this.panelChildrenBookSubmenu = new System.Windows.Forms.Panel();
+            this.btnFindVuaHocVuaChoi = new System.Windows.Forms.Button();
+            this.btnFindTranhKyNangSong = new System.Windows.Forms.Button();
+            this.btnFindKienThucBachKhoa = new System.Windows.Forms.Button();
+            this.btnFindManga_Comic = new System.Windows.Forms.Button();
             this.btnEconomyBook = new System.Windows.Forms.Button();
             this.panelLiteratureSubMenu = new System.Windows.Forms.Panel();
             this.tableLayoutMain = new System.Windows.Forms.TableLayoutPanel();
             this.panelSideMenu = new System.Windows.Forms.Panel();
+            this.btnHome = new System.Windows.Forms.Button();
             this.btnChildrenBook = new System.Windows.Forms.Button();
             this.panelLogoSideMenu = new System.Windows.Forms.Panel();
             this.imageList20 = new System.Windows.Forms.ImageList(this.components);
@@ -162,11 +164,12 @@
             // 
             // btnText_ReferenceBook
             // 
-            this.btnText_ReferenceBook.BackColor = System.Drawing.Color.LightPink;
+            this.btnText_ReferenceBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
             this.btnText_ReferenceBook.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnText_ReferenceBook.FlatAppearance.BorderSize = 0;
             this.btnText_ReferenceBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnText_ReferenceBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnText_ReferenceBook.ForeColor = System.Drawing.Color.White;
             this.btnText_ReferenceBook.Location = new System.Drawing.Point(0, 1572);
             this.btnText_ReferenceBook.Margin = new System.Windows.Forms.Padding(0);
             this.btnText_ReferenceBook.Name = "btnText_ReferenceBook";
@@ -211,12 +214,26 @@
             // 
             // panelShowBoooks
             // 
+            this.panelShowBoooks.Controls.Add(this.txtNoticeBookNotFound);
             this.panelShowBoooks.Controls.Add(this.dataGridViewBookShow);
             this.panelShowBoooks.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelShowBoooks.ForeColor = System.Drawing.Color.White;
             this.panelShowBoooks.Location = new System.Drawing.Point(3, 193);
             this.panelShowBoooks.Name = "panelShowBoooks";
             this.panelShowBoooks.Size = new System.Drawing.Size(1105, 759);
             this.panelShowBoooks.TabIndex = 2;
+            // 
+            // txtNoticeBookNotFound
+            // 
+            this.txtNoticeBookNotFound.AutoSize = true;
+            this.txtNoticeBookNotFound.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNoticeBookNotFound.ForeColor = System.Drawing.Color.Tomato;
+            this.txtNoticeBookNotFound.Location = new System.Drawing.Point(36, 14);
+            this.txtNoticeBookNotFound.Name = "txtNoticeBookNotFound";
+            this.txtNoticeBookNotFound.Size = new System.Drawing.Size(449, 24);
+            this.txtNoticeBookNotFound.TabIndex = 1;
+            this.txtNoticeBookNotFound.Text = "Không thể tìm thấy sách, mong bạn thông cảm!";
+            this.txtNoticeBookNotFound.Visible = false;
             // 
             // dataGridViewBookShow
             // 
@@ -235,32 +252,34 @@
             this.InformationOfBook,
             this.QuantityAndPrice,
             this.AddShopCart});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(5);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewBookShow.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewBookShow.DefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewBookShow.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewBookShow.GridColor = System.Drawing.Color.LightSalmon;
             this.dataGridViewBookShow.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewBookShow.Margin = new System.Windows.Forms.Padding(0);
             this.dataGridViewBookShow.MultiSelect = false;
             this.dataGridViewBookShow.Name = "dataGridViewBookShow";
             this.dataGridViewBookShow.ReadOnly = true;
             this.dataGridViewBookShow.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewBookShow.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewBookShow.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewBookShow.RowHeadersVisible = false;
-            this.dataGridViewBookShow.RowTemplate.Height = 125;
+            this.dataGridViewBookShow.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.dataGridViewBookShow.RowTemplate.Height = 130;
             this.dataGridViewBookShow.RowTemplate.ReadOnly = true;
             this.dataGridViewBookShow.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewBookShow.Size = new System.Drawing.Size(1105, 759);
@@ -296,18 +315,18 @@
             // 
             // AddShopCart
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(10, 30, 10, 30);
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.AddShopCart.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(10, 30, 10, 30);
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.AddShopCart.DefaultCellStyle = dataGridViewCellStyle4;
             this.AddShopCart.FillWeight = 25F;
             this.AddShopCart.HeaderText = "Add Cart";
             this.AddShopCart.Name = "AddShopCart";
             this.AddShopCart.ReadOnly = true;
-            this.AddShopCart.Text = "Add To Cart";
+            this.AddShopCart.Text = "Thêm vào giỏ hàng";
             this.AddShopCart.UseColumnTextForButtonValue = true;
             // 
             // tableLayoutPanelSearch_Account
@@ -360,7 +379,7 @@
             // 
             // pictureBoxSearchIcon
             // 
-            this.pictureBoxSearchIcon.BackColor = System.Drawing.Color.LightCoral;
+            this.pictureBoxSearchIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
             this.pictureBoxSearchIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBoxSearchIcon.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxSearchIcon.Image")));
             this.pictureBoxSearchIcon.Location = new System.Drawing.Point(742, 35);
@@ -482,11 +501,12 @@
             // 
             // btnForeignLanguagesBook
             // 
-            this.btnForeignLanguagesBook.BackColor = System.Drawing.Color.LightPink;
+            this.btnForeignLanguagesBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
             this.btnForeignLanguagesBook.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnForeignLanguagesBook.FlatAppearance.BorderSize = 0;
             this.btnForeignLanguagesBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnForeignLanguagesBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnForeignLanguagesBook.ForeColor = System.Drawing.Color.White;
             this.btnForeignLanguagesBook.Location = new System.Drawing.Point(0, 1809);
             this.btnForeignLanguagesBook.Margin = new System.Windows.Forms.Padding(0);
             this.btnForeignLanguagesBook.Name = "btnForeignLanguagesBook";
@@ -499,10 +519,10 @@
             // 
             // panelText_ReferenceBookSubMenu
             // 
-            this.panelText_ReferenceBookSubMenu.Controls.Add(this.button34);
-            this.panelText_ReferenceBookSubMenu.Controls.Add(this.button35);
-            this.panelText_ReferenceBookSubMenu.Controls.Add(this.button36);
-            this.panelText_ReferenceBookSubMenu.Controls.Add(this.button37);
+            this.panelText_ReferenceBookSubMenu.Controls.Add(this.btnFindMauGiao);
+            this.panelText_ReferenceBookSubMenu.Controls.Add(this.btnFindSachChoGiaoVien);
+            this.panelText_ReferenceBookSubMenu.Controls.Add(this.btnFindSachThamKhao);
+            this.panelText_ReferenceBookSubMenu.Controls.Add(this.btnFindSachGiaoKhoa);
             this.panelText_ReferenceBookSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelText_ReferenceBookSubMenu.Location = new System.Drawing.Point(0, 1619);
             this.panelText_ReferenceBookSubMenu.Margin = new System.Windows.Forms.Padding(0);
@@ -510,138 +530,126 @@
             this.panelText_ReferenceBookSubMenu.Size = new System.Drawing.Size(290, 190);
             this.panelText_ReferenceBookSubMenu.TabIndex = 16;
             // 
-            // button34
+            // btnFindMauGiao
             // 
-            this.button34.BackColor = System.Drawing.Color.Pink;
-            this.button34.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button34.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button34.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.button34.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button34.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button34.Location = new System.Drawing.Point(0, 141);
-            this.button34.Margin = new System.Windows.Forms.Padding(0);
-            this.button34.Name = "button34";
-            this.button34.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button34.Size = new System.Drawing.Size(290, 47);
-            this.button34.TabIndex = 3;
-            this.button34.Text = "Mẫu Giáo";
-            this.button34.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button34.UseVisualStyleBackColor = false;
+            this.btnFindMauGiao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.btnFindMauGiao.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFindMauGiao.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnFindMauGiao.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnFindMauGiao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFindMauGiao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFindMauGiao.ForeColor = System.Drawing.Color.White;
+            this.btnFindMauGiao.Location = new System.Drawing.Point(0, 141);
+            this.btnFindMauGiao.Margin = new System.Windows.Forms.Padding(0);
+            this.btnFindMauGiao.Name = "btnFindMauGiao";
+            this.btnFindMauGiao.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnFindMauGiao.Size = new System.Drawing.Size(290, 47);
+            this.btnFindMauGiao.TabIndex = 3;
+            this.btnFindMauGiao.Text = "Mẫu Giáo";
+            this.btnFindMauGiao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFindMauGiao.UseVisualStyleBackColor = false;
             // 
-            // button35
+            // btnFindSachChoGiaoVien
             // 
-            this.button35.BackColor = System.Drawing.Color.Pink;
-            this.button35.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button35.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button35.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.button35.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button35.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button35.Location = new System.Drawing.Point(0, 94);
-            this.button35.Margin = new System.Windows.Forms.Padding(0);
-            this.button35.Name = "button35";
-            this.button35.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button35.Size = new System.Drawing.Size(290, 47);
-            this.button35.TabIndex = 2;
-            this.button35.Text = "Luyện Thi THPT Quốc Gia";
-            this.button35.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button35.UseVisualStyleBackColor = false;
+            this.btnFindSachChoGiaoVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.btnFindSachChoGiaoVien.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFindSachChoGiaoVien.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnFindSachChoGiaoVien.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnFindSachChoGiaoVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFindSachChoGiaoVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFindSachChoGiaoVien.ForeColor = System.Drawing.Color.White;
+            this.btnFindSachChoGiaoVien.Location = new System.Drawing.Point(0, 94);
+            this.btnFindSachChoGiaoVien.Margin = new System.Windows.Forms.Padding(0);
+            this.btnFindSachChoGiaoVien.Name = "btnFindSachChoGiaoVien";
+            this.btnFindSachChoGiaoVien.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnFindSachChoGiaoVien.Size = new System.Drawing.Size(290, 47);
+            this.btnFindSachChoGiaoVien.TabIndex = 2;
+            this.btnFindSachChoGiaoVien.Text = "Sách Cho Giáo Viên";
+            this.btnFindSachChoGiaoVien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFindSachChoGiaoVien.UseVisualStyleBackColor = false;
             // 
-            // button36
+            // btnFindSachThamKhao
             // 
-            this.button36.BackColor = System.Drawing.Color.Pink;
-            this.button36.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button36.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button36.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.button36.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button36.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button36.Location = new System.Drawing.Point(0, 47);
-            this.button36.Margin = new System.Windows.Forms.Padding(0);
-            this.button36.Name = "button36";
-            this.button36.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button36.Size = new System.Drawing.Size(290, 47);
-            this.button36.TabIndex = 1;
-            this.button36.Text = "Sách Tham Khảo";
-            this.button36.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button36.UseVisualStyleBackColor = false;
+            this.btnFindSachThamKhao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.btnFindSachThamKhao.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFindSachThamKhao.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnFindSachThamKhao.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnFindSachThamKhao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFindSachThamKhao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFindSachThamKhao.ForeColor = System.Drawing.Color.White;
+            this.btnFindSachThamKhao.Location = new System.Drawing.Point(0, 47);
+            this.btnFindSachThamKhao.Margin = new System.Windows.Forms.Padding(0);
+            this.btnFindSachThamKhao.Name = "btnFindSachThamKhao";
+            this.btnFindSachThamKhao.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnFindSachThamKhao.Size = new System.Drawing.Size(290, 47);
+            this.btnFindSachThamKhao.TabIndex = 1;
+            this.btnFindSachThamKhao.Text = "Sách Tham Khảo";
+            this.btnFindSachThamKhao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFindSachThamKhao.UseVisualStyleBackColor = false;
             // 
-            // button37
+            // btnFindSachGiaoKhoa
             // 
-            this.button37.BackColor = System.Drawing.Color.Pink;
-            this.button37.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button37.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button37.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.button37.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button37.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button37.Location = new System.Drawing.Point(0, 0);
-            this.button37.Margin = new System.Windows.Forms.Padding(0);
-            this.button37.Name = "button37";
-            this.button37.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button37.Size = new System.Drawing.Size(290, 47);
-            this.button37.TabIndex = 0;
-            this.button37.Text = "Sách Giáo Khoa";
-            this.button37.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button37.UseVisualStyleBackColor = false;
+            this.btnFindSachGiaoKhoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.btnFindSachGiaoKhoa.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFindSachGiaoKhoa.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnFindSachGiaoKhoa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnFindSachGiaoKhoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFindSachGiaoKhoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFindSachGiaoKhoa.ForeColor = System.Drawing.Color.White;
+            this.btnFindSachGiaoKhoa.Location = new System.Drawing.Point(0, 0);
+            this.btnFindSachGiaoKhoa.Margin = new System.Windows.Forms.Padding(0);
+            this.btnFindSachGiaoKhoa.Name = "btnFindSachGiaoKhoa";
+            this.btnFindSachGiaoKhoa.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnFindSachGiaoKhoa.Size = new System.Drawing.Size(290, 47);
+            this.btnFindSachGiaoKhoa.TabIndex = 0;
+            this.btnFindSachGiaoKhoa.Text = "Sách Giáo Khoa";
+            this.btnFindSachGiaoKhoa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFindSachGiaoKhoa.UseVisualStyleBackColor = false;
             // 
-            // button11
+            // btnFindMarketing_BanHang
             // 
-            this.button11.BackColor = System.Drawing.Color.Pink;
-            this.button11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button11.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.Location = new System.Drawing.Point(0, 94);
-            this.button11.Margin = new System.Windows.Forms.Padding(0);
-            this.button11.Name = "button11";
-            this.button11.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button11.Size = new System.Drawing.Size(290, 47);
-            this.button11.TabIndex = 2;
-            this.button11.Text = "Marketing - Bán Hàng";
-            this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button11.UseVisualStyleBackColor = false;
+            this.btnFindMarketing_BanHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.btnFindMarketing_BanHang.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFindMarketing_BanHang.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnFindMarketing_BanHang.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnFindMarketing_BanHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFindMarketing_BanHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFindMarketing_BanHang.ForeColor = System.Drawing.Color.White;
+            this.btnFindMarketing_BanHang.Location = new System.Drawing.Point(0, 94);
+            this.btnFindMarketing_BanHang.Margin = new System.Windows.Forms.Padding(0);
+            this.btnFindMarketing_BanHang.Name = "btnFindMarketing_BanHang";
+            this.btnFindMarketing_BanHang.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnFindMarketing_BanHang.Size = new System.Drawing.Size(290, 47);
+            this.btnFindMarketing_BanHang.TabIndex = 2;
+            this.btnFindMarketing_BanHang.Text = "Marketing - Bán Hàng";
+            this.btnFindMarketing_BanHang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFindMarketing_BanHang.UseVisualStyleBackColor = false;
             // 
-            // button8
+            // btnFindTieuThuyet
             // 
-            this.button8.BackColor = System.Drawing.Color.Pink;
-            this.button8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button8.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(0, 0);
-            this.button8.Margin = new System.Windows.Forms.Padding(0);
-            this.button8.Name = "button8";
-            this.button8.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button8.Size = new System.Drawing.Size(290, 47);
-            this.button8.TabIndex = 0;
-            this.button8.Text = "Tiểu Thuyết";
-            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Pink;
-            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(0, 141);
-            this.button5.Margin = new System.Windows.Forms.Padding(0);
-            this.button5.Name = "button5";
-            this.button5.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button5.Size = new System.Drawing.Size(290, 47);
-            this.button5.TabIndex = 3;
-            this.button5.Text = "Vừa Học Vừa Chơi";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnFindTieuThuyet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.btnFindTieuThuyet.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFindTieuThuyet.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnFindTieuThuyet.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnFindTieuThuyet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFindTieuThuyet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFindTieuThuyet.ForeColor = System.Drawing.Color.White;
+            this.btnFindTieuThuyet.Location = new System.Drawing.Point(0, 0);
+            this.btnFindTieuThuyet.Margin = new System.Windows.Forms.Padding(0);
+            this.btnFindTieuThuyet.Name = "btnFindTieuThuyet";
+            this.btnFindTieuThuyet.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnFindTieuThuyet.Size = new System.Drawing.Size(290, 47);
+            this.btnFindTieuThuyet.TabIndex = 0;
+            this.btnFindTieuThuyet.Text = "Tiểu Thuyết";
+            this.btnFindTieuThuyet.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFindTieuThuyet.UseVisualStyleBackColor = false;
             // 
             // panelForeignLanguageBooksSubMenu
             // 
-            this.panelForeignLanguageBooksSubMenu.Controls.Add(this.button39);
-            this.panelForeignLanguageBooksSubMenu.Controls.Add(this.button40);
-            this.panelForeignLanguageBooksSubMenu.Controls.Add(this.button41);
-            this.panelForeignLanguageBooksSubMenu.Controls.Add(this.button42);
+            this.panelForeignLanguageBooksSubMenu.Controls.Add(this.btnFindSachTiengHan);
+            this.panelForeignLanguageBooksSubMenu.Controls.Add(this.btnFindSachTiengHoa);
+            this.panelForeignLanguageBooksSubMenu.Controls.Add(this.btnFindSachTiengNhat);
+            this.panelForeignLanguageBooksSubMenu.Controls.Add(this.btnFindSachTiengAnh);
             this.panelForeignLanguageBooksSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelForeignLanguageBooksSubMenu.Location = new System.Drawing.Point(0, 1856);
             this.panelForeignLanguageBooksSubMenu.Margin = new System.Windows.Forms.Padding(0);
@@ -649,246 +657,202 @@
             this.panelForeignLanguageBooksSubMenu.Size = new System.Drawing.Size(290, 190);
             this.panelForeignLanguageBooksSubMenu.TabIndex = 18;
             // 
-            // button39
+            // btnFindSachTiengHan
             // 
-            this.button39.BackColor = System.Drawing.Color.Pink;
-            this.button39.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button39.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button39.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.button39.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button39.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button39.Location = new System.Drawing.Point(0, 141);
-            this.button39.Margin = new System.Windows.Forms.Padding(0);
-            this.button39.Name = "button39";
-            this.button39.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button39.Size = new System.Drawing.Size(290, 47);
-            this.button39.TabIndex = 3;
-            this.button39.Text = "Tiếng Hàn";
-            this.button39.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button39.UseVisualStyleBackColor = false;
+            this.btnFindSachTiengHan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.btnFindSachTiengHan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFindSachTiengHan.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnFindSachTiengHan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnFindSachTiengHan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFindSachTiengHan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFindSachTiengHan.ForeColor = System.Drawing.Color.White;
+            this.btnFindSachTiengHan.Location = new System.Drawing.Point(0, 141);
+            this.btnFindSachTiengHan.Margin = new System.Windows.Forms.Padding(0);
+            this.btnFindSachTiengHan.Name = "btnFindSachTiengHan";
+            this.btnFindSachTiengHan.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnFindSachTiengHan.Size = new System.Drawing.Size(290, 47);
+            this.btnFindSachTiengHan.TabIndex = 3;
+            this.btnFindSachTiengHan.Text = "Tiếng Hàn";
+            this.btnFindSachTiengHan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFindSachTiengHan.UseVisualStyleBackColor = false;
             // 
-            // button40
+            // btnFindSachTiengHoa
             // 
-            this.button40.BackColor = System.Drawing.Color.Pink;
-            this.button40.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button40.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button40.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.button40.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button40.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button40.Location = new System.Drawing.Point(0, 94);
-            this.button40.Margin = new System.Windows.Forms.Padding(0);
-            this.button40.Name = "button40";
-            this.button40.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button40.Size = new System.Drawing.Size(290, 47);
-            this.button40.TabIndex = 2;
-            this.button40.Text = "Tiếng Hoa";
-            this.button40.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button40.UseVisualStyleBackColor = false;
+            this.btnFindSachTiengHoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.btnFindSachTiengHoa.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFindSachTiengHoa.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnFindSachTiengHoa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnFindSachTiengHoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFindSachTiengHoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFindSachTiengHoa.ForeColor = System.Drawing.Color.White;
+            this.btnFindSachTiengHoa.Location = new System.Drawing.Point(0, 94);
+            this.btnFindSachTiengHoa.Margin = new System.Windows.Forms.Padding(0);
+            this.btnFindSachTiengHoa.Name = "btnFindSachTiengHoa";
+            this.btnFindSachTiengHoa.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnFindSachTiengHoa.Size = new System.Drawing.Size(290, 47);
+            this.btnFindSachTiengHoa.TabIndex = 2;
+            this.btnFindSachTiengHoa.Text = "Tiếng Hoa";
+            this.btnFindSachTiengHoa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFindSachTiengHoa.UseVisualStyleBackColor = false;
             // 
-            // button41
+            // btnFindSachTiengNhat
             // 
-            this.button41.BackColor = System.Drawing.Color.Pink;
-            this.button41.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button41.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button41.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.button41.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button41.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button41.Location = new System.Drawing.Point(0, 47);
-            this.button41.Margin = new System.Windows.Forms.Padding(0);
-            this.button41.Name = "button41";
-            this.button41.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button41.Size = new System.Drawing.Size(290, 47);
-            this.button41.TabIndex = 1;
-            this.button41.Text = "Tiếng Nhật";
-            this.button41.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button41.UseVisualStyleBackColor = false;
+            this.btnFindSachTiengNhat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.btnFindSachTiengNhat.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFindSachTiengNhat.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnFindSachTiengNhat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnFindSachTiengNhat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFindSachTiengNhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFindSachTiengNhat.ForeColor = System.Drawing.Color.White;
+            this.btnFindSachTiengNhat.Location = new System.Drawing.Point(0, 47);
+            this.btnFindSachTiengNhat.Margin = new System.Windows.Forms.Padding(0);
+            this.btnFindSachTiengNhat.Name = "btnFindSachTiengNhat";
+            this.btnFindSachTiengNhat.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnFindSachTiengNhat.Size = new System.Drawing.Size(290, 47);
+            this.btnFindSachTiengNhat.TabIndex = 1;
+            this.btnFindSachTiengNhat.Text = "Tiếng Nhật";
+            this.btnFindSachTiengNhat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFindSachTiengNhat.UseVisualStyleBackColor = false;
             // 
-            // button42
+            // btnFindSachTiengAnh
             // 
-            this.button42.BackColor = System.Drawing.Color.Pink;
-            this.button42.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button42.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button42.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.button42.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button42.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button42.Location = new System.Drawing.Point(0, 0);
-            this.button42.Margin = new System.Windows.Forms.Padding(0);
-            this.button42.Name = "button42";
-            this.button42.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button42.Size = new System.Drawing.Size(290, 47);
-            this.button42.TabIndex = 0;
-            this.button42.Text = "Tiếng Anh";
-            this.button42.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button42.UseVisualStyleBackColor = false;
+            this.btnFindSachTiengAnh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.btnFindSachTiengAnh.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFindSachTiengAnh.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnFindSachTiengAnh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnFindSachTiengAnh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFindSachTiengAnh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFindSachTiengAnh.ForeColor = System.Drawing.Color.White;
+            this.btnFindSachTiengAnh.Location = new System.Drawing.Point(0, 0);
+            this.btnFindSachTiengAnh.Margin = new System.Windows.Forms.Padding(0);
+            this.btnFindSachTiengAnh.Name = "btnFindSachTiengAnh";
+            this.btnFindSachTiengAnh.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnFindSachTiengAnh.Size = new System.Drawing.Size(290, 47);
+            this.btnFindSachTiengAnh.TabIndex = 0;
+            this.btnFindSachTiengAnh.Text = "Tiếng Anh";
+            this.btnFindSachTiengAnh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFindSachTiengAnh.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // btnFindLightNovel
             // 
-            this.button6.BackColor = System.Drawing.Color.Pink;
-            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(0, 94);
-            this.button6.Margin = new System.Windows.Forms.Padding(0);
-            this.button6.Name = "button6";
-            this.button6.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button6.Size = new System.Drawing.Size(290, 47);
-            this.button6.TabIndex = 2;
-            this.button6.Text = "Light Novel";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnFindLightNovel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.btnFindLightNovel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFindLightNovel.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnFindLightNovel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnFindLightNovel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFindLightNovel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFindLightNovel.ForeColor = System.Drawing.Color.White;
+            this.btnFindLightNovel.Location = new System.Drawing.Point(0, 94);
+            this.btnFindLightNovel.Margin = new System.Windows.Forms.Padding(0);
+            this.btnFindLightNovel.Name = "btnFindLightNovel";
+            this.btnFindLightNovel.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnFindLightNovel.Size = new System.Drawing.Size(290, 47);
+            this.btnFindLightNovel.TabIndex = 2;
+            this.btnFindLightNovel.Text = "Light Novel";
+            this.btnFindLightNovel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFindLightNovel.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btnFindNgonTinh
             // 
-            this.button4.BackColor = System.Drawing.Color.Pink;
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(0, 94);
-            this.button4.Margin = new System.Windows.Forms.Padding(0);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(290, 47);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "Sách Tranh Kỹ Năng Sống";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnFindNgonTinh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.btnFindNgonTinh.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFindNgonTinh.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnFindNgonTinh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnFindNgonTinh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFindNgonTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFindNgonTinh.ForeColor = System.Drawing.Color.White;
+            this.btnFindNgonTinh.Location = new System.Drawing.Point(0, 141);
+            this.btnFindNgonTinh.Margin = new System.Windows.Forms.Padding(0);
+            this.btnFindNgonTinh.Name = "btnFindNgonTinh";
+            this.btnFindNgonTinh.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnFindNgonTinh.Size = new System.Drawing.Size(290, 47);
+            this.btnFindNgonTinh.TabIndex = 3;
+            this.btnFindNgonTinh.Text = "Ngôn Tình";
+            this.btnFindNgonTinh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFindNgonTinh.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnFindNhanVat_BaiHocKinhDoanh
             // 
-            this.button1.BackColor = System.Drawing.Color.Pink;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(0, 141);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(290, 47);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Ngôn Tình";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnFindNhanVat_BaiHocKinhDoanh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.btnFindNhanVat_BaiHocKinhDoanh.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFindNhanVat_BaiHocKinhDoanh.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnFindNhanVat_BaiHocKinhDoanh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnFindNhanVat_BaiHocKinhDoanh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFindNhanVat_BaiHocKinhDoanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFindNhanVat_BaiHocKinhDoanh.ForeColor = System.Drawing.Color.White;
+            this.btnFindNhanVat_BaiHocKinhDoanh.Location = new System.Drawing.Point(0, 0);
+            this.btnFindNhanVat_BaiHocKinhDoanh.Margin = new System.Windows.Forms.Padding(0);
+            this.btnFindNhanVat_BaiHocKinhDoanh.Name = "btnFindNhanVat_BaiHocKinhDoanh";
+            this.btnFindNhanVat_BaiHocKinhDoanh.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnFindNhanVat_BaiHocKinhDoanh.Size = new System.Drawing.Size(290, 47);
+            this.btnFindNhanVat_BaiHocKinhDoanh.TabIndex = 0;
+            this.btnFindNhanVat_BaiHocKinhDoanh.Text = "Nhân Vật - Bài Học Kinh Doanh";
+            this.btnFindNhanVat_BaiHocKinhDoanh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFindNhanVat_BaiHocKinhDoanh.UseVisualStyleBackColor = false;
             // 
-            // button13
+            // btnFindQuanTri_LanhDao
             // 
-            this.button13.BackColor = System.Drawing.Color.Pink;
-            this.button13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button13.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button13.Location = new System.Drawing.Point(0, 0);
-            this.button13.Margin = new System.Windows.Forms.Padding(0);
-            this.button13.Name = "button13";
-            this.button13.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button13.Size = new System.Drawing.Size(290, 47);
-            this.button13.TabIndex = 0;
-            this.button13.Text = "Nhân Vật - Bài Học Kinh Doanh";
-            this.button13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button13.UseVisualStyleBackColor = false;
+            this.btnFindQuanTri_LanhDao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.btnFindQuanTri_LanhDao.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFindQuanTri_LanhDao.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnFindQuanTri_LanhDao.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnFindQuanTri_LanhDao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFindQuanTri_LanhDao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFindQuanTri_LanhDao.ForeColor = System.Drawing.Color.White;
+            this.btnFindQuanTri_LanhDao.Location = new System.Drawing.Point(0, 47);
+            this.btnFindQuanTri_LanhDao.Margin = new System.Windows.Forms.Padding(0);
+            this.btnFindQuanTri_LanhDao.Name = "btnFindQuanTri_LanhDao";
+            this.btnFindQuanTri_LanhDao.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnFindQuanTri_LanhDao.Size = new System.Drawing.Size(290, 47);
+            this.btnFindQuanTri_LanhDao.TabIndex = 1;
+            this.btnFindQuanTri_LanhDao.Text = "Quản Trị - Lãnh Đạo";
+            this.btnFindQuanTri_LanhDao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFindQuanTri_LanhDao.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnFindTruyenNgan_TanVan
             // 
-            this.button3.BackColor = System.Drawing.Color.Pink;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(0, 47);
-            this.button3.Margin = new System.Windows.Forms.Padding(0);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(290, 47);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Kiến Thức Bách Khoa";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnFindTruyenNgan_TanVan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.btnFindTruyenNgan_TanVan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFindTruyenNgan_TanVan.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnFindTruyenNgan_TanVan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnFindTruyenNgan_TanVan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFindTruyenNgan_TanVan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFindTruyenNgan_TanVan.ForeColor = System.Drawing.Color.White;
+            this.btnFindTruyenNgan_TanVan.Location = new System.Drawing.Point(0, 47);
+            this.btnFindTruyenNgan_TanVan.Margin = new System.Windows.Forms.Padding(0);
+            this.btnFindTruyenNgan_TanVan.Name = "btnFindTruyenNgan_TanVan";
+            this.btnFindTruyenNgan_TanVan.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnFindTruyenNgan_TanVan.Size = new System.Drawing.Size(290, 47);
+            this.btnFindTruyenNgan_TanVan.TabIndex = 1;
+            this.btnFindTruyenNgan_TanVan.Text = "Truyện Ngắn - Tản Văn";
+            this.btnFindTruyenNgan_TanVan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFindTruyenNgan_TanVan.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnFindPhanTichKinhTe
             // 
-            this.button2.BackColor = System.Drawing.Color.Pink;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(0, 0);
-            this.button2.Margin = new System.Windows.Forms.Padding(0);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(290, 47);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Manga - Comic";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button12
-            // 
-            this.button12.BackColor = System.Drawing.Color.Pink;
-            this.button12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button12.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.Location = new System.Drawing.Point(0, 47);
-            this.button12.Margin = new System.Windows.Forms.Padding(0);
-            this.button12.Name = "button12";
-            this.button12.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button12.Size = new System.Drawing.Size(290, 47);
-            this.button12.TabIndex = 1;
-            this.button12.Text = "Quản Trị - Lãnh Đạo";
-            this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button12.UseVisualStyleBackColor = false;
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.Pink;
-            this.button7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(0, 47);
-            this.button7.Margin = new System.Windows.Forms.Padding(0);
-            this.button7.Name = "button7";
-            this.button7.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button7.Size = new System.Drawing.Size(290, 47);
-            this.button7.TabIndex = 1;
-            this.button7.Text = "Truyện Ngắn - Tản Văn";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.UseVisualStyleBackColor = false;
-            // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.Pink;
-            this.button10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button10.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(0, 141);
-            this.button10.Margin = new System.Windows.Forms.Padding(0);
-            this.button10.Name = "button10";
-            this.button10.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button10.Size = new System.Drawing.Size(290, 47);
-            this.button10.TabIndex = 3;
-            this.button10.Text = "Phân Tích Kinh Tế";
-            this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.UseVisualStyleBackColor = false;
+            this.btnFindPhanTichKinhTe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.btnFindPhanTichKinhTe.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFindPhanTichKinhTe.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnFindPhanTichKinhTe.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnFindPhanTichKinhTe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFindPhanTichKinhTe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFindPhanTichKinhTe.ForeColor = System.Drawing.Color.White;
+            this.btnFindPhanTichKinhTe.Location = new System.Drawing.Point(0, 141);
+            this.btnFindPhanTichKinhTe.Margin = new System.Windows.Forms.Padding(0);
+            this.btnFindPhanTichKinhTe.Name = "btnFindPhanTichKinhTe";
+            this.btnFindPhanTichKinhTe.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnFindPhanTichKinhTe.Size = new System.Drawing.Size(290, 47);
+            this.btnFindPhanTichKinhTe.TabIndex = 3;
+            this.btnFindPhanTichKinhTe.Text = "Phân Tích Kinh Tế";
+            this.btnFindPhanTichKinhTe.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFindPhanTichKinhTe.UseVisualStyleBackColor = false;
             // 
             // panelBiography_MemoirsSubMenu
             // 
-            this.panelBiography_MemoirsSubMenu.Controls.Add(this.button25);
-            this.panelBiography_MemoirsSubMenu.Controls.Add(this.button26);
-            this.panelBiography_MemoirsSubMenu.Controls.Add(this.button27);
-            this.panelBiography_MemoirsSubMenu.Controls.Add(this.button28);
+            this.panelBiography_MemoirsSubMenu.Controls.Add(this.btnFindNgheThuatGiaiTri);
+            this.panelBiography_MemoirsSubMenu.Controls.Add(this.btnFindKinhTe);
+            this.panelBiography_MemoirsSubMenu.Controls.Add(this.btnFindChinhTri);
+            this.panelBiography_MemoirsSubMenu.Controls.Add(this.btnFindCauChuyenCuocDoi);
             this.panelBiography_MemoirsSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelBiography_MemoirsSubMenu.Location = new System.Drawing.Point(0, 1382);
             this.panelBiography_MemoirsSubMenu.Margin = new System.Windows.Forms.Padding(0);
@@ -896,85 +860,90 @@
             this.panelBiography_MemoirsSubMenu.Size = new System.Drawing.Size(290, 190);
             this.panelBiography_MemoirsSubMenu.TabIndex = 14;
             // 
-            // button25
+            // btnFindNgheThuatGiaiTri
             // 
-            this.button25.BackColor = System.Drawing.Color.Pink;
-            this.button25.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button25.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button25.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button25.Location = new System.Drawing.Point(0, 141);
-            this.button25.Margin = new System.Windows.Forms.Padding(0);
-            this.button25.Name = "button25";
-            this.button25.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button25.Size = new System.Drawing.Size(290, 47);
-            this.button25.TabIndex = 3;
-            this.button25.Text = "Nghệ Thuật Giải Trí";
-            this.button25.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button25.UseVisualStyleBackColor = false;
+            this.btnFindNgheThuatGiaiTri.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.btnFindNgheThuatGiaiTri.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFindNgheThuatGiaiTri.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnFindNgheThuatGiaiTri.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnFindNgheThuatGiaiTri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFindNgheThuatGiaiTri.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFindNgheThuatGiaiTri.ForeColor = System.Drawing.Color.White;
+            this.btnFindNgheThuatGiaiTri.Location = new System.Drawing.Point(0, 141);
+            this.btnFindNgheThuatGiaiTri.Margin = new System.Windows.Forms.Padding(0);
+            this.btnFindNgheThuatGiaiTri.Name = "btnFindNgheThuatGiaiTri";
+            this.btnFindNgheThuatGiaiTri.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnFindNgheThuatGiaiTri.Size = new System.Drawing.Size(290, 47);
+            this.btnFindNgheThuatGiaiTri.TabIndex = 3;
+            this.btnFindNgheThuatGiaiTri.Text = "Nghệ Thuật Giải Trí";
+            this.btnFindNgheThuatGiaiTri.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFindNgheThuatGiaiTri.UseVisualStyleBackColor = false;
             // 
-            // button26
+            // btnFindKinhTe
             // 
-            this.button26.BackColor = System.Drawing.Color.Pink;
-            this.button26.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button26.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button26.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.button26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button26.Location = new System.Drawing.Point(0, 94);
-            this.button26.Margin = new System.Windows.Forms.Padding(0);
-            this.button26.Name = "button26";
-            this.button26.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button26.Size = new System.Drawing.Size(290, 47);
-            this.button26.TabIndex = 2;
-            this.button26.Text = "Kinh Tế";
-            this.button26.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button26.UseVisualStyleBackColor = false;
+            this.btnFindKinhTe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.btnFindKinhTe.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFindKinhTe.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnFindKinhTe.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnFindKinhTe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFindKinhTe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFindKinhTe.ForeColor = System.Drawing.Color.White;
+            this.btnFindKinhTe.Location = new System.Drawing.Point(0, 94);
+            this.btnFindKinhTe.Margin = new System.Windows.Forms.Padding(0);
+            this.btnFindKinhTe.Name = "btnFindKinhTe";
+            this.btnFindKinhTe.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnFindKinhTe.Size = new System.Drawing.Size(290, 47);
+            this.btnFindKinhTe.TabIndex = 2;
+            this.btnFindKinhTe.Text = "Kinh Tế";
+            this.btnFindKinhTe.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFindKinhTe.UseVisualStyleBackColor = false;
             // 
-            // button27
+            // btnFindChinhTri
             // 
-            this.button27.BackColor = System.Drawing.Color.Pink;
-            this.button27.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button27.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button27.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.button27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button27.Location = new System.Drawing.Point(0, 47);
-            this.button27.Margin = new System.Windows.Forms.Padding(0);
-            this.button27.Name = "button27";
-            this.button27.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button27.Size = new System.Drawing.Size(290, 47);
-            this.button27.TabIndex = 1;
-            this.button27.Text = "Chính Trị";
-            this.button27.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button27.UseVisualStyleBackColor = false;
+            this.btnFindChinhTri.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.btnFindChinhTri.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFindChinhTri.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnFindChinhTri.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnFindChinhTri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFindChinhTri.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFindChinhTri.ForeColor = System.Drawing.Color.White;
+            this.btnFindChinhTri.Location = new System.Drawing.Point(0, 47);
+            this.btnFindChinhTri.Margin = new System.Windows.Forms.Padding(0);
+            this.btnFindChinhTri.Name = "btnFindChinhTri";
+            this.btnFindChinhTri.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnFindChinhTri.Size = new System.Drawing.Size(290, 47);
+            this.btnFindChinhTri.TabIndex = 1;
+            this.btnFindChinhTri.Text = "Chính Trị";
+            this.btnFindChinhTri.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFindChinhTri.UseVisualStyleBackColor = false;
             // 
-            // button28
+            // btnFindCauChuyenCuocDoi
             // 
-            this.button28.BackColor = System.Drawing.Color.Pink;
-            this.button28.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button28.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button28.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.button28.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button28.Location = new System.Drawing.Point(0, 0);
-            this.button28.Margin = new System.Windows.Forms.Padding(0);
-            this.button28.Name = "button28";
-            this.button28.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button28.Size = new System.Drawing.Size(290, 47);
-            this.button28.TabIndex = 0;
-            this.button28.Text = "Câu Chuyện Cuộc Đời";
-            this.button28.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button28.UseVisualStyleBackColor = false;
+            this.btnFindCauChuyenCuocDoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.btnFindCauChuyenCuocDoi.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFindCauChuyenCuocDoi.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnFindCauChuyenCuocDoi.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnFindCauChuyenCuocDoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFindCauChuyenCuocDoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFindCauChuyenCuocDoi.ForeColor = System.Drawing.Color.White;
+            this.btnFindCauChuyenCuocDoi.Location = new System.Drawing.Point(0, 0);
+            this.btnFindCauChuyenCuocDoi.Margin = new System.Windows.Forms.Padding(0);
+            this.btnFindCauChuyenCuocDoi.Name = "btnFindCauChuyenCuocDoi";
+            this.btnFindCauChuyenCuocDoi.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnFindCauChuyenCuocDoi.Size = new System.Drawing.Size(290, 47);
+            this.btnFindCauChuyenCuocDoi.TabIndex = 0;
+            this.btnFindCauChuyenCuocDoi.Text = "Câu Chuyện Cuộc Đời";
+            this.btnFindCauChuyenCuocDoi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFindCauChuyenCuocDoi.UseVisualStyleBackColor = false;
             // 
             // btnRaiseUpChildBook
             // 
-            this.btnRaiseUpChildBook.BackColor = System.Drawing.Color.LightPink;
+            this.btnRaiseUpChildBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
             this.btnRaiseUpChildBook.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnRaiseUpChildBook.FlatAppearance.BorderSize = 0;
             this.btnRaiseUpChildBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRaiseUpChildBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRaiseUpChildBook.ForeColor = System.Drawing.Color.White;
             this.btnRaiseUpChildBook.Location = new System.Drawing.Point(0, 1098);
             this.btnRaiseUpChildBook.Margin = new System.Windows.Forms.Padding(0);
             this.btnRaiseUpChildBook.Name = "btnRaiseUpChildBook";
@@ -987,10 +956,10 @@
             // 
             // panelPsychology_LifeSkillsSubMenu
             // 
-            this.panelPsychology_LifeSkillsSubMenu.Controls.Add(this.button15);
-            this.panelPsychology_LifeSkillsSubMenu.Controls.Add(this.button16);
-            this.panelPsychology_LifeSkillsSubMenu.Controls.Add(this.button17);
-            this.panelPsychology_LifeSkillsSubMenu.Controls.Add(this.button18);
+            this.panelPsychology_LifeSkillsSubMenu.Controls.Add(this.btnFindSachChoTuoiMoiLon);
+            this.panelPsychology_LifeSkillsSubMenu.Controls.Add(this.btnFindTamLy);
+            this.panelPsychology_LifeSkillsSubMenu.Controls.Add(this.btnFindRenLuyenNhanCach);
+            this.panelPsychology_LifeSkillsSubMenu.Controls.Add(this.btnFindKyNangSong);
             this.panelPsychology_LifeSkillsSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelPsychology_LifeSkillsSubMenu.Location = new System.Drawing.Point(0, 908);
             this.panelPsychology_LifeSkillsSubMenu.Margin = new System.Windows.Forms.Padding(0);
@@ -998,85 +967,90 @@
             this.panelPsychology_LifeSkillsSubMenu.Size = new System.Drawing.Size(290, 190);
             this.panelPsychology_LifeSkillsSubMenu.TabIndex = 9;
             // 
-            // button15
+            // btnFindSachChoTuoiMoiLon
             // 
-            this.button15.BackColor = System.Drawing.Color.Pink;
-            this.button15.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button15.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button15.Location = new System.Drawing.Point(0, 141);
-            this.button15.Margin = new System.Windows.Forms.Padding(0);
-            this.button15.Name = "button15";
-            this.button15.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button15.Size = new System.Drawing.Size(290, 47);
-            this.button15.TabIndex = 3;
-            this.button15.Text = "Sách Cho Tuổi Mới Lớn";
-            this.button15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button15.UseVisualStyleBackColor = false;
+            this.btnFindSachChoTuoiMoiLon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.btnFindSachChoTuoiMoiLon.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFindSachChoTuoiMoiLon.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnFindSachChoTuoiMoiLon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnFindSachChoTuoiMoiLon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFindSachChoTuoiMoiLon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFindSachChoTuoiMoiLon.ForeColor = System.Drawing.Color.White;
+            this.btnFindSachChoTuoiMoiLon.Location = new System.Drawing.Point(0, 141);
+            this.btnFindSachChoTuoiMoiLon.Margin = new System.Windows.Forms.Padding(0);
+            this.btnFindSachChoTuoiMoiLon.Name = "btnFindSachChoTuoiMoiLon";
+            this.btnFindSachChoTuoiMoiLon.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnFindSachChoTuoiMoiLon.Size = new System.Drawing.Size(290, 47);
+            this.btnFindSachChoTuoiMoiLon.TabIndex = 3;
+            this.btnFindSachChoTuoiMoiLon.Text = "Sách Cho Tuổi Mới Lớn";
+            this.btnFindSachChoTuoiMoiLon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFindSachChoTuoiMoiLon.UseVisualStyleBackColor = false;
             // 
-            // button16
+            // btnFindTamLy
             // 
-            this.button16.BackColor = System.Drawing.Color.Pink;
-            this.button16.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button16.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button16.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button16.Location = new System.Drawing.Point(0, 94);
-            this.button16.Margin = new System.Windows.Forms.Padding(0);
-            this.button16.Name = "button16";
-            this.button16.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button16.Size = new System.Drawing.Size(290, 47);
-            this.button16.TabIndex = 2;
-            this.button16.Text = "Tâm Lý";
-            this.button16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button16.UseVisualStyleBackColor = false;
+            this.btnFindTamLy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.btnFindTamLy.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFindTamLy.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnFindTamLy.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnFindTamLy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFindTamLy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFindTamLy.ForeColor = System.Drawing.Color.White;
+            this.btnFindTamLy.Location = new System.Drawing.Point(0, 94);
+            this.btnFindTamLy.Margin = new System.Windows.Forms.Padding(0);
+            this.btnFindTamLy.Name = "btnFindTamLy";
+            this.btnFindTamLy.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnFindTamLy.Size = new System.Drawing.Size(290, 47);
+            this.btnFindTamLy.TabIndex = 2;
+            this.btnFindTamLy.Text = "Tâm Lý";
+            this.btnFindTamLy.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFindTamLy.UseVisualStyleBackColor = false;
             // 
-            // button17
+            // btnFindRenLuyenNhanCach
             // 
-            this.button17.BackColor = System.Drawing.Color.Pink;
-            this.button17.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button17.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button17.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button17.Location = new System.Drawing.Point(0, 47);
-            this.button17.Margin = new System.Windows.Forms.Padding(0);
-            this.button17.Name = "button17";
-            this.button17.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button17.Size = new System.Drawing.Size(290, 47);
-            this.button17.TabIndex = 1;
-            this.button17.Text = "Rèn Luyện Nhân Cách";
-            this.button17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button17.UseVisualStyleBackColor = false;
+            this.btnFindRenLuyenNhanCach.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.btnFindRenLuyenNhanCach.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFindRenLuyenNhanCach.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnFindRenLuyenNhanCach.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnFindRenLuyenNhanCach.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFindRenLuyenNhanCach.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFindRenLuyenNhanCach.ForeColor = System.Drawing.Color.White;
+            this.btnFindRenLuyenNhanCach.Location = new System.Drawing.Point(0, 47);
+            this.btnFindRenLuyenNhanCach.Margin = new System.Windows.Forms.Padding(0);
+            this.btnFindRenLuyenNhanCach.Name = "btnFindRenLuyenNhanCach";
+            this.btnFindRenLuyenNhanCach.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnFindRenLuyenNhanCach.Size = new System.Drawing.Size(290, 47);
+            this.btnFindRenLuyenNhanCach.TabIndex = 1;
+            this.btnFindRenLuyenNhanCach.Text = "Rèn Luyện Nhân Cách";
+            this.btnFindRenLuyenNhanCach.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFindRenLuyenNhanCach.UseVisualStyleBackColor = false;
             // 
-            // button18
+            // btnFindKyNangSong
             // 
-            this.button18.BackColor = System.Drawing.Color.Pink;
-            this.button18.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button18.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button18.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button18.Location = new System.Drawing.Point(0, 0);
-            this.button18.Margin = new System.Windows.Forms.Padding(0);
-            this.button18.Name = "button18";
-            this.button18.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button18.Size = new System.Drawing.Size(290, 47);
-            this.button18.TabIndex = 0;
-            this.button18.Text = "Kỹ Năng Sống";
-            this.button18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button18.UseVisualStyleBackColor = false;
+            this.btnFindKyNangSong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.btnFindKyNangSong.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFindKyNangSong.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnFindKyNangSong.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnFindKyNangSong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFindKyNangSong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFindKyNangSong.ForeColor = System.Drawing.Color.White;
+            this.btnFindKyNangSong.Location = new System.Drawing.Point(0, 0);
+            this.btnFindKyNangSong.Margin = new System.Windows.Forms.Padding(0);
+            this.btnFindKyNangSong.Name = "btnFindKyNangSong";
+            this.btnFindKyNangSong.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnFindKyNangSong.Size = new System.Drawing.Size(290, 47);
+            this.btnFindKyNangSong.TabIndex = 0;
+            this.btnFindKyNangSong.Text = "Kỹ Năng Sống";
+            this.btnFindKyNangSong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFindKyNangSong.UseVisualStyleBackColor = false;
             // 
             // btnBiography_MemoirBook
             // 
-            this.btnBiography_MemoirBook.BackColor = System.Drawing.Color.LightPink;
+            this.btnBiography_MemoirBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
             this.btnBiography_MemoirBook.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnBiography_MemoirBook.FlatAppearance.BorderSize = 0;
             this.btnBiography_MemoirBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBiography_MemoirBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBiography_MemoirBook.ForeColor = System.Drawing.Color.White;
             this.btnBiography_MemoirBook.Location = new System.Drawing.Point(0, 1335);
             this.btnBiography_MemoirBook.Margin = new System.Windows.Forms.Padding(0);
             this.btnBiography_MemoirBook.Name = "btnBiography_MemoirBook";
@@ -1089,10 +1063,10 @@
             // 
             // panelRaiseUpChildSubMenu
             // 
-            this.panelRaiseUpChildSubMenu.Controls.Add(this.button20);
-            this.panelRaiseUpChildSubMenu.Controls.Add(this.button21);
-            this.panelRaiseUpChildSubMenu.Controls.Add(this.button22);
-            this.panelRaiseUpChildSubMenu.Controls.Add(this.button23);
+            this.panelRaiseUpChildSubMenu.Controls.Add(this.btnFindPhatTrienKyNangChoTre);
+            this.panelRaiseUpChildSubMenu.Controls.Add(this.btnFindPhatTrienTriTueChoTre);
+            this.panelRaiseUpChildSubMenu.Controls.Add(this.btnFindPhuongPhapGiaoDucTre);
+            this.panelRaiseUpChildSubMenu.Controls.Add(this.btnFindCamNangLamChaMe);
             this.panelRaiseUpChildSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelRaiseUpChildSubMenu.Location = new System.Drawing.Point(0, 1145);
             this.panelRaiseUpChildSubMenu.Margin = new System.Windows.Forms.Padding(0);
@@ -1100,85 +1074,90 @@
             this.panelRaiseUpChildSubMenu.Size = new System.Drawing.Size(290, 190);
             this.panelRaiseUpChildSubMenu.TabIndex = 11;
             // 
-            // button20
+            // btnFindPhatTrienKyNangChoTre
             // 
-            this.button20.BackColor = System.Drawing.Color.Pink;
-            this.button20.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button20.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button20.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button20.Location = new System.Drawing.Point(0, 141);
-            this.button20.Margin = new System.Windows.Forms.Padding(0);
-            this.button20.Name = "button20";
-            this.button20.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button20.Size = new System.Drawing.Size(290, 47);
-            this.button20.TabIndex = 3;
-            this.button20.Text = "Phát Triển Kỹ Năng Cho Trẻ";
-            this.button20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button20.UseVisualStyleBackColor = false;
+            this.btnFindPhatTrienKyNangChoTre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.btnFindPhatTrienKyNangChoTre.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFindPhatTrienKyNangChoTre.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnFindPhatTrienKyNangChoTre.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnFindPhatTrienKyNangChoTre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFindPhatTrienKyNangChoTre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFindPhatTrienKyNangChoTre.ForeColor = System.Drawing.Color.White;
+            this.btnFindPhatTrienKyNangChoTre.Location = new System.Drawing.Point(0, 141);
+            this.btnFindPhatTrienKyNangChoTre.Margin = new System.Windows.Forms.Padding(0);
+            this.btnFindPhatTrienKyNangChoTre.Name = "btnFindPhatTrienKyNangChoTre";
+            this.btnFindPhatTrienKyNangChoTre.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnFindPhatTrienKyNangChoTre.Size = new System.Drawing.Size(290, 47);
+            this.btnFindPhatTrienKyNangChoTre.TabIndex = 3;
+            this.btnFindPhatTrienKyNangChoTre.Text = "Phát Triển Kỹ Năng Cho Trẻ";
+            this.btnFindPhatTrienKyNangChoTre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFindPhatTrienKyNangChoTre.UseVisualStyleBackColor = false;
             // 
-            // button21
+            // btnFindPhatTrienTriTueChoTre
             // 
-            this.button21.BackColor = System.Drawing.Color.Pink;
-            this.button21.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button21.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button21.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button21.Location = new System.Drawing.Point(0, 94);
-            this.button21.Margin = new System.Windows.Forms.Padding(0);
-            this.button21.Name = "button21";
-            this.button21.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button21.Size = new System.Drawing.Size(290, 47);
-            this.button21.TabIndex = 2;
-            this.button21.Text = "Phát Triển Trí Tuệ Cho Trẻ";
-            this.button21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button21.UseVisualStyleBackColor = false;
+            this.btnFindPhatTrienTriTueChoTre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.btnFindPhatTrienTriTueChoTre.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFindPhatTrienTriTueChoTre.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnFindPhatTrienTriTueChoTre.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnFindPhatTrienTriTueChoTre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFindPhatTrienTriTueChoTre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFindPhatTrienTriTueChoTre.ForeColor = System.Drawing.Color.White;
+            this.btnFindPhatTrienTriTueChoTre.Location = new System.Drawing.Point(0, 94);
+            this.btnFindPhatTrienTriTueChoTre.Margin = new System.Windows.Forms.Padding(0);
+            this.btnFindPhatTrienTriTueChoTre.Name = "btnFindPhatTrienTriTueChoTre";
+            this.btnFindPhatTrienTriTueChoTre.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnFindPhatTrienTriTueChoTre.Size = new System.Drawing.Size(290, 47);
+            this.btnFindPhatTrienTriTueChoTre.TabIndex = 2;
+            this.btnFindPhatTrienTriTueChoTre.Text = "Phát Triển Trí Tuệ Cho Trẻ";
+            this.btnFindPhatTrienTriTueChoTre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFindPhatTrienTriTueChoTre.UseVisualStyleBackColor = false;
             // 
-            // button22
+            // btnFindPhuongPhapGiaoDucTre
             // 
-            this.button22.BackColor = System.Drawing.Color.Pink;
-            this.button22.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button22.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button22.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.button22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button22.Location = new System.Drawing.Point(0, 47);
-            this.button22.Margin = new System.Windows.Forms.Padding(0);
-            this.button22.Name = "button22";
-            this.button22.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button22.Size = new System.Drawing.Size(290, 47);
-            this.button22.TabIndex = 1;
-            this.button22.Text = "Phương Pháp Giáo Dục Trẻ";
-            this.button22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button22.UseVisualStyleBackColor = false;
+            this.btnFindPhuongPhapGiaoDucTre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.btnFindPhuongPhapGiaoDucTre.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFindPhuongPhapGiaoDucTre.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnFindPhuongPhapGiaoDucTre.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnFindPhuongPhapGiaoDucTre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFindPhuongPhapGiaoDucTre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFindPhuongPhapGiaoDucTre.ForeColor = System.Drawing.Color.White;
+            this.btnFindPhuongPhapGiaoDucTre.Location = new System.Drawing.Point(0, 47);
+            this.btnFindPhuongPhapGiaoDucTre.Margin = new System.Windows.Forms.Padding(0);
+            this.btnFindPhuongPhapGiaoDucTre.Name = "btnFindPhuongPhapGiaoDucTre";
+            this.btnFindPhuongPhapGiaoDucTre.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnFindPhuongPhapGiaoDucTre.Size = new System.Drawing.Size(290, 47);
+            this.btnFindPhuongPhapGiaoDucTre.TabIndex = 1;
+            this.btnFindPhuongPhapGiaoDucTre.Text = "Phương Pháp Giáo Dục Trẻ";
+            this.btnFindPhuongPhapGiaoDucTre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFindPhuongPhapGiaoDucTre.UseVisualStyleBackColor = false;
             // 
-            // button23
+            // btnFindCamNangLamChaMe
             // 
-            this.button23.BackColor = System.Drawing.Color.Pink;
-            this.button23.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button23.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button23.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
-            this.button23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button23.Location = new System.Drawing.Point(0, 0);
-            this.button23.Margin = new System.Windows.Forms.Padding(0);
-            this.button23.Name = "button23";
-            this.button23.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button23.Size = new System.Drawing.Size(290, 47);
-            this.button23.TabIndex = 0;
-            this.button23.Text = "Cẩm Nang Làm Cha Mẹ";
-            this.button23.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button23.UseVisualStyleBackColor = false;
+            this.btnFindCamNangLamChaMe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.btnFindCamNangLamChaMe.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFindCamNangLamChaMe.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnFindCamNangLamChaMe.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnFindCamNangLamChaMe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFindCamNangLamChaMe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFindCamNangLamChaMe.ForeColor = System.Drawing.Color.White;
+            this.btnFindCamNangLamChaMe.Location = new System.Drawing.Point(0, 0);
+            this.btnFindCamNangLamChaMe.Margin = new System.Windows.Forms.Padding(0);
+            this.btnFindCamNangLamChaMe.Name = "btnFindCamNangLamChaMe";
+            this.btnFindCamNangLamChaMe.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnFindCamNangLamChaMe.Size = new System.Drawing.Size(290, 47);
+            this.btnFindCamNangLamChaMe.TabIndex = 0;
+            this.btnFindCamNangLamChaMe.Text = "Cẩm Nang Làm Cha Mẹ";
+            this.btnFindCamNangLamChaMe.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFindCamNangLamChaMe.UseVisualStyleBackColor = false;
             // 
             // btnPsychology_LifeSkillsBook
             // 
-            this.btnPsychology_LifeSkillsBook.BackColor = System.Drawing.Color.LightPink;
+            this.btnPsychology_LifeSkillsBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
             this.btnPsychology_LifeSkillsBook.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnPsychology_LifeSkillsBook.FlatAppearance.BorderSize = 0;
             this.btnPsychology_LifeSkillsBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPsychology_LifeSkillsBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPsychology_LifeSkillsBook.ForeColor = System.Drawing.Color.White;
             this.btnPsychology_LifeSkillsBook.Location = new System.Drawing.Point(0, 861);
             this.btnPsychology_LifeSkillsBook.Margin = new System.Windows.Forms.Padding(0);
             this.btnPsychology_LifeSkillsBook.Name = "btnPsychology_LifeSkillsBook";
@@ -1191,10 +1170,10 @@
             // 
             // panelEconomySubMenu
             // 
-            this.panelEconomySubMenu.Controls.Add(this.button10);
-            this.panelEconomySubMenu.Controls.Add(this.button11);
-            this.panelEconomySubMenu.Controls.Add(this.button12);
-            this.panelEconomySubMenu.Controls.Add(this.button13);
+            this.panelEconomySubMenu.Controls.Add(this.btnFindPhanTichKinhTe);
+            this.panelEconomySubMenu.Controls.Add(this.btnFindMarketing_BanHang);
+            this.panelEconomySubMenu.Controls.Add(this.btnFindQuanTri_LanhDao);
+            this.panelEconomySubMenu.Controls.Add(this.btnFindNhanVat_BaiHocKinhDoanh);
             this.panelEconomySubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelEconomySubMenu.Location = new System.Drawing.Point(0, 671);
             this.panelEconomySubMenu.Margin = new System.Windows.Forms.Padding(0);
@@ -1204,11 +1183,12 @@
             // 
             // btnLiteratureBook
             // 
-            this.btnLiteratureBook.BackColor = System.Drawing.Color.LightPink;
+            this.btnLiteratureBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
             this.btnLiteratureBook.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnLiteratureBook.FlatAppearance.BorderSize = 0;
             this.btnLiteratureBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLiteratureBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLiteratureBook.ForeColor = System.Drawing.Color.White;
             this.btnLiteratureBook.Location = new System.Drawing.Point(0, 387);
             this.btnLiteratureBook.Margin = new System.Windows.Forms.Padding(0);
             this.btnLiteratureBook.Name = "btnLiteratureBook";
@@ -1221,23 +1201,101 @@
             // 
             // panelChildrenBookSubmenu
             // 
-            this.panelChildrenBookSubmenu.Controls.Add(this.button5);
-            this.panelChildrenBookSubmenu.Controls.Add(this.button4);
-            this.panelChildrenBookSubmenu.Controls.Add(this.button3);
-            this.panelChildrenBookSubmenu.Controls.Add(this.button2);
+            this.panelChildrenBookSubmenu.Controls.Add(this.btnFindVuaHocVuaChoi);
+            this.panelChildrenBookSubmenu.Controls.Add(this.btnFindTranhKyNangSong);
+            this.panelChildrenBookSubmenu.Controls.Add(this.btnFindKienThucBachKhoa);
+            this.panelChildrenBookSubmenu.Controls.Add(this.btnFindManga_Comic);
             this.panelChildrenBookSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelChildrenBookSubmenu.Location = new System.Drawing.Point(0, 197);
             this.panelChildrenBookSubmenu.Name = "panelChildrenBookSubmenu";
             this.panelChildrenBookSubmenu.Size = new System.Drawing.Size(290, 190);
             this.panelChildrenBookSubmenu.TabIndex = 3;
             // 
+            // btnFindVuaHocVuaChoi
+            // 
+            this.btnFindVuaHocVuaChoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.btnFindVuaHocVuaChoi.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFindVuaHocVuaChoi.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnFindVuaHocVuaChoi.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnFindVuaHocVuaChoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFindVuaHocVuaChoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFindVuaHocVuaChoi.ForeColor = System.Drawing.Color.White;
+            this.btnFindVuaHocVuaChoi.Location = new System.Drawing.Point(0, 141);
+            this.btnFindVuaHocVuaChoi.Margin = new System.Windows.Forms.Padding(0);
+            this.btnFindVuaHocVuaChoi.Name = "btnFindVuaHocVuaChoi";
+            this.btnFindVuaHocVuaChoi.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnFindVuaHocVuaChoi.Size = new System.Drawing.Size(290, 47);
+            this.btnFindVuaHocVuaChoi.TabIndex = 3;
+            this.btnFindVuaHocVuaChoi.Text = "Vừa Học Vừa Chơi";
+            this.btnFindVuaHocVuaChoi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFindVuaHocVuaChoi.UseVisualStyleBackColor = false;
+            // 
+            // btnFindTranhKyNangSong
+            // 
+            this.btnFindTranhKyNangSong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.btnFindTranhKyNangSong.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFindTranhKyNangSong.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnFindTranhKyNangSong.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnFindTranhKyNangSong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFindTranhKyNangSong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFindTranhKyNangSong.ForeColor = System.Drawing.Color.White;
+            this.btnFindTranhKyNangSong.Location = new System.Drawing.Point(0, 94);
+            this.btnFindTranhKyNangSong.Margin = new System.Windows.Forms.Padding(0);
+            this.btnFindTranhKyNangSong.Name = "btnFindTranhKyNangSong";
+            this.btnFindTranhKyNangSong.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnFindTranhKyNangSong.Size = new System.Drawing.Size(290, 47);
+            this.btnFindTranhKyNangSong.TabIndex = 2;
+            this.btnFindTranhKyNangSong.Text = "Sách Tranh Kỹ Năng Sống";
+            this.btnFindTranhKyNangSong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFindTranhKyNangSong.UseVisualStyleBackColor = false;
+            // 
+            // btnFindKienThucBachKhoa
+            // 
+            this.btnFindKienThucBachKhoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.btnFindKienThucBachKhoa.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFindKienThucBachKhoa.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnFindKienThucBachKhoa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnFindKienThucBachKhoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFindKienThucBachKhoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFindKienThucBachKhoa.ForeColor = System.Drawing.Color.White;
+            this.btnFindKienThucBachKhoa.Location = new System.Drawing.Point(0, 47);
+            this.btnFindKienThucBachKhoa.Margin = new System.Windows.Forms.Padding(0);
+            this.btnFindKienThucBachKhoa.Name = "btnFindKienThucBachKhoa";
+            this.btnFindKienThucBachKhoa.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnFindKienThucBachKhoa.Size = new System.Drawing.Size(290, 47);
+            this.btnFindKienThucBachKhoa.TabIndex = 1;
+            this.btnFindKienThucBachKhoa.Text = "Kiến Thức Bách Khoa";
+            this.btnFindKienThucBachKhoa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFindKienThucBachKhoa.UseVisualStyleBackColor = false;
+            // 
+            // btnFindManga_Comic
+            // 
+            this.btnFindManga_Comic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.btnFindManga_Comic.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFindManga_Comic.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnFindManga_Comic.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
+            this.btnFindManga_Comic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFindManga_Comic.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFindManga_Comic.ForeColor = System.Drawing.Color.White;
+            this.btnFindManga_Comic.Location = new System.Drawing.Point(0, 0);
+            this.btnFindManga_Comic.Margin = new System.Windows.Forms.Padding(0);
+            this.btnFindManga_Comic.Name = "btnFindManga_Comic";
+            this.btnFindManga_Comic.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnFindManga_Comic.Size = new System.Drawing.Size(290, 47);
+            this.btnFindManga_Comic.TabIndex = 0;
+            this.btnFindManga_Comic.Text = "Manga - Comic";
+            this.btnFindManga_Comic.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFindManga_Comic.UseVisualStyleBackColor = false;
+            this.btnFindManga_Comic.Click += new System.EventHandler(this.btnFindManga_Comic_Click);
+            // 
             // btnEconomyBook
             // 
-            this.btnEconomyBook.BackColor = System.Drawing.Color.LightPink;
+            this.btnEconomyBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
             this.btnEconomyBook.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnEconomyBook.FlatAppearance.BorderSize = 0;
             this.btnEconomyBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEconomyBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEconomyBook.ForeColor = System.Drawing.Color.White;
             this.btnEconomyBook.Location = new System.Drawing.Point(0, 624);
             this.btnEconomyBook.Margin = new System.Windows.Forms.Padding(0);
             this.btnEconomyBook.Name = "btnEconomyBook";
@@ -1250,10 +1308,10 @@
             // 
             // panelLiteratureSubMenu
             // 
-            this.panelLiteratureSubMenu.Controls.Add(this.button1);
-            this.panelLiteratureSubMenu.Controls.Add(this.button6);
-            this.panelLiteratureSubMenu.Controls.Add(this.button7);
-            this.panelLiteratureSubMenu.Controls.Add(this.button8);
+            this.panelLiteratureSubMenu.Controls.Add(this.btnFindNgonTinh);
+            this.panelLiteratureSubMenu.Controls.Add(this.btnFindLightNovel);
+            this.panelLiteratureSubMenu.Controls.Add(this.btnFindTruyenNgan_TanVan);
+            this.panelLiteratureSubMenu.Controls.Add(this.btnFindTieuThuyet);
             this.panelLiteratureSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLiteratureSubMenu.Location = new System.Drawing.Point(0, 434);
             this.panelLiteratureSubMenu.Name = "panelLiteratureSubMenu";
@@ -1281,7 +1339,8 @@
             // 
             this.panelSideMenu.AutoScroll = true;
             this.panelSideMenu.AutoScrollMinSize = new System.Drawing.Size(250, 1024);
-            this.panelSideMenu.BackColor = System.Drawing.Color.LightPink;
+            this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.panelSideMenu.Controls.Add(this.btnHome);
             this.panelSideMenu.Controls.Add(this.panelForeignLanguageBooksSubMenu);
             this.panelSideMenu.Controls.Add(this.btnForeignLanguagesBook);
             this.panelSideMenu.Controls.Add(this.panelText_ReferenceBookSubMenu);
@@ -1306,13 +1365,32 @@
             this.panelSideMenu.Size = new System.Drawing.Size(307, 961);
             this.panelSideMenu.TabIndex = 1;
             // 
+            // btnHome
+            // 
+            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHome.FlatAppearance.BorderSize = 0;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.ForeColor = System.Drawing.Color.White;
+            this.btnHome.Location = new System.Drawing.Point(0, 2046);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(0);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(290, 47);
+            this.btnHome.TabIndex = 19;
+            this.btnHome.Text = "Trang Chủ";
+            this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
             // btnChildrenBook
             // 
-            this.btnChildrenBook.BackColor = System.Drawing.Color.LightPink;
+            this.btnChildrenBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
             this.btnChildrenBook.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnChildrenBook.FlatAppearance.BorderSize = 0;
             this.btnChildrenBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChildrenBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChildrenBook.ForeColor = System.Drawing.Color.White;
             this.btnChildrenBook.Location = new System.Drawing.Point(0, 150);
             this.btnChildrenBook.Margin = new System.Windows.Forms.Padding(0);
             this.btnChildrenBook.Name = "btnChildrenBook";
@@ -1370,6 +1448,7 @@
             this.tableLayoutShowScreen.ResumeLayout(false);
             this.tableLayoutShowScreen.PerformLayout();
             this.panelShowBoooks.ResumeLayout(false);
+            this.panelShowBoooks.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBookShow)).EndInit();
             this.tableLayoutPanelSearch_Account.ResumeLayout(false);
             this.flowLayoutPanelSearch.ResumeLayout(false);
@@ -1416,45 +1495,41 @@
         private System.Windows.Forms.Button btnSignIn;
         private System.Windows.Forms.Button btnForeignLanguagesBook;
         private System.Windows.Forms.Panel panelText_ReferenceBookSubMenu;
-        private System.Windows.Forms.Button button34;
-        private System.Windows.Forms.Button button35;
-        private System.Windows.Forms.Button button36;
-        private System.Windows.Forms.Button button37;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnFindMauGiao;
+        private System.Windows.Forms.Button btnFindSachChoGiaoVien;
+        private System.Windows.Forms.Button btnFindSachThamKhao;
+        private System.Windows.Forms.Button btnFindSachGiaoKhoa;
+        private System.Windows.Forms.Button btnFindMarketing_BanHang;
+        private System.Windows.Forms.Button btnFindTieuThuyet;
         private System.Windows.Forms.Panel panelForeignLanguageBooksSubMenu;
-        private System.Windows.Forms.Button button39;
-        private System.Windows.Forms.Button button40;
-        private System.Windows.Forms.Button button41;
-        private System.Windows.Forms.Button button42;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button btnFindSachTiengHan;
+        private System.Windows.Forms.Button btnFindSachTiengHoa;
+        private System.Windows.Forms.Button btnFindSachTiengNhat;
+        private System.Windows.Forms.Button btnFindSachTiengAnh;
+        private System.Windows.Forms.Button btnFindLightNovel;
+        private System.Windows.Forms.Button btnFindNgonTinh;
+        private System.Windows.Forms.Button btnFindNhanVat_BaiHocKinhDoanh;
+        private System.Windows.Forms.Button btnFindQuanTri_LanhDao;
+        private System.Windows.Forms.Button btnFindTruyenNgan_TanVan;
+        private System.Windows.Forms.Button btnFindPhanTichKinhTe;
         private System.Windows.Forms.Panel panelBiography_MemoirsSubMenu;
-        private System.Windows.Forms.Button button25;
-        private System.Windows.Forms.Button button26;
-        private System.Windows.Forms.Button button27;
-        private System.Windows.Forms.Button button28;
+        private System.Windows.Forms.Button btnFindNgheThuatGiaiTri;
+        private System.Windows.Forms.Button btnFindKinhTe;
+        private System.Windows.Forms.Button btnFindChinhTri;
+        private System.Windows.Forms.Button btnFindCauChuyenCuocDoi;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button btnRaiseUpChildBook;
         private System.Windows.Forms.Panel panelPsychology_LifeSkillsSubMenu;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.Button btnFindSachChoTuoiMoiLon;
+        private System.Windows.Forms.Button btnFindTamLy;
+        private System.Windows.Forms.Button btnFindRenLuyenNhanCach;
+        private System.Windows.Forms.Button btnFindKyNangSong;
         private System.Windows.Forms.Button btnBiography_MemoirBook;
         private System.Windows.Forms.Panel panelRaiseUpChildSubMenu;
-        private System.Windows.Forms.Button button20;
-        private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.Button button22;
-        private System.Windows.Forms.Button button23;
+        private System.Windows.Forms.Button btnFindPhatTrienKyNangChoTre;
+        private System.Windows.Forms.Button btnFindPhatTrienTriTueChoTre;
+        private System.Windows.Forms.Button btnFindPhuongPhapGiaoDucTre;
+        private System.Windows.Forms.Button btnFindCamNangLamChaMe;
         private System.Windows.Forms.Button btnPsychology_LifeSkillsBook;
         private System.Windows.Forms.Panel panelEconomySubMenu;
         private System.Windows.Forms.Button btnLiteratureBook;
@@ -1463,18 +1538,24 @@
         private System.Windows.Forms.Panel panelLiteratureSubMenu;
         private System.Windows.Forms.TableLayoutPanel tableLayoutMain;
         private System.Windows.Forms.Panel panelSideMenu;
-        private System.Windows.Forms.Button btnChildrenBook;
         private System.Windows.Forms.Panel panelLogoSideMenu;
         private System.Windows.Forms.ImageList imageList20;
         private System.Windows.Forms.PictureBox pictureBoxFavoriteIcon;
         private System.Windows.Forms.ImageList imageList40;
-        private System.Windows.Forms.DataGridView dataGridViewBookShow;
         private System.Windows.Forms.PictureBox pictureBoxShopCart;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Label txtNoticeBookNotFound;
+        private System.Windows.Forms.DataGridView dataGridViewBookShow;
         private System.Windows.Forms.DataGridViewImageColumn BookImage;
         private System.Windows.Forms.DataGridViewTextBoxColumn InformationOfBook;
         private System.Windows.Forms.DataGridViewTextBoxColumn QuantityAndPrice;
         private System.Windows.Forms.DataGridViewButtonColumn AddShopCart;
+        private System.Windows.Forms.Button btnFindVuaHocVuaChoi;
+        private System.Windows.Forms.Button btnFindTranhKyNangSong;
+        private System.Windows.Forms.Button btnFindKienThucBachKhoa;
+        private System.Windows.Forms.Button btnFindManga_Comic;
+        private System.Windows.Forms.Button btnHome;
+        private System.Windows.Forms.Button btnChildrenBook;
     }
 }
 
