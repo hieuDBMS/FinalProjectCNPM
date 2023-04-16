@@ -12,6 +12,7 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace FahasaApp
 {
+ #region Hieu
     public partial class MainForm : Form
     {
         List<Panel> subMenuControl = new List<Panel>();
@@ -19,6 +20,7 @@ namespace FahasaApp
         private int rowCount = 0;   // for load more data to mainform
         private int rowCountCateogy = 0; // for load more data of category datagridview
         DataTable currentDataTable = new DataTable();
+        DataTable currentCategoryTable = new DataTable();
         DataTable allBooks = new DataTable();
         int currentCategoryID = -1;
         public int currentRowCell = 0; //may be used for detail product
@@ -85,7 +87,7 @@ namespace FahasaApp
 
             //Initate Button control for topics of Books
             typeBookControl.Add(btnChildrenBook);
-            typeBookControl.Add(btnBiography_MemoirBook);
+            typeBookControl.Add(btnBiography_MemoryBook);
             typeBookControl.Add(btnEconomyBook);
             typeBookControl.Add(btnForeignLanguagesBook);
             typeBookControl.Add(btnLiteratureBook);
@@ -161,12 +163,23 @@ namespace FahasaApp
         }
         private void btnFindManga_Comic_Click(object sender, EventArgs e)
         {
-            getBookByCategoryID(17);
-
-            searchBox.ForeColor = Color.Silver;          
-            searchBox.Text = "    Nhập thông tin sách bạn muốn tìm kiếm...\r\n";
-            isStartingFocus = true;
-            searchBox_Leave(sender, e);
+            getBookByCategoryID_RefreshSearchBox(17);
+            searchBox_Leave(sender, e); //remove the focus on searchBox
+        }
+        private void btnFindKienThucBachKhoa_Click(object sender, EventArgs e)
+        {
+            getBookByCategoryID_RefreshSearchBox(18);
+            searchBox_Leave(sender, e); //remove the focus on searchBox
+        }
+        private void btnFindTranhKyNangSong_Click(object sender, EventArgs e)
+        {
+            getBookByCategoryID_RefreshSearchBox(19);
+            searchBox_Leave(sender, e); //remove the focus on searchBox
+        }
+        private void btnFindVuaHocVuaChoi_Click(object sender, EventArgs e)
+        {
+            getBookByCategoryID_RefreshSearchBox(20);
+            searchBox_Leave(sender, e); //remove the focus on searchBox
         }
         //
 
@@ -176,48 +189,220 @@ namespace FahasaApp
             showSubmenu(panelLiteratureSubMenu);
 
         }
+        private void btnFindTieuThuyet_Click(object sender, EventArgs e)
+        {
+            getBookByCategoryID_RefreshSearchBox(1);
+            searchBox_Leave(sender, e); //remove the focus on searchBox
+        }
+        private void btnFindTruyenNgan_TanVan_Click(object sender, EventArgs e)
+        {
+            getBookByCategoryID_RefreshSearchBox(2);
+            searchBox_Leave(sender, e); //remove the focus on searchBox
+        }
+
+        private void btnFindLightNovel_Click(object sender, EventArgs e)
+        {
+            getBookByCategoryID_RefreshSearchBox(3);
+            searchBox_Leave(sender, e); //remove the focus on searchBox
+        }
+
+        private void btnFindNgonTinh_Click(object sender, EventArgs e)
+        {
+            getBookByCategoryID_RefreshSearchBox(4);
+            searchBox_Leave(sender, e); //remove the focus on searchBox
+        }
         //
 
+        //Find book in Economy Books
         private void btnEconomyBook_Click(object sender, EventArgs e)
         {
             showSubmenu(panelEconomySubMenu);
 
         }
+        private void btnFindNhanVat_BaiHocKinhDoanh_Click(object sender, EventArgs e)
+        {
+            getBookByCategoryID_RefreshSearchBox(5);
+            searchBox_Leave(sender, e); //remove the focus on searchBox
+        }
 
+        private void btnFindQuanTri_LanhDao_Click(object sender, EventArgs e)
+        {
+            getBookByCategoryID_RefreshSearchBox(6);
+            searchBox_Leave(sender, e); //remove the focus on searchBox
+        }
+
+        private void btnFindMarketing_BanHang_Click(object sender, EventArgs e)
+        {
+            getBookByCategoryID_RefreshSearchBox(7);
+            searchBox_Leave(sender, e); //remove the focus on searchBox
+        }
+
+        private void btnFindPhanTichKinhTe_Click(object sender, EventArgs e)
+        {
+            getBookByCategoryID_RefreshSearchBox(8);
+            searchBox_Leave(sender, e); //remove the focus on searchBox
+        }
+        //
+
+        //Find book in Psychology_LifeSkillsBook Books
         private void btnPsychology_LifeSkillsBook_Click(object sender, EventArgs e)
         {
             showSubmenu(panelPsychology_LifeSkillsSubMenu);
-
+        }
+        private void btnFindKyNangSong_Click(object sender, EventArgs e)
+        {
+            getBookByCategoryID_RefreshSearchBox(9);
+            searchBox_Leave(sender, e); //remove the focus on searchBox
         }
 
+        private void btnFindRenLuyenNhanCach_Click(object sender, EventArgs e)
+        {
+            getBookByCategoryID_RefreshSearchBox(10);
+            searchBox_Leave(sender, e); //remove the focus on searchBox
+        }
+
+        private void btnFindTamLy_Click(object sender, EventArgs e)
+        {
+            getBookByCategoryID_RefreshSearchBox(11);
+            searchBox_Leave(sender, e); //remove the focus on searchBox
+        }
+
+        private void btnFindSachChoTuoiMoiLon_Click(object sender, EventArgs e)
+        {
+            getBookByCategoryID_RefreshSearchBox(12);
+            searchBox_Leave(sender, e); //remove the focus on searchBox
+        }
+        //
+
+        //Find book in RaiseUpChild Books
         private void btnRaiseUpChildBook_Click(object sender, EventArgs e)
         {
             showSubmenu(panelRaiseUpChildSubMenu);
-
+        }
+        private void btnFindCamNangLamChaMe_Click(object sender, EventArgs e)
+        {
+            getBookByCategoryID_RefreshSearchBox(13);
+            searchBox_Leave(sender, e); //remove the focus on searchBox
         }
 
-        private void btnBiography_MemoirBook_Click(object sender, EventArgs e)
+        private void btnFindPhuongPhapGiaoDucTre_Click(object sender, EventArgs e)
+        {
+            getBookByCategoryID_RefreshSearchBox(14);
+            searchBox_Leave(sender, e); //remove the focus on searchBox
+        }
+
+        private void btnFindPhatTrienTriTueChoTre_Click(object sender, EventArgs e)
+        {
+            getBookByCategoryID_RefreshSearchBox(15);
+            searchBox_Leave(sender, e); //remove the focus on searchBox
+        }
+
+        private void btnFindPhatTrienKyNangChoTre_Click(object sender, EventArgs e)
+        {
+            getBookByCategoryID_RefreshSearchBox(16);
+            searchBox_Leave(sender, e); //remove the focus on searchBox
+        }
+        //
+
+        //Find book in Biography_Memory Books
+        private void btnBiography_MemoryBook_Click(object sender, EventArgs e)
         {
             showSubmenu(panelBiography_MemoirsSubMenu);
         }
 
+        private void btnFindCauChuyenCuocDoi_Click(object sender, EventArgs e)
+        {
+            getBookByCategoryID_RefreshSearchBox(21);
+            searchBox_Leave(sender, e); //remove the focus on searchBox
+        }
+
+        private void btnFindChinhTri_Click(object sender, EventArgs e)
+        {
+            getBookByCategoryID_RefreshSearchBox(22);
+            searchBox_Leave(sender, e); //remove the focus on searchBox
+        }
+
+        private void btnFindKinhTe_Click(object sender, EventArgs e)
+        {
+            getBookByCategoryID_RefreshSearchBox(23);
+            searchBox_Leave(sender, e); //remove the focus on searchBox
+        }
+
+        private void btnFindNgheThuatGiaiTri_Click(object sender, EventArgs e)
+        {
+            getBookByCategoryID_RefreshSearchBox(24);
+            searchBox_Leave(sender, e); //remove the focus on searchBox
+        }
+        //
+
+        //Find book in Text_Reference Books
         private void btnText_ReferenceBook_Click(object sender, EventArgs e)
         {
             showSubmenu(panelText_ReferenceBookSubMenu);
-
         }
 
+        private void btnFindSachGiaoKhoa_Click(object sender, EventArgs e)
+        {
+            getBookByCategoryID_RefreshSearchBox(25);
+            searchBox_Leave(sender, e); //remove the focus on searchBox
+        }
+
+        private void btnFindSachThamKhao_Click(object sender, EventArgs e)
+        {
+            getBookByCategoryID_RefreshSearchBox(26);
+            searchBox_Leave(sender, e); //remove the focus on searchBox
+        }
+
+        private void btnFindSachChoGiaoVien_Click(object sender, EventArgs e)
+        {
+            getBookByCategoryID_RefreshSearchBox(27);
+            searchBox_Leave(sender, e); //remove the focus on searchBox
+        }
+
+        private void btnFindMauGiao_Click(object sender, EventArgs e)
+        {
+            getBookByCategoryID_RefreshSearchBox(28);
+            searchBox_Leave(sender, e); //remove the focus on searchBox
+        }
+        //
+
+        //Find book in ForeignLanguages Books
         private void btnForeignLanguagesBook_Click(object sender, EventArgs e)
         {
             showSubmenu(panelForeignLanguageBooksSubMenu);
-
         }
+
+        private void btnFindSachTiengAnh_Click(object sender, EventArgs e)
+        {
+            getBookByCategoryID_RefreshSearchBox(29);
+            searchBox_Leave(sender, e); //remove the focus on searchBox
+        }
+
+        private void btnFindSachTiengNhat_Click(object sender, EventArgs e)
+        {
+            getBookByCategoryID_RefreshSearchBox(30);
+            searchBox_Leave(sender, e); //remove the focus on searchBox
+        }
+
+        private void btnFindSachTiengHoa_Click(object sender, EventArgs e)
+        {
+            getBookByCategoryID_RefreshSearchBox(31);
+            searchBox_Leave(sender, e); //remove the focus on searchBox
+        }
+
+        private void btnFindSachTiengHan_Click(object sender, EventArgs e)
+        {
+            getBookByCategoryID_RefreshSearchBox(32);
+            searchBox_Leave(sender, e); //remove the focus on searchBox
+        }
+        //
+
+        //Button to the Home screen
         private void btnHome_Click(object sender, EventArgs e)
         {
             hideSubMenu();
             searchBox.Text = string.Empty; //clear current text, replace the filtered with currentDatatable and set notice text for search box
             searchBox_Leave(sender,e);  //this line will
-            dataGridViewBookShow.CurrentCell = dataGridViewBookShow.Rows[0].Cells[0];  // move to the top of the datatable
 
             // Replace the datatable of category book with currentDatatable
             if(currentCategoryID != -1)
@@ -225,15 +410,20 @@ namespace FahasaApp
                 currentCategoryID = -1;
                 updateDatagrideViewBySubCategory(currentDataTable,false);
             }
+            dataGridViewBookShow.CurrentCell = dataGridViewBookShow.Rows[0].Cells[0];  // move to the top of the datatable
+
+            //refresh category instances
+            currentCategoryTable.Rows.Clear();
+            rowCountCateogy = 0;
         }
 
-        private void updateDatagrideViewBySubCategory(DataTable dt, bool flagToCreate)
+        private void updateDatagrideViewBySubCategory(DataTable dt, bool flagToCreate) 
         {
             dataGridViewBookShow.Invoke((MethodInvoker)delegate ()
             {
                 dataGridViewBookShow.DataSource = null;
                 dataGridViewBookShow.Rows.Clear();
-                if (flagToCreate)
+                if (flagToCreate) // used to identify the dataTable is adjusted or not
                     dataGridViewBookShow.DataSource = createColumn_And_ChangeInformationOfColumn(dt);
                 else
                     dataGridViewBookShow.DataSource = dt;
@@ -245,8 +435,10 @@ namespace FahasaApp
             });
         }
 
-        private void getBookByCategoryID(int categoryID)
+        private void getBookByCategoryID_RefreshSearchBox(int categoryID)
         {
+            //Clear the previous table before get the new one
+            currentCategoryTable.Rows.Clear();
             SqlConnection conn = new SqlConnection(Program.getConnectString());
             conn.Open();
             SqlCommand cmd = new SqlCommand("[GetBooksByCategory]", conn);
@@ -257,9 +449,14 @@ namespace FahasaApp
             da.Fill(dt);
             conn.Close();
             da.Dispose();
+            currentCategoryTable = dt;
             currentCategoryID = categoryID;
             rowCountCateogy = dt.Rows.Count;
             updateDatagrideViewBySubCategory(dt, true);
+
+            searchBox.ForeColor = Color.Silver;
+            searchBox.Text = "    Nhập thông tin sách bạn muốn tìm kiếm...\r\n";
+            isStartingFocus = true;
         }
 
 
@@ -387,14 +584,24 @@ namespace FahasaApp
                         dt = createColumn_And_ChangeInformationOfColumn(dt);
                         dataGridViewBookShow.Invoke((MethodInvoker)delegate ()
                         {
-                            currentDataTable.Merge(dt);
+                            DataTable dataToUpdate = new DataTable();
+                            if(currentCategoryID == -1)
+                            {
+                                currentDataTable.Merge(dt);
+                                dataToUpdate = currentDataTable;
+                            }
+                            else
+                            {
+                                currentCategoryTable.Merge(dt);
+                                dataToUpdate = currentCategoryTable;
+                            }                               
                             dataGridViewBookShow.DataSource = null;
                             dataGridViewBookShow.Rows.Clear();
-                            dataGridViewBookShow.DataSource = currentDataTable;
+                            dataGridViewBookShow.DataSource = dataToUpdate;
                             dataGridViewBookShow.Invalidate();
                             dataGridViewBookShow.Refresh();
                             dataGridViewBookShow.Update();
-                            dataGridViewBookShow.CurrentCell = dataGridViewBookShow.Rows[rowCount].Cells[0];
+                            dataGridViewBookShow.CurrentCell = dataGridViewBookShow.Rows[RowCount - 1].Cells[0];
                             dataGridViewBookShow.ClearSelection();
                             //add rowcount for home
                             if(currentCategoryID == -1)
@@ -419,8 +626,8 @@ namespace FahasaApp
                                 {
                                     rowCountCateogy += dt.Rows.Count;
                                 }
-                            }
-                            
+                            }                            
+
                         });
                         conn.Close();
                     }
@@ -587,7 +794,6 @@ namespace FahasaApp
         {
             allBooks.Clear();
         }
-
-
     }
+    #endregion
 }

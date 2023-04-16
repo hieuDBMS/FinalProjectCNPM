@@ -31,9 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.FlowLayoutPanel flowLayoutPanelIconUser;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBoxAccountIcon = new System.Windows.Forms.PictureBox();
             this.btnText_ReferenceBook = new System.Windows.Forms.Button();
             this.tableLayoutShowScreen = new System.Windows.Forms.TableLayoutPanel();
@@ -89,7 +89,7 @@
             this.btnFindTamLy = new System.Windows.Forms.Button();
             this.btnFindRenLuyenNhanCach = new System.Windows.Forms.Button();
             this.btnFindKyNangSong = new System.Windows.Forms.Button();
-            this.btnBiography_MemoirBook = new System.Windows.Forms.Button();
+            this.btnBiography_MemoryBook = new System.Windows.Forms.Button();
             this.panelRaiseUpChildSubMenu = new System.Windows.Forms.Panel();
             this.btnFindPhatTrienKyNangChoTre = new System.Windows.Forms.Button();
             this.btnFindPhatTrienTriTueChoTre = new System.Windows.Forms.Button();
@@ -252,15 +252,15 @@
             this.InformationOfBook,
             this.QuantityAndPrice,
             this.AddShopCart});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(5);
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewBookShow.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            dataGridViewCellStyle41.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle41.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle41.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle41.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle41.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle41.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle41.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewBookShow.DefaultCellStyle = dataGridViewCellStyle41;
             this.dataGridViewBookShow.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewBookShow.GridColor = System.Drawing.Color.LightSalmon;
             this.dataGridViewBookShow.Location = new System.Drawing.Point(0, 0);
@@ -269,14 +269,14 @@
             this.dataGridViewBookShow.Name = "dataGridViewBookShow";
             this.dataGridViewBookShow.ReadOnly = true;
             this.dataGridViewBookShow.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewBookShow.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle42.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle42.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle42.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle42.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle42.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewBookShow.RowHeadersDefaultCellStyle = dataGridViewCellStyle42;
             this.dataGridViewBookShow.RowHeadersVisible = false;
             this.dataGridViewBookShow.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
             this.dataGridViewBookShow.RowTemplate.Height = 130;
@@ -315,13 +315,13 @@
             // 
             // AddShopCart
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(10, 30, 10, 30);
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.AddShopCart.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle40.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle40.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle40.Padding = new System.Windows.Forms.Padding(10, 30, 10, 30);
+            dataGridViewCellStyle40.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle40.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.AddShopCart.DefaultCellStyle = dataGridViewCellStyle40;
             this.AddShopCart.FillWeight = 25F;
             this.AddShopCart.HeaderText = "Add Cart";
             this.AddShopCart.Name = "AddShopCart";
@@ -548,6 +548,7 @@
             this.btnFindMauGiao.Text = "Mẫu Giáo";
             this.btnFindMauGiao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFindMauGiao.UseVisualStyleBackColor = false;
+            this.btnFindMauGiao.Click += new System.EventHandler(this.btnFindMauGiao_Click);
             // 
             // btnFindSachChoGiaoVien
             // 
@@ -567,6 +568,7 @@
             this.btnFindSachChoGiaoVien.Text = "Sách Cho Giáo Viên";
             this.btnFindSachChoGiaoVien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFindSachChoGiaoVien.UseVisualStyleBackColor = false;
+            this.btnFindSachChoGiaoVien.Click += new System.EventHandler(this.btnFindSachChoGiaoVien_Click);
             // 
             // btnFindSachThamKhao
             // 
@@ -586,6 +588,7 @@
             this.btnFindSachThamKhao.Text = "Sách Tham Khảo";
             this.btnFindSachThamKhao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFindSachThamKhao.UseVisualStyleBackColor = false;
+            this.btnFindSachThamKhao.Click += new System.EventHandler(this.btnFindSachThamKhao_Click);
             // 
             // btnFindSachGiaoKhoa
             // 
@@ -605,6 +608,7 @@
             this.btnFindSachGiaoKhoa.Text = "Sách Giáo Khoa";
             this.btnFindSachGiaoKhoa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFindSachGiaoKhoa.UseVisualStyleBackColor = false;
+            this.btnFindSachGiaoKhoa.Click += new System.EventHandler(this.btnFindSachGiaoKhoa_Click);
             // 
             // btnFindMarketing_BanHang
             // 
@@ -624,6 +628,7 @@
             this.btnFindMarketing_BanHang.Text = "Marketing - Bán Hàng";
             this.btnFindMarketing_BanHang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFindMarketing_BanHang.UseVisualStyleBackColor = false;
+            this.btnFindMarketing_BanHang.Click += new System.EventHandler(this.btnFindMarketing_BanHang_Click);
             // 
             // btnFindTieuThuyet
             // 
@@ -643,6 +648,7 @@
             this.btnFindTieuThuyet.Text = "Tiểu Thuyết";
             this.btnFindTieuThuyet.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFindTieuThuyet.UseVisualStyleBackColor = false;
+            this.btnFindTieuThuyet.Click += new System.EventHandler(this.btnFindTieuThuyet_Click);
             // 
             // panelForeignLanguageBooksSubMenu
             // 
@@ -675,6 +681,7 @@
             this.btnFindSachTiengHan.Text = "Tiếng Hàn";
             this.btnFindSachTiengHan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFindSachTiengHan.UseVisualStyleBackColor = false;
+            this.btnFindSachTiengHan.Click += new System.EventHandler(this.btnFindSachTiengHan_Click);
             // 
             // btnFindSachTiengHoa
             // 
@@ -694,6 +701,7 @@
             this.btnFindSachTiengHoa.Text = "Tiếng Hoa";
             this.btnFindSachTiengHoa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFindSachTiengHoa.UseVisualStyleBackColor = false;
+            this.btnFindSachTiengHoa.Click += new System.EventHandler(this.btnFindSachTiengHoa_Click);
             // 
             // btnFindSachTiengNhat
             // 
@@ -713,6 +721,7 @@
             this.btnFindSachTiengNhat.Text = "Tiếng Nhật";
             this.btnFindSachTiengNhat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFindSachTiengNhat.UseVisualStyleBackColor = false;
+            this.btnFindSachTiengNhat.Click += new System.EventHandler(this.btnFindSachTiengNhat_Click);
             // 
             // btnFindSachTiengAnh
             // 
@@ -732,6 +741,7 @@
             this.btnFindSachTiengAnh.Text = "Tiếng Anh";
             this.btnFindSachTiengAnh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFindSachTiengAnh.UseVisualStyleBackColor = false;
+            this.btnFindSachTiengAnh.Click += new System.EventHandler(this.btnFindSachTiengAnh_Click);
             // 
             // btnFindLightNovel
             // 
@@ -751,6 +761,7 @@
             this.btnFindLightNovel.Text = "Light Novel";
             this.btnFindLightNovel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFindLightNovel.UseVisualStyleBackColor = false;
+            this.btnFindLightNovel.Click += new System.EventHandler(this.btnFindLightNovel_Click);
             // 
             // btnFindNgonTinh
             // 
@@ -770,6 +781,7 @@
             this.btnFindNgonTinh.Text = "Ngôn Tình";
             this.btnFindNgonTinh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFindNgonTinh.UseVisualStyleBackColor = false;
+            this.btnFindNgonTinh.Click += new System.EventHandler(this.btnFindNgonTinh_Click);
             // 
             // btnFindNhanVat_BaiHocKinhDoanh
             // 
@@ -789,6 +801,7 @@
             this.btnFindNhanVat_BaiHocKinhDoanh.Text = "Nhân Vật - Bài Học Kinh Doanh";
             this.btnFindNhanVat_BaiHocKinhDoanh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFindNhanVat_BaiHocKinhDoanh.UseVisualStyleBackColor = false;
+            this.btnFindNhanVat_BaiHocKinhDoanh.Click += new System.EventHandler(this.btnFindNhanVat_BaiHocKinhDoanh_Click);
             // 
             // btnFindQuanTri_LanhDao
             // 
@@ -808,6 +821,7 @@
             this.btnFindQuanTri_LanhDao.Text = "Quản Trị - Lãnh Đạo";
             this.btnFindQuanTri_LanhDao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFindQuanTri_LanhDao.UseVisualStyleBackColor = false;
+            this.btnFindQuanTri_LanhDao.Click += new System.EventHandler(this.btnFindQuanTri_LanhDao_Click);
             // 
             // btnFindTruyenNgan_TanVan
             // 
@@ -827,6 +841,7 @@
             this.btnFindTruyenNgan_TanVan.Text = "Truyện Ngắn - Tản Văn";
             this.btnFindTruyenNgan_TanVan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFindTruyenNgan_TanVan.UseVisualStyleBackColor = false;
+            this.btnFindTruyenNgan_TanVan.Click += new System.EventHandler(this.btnFindTruyenNgan_TanVan_Click);
             // 
             // btnFindPhanTichKinhTe
             // 
@@ -846,6 +861,7 @@
             this.btnFindPhanTichKinhTe.Text = "Phân Tích Kinh Tế";
             this.btnFindPhanTichKinhTe.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFindPhanTichKinhTe.UseVisualStyleBackColor = false;
+            this.btnFindPhanTichKinhTe.Click += new System.EventHandler(this.btnFindPhanTichKinhTe_Click);
             // 
             // panelBiography_MemoirsSubMenu
             // 
@@ -878,6 +894,7 @@
             this.btnFindNgheThuatGiaiTri.Text = "Nghệ Thuật Giải Trí";
             this.btnFindNgheThuatGiaiTri.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFindNgheThuatGiaiTri.UseVisualStyleBackColor = false;
+            this.btnFindNgheThuatGiaiTri.Click += new System.EventHandler(this.btnFindNgheThuatGiaiTri_Click);
             // 
             // btnFindKinhTe
             // 
@@ -897,6 +914,7 @@
             this.btnFindKinhTe.Text = "Kinh Tế";
             this.btnFindKinhTe.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFindKinhTe.UseVisualStyleBackColor = false;
+            this.btnFindKinhTe.Click += new System.EventHandler(this.btnFindKinhTe_Click);
             // 
             // btnFindChinhTri
             // 
@@ -916,6 +934,7 @@
             this.btnFindChinhTri.Text = "Chính Trị";
             this.btnFindChinhTri.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFindChinhTri.UseVisualStyleBackColor = false;
+            this.btnFindChinhTri.Click += new System.EventHandler(this.btnFindChinhTri_Click);
             // 
             // btnFindCauChuyenCuocDoi
             // 
@@ -935,6 +954,7 @@
             this.btnFindCauChuyenCuocDoi.Text = "Câu Chuyện Cuộc Đời";
             this.btnFindCauChuyenCuocDoi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFindCauChuyenCuocDoi.UseVisualStyleBackColor = false;
+            this.btnFindCauChuyenCuocDoi.Click += new System.EventHandler(this.btnFindCauChuyenCuocDoi_Click);
             // 
             // btnRaiseUpChildBook
             // 
@@ -985,6 +1005,7 @@
             this.btnFindSachChoTuoiMoiLon.Text = "Sách Cho Tuổi Mới Lớn";
             this.btnFindSachChoTuoiMoiLon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFindSachChoTuoiMoiLon.UseVisualStyleBackColor = false;
+            this.btnFindSachChoTuoiMoiLon.Click += new System.EventHandler(this.btnFindSachChoTuoiMoiLon_Click);
             // 
             // btnFindTamLy
             // 
@@ -1004,6 +1025,7 @@
             this.btnFindTamLy.Text = "Tâm Lý";
             this.btnFindTamLy.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFindTamLy.UseVisualStyleBackColor = false;
+            this.btnFindTamLy.Click += new System.EventHandler(this.btnFindTamLy_Click);
             // 
             // btnFindRenLuyenNhanCach
             // 
@@ -1023,6 +1045,7 @@
             this.btnFindRenLuyenNhanCach.Text = "Rèn Luyện Nhân Cách";
             this.btnFindRenLuyenNhanCach.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFindRenLuyenNhanCach.UseVisualStyleBackColor = false;
+            this.btnFindRenLuyenNhanCach.Click += new System.EventHandler(this.btnFindRenLuyenNhanCach_Click);
             // 
             // btnFindKyNangSong
             // 
@@ -1042,24 +1065,25 @@
             this.btnFindKyNangSong.Text = "Kỹ Năng Sống";
             this.btnFindKyNangSong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFindKyNangSong.UseVisualStyleBackColor = false;
+            this.btnFindKyNangSong.Click += new System.EventHandler(this.btnFindKyNangSong_Click);
             // 
-            // btnBiography_MemoirBook
+            // btnBiography_MemoryBook
             // 
-            this.btnBiography_MemoirBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.btnBiography_MemoirBook.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnBiography_MemoirBook.FlatAppearance.BorderSize = 0;
-            this.btnBiography_MemoirBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBiography_MemoirBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBiography_MemoirBook.ForeColor = System.Drawing.Color.White;
-            this.btnBiography_MemoirBook.Location = new System.Drawing.Point(0, 1335);
-            this.btnBiography_MemoirBook.Margin = new System.Windows.Forms.Padding(0);
-            this.btnBiography_MemoirBook.Name = "btnBiography_MemoirBook";
-            this.btnBiography_MemoirBook.Size = new System.Drawing.Size(290, 47);
-            this.btnBiography_MemoirBook.TabIndex = 13;
-            this.btnBiography_MemoirBook.Text = "Tiểu Sử - Hồi Ký";
-            this.btnBiography_MemoirBook.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBiography_MemoirBook.UseVisualStyleBackColor = false;
-            this.btnBiography_MemoirBook.Click += new System.EventHandler(this.btnBiography_MemoirBook_Click);
+            this.btnBiography_MemoryBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.btnBiography_MemoryBook.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBiography_MemoryBook.FlatAppearance.BorderSize = 0;
+            this.btnBiography_MemoryBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBiography_MemoryBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBiography_MemoryBook.ForeColor = System.Drawing.Color.White;
+            this.btnBiography_MemoryBook.Location = new System.Drawing.Point(0, 1335);
+            this.btnBiography_MemoryBook.Margin = new System.Windows.Forms.Padding(0);
+            this.btnBiography_MemoryBook.Name = "btnBiography_MemoryBook";
+            this.btnBiography_MemoryBook.Size = new System.Drawing.Size(290, 47);
+            this.btnBiography_MemoryBook.TabIndex = 13;
+            this.btnBiography_MemoryBook.Text = "Tiểu Sử - Hồi Ký";
+            this.btnBiography_MemoryBook.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBiography_MemoryBook.UseVisualStyleBackColor = false;
+            this.btnBiography_MemoryBook.Click += new System.EventHandler(this.btnBiography_MemoryBook_Click);
             // 
             // panelRaiseUpChildSubMenu
             // 
@@ -1092,6 +1116,7 @@
             this.btnFindPhatTrienKyNangChoTre.Text = "Phát Triển Kỹ Năng Cho Trẻ";
             this.btnFindPhatTrienKyNangChoTre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFindPhatTrienKyNangChoTre.UseVisualStyleBackColor = false;
+            this.btnFindPhatTrienKyNangChoTre.Click += new System.EventHandler(this.btnFindPhatTrienKyNangChoTre_Click);
             // 
             // btnFindPhatTrienTriTueChoTre
             // 
@@ -1111,6 +1136,7 @@
             this.btnFindPhatTrienTriTueChoTre.Text = "Phát Triển Trí Tuệ Cho Trẻ";
             this.btnFindPhatTrienTriTueChoTre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFindPhatTrienTriTueChoTre.UseVisualStyleBackColor = false;
+            this.btnFindPhatTrienTriTueChoTre.Click += new System.EventHandler(this.btnFindPhatTrienTriTueChoTre_Click);
             // 
             // btnFindPhuongPhapGiaoDucTre
             // 
@@ -1130,6 +1156,7 @@
             this.btnFindPhuongPhapGiaoDucTre.Text = "Phương Pháp Giáo Dục Trẻ";
             this.btnFindPhuongPhapGiaoDucTre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFindPhuongPhapGiaoDucTre.UseVisualStyleBackColor = false;
+            this.btnFindPhuongPhapGiaoDucTre.Click += new System.EventHandler(this.btnFindPhuongPhapGiaoDucTre_Click);
             // 
             // btnFindCamNangLamChaMe
             // 
@@ -1149,6 +1176,7 @@
             this.btnFindCamNangLamChaMe.Text = "Cẩm Nang Làm Cha Mẹ";
             this.btnFindCamNangLamChaMe.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFindCamNangLamChaMe.UseVisualStyleBackColor = false;
+            this.btnFindCamNangLamChaMe.Click += new System.EventHandler(this.btnFindCamNangLamChaMe_Click);
             // 
             // btnPsychology_LifeSkillsBook
             // 
@@ -1229,6 +1257,7 @@
             this.btnFindVuaHocVuaChoi.Text = "Vừa Học Vừa Chơi";
             this.btnFindVuaHocVuaChoi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFindVuaHocVuaChoi.UseVisualStyleBackColor = false;
+            this.btnFindVuaHocVuaChoi.Click += new System.EventHandler(this.btnFindVuaHocVuaChoi_Click);
             // 
             // btnFindTranhKyNangSong
             // 
@@ -1248,6 +1277,7 @@
             this.btnFindTranhKyNangSong.Text = "Sách Tranh Kỹ Năng Sống";
             this.btnFindTranhKyNangSong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFindTranhKyNangSong.UseVisualStyleBackColor = false;
+            this.btnFindTranhKyNangSong.Click += new System.EventHandler(this.btnFindTranhKyNangSong_Click);
             // 
             // btnFindKienThucBachKhoa
             // 
@@ -1267,6 +1297,7 @@
             this.btnFindKienThucBachKhoa.Text = "Kiến Thức Bách Khoa";
             this.btnFindKienThucBachKhoa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFindKienThucBachKhoa.UseVisualStyleBackColor = false;
+            this.btnFindKienThucBachKhoa.Click += new System.EventHandler(this.btnFindKienThucBachKhoa_Click);
             // 
             // btnFindManga_Comic
             // 
@@ -1346,7 +1377,7 @@
             this.panelSideMenu.Controls.Add(this.panelText_ReferenceBookSubMenu);
             this.panelSideMenu.Controls.Add(this.btnText_ReferenceBook);
             this.panelSideMenu.Controls.Add(this.panelBiography_MemoirsSubMenu);
-            this.panelSideMenu.Controls.Add(this.btnBiography_MemoirBook);
+            this.panelSideMenu.Controls.Add(this.btnBiography_MemoryBook);
             this.panelSideMenu.Controls.Add(this.panelRaiseUpChildSubMenu);
             this.panelSideMenu.Controls.Add(this.btnRaiseUpChildBook);
             this.panelSideMenu.Controls.Add(this.panelPsychology_LifeSkillsSubMenu);
@@ -1524,7 +1555,7 @@
         private System.Windows.Forms.Button btnFindTamLy;
         private System.Windows.Forms.Button btnFindRenLuyenNhanCach;
         private System.Windows.Forms.Button btnFindKyNangSong;
-        private System.Windows.Forms.Button btnBiography_MemoirBook;
+        private System.Windows.Forms.Button btnBiography_MemoryBook;
         private System.Windows.Forms.Panel panelRaiseUpChildSubMenu;
         private System.Windows.Forms.Button btnFindPhatTrienKyNangChoTre;
         private System.Windows.Forms.Button btnFindPhatTrienTriTueChoTre;
