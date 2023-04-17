@@ -36,3 +36,7 @@ C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaAp
 C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.exe
 C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.pdb
 C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.DetailProduct.resources
+C:\Users\dongp\Source\Repos\hieuDBMS\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.DetailProduct.resources
+C:\Users\dongp\Source\Repos\hieuDBMS\FinalProjectCNPM\FahasaApp\bin\Debug\Guna.UI2.dll
+C:\Users\dongp\Source\Repos\hieuDBMS\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.csproj.CopyComplete
+C:\Users\dongp\Source\Repos\hieuDBMS\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.Forget_PasswordForm.resources

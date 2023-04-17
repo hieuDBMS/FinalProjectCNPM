@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -34,21 +36,35 @@ namespace FahasaApp
 
             this.StartPosition = FormStartPosition.Manual;
             this.Location = new Point(left, top);
-        }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
 
-        }
+            //Init first data for Mainform
+            try
+            {
+                SqlConnection conn = new SqlConnection(Program.getConnectString());
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("[GetFirst10Books]", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                conn.Close();
+                da.Dispose();
+               
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        
+    }
 
         private void label13_Click(object sender, EventArgs e)
         {
-
+           
         }
 
-        private void TextHo_TextChanged(object sender, EventArgs e)
-        {
-        }
 
 
 
@@ -58,6 +74,7 @@ namespace FahasaApp
             {
                 TextHo.Text = "";
                 isclearform1 = true;
+
             }
         }
         private void RePlaceholder(object sender, EventArgs e)
@@ -101,7 +118,7 @@ namespace FahasaApp
         {
             if (textEmail.Text == "")
             {
-                textEmail.Text = "        Nhập email của bạn";
+                textEmail.Text = "      Nhập email của bạn";
                 EmailIcon.Visible = true;
                 isclearform3 = false;
             }
@@ -121,7 +138,7 @@ namespace FahasaApp
         {
             if (textSDT.Text == "")
             {
-                textSDT.Text = "        (+84)";
+                textSDT.Text = "      (+84)";
                 SDTicon.Visible = true;
                 isclearform4 = false;
             }
@@ -142,7 +159,7 @@ namespace FahasaApp
         {
             if (textPass.Text == "")
             {
-                textPass.Text = "        Mật khẩu";
+                textPass.Text = "      Mật khẩu";
                 Lockicon.Visible = true;
                 isclearform5 = false;
                 textPass.PasswordChar = '\0';
@@ -164,23 +181,14 @@ namespace FahasaApp
         {
             if (textRepass.Text == "")
             {
-                textRepass.Text = "        Nhập lại mật khẩu";
+                textRepass.Text = "      Nhập lại mật khẩu";
                 Lockicon2.Visible = true;
                 isclearform6 = false;
                 textRepass.PasswordChar = '\0';
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (isclearform1 && isclearform2 && isclearform3 && isclearform4 && isclearform5 && isclearform6 && Checkbox.Checked)
-            {
-                MessageBox.Show("Chúc mừng bạn đã đăng ký tài khoản thành công! ");
-                reloadForm();
-            }
-            else
-                MessageBox.Show("Bạn vui lòng nhập đầy đủ thông tin! ");
-        }
+       
         private void reloadForm()
         {
             TextHo.Text = "Họ";
@@ -189,26 +197,110 @@ namespace FahasaApp
             textTen.Text = "Tên";
             isclearform2 = false;
 
-            textEmail.Text = "        Nhập email của bạn";
+            textEmail.Text = "      Nhập email của bạn";
             EmailIcon.Visible = true;
             isclearform3 = false;
 
-            textSDT.Text = "        (+84)";
+            textSDT.Text = "      (+84)";
             SDTicon.Visible = true;
             isclearform4 = false;
 
-            textPass.Text = "        Mật khẩu";
+            textPass.PasswordChar = '\0';
+            textPass.Text = "      Mật khẩu";
             Lockicon.Visible = true;
             isclearform5 = false;
 
-            textRepass.Text = "        Nhập lại mật khẩu";
+            textRepass.PasswordChar = '\0';
+            textRepass.Text = "      Nhập lại mật khẩu";
             Lockicon2.Visible = true;
             isclearform6 = false;
 
             Checkbox.Checked = false;
-        }    
+        }
 
-        
+
+        //Hide Password
+        private void HidePassword(object sender, MouseEventArgs e)
+        {        
+           textPass.PasswordChar = '*';
+           HidePasswordIcon.Visible = false;
+           ShowPasswordIcon.Visible = true;  
+            
+        }
+
+        private void HideRePassword(object sender, MouseEventArgs e)
+        {
+           
+            textRepass.PasswordChar = '*';
+            HideRePasswordIcon.Visible = false;
+            ShowRePasswordIcon.Visible = true;
+        }
+
+        //Show Password
+        private void ShowPassword(object sender, MouseEventArgs e)
+        {
+            if(textPass.PasswordChar == '*')
+            {
+                textPass.PasswordChar = '\0';
+                HidePasswordIcon.Visible = true;
+                ShowPasswordIcon.Visible = false;
+            }    
+           
+        }
+
+        private void ShowRepassword(object sender, MouseEventArgs e)
+        {
+            if(textRepass.PasswordChar == '*')
+            {
+                textRepass.PasswordChar = '\0';
+                HideRePasswordIcon.Visible = true;
+                ShowRePasswordIcon.Visible = false;
+            }    
+            
+        }
+
+        private void Label_LoginClick(object sender, MouseEventArgs e)
+        {
+            LoginForm Lg = new LoginForm();
+            Lg.Show();
+            this.Hide();
+        }
+
+        private void CreateAccount(object sender, MouseEventArgs e)
+        {
+            if (isclearform1 && isclearform2 && isclearform3 && isclearform4 && isclearform5 && isclearform6 && Checkbox.Checked)
+            {
+                try
+                {
+                    MailAddress mailAddress = new MailAddress(textEmail.Text);  //Check ValidEmail
+
+                    using (SqlConnection conn = new SqlConnection(Program.getConnectString()))
+                    {
+
+                        SqlCommand cmd = new SqlCommand("INSERT INTO [CUSTOMER] (Firstname, Lastname, Email, Phone, Password, Privilige) VALUES (@Firstname, @Lastname, @Email, @Phone, @Password, @Privilige)", conn);
+                        cmd.Parameters.AddWithValue("@Firstname", textTen.Text);
+                        cmd.Parameters.AddWithValue("@Lastname", TextHo.Text);
+                        cmd.Parameters.AddWithValue("@Email", textEmail.Text);
+                        cmd.Parameters.AddWithValue("@Phone", textSDT.Text);
+                        cmd.Parameters.AddWithValue("@Password", textPass.Text);
+                        cmd.Parameters.AddWithValue("@Privilige", 0);
+                        conn.Open();
+                        cmd.ExecuteReader();
+                        conn.Close();
+                    }
+
+                        MessageBox.Show("Chúc mừng bạn đã đăng ký tài khoản thành công! ");
+                        reloadForm();  
+                }
+                catch (FormatException)
+                {
+                    MessageBox.Show("Định dạng email không hợp lệ");
+                }
+            }
+            else
+                MessageBox.Show("Bạn vui lòng nhập đầy đủ thông tin! ");
+
+        }
     }
 
 }

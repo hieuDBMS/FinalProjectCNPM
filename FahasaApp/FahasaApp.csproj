@@ -34,10 +34,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.4\lib\net48\Guna.UI2.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -54,6 +60,12 @@
     </Compile>
     <Compile Include="DetailProduct.Designer.cs">
       <DependentUpon>DetailProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forget_PasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forget_PasswordForm.Designer.cs">
+      <DependentUpon>Forget_PasswordForm.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -78,6 +90,9 @@
     <EmbeddedResource Include="DetailProduct.resx">
       <DependentUpon>DetailProduct.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forget_PasswordForm.resx">
+      <DependentUpon>Forget_PasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -97,6 +112,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

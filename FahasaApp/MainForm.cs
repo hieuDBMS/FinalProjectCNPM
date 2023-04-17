@@ -150,8 +150,8 @@ namespace FahasaApp
             // Suspend layout updates
             panelToggleDownAccount.SuspendLayout();
 
-            panelToggleDownAccount.Visible = !panelToggleDownAccount.Visible;
-
+            // panelToggleDownAccount.Visible = !panelToggleDownAccount.Visible;
+            pictureBoxIconToggle_Click(sender, e);
             // Resume layout updates
             panelToggleDownAccount.ResumeLayout(); 
         }
@@ -794,6 +794,8 @@ namespace FahasaApp
         {
             allBooks.Clear();
         }
+
+      
     }
     #endregion
 }

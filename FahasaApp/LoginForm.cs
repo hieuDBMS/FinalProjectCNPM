@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -93,9 +95,40 @@ namespace FahasaApp
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            MainForm mf = new MainForm();
-            mf.Show();
+            
+            if(EmailIcon.Visible == false && Lockicon.Visible == false)
+            {
+                //Authentication Account
+                using (SqlConnection conn = new SqlConnection(Program.getConnectString()))
+                {
+
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM [CUSTOMER] WHERE Email=@username AND Password=@password", conn);
+                    cmd.Parameters.AddWithValue("@username", textBoxUsername.Text);
+                    cmd.Parameters.AddWithValue("@password", textBoxPassword.Text);
+                    conn.Open();
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    if (dr.HasRows)
+                    {
+                        MessageBox.Show("Đăng nhập thành công");
+                        MainForm mf = new MainForm();
+                        mf.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Sai tên tài khoản hoặc mật khẩu");
+                    }
+                    conn.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Bạn vui lòng nhập đầy đủ thông tin để đăng nhập");
+            }    
+            
+            
+            
+          
         }
 
         private void RegisterButton_Click(object sender, EventArgs e)
@@ -103,6 +136,42 @@ namespace FahasaApp
             this.Hide();
             RegisterForm RG = new RegisterForm();
             RG.Show();
+        }
+
+        private void textBoxUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2PictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ShowPassword(object sender, MouseEventArgs e)
+        {
+            if (textBoxPassword.PasswordChar == '*')
+            {
+                textBoxPassword.PasswordChar = '\0';
+                HidePasswordIcon.Visible = true;
+                ShowPasswordIcon.Visible = false;
+            }
+
+        }
+
+        private void HidePassword(object sender, MouseEventArgs e)
+        {
+            textBoxPassword.PasswordChar = '*';
+            HidePasswordIcon.Visible = false;
+            ShowPasswordIcon.Visible = true;
+
+        }
+
+        private void ForgetPassword_Click(object sender, EventArgs e)
+        {
+            Forget_PasswordForm FG = new Forget_PasswordForm();
+            FG.Show();
+            this.Hide();
         }
     }
 
