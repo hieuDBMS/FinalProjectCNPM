@@ -30,18 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Forget_PasswordForm));
             this.HidePasswordIcon = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.Return_Btn = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.EmailIcon = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.textBoxUsername = new Guna.UI2.WinForms.Guna2TextBox();
+            this.textEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.ShowPasswordIcon = new Guna.UI2.WinForms.Guna2PictureBox();
             this.Lockicon = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.textBoxPassword = new Guna.UI2.WinForms.Guna2TextBox();
+            this.textPass = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.textEmail_OTP = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.HidePasswordIcon)).BeginInit();
@@ -64,27 +64,29 @@
             this.HidePasswordIcon.TabIndex = 66;
             this.HidePasswordIcon.TabStop = false;
             this.HidePasswordIcon.Visible = false;
+            this.HidePasswordIcon.MouseClick += new System.Windows.Forms.MouseEventHandler(this.HidePassword);
             // 
-            // guna2Button2
+            // Return_Btn
             // 
-            this.guna2Button2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.guna2Button2.BorderRadius = 7;
-            this.guna2Button2.BorderThickness = 1;
-            this.guna2Button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.White;
-            this.guna2Button2.Font = new System.Drawing.Font("Open Sans Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.guna2Button2.Location = new System.Drawing.Point(589, 392);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.guna2Button2.Size = new System.Drawing.Size(144, 45);
-            this.guna2Button2.TabIndex = 65;
-            this.guna2Button2.Text = "Trở về";
+            this.Return_Btn.BackColor = System.Drawing.Color.Transparent;
+            this.Return_Btn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.Return_Btn.BorderRadius = 7;
+            this.Return_Btn.BorderThickness = 1;
+            this.Return_Btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Return_Btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Return_Btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Return_Btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Return_Btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Return_Btn.FillColor = System.Drawing.Color.White;
+            this.Return_Btn.Font = new System.Drawing.Font("Open Sans Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Return_Btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.Return_Btn.Location = new System.Drawing.Point(589, 392);
+            this.Return_Btn.Name = "Return_Btn";
+            this.Return_Btn.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.Return_Btn.Size = new System.Drawing.Size(144, 45);
+            this.Return_Btn.TabIndex = 65;
+            this.Return_Btn.Text = "Trở về";
+            this.Return_Btn.Click += new System.EventHandler(this.Return_Btn_Click);
             // 
             // label2
             // 
@@ -125,28 +127,30 @@
             this.EmailIcon.TabIndex = 62;
             this.EmailIcon.TabStop = false;
             // 
-            // textBoxUsername
+            // textEmail
             // 
-            this.textBoxUsername.BorderColor = System.Drawing.Color.Gray;
-            this.textBoxUsername.BorderRadius = 5;
-            this.textBoxUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBoxUsername.DefaultText = "      Nhập email của bạn";
-            this.textBoxUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.textBoxUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.textBoxUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textBoxUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textBoxUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBoxUsername.Font = new System.Drawing.Font("Open Sans Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBoxUsername.Location = new System.Drawing.Point(417, 199);
-            this.textBoxUsername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBoxUsername.Name = "textBoxUsername";
-            this.textBoxUsername.PasswordChar = '\0';
-            this.textBoxUsername.PlaceholderForeColor = System.Drawing.SystemColors.ControlDark;
-            this.textBoxUsername.PlaceholderText = "";
-            this.textBoxUsername.SelectedText = "";
-            this.textBoxUsername.Size = new System.Drawing.Size(312, 29);
-            this.textBoxUsername.TabIndex = 61;
+            this.textEmail.BorderColor = System.Drawing.Color.Gray;
+            this.textEmail.BorderRadius = 5;
+            this.textEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textEmail.DefaultText = "      Nhập email của bạn";
+            this.textEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textEmail.Font = new System.Drawing.Font("Open Sans Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textEmail.Location = new System.Drawing.Point(417, 199);
+            this.textEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textEmail.Name = "textEmail";
+            this.textEmail.PasswordChar = '\0';
+            this.textEmail.PlaceholderForeColor = System.Drawing.SystemColors.ControlDark;
+            this.textEmail.PlaceholderText = "";
+            this.textEmail.SelectedText = "";
+            this.textEmail.Size = new System.Drawing.Size(312, 29);
+            this.textEmail.TabIndex = 61;
+            this.textEmail.Leave += new System.EventHandler(this.RePlaceholder1);
+            this.textEmail.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Clearform1);
             // 
             // ShowPasswordIcon
             // 
@@ -160,6 +164,7 @@
             this.ShowPasswordIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ShowPasswordIcon.TabIndex = 60;
             this.ShowPasswordIcon.TabStop = false;
+            this.ShowPasswordIcon.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ShowPassword);
             // 
             // Lockicon
             // 
@@ -173,28 +178,30 @@
             this.Lockicon.TabIndex = 59;
             this.Lockicon.TabStop = false;
             // 
-            // textBoxPassword
+            // textPass
             // 
-            this.textBoxPassword.BorderColor = System.Drawing.Color.Gray;
-            this.textBoxPassword.BorderRadius = 5;
-            this.textBoxPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBoxPassword.DefaultText = "      Mật khẩu";
-            this.textBoxPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.textBoxPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.textBoxPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textBoxPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textBoxPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBoxPassword.Font = new System.Drawing.Font("Open Sans Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBoxPassword.Location = new System.Drawing.Point(421, 337);
-            this.textBoxPassword.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
-            this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.PasswordChar = '\0';
-            this.textBoxPassword.PlaceholderForeColor = System.Drawing.SystemColors.ControlDark;
-            this.textBoxPassword.PlaceholderText = "";
-            this.textBoxPassword.SelectedText = "";
-            this.textBoxPassword.Size = new System.Drawing.Size(312, 29);
-            this.textBoxPassword.TabIndex = 58;
+            this.textPass.BorderColor = System.Drawing.Color.Gray;
+            this.textPass.BorderRadius = 5;
+            this.textPass.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textPass.DefaultText = "      Mật khẩu";
+            this.textPass.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textPass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textPass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textPass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textPass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textPass.Font = new System.Drawing.Font("Open Sans Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textPass.Location = new System.Drawing.Point(421, 337);
+            this.textPass.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.textPass.Name = "textPass";
+            this.textPass.PasswordChar = '\0';
+            this.textPass.PlaceholderForeColor = System.Drawing.SystemColors.ControlDark;
+            this.textPass.PlaceholderText = "";
+            this.textPass.SelectedText = "";
+            this.textPass.Size = new System.Drawing.Size(312, 29);
+            this.textPass.TabIndex = 58;
+            this.textPass.Leave += new System.EventHandler(this.RePlaceholder3);
+            this.textPass.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Clearform3);
             // 
             // label6
             // 
@@ -229,28 +236,30 @@
             this.pictureBox1.TabIndex = 51;
             this.pictureBox1.TabStop = false;
             // 
-            // guna2TextBox1
+            // textEmail_OTP
             // 
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.Gray;
-            this.guna2TextBox1.BorderRadius = 5;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "Mã xác nhận 6 ký tự";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Open Sans Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(421, 268);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderForeColor = System.Drawing.SystemColors.ControlDark;
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(312, 29);
-            this.guna2TextBox1.TabIndex = 68;
+            this.textEmail_OTP.BorderColor = System.Drawing.Color.Gray;
+            this.textEmail_OTP.BorderRadius = 5;
+            this.textEmail_OTP.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textEmail_OTP.DefaultText = "Mã xác nhận 6 ký tự";
+            this.textEmail_OTP.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textEmail_OTP.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textEmail_OTP.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textEmail_OTP.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textEmail_OTP.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textEmail_OTP.Font = new System.Drawing.Font("Open Sans Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textEmail_OTP.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textEmail_OTP.Location = new System.Drawing.Point(421, 268);
+            this.textEmail_OTP.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.textEmail_OTP.Name = "textEmail_OTP";
+            this.textEmail_OTP.PasswordChar = '\0';
+            this.textEmail_OTP.PlaceholderForeColor = System.Drawing.SystemColors.ControlDark;
+            this.textEmail_OTP.PlaceholderText = "";
+            this.textEmail_OTP.SelectedText = "";
+            this.textEmail_OTP.Size = new System.Drawing.Size(312, 29);
+            this.textEmail_OTP.TabIndex = 68;
+            this.textEmail_OTP.Leave += new System.EventHandler(this.RePlaceholder2);
+            this.textEmail_OTP.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Clearform2);
             // 
             // label1
             // 
@@ -287,17 +296,17 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(842, 541);
             this.Controls.Add(this.guna2Button3);
-            this.Controls.Add(this.guna2TextBox1);
+            this.Controls.Add(this.textEmail_OTP);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.HidePasswordIcon);
-            this.Controls.Add(this.guna2Button2);
+            this.Controls.Add(this.Return_Btn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.EmailIcon);
-            this.Controls.Add(this.textBoxUsername);
+            this.Controls.Add(this.textEmail);
             this.Controls.Add(this.ShowPasswordIcon);
             this.Controls.Add(this.Lockicon);
-            this.Controls.Add(this.textBoxPassword);
+            this.Controls.Add(this.textPass);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox1);
@@ -317,18 +326,18 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2PictureBox HidePasswordIcon;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button Return_Btn;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2PictureBox EmailIcon;
-        private Guna.UI2.WinForms.Guna2TextBox textBoxUsername;
+        private Guna.UI2.WinForms.Guna2TextBox textEmail;
         private Guna.UI2.WinForms.Guna2PictureBox ShowPasswordIcon;
         private Guna.UI2.WinForms.Guna2PictureBox Lockicon;
-        private Guna.UI2.WinForms.Guna2TextBox textBoxPassword;
+        private Guna.UI2.WinForms.Guna2TextBox textPass;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox textEmail_OTP;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
     }

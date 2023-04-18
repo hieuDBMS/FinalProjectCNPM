@@ -124,6 +124,7 @@
             // ForgetPassword
             // 
             this.ForgetPassword.AutoSize = true;
+            this.ForgetPassword.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ForgetPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForgetPassword.ForeColor = System.Drawing.Color.Red;
             this.ForgetPassword.Location = new System.Drawing.Point(558, 318);
