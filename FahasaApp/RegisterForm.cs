@@ -38,25 +38,8 @@ namespace FahasaApp
             this.Location = new Point(left, top);
 
 
-            //Init first data for Mainform
-            try
-            {
-                SqlConnection conn = new SqlConnection(Program.getConnectString());
-                conn.Open();
-                SqlCommand cmd = new SqlCommand("[GetFirst10Books]", conn);
-                cmd.CommandType = CommandType.StoredProcedure;
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                conn.Close();
-                da.Dispose();
-               
-
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
+            
+            
         
     }
 

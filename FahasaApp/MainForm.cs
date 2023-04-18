@@ -31,6 +31,10 @@ namespace FahasaApp
             InitializeComponent();
             initControlLists();
             hideSubMenu();
+
+
+            //InitiaForm before login - vin
+            InitiaForm();
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
@@ -794,8 +798,87 @@ namespace FahasaApp
         {
             allBooks.Clear();
         }
+        #endregion
 
-      
+        #region Vin
+
+        private static string InitialUserName;
+        private static string InitialBTNSignInText;
+        private static string InitialBTNSigupText;
+
+        private void OpenLoginForm(object sender, EventArgs e)
+        {
+            LoginForm Loginform = new LoginForm();
+            Loginform.Show();
+            
+        }
+        
+        private void OpenRegisterForm(object sender, EventArgs e)
+        {
+            //Hide Panel
+            pictureBoxIconToggle_Click(sender, e);
+
+            RegisterForm RegisForm = new RegisterForm();   
+            RegisForm.Show();
+        }
+
+        private void OpenInforUserForm(object sender, EventArgs e)
+        {
+            //Hide Panel
+            pictureBoxIconToggle_Click(sender, e);
+
+
+            LoginForm Loginform = new LoginForm();
+            Loginform.Show();
+        }
+
+        private void LogoutAccount(object sender, EventArgs e)
+        {
+            //Hide Panel
+            pictureBoxIconToggle_Click(sender, e);
+
+
+            labelUsername.Text = InitialUserName;
+            btnSignIn.Text  = InitialBTNSignInText;
+            btnSignUp.Text = InitialBTNSigupText;
+
+            // Change Event Label Click
+            this.btnSignIn.Click += new System.EventHandler(this.OpenLoginForm);
+            this.btnSignIn.Click -= new System.EventHandler(this.OpenInforUserForm);
+
+            this.btnSignUp.Click += new System.EventHandler(this.OpenRegisterForm);
+            this.btnSignUp.Click -= new System.EventHandler(this.LogoutAccount);
+
+            MessageBox.Show("Bạn đã đăng xuất");
+        }
+
+        private void InitiaForm()
+        {
+            InitialUserName = labelUsername.Text;
+            InitialBTNSignInText = btnSignIn.Text;
+            InitialBTNSigupText = btnSignUp.Text;
+        }
+
+        public void SyncDataUser(String Username)
+        {
+            labelUsername.Text = Username;
+            btnSignIn.Text = "Thông tin ";
+            btnSignUp.Text = "Đăng xuất";
+            this.Refresh();
+
+            // Change Event Label Click
+            this.btnSignIn.Click -= new System.EventHandler(this.OpenLoginForm);
+            this.btnSignIn.Click += new System.EventHandler(this.OpenInforUserForm);
+
+            this.btnSignUp.Click -= new System.EventHandler(this.OpenRegisterForm);
+            this.btnSignUp.Click += new System.EventHandler(this.LogoutAccount);
+        }
+
+        #endregion
+
+
     }
-    #endregion
+
+
+
 }

@@ -21,7 +21,7 @@ namespace FahasaApp
             strConn = ConfigurationManager.ConnectionStrings["MyConn"].ConnectionString;
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+            Application.Run(new MainForm());
         }
 
         public static string getConnectString()

@@ -109,16 +109,30 @@ namespace FahasaApp
                     SqlDataReader dr = cmd.ExecuteReader();
                     if (dr.HasRows)
                     {
+                        conn.Close();
+                        //Get Firstname by Email
+                        SqlCommand cmd1 = new SqlCommand("SELECT Firstname FROM [CUSTOMER] WHERE Email=@username ", conn);
+                        cmd1.Parameters.AddWithValue("@username", textBoxUsername.Text);
+                        conn.Open();
+                        string Firstname = (string)cmd1.ExecuteScalar();
+                        conn.Close();
+
+                        if (Application.OpenForms.OfType<MainForm>().Any())
+                        {
+                            // Update and Sync infor user to mainform
+                            MainForm mainForm = Application.OpenForms.OfType<MainForm>().FirstOrDefault();
+                            mainForm.SyncDataUser(Firstname);
+                        }
+
                         MessageBox.Show("Đăng nhập thành công");
-                        MainForm mf = new MainForm();
-                        mf.Show();
+                        
                         this.Hide();
                     }
                     else
                     {
                         MessageBox.Show("Sai tên tài khoản hoặc mật khẩu");
                     }
-                    conn.Close();
+                   
                 }
             }
             else
