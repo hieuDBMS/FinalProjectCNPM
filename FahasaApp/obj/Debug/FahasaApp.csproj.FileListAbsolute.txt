@@ -40,3 +40,5 @@ C:\Users\dongp\Source\Repos\hieuDBMS\FinalProjectCNPM\FahasaApp\obj\Debug\Fahasa
 C:\Users\dongp\Source\Repos\hieuDBMS\FinalProjectCNPM\FahasaApp\bin\Debug\Guna.UI2.dll
 C:\Users\dongp\Source\Repos\hieuDBMS\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.csproj.CopyComplete
 C:\Users\dongp\Source\Repos\hieuDBMS\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.Forget_PasswordForm.resources
+C:\Users\dongp\Source\Repos\hieuDBMS\FinalProjectCNPM\FahasaApp\bin\Debug\Guna.Charts.WinForms.dll
+C:\Users\dongp\Source\Repos\hieuDBMS\FinalProjectCNPM\FahasaApp\bin\Debug\ToastNotifications.dll

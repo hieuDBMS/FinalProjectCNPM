@@ -32,7 +32,7 @@
             this.HidePasswordIcon = new Guna.UI2.WinForms.Guna2PictureBox();
             this.Return_Btn = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.Accept_btn = new Guna.UI2.WinForms.Guna2Button();
             this.EmailIcon = new Guna.UI2.WinForms.Guna2PictureBox();
             this.textEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.ShowPasswordIcon = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -43,7 +43,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textEmail_OTP = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.SendOTP_btn = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.HidePasswordIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmailIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ShowPasswordIcon)).BeginInit();
@@ -99,22 +99,23 @@
             this.label2.TabIndex = 64;
             this.label2.Text = "Khôi phục mật khẩu";
             // 
-            // guna2Button1
+            // Accept_btn
             // 
-            this.guna2Button1.BorderRadius = 5;
-            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Open Sans Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(421, 392);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(136, 45);
-            this.guna2Button1.TabIndex = 63;
-            this.guna2Button1.Text = "Xác nhận";
+            this.Accept_btn.BorderRadius = 5;
+            this.Accept_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Accept_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Accept_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Accept_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Accept_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Accept_btn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.Accept_btn.Font = new System.Drawing.Font("Open Sans Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Accept_btn.ForeColor = System.Drawing.Color.White;
+            this.Accept_btn.Location = new System.Drawing.Point(421, 392);
+            this.Accept_btn.Name = "Accept_btn";
+            this.Accept_btn.Size = new System.Drawing.Size(136, 45);
+            this.Accept_btn.TabIndex = 63;
+            this.Accept_btn.Text = "Xác nhận";
+            this.Accept_btn.Click += new System.EventHandler(this.Accept_btn_Click);
             // 
             // EmailIcon
             // 
@@ -272,22 +273,23 @@
             this.label1.TabIndex = 67;
             this.label1.Text = "Mã xác nhận";
             // 
-            // guna2Button3
+            // SendOTP_btn
             // 
-            this.guna2Button3.BorderRadius = 5;
-            this.guna2Button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.guna2Button3.Font = new System.Drawing.Font("Open Sans Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.Location = new System.Drawing.Point(635, 235);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(94, 29);
-            this.guna2Button3.TabIndex = 69;
-            this.guna2Button3.Text = "Gửi mã";
+            this.SendOTP_btn.BorderRadius = 5;
+            this.SendOTP_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SendOTP_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.SendOTP_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.SendOTP_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.SendOTP_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.SendOTP_btn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.SendOTP_btn.Font = new System.Drawing.Font("Open Sans Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SendOTP_btn.ForeColor = System.Drawing.Color.White;
+            this.SendOTP_btn.Location = new System.Drawing.Point(635, 235);
+            this.SendOTP_btn.Name = "SendOTP_btn";
+            this.SendOTP_btn.Size = new System.Drawing.Size(94, 29);
+            this.SendOTP_btn.TabIndex = 69;
+            this.SendOTP_btn.Text = "Gửi mã";
+            this.SendOTP_btn.Click += new System.EventHandler(this.SendOTP_btn_Click);
             // 
             // Forget_PasswordForm
             // 
@@ -295,13 +297,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(842, 541);
-            this.Controls.Add(this.guna2Button3);
+            this.Controls.Add(this.SendOTP_btn);
             this.Controls.Add(this.textEmail_OTP);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.HidePasswordIcon);
             this.Controls.Add(this.Return_Btn);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.Accept_btn);
             this.Controls.Add(this.EmailIcon);
             this.Controls.Add(this.textEmail);
             this.Controls.Add(this.ShowPasswordIcon);
@@ -328,7 +330,7 @@
         private Guna.UI2.WinForms.Guna2PictureBox HidePasswordIcon;
         private Guna.UI2.WinForms.Guna2Button Return_Btn;
         private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button Accept_btn;
         private Guna.UI2.WinForms.Guna2PictureBox EmailIcon;
         private Guna.UI2.WinForms.Guna2TextBox textEmail;
         private Guna.UI2.WinForms.Guna2PictureBox ShowPasswordIcon;
@@ -339,6 +341,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2TextBox textEmail_OTP;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2Button SendOTP_btn;
     }
 }

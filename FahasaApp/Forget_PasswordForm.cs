@@ -1,12 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Net;
+using System.Net.Mail;
 using System.Windows.Forms;
+using ToastNotifications;
+using ToastNotifications.Core;
+using ToastNotifications.Lifetime;
+using ToastNotifications.Position;
 
 namespace FahasaApp
 {
@@ -15,6 +16,8 @@ namespace FahasaApp
         bool isclearform1 = false;
         bool isclearform2 = false;
         bool isclearform3 = false;
+
+        String OTPCheck;
         public Forget_PasswordForm()
         {
             InitializeComponent();
@@ -108,11 +111,63 @@ namespace FahasaApp
             ShowPasswordIcon.Visible = true;
 
         }
+
+        private void SendOTP_btn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Đã gửi mã OTP");
+            int otp = new Random().Next(100000, 999999);
+
+            OTPCheck = otp.ToString();
+            // Gửi email
+            MailMessage message = new MailMessage();
+            message.From = new MailAddress("fahasa.finalproject@gmail.com");
+            message.To.Add(textEmail.Text);
+            message.Subject = "OTP Verification Recovery Password";
+            message.Body = "Your OTP is " + otp.ToString();
+            SmtpClient client = new SmtpClient();
+            client.Host = "smtp.gmail.com";
+            client.Port = 587;
+            client.UseDefaultCredentials = false;
+            client.EnableSsl = true;
+            client.Credentials = new NetworkCredential("fahasa.finalproject@gmail.com", "kjvolzwfqnbdpucd"); //(Email, Password)
+            client.Send(message);
+        }
+        private void Accept_btn_Click(object sender, EventArgs e)
+        {
+
+            //Check empty textbox
+            if(textEmail.Text == "      Nhập email của bạn" || textEmail_OTP.Text == "Mã xác nhận 6 ký tự" || textPass.Text == "      Mật khẩu")
+            {
+                MessageBox.Show("Bạn vui lòng nhập đầy đủ thông tin");
+                return;
+            } 
+            
+            //Authentication OTP
+            if (textEmail_OTP.Text == OTPCheck)
+            {
+                using (SqlConnection conn = new SqlConnection(Program.getConnectString()))
+                {
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("UPDATE [CUSTOMER] SET Password = @password WHERE Email=@username", conn);
+                    cmd.Parameters.AddWithValue("@password", textPass.Text);
+                    cmd.Parameters.AddWithValue("@username", textEmail.Text);
+                    cmd.ExecuteReader();
+                    conn.Close();
+                    MessageBox.Show("Khôi phục mật khẩu thành công");
+                }
+            }
+            else
+                MessageBox.Show("Mã OTP không chính xác");
+                
+        }
+
         private void Return_Btn_Click(object sender, EventArgs e)
         {
             LoginForm LG = new LoginForm();
             LG.Show();
             this.Hide();
         }
+
+        
     }
 }

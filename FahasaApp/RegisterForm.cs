@@ -253,37 +253,60 @@ namespace FahasaApp
         {
             if (isclearform1 && isclearform2 && isclearform3 && isclearform4 && isclearform5 && isclearform6 && Checkbox.Checked)
             {
-                try
-                {
-                    MailAddress mailAddress = new MailAddress(textEmail.Text);  //Check ValidEmail
-
-                    using (SqlConnection conn = new SqlConnection(Program.getConnectString()))
+                    try
                     {
+                        MailAddress mailAddress = new MailAddress(textEmail.Text);  //Check ValidEmailForm
 
-                        SqlCommand cmd = new SqlCommand("INSERT INTO [CUSTOMER] (Firstname, Lastname, Email, Phone, Password, Privilige) VALUES (@Firstname, @Lastname, @Email, @Phone, @Password, @Privilige)", conn);
-                        cmd.Parameters.AddWithValue("@Firstname", textTen.Text);
-                        cmd.Parameters.AddWithValue("@Lastname", TextHo.Text);
-                        cmd.Parameters.AddWithValue("@Email", textEmail.Text);
-                        cmd.Parameters.AddWithValue("@Phone", textSDT.Text);
-                        cmd.Parameters.AddWithValue("@Password", textPass.Text);
-                        cmd.Parameters.AddWithValue("@Privilige", 0);
-                        conn.Open();
-                        cmd.ExecuteReader();
-                        conn.Close();
+                        using (SqlConnection conn = new SqlConnection(Program.getConnectString()))
+                        {
+                            SqlCommand cmd = new SqlCommand("Select * FROM[CUSTOMER]",conn);
+                            conn.Open();
+                            SqlDataReader reader = cmd.ExecuteReader();
+                        
+                            while (reader.Read())
+                            {
+                                if((String)reader["Email"] == textEmail.Text)
+                                {
+                                    MessageBox.Show("Email này đã được đăng ký");
+                                    return;
+                                }    
+                            }    
+                            conn.Close();
+
+                            if(textPass.Text == textRepass.Text)
+                            {
+                                SqlCommand cmdaddUser = new SqlCommand("INSERT INTO [CUSTOMER] (Firstname, Lastname, Email, Phone, Password, Privilige) VALUES (@Firstname, @Lastname, @Email, @Phone, @Password, @Privilige)", conn);
+                                cmdaddUser.Parameters.AddWithValue("@Firstname", textTen.Text);
+                                cmdaddUser.Parameters.AddWithValue("@Lastname", TextHo.Text);
+                                cmdaddUser.Parameters.AddWithValue("@Email", textEmail.Text);
+                                cmdaddUser.Parameters.AddWithValue("@Phone", textSDT.Text);
+                                cmdaddUser.Parameters.AddWithValue("@Password", textPass.Text);
+                                cmdaddUser.Parameters.AddWithValue("@Privilige", 0);
+                                conn.Open();
+                                cmdaddUser.ExecuteReader();
+                                conn.Close();
+                                MessageBox.Show("Chúc mừng bạn đã đăng ký tài khoản thành công! ");
+                                reloadForm();
+                            }else
+                            {
+                                MessageBox.Show("Xác thực mật khẩu không chính xác!");
+                            }    
+                            
                     }
 
-                        MessageBox.Show("Chúc mừng bạn đã đăng ký tài khoản thành công! ");
-                        reloadForm();  
-                }
-                catch (FormatException)
-                {
-                    MessageBox.Show("Định dạng email không hợp lệ");
-                }
+                         
+                    }
+                    catch (FormatException)
+                    {
+                        MessageBox.Show("Định dạng email không hợp lệ");
+                    }
             }
             else
                 MessageBox.Show("Bạn vui lòng nhập đầy đủ thông tin! ");
 
         }
+
+      
     }
 
 }
