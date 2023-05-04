@@ -17,15 +17,27 @@ namespace FahasaApp
     {
         List<Panel> subMenuControl = new List<Panel>();
         List<Button> typeBookControl = new List<Button>();
+        Dictionary<string, string> dateList = new Dictionary<string, string>();
+
         private int rowCount = 0;   // for load more data to mainform
         private int rowCountCateogy = 0; // for load more data of category datagridview
+
         DataTable currentDataTable = new DataTable();
         DataTable currentCategoryTable = new DataTable();
+        DataTable DayWeekMonthYear_BooksTable= new DataTable();
+        DataTable currentMainDataTable = new DataTable();
         DataTable allBooks = new DataTable();
+
+        ///
+        Form activeChildForm = null;
+        DataGridView currentDataGridView = null;
+
         int currentCategoryID = -1;
         public int currentRowCell = 0; //may be used for detail product
         public bool findBooks = false; // for handle scroll event
+        public bool dateSearch = false; // for handle search book by day week month year week
         public bool isStartingFocus = true;
+        public bool hasDataDetailProductForm = false;
         public MainForm()
         {
             InitializeComponent();
@@ -68,8 +80,11 @@ namespace FahasaApp
                     dataGridViewBookShow.AutoGenerateColumns = false;
                     dataGridViewBookShow.DataSource = dt;
                     dataGridViewBookShow.ClearSelection();
-                    currentDataTable = dt;
+                    currentMainDataTable = dt;
+                    //set current Datatable is main Form when initalize the Form Main.
+                    currentDataTable = currentMainDataTable;
                 }
+                /*MessageBox.Show()*/
                 
             }
             catch(Exception ex)
@@ -105,6 +120,21 @@ namespace FahasaApp
             pictureBoxFavoriteIcon.Image = imageList40.Images[0];
             //Initate icon for shop cart picturebox
             pictureBoxShopCart.Image = imageList40.Images[1];
+            //Initate icon for icon fire
+            iconFire.Image = imageList40.Images[2];
+
+            //Init list date for Book searching following by day, week, motnh, year
+            dateList.Add("Ngày","Day");
+            dateList.Add("Tuần","Week");
+            dateList.Add("Tháng","Month");
+            dateList.Add("Năm","Year");
+
+            //Init current Datagridview
+            currentDataGridView = dataGridViewBookShow;
+
+            //Set backButton InVisible
+            BackButton.Visible = false;
+
         }
 
         private void hideSubMenu()
@@ -407,17 +437,25 @@ namespace FahasaApp
             hideSubMenu();
             searchBox.Text = string.Empty; //clear current text, replace the filtered with currentDatatable and set notice text for search box
             searchBox_Leave(sender,e);  //this line will
-
+            comboBoxSearch_DayMonthYear.SelectedIndex = -1;
+            dateSearch = false; // refresh search engine
             // Replace the datatable of category book with currentDatatable
-            if(currentCategoryID != -1)
+            if (currentCategoryID != -1)
             {
                 currentCategoryID = -1;
+                currentDataTable = currentMainDataTable;
                 updateDatagrideViewBySubCategory(currentDataTable,false);
+            }
+            else
+            {
+                currentDataTable = currentMainDataTable;
+                updateDatagrideViewBySubCategory(currentDataTable, false);
             }
             dataGridViewBookShow.CurrentCell = dataGridViewBookShow.Rows[0].Cells[0];  // move to the top of the datatable
 
             //refresh category instances
             currentCategoryTable.Rows.Clear();
+            currentCategoryTable.Columns.Clear();
             rowCountCateogy = 0;
         }
 
@@ -428,7 +466,11 @@ namespace FahasaApp
                 dataGridViewBookShow.DataSource = null;
                 dataGridViewBookShow.Rows.Clear();
                 if (flagToCreate) // used to identify the dataTable is adjusted or not
-                    dataGridViewBookShow.DataSource = createColumn_And_ChangeInformationOfColumn(dt);
+                {
+                    currentDataTable = createColumn_And_ChangeInformationOfColumn(dt);
+                    dataGridViewBookShow.DataSource = currentDataTable;
+                }
+
                 else
                     dataGridViewBookShow.DataSource = dt;
 
@@ -454,15 +496,17 @@ namespace FahasaApp
             conn.Close();
             da.Dispose();
             currentCategoryTable = dt;
+            ///
+            currentDataTable = currentCategoryTable;
+            ///
             currentCategoryID = categoryID;
             rowCountCateogy = dt.Rows.Count;
-            updateDatagrideViewBySubCategory(dt, true);
+            updateDatagrideViewBySubCategory(currentDataTable, true);
 
             searchBox.ForeColor = Color.Silver;
             searchBox.Text = "    Nhập thông tin sách bạn muốn tìm kiếm...\r\n";
             isStartingFocus = true;
         }
-
 
         //Get All data about Author by ID
         private DataTable getAuthorBy_ID(int ID)
@@ -539,6 +583,22 @@ namespace FahasaApp
             return publisherName;
         }
 
+        //Get all data about Book by ID
+        private DataTable getBookByID(int ID)
+        {
+            SqlConnection conn = new SqlConnection(Program.getConnectString());
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("[GetBookByID]", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@ID", ID));
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            conn.Close();
+            da.Dispose();
+            return dt;
+        }
+
         //Handle event choose book to add to cart
         private void dataGridViewBookShow_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -553,13 +613,41 @@ namespace FahasaApp
             else
             {
                 currentRowCell = e.RowIndex;
+                DataGridViewRow row = dataGridViewBookShow.Rows[currentRowCell];
+                /*byte[] bookImage = (byte[])row.Cells[0].Value;*/
+                int bookID = int.Parse(row.Cells[4].Value.ToString());
+                DataTable bookTable = getBookByID(bookID);
+                if(bookTable.Rows.Count > 0)
+                {
+                    byte[] bookImage = (byte[])bookTable.Rows[0]["Image"];
+                    DateTime tempPublication = (DateTime)bookTable.Rows[0]["PublicationDate"];
+
+                    string category = getNameCategory((int)bookTable.Rows[0]["CategoryID"]);
+                    string publicationDate = tempPublication.ToString("dd-MM-yyyy");
+                    string publisher = getNamePublisher((int)bookTable.Rows[0]["PublisherID"]);
+                    string author = getNameAuthor((int)bookTable.Rows[0]["AuthorID"]);
+
+
+                    MessageBox.Show(publicationDate + "/" + publisher + "/" + author);
+                    Book detailBook = new Book(bookID,bookTable.Rows[0]["BookTitle"].ToString(), bookTable.Rows[0]["BookCover"].ToString(),category, bookTable.Rows[0]["Price"].ToString(),
+                        publicationDate, publisher, author, bookImage);
+
+
+                    DetailProduct dProduct = new DetailProduct(detailBook);
+                    openChildForm(dProduct);
+                }
+                else
+                {
+                    MessageBox.Show("Sách hiện đang không khả dụng !");
+                }
+
             }
         }
 
         private void dataGridViewBookShow_Scroll(object sender, ScrollEventArgs e)
         {
-            if(!findBooks)
-            {
+            if (!findBooks && !dateSearch)
+            {             
                 int totalHeight = 0;
                 foreach (DataGridViewRow row in dataGridViewBookShow.Rows)
                     totalHeight += row.Height;
@@ -591,13 +679,17 @@ namespace FahasaApp
                             DataTable dataToUpdate = new DataTable();
                             if(currentCategoryID == -1)
                             {
-                                currentDataTable.Merge(dt);
+                                currentMainDataTable.Merge(dt);
+                                currentDataTable = currentMainDataTable;
+                                //currentDataTable.Merge(dt);
                                 dataToUpdate = currentDataTable;
                             }
                             else
                             {
                                 currentCategoryTable.Merge(dt);
-                                dataToUpdate = currentCategoryTable;
+                                // Set currentTable is CategoryTable
+                                currentDataTable = currentCategoryTable;
+                                dataToUpdate = currentDataTable;
                             }                               
                             dataGridViewBookShow.DataSource = null;
                             dataGridViewBookShow.Rows.Clear();
@@ -607,7 +699,7 @@ namespace FahasaApp
                             dataGridViewBookShow.Update();
                             dataGridViewBookShow.CurrentCell = dataGridViewBookShow.Rows[RowCount - 1].Cells[0];
                             dataGridViewBookShow.ClearSelection();
-                            //add rowcount for home
+                            //add rowcount for Main Table
                             if(currentCategoryID == -1)
                             {
                                 if (dt.Rows.Count == 10)
@@ -646,6 +738,7 @@ namespace FahasaApp
         {
             dt.Columns.Add("BookInfor");
             dt.Columns.Add("PriceInfor");
+            
             foreach (DataRow row in dt.Rows)
             {
                 row["BookInfor"] = row["BookTitle"] + "\n\n" + getNameCategory((int)row["CategoryID"]) + "\n\n" + getNameAuthor((int)row["AuthorID"]) + "\n";
@@ -656,6 +749,7 @@ namespace FahasaApp
                 }
 
                 row["PriceInfor"] = "\n" + row["Price"] + "\n\n" + "Tình Trạng: " + StatusBar;
+                
             }
             return dt;
         }
@@ -665,13 +759,14 @@ namespace FahasaApp
         {
             if (searchBox.Text == "    Nhập thông tin sách bạn muốn tìm kiếm...\r\n")
             {
+                isStartingFocus = false;
                 searchBox.Text = string.Empty;
                 searchBox.ForeColor = Color.Black;
-                isStartingFocus = false;
+                
             }
         }
 
-        //Handle event click mouse on searchBox
+        //Handle event remove mouse on searchBox
         private void searchBox_Leave(object sender, EventArgs e)
         {
             if (String.IsNullOrEmpty(searchBox.Text))
@@ -698,7 +793,7 @@ namespace FahasaApp
                     DataTable filteredTable = allBooks.Clone();
                     
                     string searchContent = searchBox.Text.ToLower().Trim();
-                    int count = 0;
+
                     //Find book once the searchContent is not empty
                     if (!String.IsNullOrEmpty(searchContent))
                     {
@@ -708,31 +803,26 @@ namespace FahasaApp
                             if (row["BookTitle"].ToString().ToLower().Trim().Contains(searchContent) )
                             {
                                 filteredTable.ImportRow(row);
-                                count += 1;
                             }
                             //Find publication date
                             else if (DateTime.Parse(row["PublicationDate"].ToString()).ToString("d/M/yyyy").Trim().Contains(searchContent) )
                             {
                                 filteredTable.ImportRow(row);
-                                count += 1;
                             }
                             //Find author
                             else if (getNameAuthor(int.Parse(row["AuthorID"].ToString())).ToLower().Trim().Contains(searchContent) )
                             {
                                 filteredTable.ImportRow(row);
-                                count += 1;
                             }
                             //Find category
                             else if (getNameCategory(int.Parse(row["CategoryID"].ToString())).ToLower().Trim().Contains(searchContent) )
                             {
                                 filteredTable.ImportRow(row);
-                                count += 1;
                             }
                             //Find publisher
                             else if (getNamePublisher(int.Parse(row["PublisherID"].ToString())).ToLower().Trim().Contains(searchContent))
                             {
                                 filteredTable.ImportRow(row);
-                                count += 1;
                             }
                         }
                         //MessageBox.Show(count.ToString());
@@ -756,6 +846,7 @@ namespace FahasaApp
                     //When the text in the searchBox is deleted emptily and is not a startingfocus, back to the currentDatable of books
                     if (filteredTable.Rows.Count == 0 && searchContent == "" && !isStartingFocus)
                     {
+                        currentCategoryID = -1;
                         filteredTable = currentDataTable;                        
                         txtNoticeBookNotFound.Visible = false;
                         findBooks = false;
@@ -797,6 +888,101 @@ namespace FahasaApp
         private void removeAllBooks()
         {
             allBooks.Clear();
+        }
+
+        private void comboBoxSearch_DayMonthYear_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dateSearch = true;
+            foreach (KeyValuePair<string, string> dateType in dateList)
+            {
+                if (comboBoxSearch_DayMonthYear.Text == dateType.Key)
+                {
+                    //Refresh the searchBox
+                    searchBox_Leave(sender, e);
+                    //Get searched books
+                    SqlConnection conn = new SqlConnection(Program.getConnectString());
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("[GetBooksBy" + dateType.Value + "]", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(DayWeekMonthYear_BooksTable);
+                    conn.Close();
+                    da.Dispose();
+                    //MessageBox.Show("[GetBooksBy" + date + "]");
+                    dataGridViewBookShow.DataSource = createColumn_And_ChangeInformationOfColumn(DayWeekMonthYear_BooksTable); ;
+                    dataGridViewBookShow.Refresh();
+                    dataGridViewBookShow.Update();
+                    dataGridViewBookShow.ClearSelection();
+                    //Refresh data table
+                    DayWeekMonthYear_BooksTable = new DataTable();
+                    break;
+                }
+
+            }
+        }
+/// <summary>
+/// Section to Detail Book
+/// </summary>
+        
+        private void openChildForm(Form childForm)
+        {
+            ///store current Datagridview
+            currentDataGridView = dataGridViewBookShow;
+            if(activeChildForm != null)
+            {
+                //Dispose the current childForm
+                activeChildForm.Close();
+            }
+            activeChildForm= childForm;
+            if(activeChildForm != null)
+            {
+                childForm.TopLevel = false;
+                childForm.FormBorderStyle= FormBorderStyle.None;
+                childForm.Dock = DockStyle.Fill;
+                panelShowBoooks.Controls.Add(childForm);
+                panelShowBoooks.Tag = childForm;
+                childForm.BringToFront();
+                childForm.Show();
+                hasDataDetailProductForm = true;
+            }
+            hideAndShowSearchSection_BackButton();
+        }
+        private void closeChildFormAndOpenGridView()
+        {
+            if(activeChildForm != null)
+            {
+                panelShowBoooks.Controls.Remove(activeChildForm);
+                panelShowBoooks.Tag = null;
+                panelShowBoooks.Controls.Add(currentDataGridView);
+                activeChildForm.Close();
+                hasDataDetailProductForm = false;
+                hideAndShowSearchSection_BackButton();
+            }
+
+        }
+
+        private void hideAndShowSearchSection_BackButton()
+        {
+            if(hasDataDetailProductForm)
+            {
+                TitleSearch.Visible = false;
+                iconFire.Visible = false;
+                comboBoxSearch_DayMonthYear.Visible = false;
+                BackButton.Visible = true;
+
+            }
+            else
+            {
+                TitleSearch.Visible = true;
+                iconFire.Visible = true;
+                comboBoxSearch_DayMonthYear.Visible = true;
+                BackButton.Visible = false;
+
+            }
+        }
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            closeChildFormAndOpenGridView();
         }
         #endregion
 
@@ -874,11 +1060,8 @@ namespace FahasaApp
             this.btnSignUp.Click += new System.EventHandler(this.LogoutAccount);
         }
 
+
         #endregion
-
-
     }
-
-
 
 }
