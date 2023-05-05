@@ -107,21 +107,25 @@ namespace FahasaApp
                     cmd.Parameters.AddWithValue("@password", textBoxPassword.Text);
                     conn.Open();
                     SqlDataReader dr = cmd.ExecuteReader();
+                    
                     if (dr.HasRows)
                     {
-                        conn.Close();
+                        /*conn.Close();
                         //Get Firstname by Email
-                        SqlCommand cmd1 = new SqlCommand("SELECT Firstname FROM [CUSTOMER] WHERE Email=@username ", conn);
+                        SqlCommand cmd1 = new SqlCommand("SELECT Firstname,Lastname FROM [CUSTOMER] WHERE Email=@username ", conn);
                         cmd1.Parameters.AddWithValue("@username", textBoxUsername.Text);
                         conn.Open();
                         string Firstname = (string)cmd1.ExecuteScalar();
+                        conn.Close();*/
                         conn.Close();
-
                         if (Application.OpenForms.OfType<MainForm>().Any())
                         {
                             // Update and Sync infor user to mainform
                             MainForm mainForm = Application.OpenForms.OfType<MainForm>().FirstOrDefault();
-                            mainForm.SyncDataUser(Firstname);
+                            List<string> user = getUserNameByEmail(textBoxUsername.Text, conn);
+                            string userID = user[0];
+                            string username = user[1];
+                            mainForm.SyncDataUser(userID,username);
                         }
 
                         MessageBox.Show("Đăng nhập thành công");
@@ -186,6 +190,32 @@ namespace FahasaApp
             Forget_PasswordForm FG = new Forget_PasswordForm();
             FG.Show();
             this.Hide();
+        }
+
+        private DataTable getUserByEmail(string email, SqlConnection conn)
+        {
+
+            SqlCommand cmd = new SqlCommand("[getUserByEmail]", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@UEmail", email));
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            conn.Close();
+            da.Dispose();
+            return dt;
+        }
+
+        private List<string> getUserNameByEmail(string email, SqlConnection conn)
+        {
+            DataTable dt = getUserByEmail(email, conn);
+            DataRow row = dt.Rows[0];
+            string username = row["Firstname"].ToString() + " " + row["Lastname"].ToString();
+            string userID = row["CustomerID"].ToString();
+            List<string> user = new List<string>();
+            user.Add(userID);
+            user.Add(username);
+            return user;
         }
     }
 

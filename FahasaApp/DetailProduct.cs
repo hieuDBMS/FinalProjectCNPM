@@ -131,24 +131,56 @@ namespace FahasaApp
 
         private void btnAccess_Click(object sender, EventArgs e)
         {
+            
             int selectedIndex = comboBoxChooseStar.SelectedIndex;
             if (selectedIndex != -1 && !string.IsNullOrEmpty(txtUserComment.Text))
             {
-                DataTable dt = new DataTable();
-                SqlConnection conn = new SqlConnection(Program.getConnectString());
-                conn.Open();
-                SqlCommand cmd = new SqlCommand("[storeUserComment]", conn);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add(new SqlParameter("@UID", 2));
-                cmd.Parameters.Add(new SqlParameter("@BID", bookDetail.getBookID));
-                cmd.Parameters.Add(new SqlParameter("@Star", selectedIndex));
-                cmd.Parameters.Add(new SqlParameter("@Comment", txtUserComment.Text));
-                cmd.ExecuteNonQuery();
-                conn.Close();
+                if (string.IsNullOrEmpty(Properties.Settings.Default.userID))
+                {
+                    DialogResult result = MessageBox.Show("Vui lòng đăng nhập để sử dụng chức năng bình luận", "Đăng nhập", MessageBoxButtons.OKCancel);
+                    if (result == DialogResult.OK)
+                    {
+                        LoginForm loginForm = new LoginForm();
+                        loginForm.ShowDialog();
+                    }
+                    else if (result == DialogResult.Cancel)
+                    {
 
-                setDataGridView_UserComment(bookDetail.getBookID);
-                dataGridViewAllUserComment.Refresh();
+                    }
+                }
+                else
+                {
+                    SaveUserComment(selectedIndex, int.Parse(Properties.Settings.Default.userID));
+                    comboBoxChooseStar.SelectedIndex = -1;
+                    txtUserComment.Text = string.Empty;
+                }      
             }
+            else
+            {
+                MessageBox.Show("Quý khách vui lòng chọn và điền đầy đủ thông tin!");
+            }
+
+            //Refresh comment
+            
+        }
+
+        private void SaveUserComment(int selectedIndex,int userID)
+        {
+            DataTable dt = new DataTable();
+            SqlConnection conn = new SqlConnection(Program.getConnectString());
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("[storeUserComment]", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@UID", userID));
+            cmd.Parameters.Add(new SqlParameter("@BID", bookDetail.getBookID));
+            cmd.Parameters.Add(new SqlParameter("@Star", selectedIndex+1));
+            cmd.Parameters.Add(new SqlParameter("@Comment", txtUserComment.Text));
+            cmd.ExecuteNonQuery();
+            conn.Close();
+
+            //Refresh dataGridview to Show the new Comment
+            setDataGridView_UserComment(bookDetail.getBookID);
+            dataGridViewAllUserComment.Refresh();
         }
         private void dataGridViewAllUserComment_SelectionChanged(object sender, EventArgs e)
         {

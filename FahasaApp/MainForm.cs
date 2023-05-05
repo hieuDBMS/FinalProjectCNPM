@@ -194,26 +194,31 @@ namespace FahasaApp
         private void btnChildrenBook_Click(object sender, EventArgs e)
         {
             showSubmenu(panelChildrenBookSubmenu);
+            
         }
         private void btnFindManga_Comic_Click(object sender, EventArgs e)
         {
             getBookByCategoryID_RefreshSearchBox(17);
             searchBox_Leave(sender, e); //remove the focus on searchBox
+            closeChildFormAndOpenGridView();
         }
         private void btnFindKienThucBachKhoa_Click(object sender, EventArgs e)
         {
             getBookByCategoryID_RefreshSearchBox(18);
             searchBox_Leave(sender, e); //remove the focus on searchBox
+            closeChildFormAndOpenGridView();
         }
         private void btnFindTranhKyNangSong_Click(object sender, EventArgs e)
         {
             getBookByCategoryID_RefreshSearchBox(19);
             searchBox_Leave(sender, e); //remove the focus on searchBox
+            closeChildFormAndOpenGridView();
         }
         private void btnFindVuaHocVuaChoi_Click(object sender, EventArgs e)
         {
             getBookByCategoryID_RefreshSearchBox(20);
             searchBox_Leave(sender, e); //remove the focus on searchBox
+            closeChildFormAndOpenGridView();
         }
         //
 
@@ -227,23 +232,27 @@ namespace FahasaApp
         {
             getBookByCategoryID_RefreshSearchBox(1);
             searchBox_Leave(sender, e); //remove the focus on searchBox
+            closeChildFormAndOpenGridView();
         }
         private void btnFindTruyenNgan_TanVan_Click(object sender, EventArgs e)
         {
             getBookByCategoryID_RefreshSearchBox(2);
             searchBox_Leave(sender, e); //remove the focus on searchBox
+            closeChildFormAndOpenGridView();
         }
 
         private void btnFindLightNovel_Click(object sender, EventArgs e)
         {
             getBookByCategoryID_RefreshSearchBox(3);
             searchBox_Leave(sender, e); //remove the focus on searchBox
+            closeChildFormAndOpenGridView();
         }
 
         private void btnFindNgonTinh_Click(object sender, EventArgs e)
         {
             getBookByCategoryID_RefreshSearchBox(4);
             searchBox_Leave(sender, e); //remove the focus on searchBox
+            closeChildFormAndOpenGridView();
         }
         //
 
@@ -257,24 +266,28 @@ namespace FahasaApp
         {
             getBookByCategoryID_RefreshSearchBox(5);
             searchBox_Leave(sender, e); //remove the focus on searchBox
+            closeChildFormAndOpenGridView();
         }
 
         private void btnFindQuanTri_LanhDao_Click(object sender, EventArgs e)
         {
             getBookByCategoryID_RefreshSearchBox(6);
             searchBox_Leave(sender, e); //remove the focus on searchBox
+            closeChildFormAndOpenGridView();
         }
 
         private void btnFindMarketing_BanHang_Click(object sender, EventArgs e)
         {
             getBookByCategoryID_RefreshSearchBox(7);
             searchBox_Leave(sender, e); //remove the focus on searchBox
+            closeChildFormAndOpenGridView();
         }
 
         private void btnFindPhanTichKinhTe_Click(object sender, EventArgs e)
         {
             getBookByCategoryID_RefreshSearchBox(8);
             searchBox_Leave(sender, e); //remove the focus on searchBox
+            closeChildFormAndOpenGridView();
         }
         //
 
@@ -287,24 +300,28 @@ namespace FahasaApp
         {
             getBookByCategoryID_RefreshSearchBox(9);
             searchBox_Leave(sender, e); //remove the focus on searchBox
+            closeChildFormAndOpenGridView();
         }
 
         private void btnFindRenLuyenNhanCach_Click(object sender, EventArgs e)
         {
             getBookByCategoryID_RefreshSearchBox(10);
             searchBox_Leave(sender, e); //remove the focus on searchBox
+            closeChildFormAndOpenGridView();
         }
 
         private void btnFindTamLy_Click(object sender, EventArgs e)
         {
             getBookByCategoryID_RefreshSearchBox(11);
             searchBox_Leave(sender, e); //remove the focus on searchBox
+            closeChildFormAndOpenGridView();
         }
 
         private void btnFindSachChoTuoiMoiLon_Click(object sender, EventArgs e)
         {
             getBookByCategoryID_RefreshSearchBox(12);
             searchBox_Leave(sender, e); //remove the focus on searchBox
+            closeChildFormAndOpenGridView();
         }
         //
 
@@ -317,24 +334,28 @@ namespace FahasaApp
         {
             getBookByCategoryID_RefreshSearchBox(13);
             searchBox_Leave(sender, e); //remove the focus on searchBox
+            closeChildFormAndOpenGridView();
         }
 
         private void btnFindPhuongPhapGiaoDucTre_Click(object sender, EventArgs e)
         {
             getBookByCategoryID_RefreshSearchBox(14);
             searchBox_Leave(sender, e); //remove the focus on searchBox
+            closeChildFormAndOpenGridView();
         }
 
         private void btnFindPhatTrienTriTueChoTre_Click(object sender, EventArgs e)
         {
             getBookByCategoryID_RefreshSearchBox(15);
             searchBox_Leave(sender, e); //remove the focus on searchBox
+            closeChildFormAndOpenGridView();
         }
 
         private void btnFindPhatTrienKyNangChoTre_Click(object sender, EventArgs e)
         {
             getBookByCategoryID_RefreshSearchBox(16);
             searchBox_Leave(sender, e); //remove the focus on searchBox
+            closeChildFormAndOpenGridView();
         }
         //
 
@@ -348,24 +369,28 @@ namespace FahasaApp
         {
             getBookByCategoryID_RefreshSearchBox(21);
             searchBox_Leave(sender, e); //remove the focus on searchBox
+            closeChildFormAndOpenGridView();
         }
 
         private void btnFindChinhTri_Click(object sender, EventArgs e)
         {
             getBookByCategoryID_RefreshSearchBox(22);
             searchBox_Leave(sender, e); //remove the focus on searchBox
+            closeChildFormAndOpenGridView();
         }
 
         private void btnFindKinhTe_Click(object sender, EventArgs e)
         {
             getBookByCategoryID_RefreshSearchBox(23);
             searchBox_Leave(sender, e); //remove the focus on searchBox
+            closeChildFormAndOpenGridView();
         }
 
         private void btnFindNgheThuatGiaiTri_Click(object sender, EventArgs e)
         {
             getBookByCategoryID_RefreshSearchBox(24);
             searchBox_Leave(sender, e); //remove the focus on searchBox
+            closeChildFormAndOpenGridView();
         }
         //
 
@@ -379,24 +404,28 @@ namespace FahasaApp
         {
             getBookByCategoryID_RefreshSearchBox(25);
             searchBox_Leave(sender, e); //remove the focus on searchBox
+            closeChildFormAndOpenGridView();
         }
 
         private void btnFindSachThamKhao_Click(object sender, EventArgs e)
         {
             getBookByCategoryID_RefreshSearchBox(26);
             searchBox_Leave(sender, e); //remove the focus on searchBox
+            closeChildFormAndOpenGridView();
         }
 
         private void btnFindSachChoGiaoVien_Click(object sender, EventArgs e)
         {
             getBookByCategoryID_RefreshSearchBox(27);
             searchBox_Leave(sender, e); //remove the focus on searchBox
+            closeChildFormAndOpenGridView();
         }
 
         private void btnFindMauGiao_Click(object sender, EventArgs e)
         {
             getBookByCategoryID_RefreshSearchBox(28);
             searchBox_Leave(sender, e); //remove the focus on searchBox
+            closeChildFormAndOpenGridView();
         }
         //
 
@@ -410,30 +439,35 @@ namespace FahasaApp
         {
             getBookByCategoryID_RefreshSearchBox(29);
             searchBox_Leave(sender, e); //remove the focus on searchBox
+            closeChildFormAndOpenGridView();
         }
 
         private void btnFindSachTiengNhat_Click(object sender, EventArgs e)
         {
             getBookByCategoryID_RefreshSearchBox(30);
             searchBox_Leave(sender, e); //remove the focus on searchBox
+            closeChildFormAndOpenGridView();
         }
 
         private void btnFindSachTiengHoa_Click(object sender, EventArgs e)
         {
             getBookByCategoryID_RefreshSearchBox(31);
             searchBox_Leave(sender, e); //remove the focus on searchBox
+            closeChildFormAndOpenGridView();
         }
 
         private void btnFindSachTiengHan_Click(object sender, EventArgs e)
         {
             getBookByCategoryID_RefreshSearchBox(32);
             searchBox_Leave(sender, e); //remove the focus on searchBox
+            closeChildFormAndOpenGridView();
         }
         //
 
         //Button to the Home screen
         private void btnHome_Click(object sender, EventArgs e)
         {
+            closeChildFormAndOpenGridView();
             hideSubMenu();
             searchBox.Text = string.Empty; //clear current text, replace the filtered with currentDatatable and set notice text for search box
             searchBox_Leave(sender,e);  //this line will
@@ -628,7 +662,7 @@ namespace FahasaApp
                     string author = getNameAuthor((int)bookTable.Rows[0]["AuthorID"]);
 
 
-                    MessageBox.Show(publicationDate + "/" + publisher + "/" + author);
+                    /*MessageBox.Show(publicationDate + "/" + publisher + "/" + author);*/
                     Book detailBook = new Book(bookID,bookTable.Rows[0]["BookTitle"].ToString(), bookTable.Rows[0]["BookCover"].ToString(),category, bookTable.Rows[0]["Price"].ToString(),
                         publicationDate, publisher, author, bookImage);
 
@@ -982,8 +1016,13 @@ namespace FahasaApp
         }
         private void BackButton_Click(object sender, EventArgs e)
         {
+            
+        }
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
             closeChildFormAndOpenGridView();
         }
+
         #endregion
 
         #region Vin
@@ -1045,9 +1084,11 @@ namespace FahasaApp
             InitialBTNSigupText = btnSignUp.Text;
         }
 
-        public void SyncDataUser(String Username)
+        public void SyncDataUser(string userID,string Username)
         {
             labelUsername.Text = Username;
+            Properties.Settings.Default.userID = userID;
+            Properties.Settings.Default.username= Username;
             btnSignIn.Text = "Thông tin ";
             btnSignUp.Text = "Đăng xuất";
             this.Refresh();
@@ -1058,10 +1099,14 @@ namespace FahasaApp
 
             this.btnSignUp.Click -= new System.EventHandler(this.OpenRegisterForm);
             this.btnSignUp.Click += new System.EventHandler(this.LogoutAccount);
+
+            panelToggleDownAccount.Visible= false;
         }
 
 
         #endregion
+
+
     }
 
 }

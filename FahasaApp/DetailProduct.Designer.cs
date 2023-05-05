@@ -34,7 +34,6 @@
             this.tableLayoutPanelMain_All = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanelDetailBook = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanelBookImage = new System.Windows.Forms.FlowLayoutPanel();
-            this.pictureBoxBookImage = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanelBookTitle = new System.Windows.Forms.FlowLayoutPanel();
             this.labelBookTitle = new System.Windows.Forms.Label();
             this.flowLayoutPanelButton = new System.Windows.Forms.FlowLayoutPanel();
@@ -58,17 +57,17 @@
             this.panelAllUserComment = new System.Windows.Forms.Panel();
             this.labelNoUserComment = new System.Windows.Forms.Label();
             this.dataGridViewAllUserComment = new System.Windows.Forms.DataGridView();
-            this.UserIcon = new System.Windows.Forms.DataGridViewImageColumn();
             this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Star = new System.Windows.Forms.DataGridViewImageColumn();
             this.Comment = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.imageList100 = new System.Windows.Forms.ImageList(this.components);
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.pictureBoxBookImage = new System.Windows.Forms.PictureBox();
+            this.UserIcon = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.tableLayoutPanelMain_All.SuspendLayout();
             this.tableLayoutPanelDetailBook.SuspendLayout();
             this.flowLayoutPanelBookImage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBookImage)).BeginInit();
             this.flowLayoutPanelBookTitle.SuspendLayout();
             this.flowLayoutPanelButton.SuspendLayout();
             this.flowLayoutPanelBookInformation.SuspendLayout();
@@ -77,13 +76,13 @@
             this.flowLayoutPanelChooseStar.SuspendLayout();
             this.panelAllUserComment.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAllUserComment)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBookImage)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanelMain_All
             // 
             this.tableLayoutPanelMain_All.AutoScroll = true;
             this.tableLayoutPanelMain_All.BackColor = System.Drawing.Color.White;
-            this.tableLayoutPanelMain_All.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanelMain_All.ColumnCount = 1;
             this.tableLayoutPanelMain_All.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanelMain_All.Controls.Add(this.tableLayoutPanelDetailBook, 0, 0);
@@ -95,7 +94,7 @@
             this.tableLayoutPanelMain_All.RowCount = 3;
             this.tableLayoutPanelMain_All.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 500F));
             this.tableLayoutPanelMain_All.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 400F));
-            this.tableLayoutPanelMain_All.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 450F));
+            this.tableLayoutPanelMain_All.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 500F));
             this.tableLayoutPanelMain_All.Size = new System.Drawing.Size(1111, 785);
             this.tableLayoutPanelMain_All.TabIndex = 0;
             // 
@@ -111,14 +110,14 @@
             this.tableLayoutPanelDetailBook.Controls.Add(this.flowLayoutPanelBookInformation, 1, 1);
             this.tableLayoutPanelDetailBook.Controls.Add(this.flowLayoutPanelAuthor, 2, 1);
             this.tableLayoutPanelDetailBook.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanelDetailBook.Location = new System.Drawing.Point(1, 1);
+            this.tableLayoutPanelDetailBook.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanelDetailBook.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanelDetailBook.Name = "tableLayoutPanelDetailBook";
             this.tableLayoutPanelDetailBook.RowCount = 3;
-            this.tableLayoutPanelDetailBook.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.80952F));
-            this.tableLayoutPanelDetailBook.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 61.90476F));
-            this.tableLayoutPanelDetailBook.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanelDetailBook.Size = new System.Drawing.Size(1097, 500);
+            this.tableLayoutPanelDetailBook.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanelDetailBook.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65F));
+            this.tableLayoutPanelDetailBook.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanelDetailBook.Size = new System.Drawing.Size(1094, 500);
             this.tableLayoutPanelDetailBook.TabIndex = 2;
             // 
             // flowLayoutPanelBookImage
@@ -129,20 +128,8 @@
             this.flowLayoutPanelBookImage.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanelBookImage.Name = "flowLayoutPanelBookImage";
             this.tableLayoutPanelDetailBook.SetRowSpan(this.flowLayoutPanelBookImage, 2);
-            this.flowLayoutPanelBookImage.Size = new System.Drawing.Size(219, 381);
+            this.flowLayoutPanelBookImage.Size = new System.Drawing.Size(218, 381);
             this.flowLayoutPanelBookImage.TabIndex = 18;
-            // 
-            // pictureBoxBookImage
-            // 
-            this.pictureBoxBookImage.Location = new System.Drawing.Point(20, 0);
-            this.pictureBoxBookImage.Margin = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.pictureBoxBookImage.MaximumSize = new System.Drawing.Size(190, 340);
-            this.pictureBoxBookImage.MinimumSize = new System.Drawing.Size(190, 340);
-            this.pictureBoxBookImage.Name = "pictureBoxBookImage";
-            this.pictureBoxBookImage.Size = new System.Drawing.Size(190, 340);
-            this.pictureBoxBookImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxBookImage.TabIndex = 15;
-            this.pictureBoxBookImage.TabStop = false;
             // 
             // flowLayoutPanelBookTitle
             // 
@@ -152,7 +139,7 @@
             this.flowLayoutPanelBookTitle.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanelBookTitle.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanelBookTitle.Name = "flowLayoutPanelBookTitle";
-            this.flowLayoutPanelBookTitle.Size = new System.Drawing.Size(1097, 119);
+            this.flowLayoutPanelBookTitle.Size = new System.Drawing.Size(1094, 119);
             this.flowLayoutPanelBookTitle.TabIndex = 19;
             // 
             // labelBookTitle
@@ -171,10 +158,10 @@
             this.flowLayoutPanelButton.Controls.Add(this.btnBuyNow);
             this.flowLayoutPanelButton.Controls.Add(this.btnAddCart);
             this.flowLayoutPanelButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanelButton.Location = new System.Drawing.Point(219, 428);
+            this.flowLayoutPanelButton.Location = new System.Drawing.Point(218, 428);
             this.flowLayoutPanelButton.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanelButton.Name = "flowLayoutPanelButton";
-            this.flowLayoutPanelButton.Size = new System.Drawing.Size(548, 72);
+            this.flowLayoutPanelButton.Size = new System.Drawing.Size(547, 72);
             this.flowLayoutPanelButton.TabIndex = 20;
             // 
             // btnBuyNow
@@ -221,10 +208,10 @@
             this.flowLayoutPanelBookInformation.Controls.Add(this.labelBookPrice);
             this.flowLayoutPanelBookInformation.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanelBookInformation.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanelBookInformation.Location = new System.Drawing.Point(219, 119);
+            this.flowLayoutPanelBookInformation.Location = new System.Drawing.Point(218, 119);
             this.flowLayoutPanelBookInformation.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanelBookInformation.Name = "flowLayoutPanelBookInformation";
-            this.flowLayoutPanelBookInformation.Size = new System.Drawing.Size(548, 309);
+            this.flowLayoutPanelBookInformation.Size = new System.Drawing.Size(547, 309);
             this.flowLayoutPanelBookInformation.TabIndex = 21;
             // 
             // labelBookPublisher
@@ -279,11 +266,11 @@
             this.flowLayoutPanelAuthor.Controls.Add(this.labelBookCover);
             this.flowLayoutPanelAuthor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanelAuthor.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanelAuthor.Location = new System.Drawing.Point(767, 119);
+            this.flowLayoutPanelAuthor.Location = new System.Drawing.Point(765, 119);
             this.flowLayoutPanelAuthor.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanelAuthor.Name = "flowLayoutPanelAuthor";
             this.tableLayoutPanelDetailBook.SetRowSpan(this.flowLayoutPanelAuthor, 2);
-            this.flowLayoutPanelAuthor.Size = new System.Drawing.Size(330, 381);
+            this.flowLayoutPanelAuthor.Size = new System.Drawing.Size(329, 381);
             this.flowLayoutPanelAuthor.TabIndex = 22;
             // 
             // labelBookAuthor
@@ -318,14 +305,14 @@
             this.tableLayoutPanelCommentOfUser.Controls.Add(this.txtUserComment, 1, 1);
             this.tableLayoutPanelCommentOfUser.Controls.Add(this.btnAccess, 1, 2);
             this.tableLayoutPanelCommentOfUser.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanelCommentOfUser.Location = new System.Drawing.Point(1, 502);
+            this.tableLayoutPanelCommentOfUser.Location = new System.Drawing.Point(0, 500);
             this.tableLayoutPanelCommentOfUser.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanelCommentOfUser.Name = "tableLayoutPanelCommentOfUser";
             this.tableLayoutPanelCommentOfUser.RowCount = 3;
             this.tableLayoutPanelCommentOfUser.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanelCommentOfUser.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65F));
             this.tableLayoutPanelCommentOfUser.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanelCommentOfUser.Size = new System.Drawing.Size(1097, 400);
+            this.tableLayoutPanelCommentOfUser.Size = new System.Drawing.Size(1094, 400);
             this.tableLayoutPanelCommentOfUser.TabIndex = 3;
             // 
             // labelUserComment
@@ -353,7 +340,7 @@
             this.flowLayoutPanelChooseStar.Location = new System.Drawing.Point(0, 80);
             this.flowLayoutPanelChooseStar.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanelChooseStar.Name = "flowLayoutPanelChooseStar";
-            this.flowLayoutPanelChooseStar.Size = new System.Drawing.Size(438, 260);
+            this.flowLayoutPanelChooseStar.Size = new System.Drawing.Size(437, 260);
             this.flowLayoutPanelChooseStar.TabIndex = 8;
             // 
             // labelChooseStar
@@ -411,7 +398,7 @@
             this.txtUserComment.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUserComment.ForeColor = System.Drawing.Color.Black;
             this.txtUserComment.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUserComment.Location = new System.Drawing.Point(468, 130);
+            this.txtUserComment.Location = new System.Drawing.Point(467, 130);
             this.txtUserComment.Margin = new System.Windows.Forms.Padding(30, 50, 0, 0);
             this.txtUserComment.MaximumSize = new System.Drawing.Size(620, 180);
             this.txtUserComment.MinimumSize = new System.Drawing.Size(620, 180);
@@ -436,7 +423,7 @@
             this.btnAccess.FillColor = System.Drawing.Color.Red;
             this.btnAccess.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAccess.ForeColor = System.Drawing.Color.White;
-            this.btnAccess.Location = new System.Drawing.Point(948, 340);
+            this.btnAccess.Location = new System.Drawing.Point(947, 340);
             this.btnAccess.Margin = new System.Windows.Forms.Padding(510, 0, 0, 0);
             this.btnAccess.Name = "btnAccess";
             this.btnAccess.Size = new System.Drawing.Size(140, 40);
@@ -449,17 +436,18 @@
             this.panelAllUserComment.Controls.Add(this.labelNoUserComment);
             this.panelAllUserComment.Controls.Add(this.dataGridViewAllUserComment);
             this.panelAllUserComment.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelAllUserComment.Location = new System.Drawing.Point(11, 923);
-            this.panelAllUserComment.Margin = new System.Windows.Forms.Padding(10, 20, 10, 0);
+            this.panelAllUserComment.Location = new System.Drawing.Point(0, 900);
+            this.panelAllUserComment.Margin = new System.Windows.Forms.Padding(0);
             this.panelAllUserComment.Name = "panelAllUserComment";
-            this.panelAllUserComment.Size = new System.Drawing.Size(1077, 1043);
+            this.panelAllUserComment.Padding = new System.Windows.Forms.Padding(20, 20, 20, 0);
+            this.panelAllUserComment.Size = new System.Drawing.Size(1094, 500);
             this.panelAllUserComment.TabIndex = 4;
             // 
             // labelNoUserComment
             // 
             this.labelNoUserComment.AutoSize = true;
             this.labelNoUserComment.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNoUserComment.Location = new System.Drawing.Point(42, 17);
+            this.labelNoUserComment.Location = new System.Drawing.Point(100, 20);
             this.labelNoUserComment.Name = "labelNoUserComment";
             this.labelNoUserComment.Size = new System.Drawing.Size(292, 25);
             this.labelNoUserComment.TabIndex = 8;
@@ -485,7 +473,7 @@
             this.Comment});
             this.dataGridViewAllUserComment.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewAllUserComment.GridColor = System.Drawing.Color.LightSalmon;
-            this.dataGridViewAllUserComment.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewAllUserComment.Location = new System.Drawing.Point(20, 20);
             this.dataGridViewAllUserComment.Margin = new System.Windows.Forms.Padding(20, 20, 20, 0);
             this.dataGridViewAllUserComment.MultiSelect = false;
             this.dataGridViewAllUserComment.Name = "dataGridViewAllUserComment";
@@ -506,20 +494,10 @@
             this.dataGridViewAllUserComment.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewAllUserComment.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridViewAllUserComment.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewAllUserComment.Size = new System.Drawing.Size(1077, 1043);
+            this.dataGridViewAllUserComment.Size = new System.Drawing.Size(1054, 480);
             this.dataGridViewAllUserComment.TabIndex = 7;
             this.dataGridViewAllUserComment.VirtualMode = true;
             this.dataGridViewAllUserComment.SelectionChanged += new System.EventHandler(this.dataGridViewAllUserComment_SelectionChanged);
-            // 
-            // UserIcon
-            // 
-            this.UserIcon.FillWeight = 10F;
-            this.UserIcon.HeaderText = "UserIcon";
-            this.UserIcon.Image = ((System.Drawing.Image)(resources.GetObject("UserIcon.Image")));
-            this.UserIcon.MinimumWidth = 25;
-            this.UserIcon.Name = "UserIcon";
-            this.UserIcon.ReadOnly = true;
-            this.UserIcon.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // UserName
             // 
@@ -551,6 +529,16 @@
             this.Comment.Name = "Comment";
             this.Comment.ReadOnly = true;
             // 
+            // imageList100
+            // 
+            this.imageList100.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList100.ImageStream")));
+            this.imageList100.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList100.Images.SetKeyName(0, "one_star.png");
+            this.imageList100.Images.SetKeyName(1, "two_star.png");
+            this.imageList100.Images.SetKeyName(2, "three_star.png");
+            this.imageList100.Images.SetKeyName(3, "four_strar.png");
+            this.imageList100.Images.SetKeyName(4, "five_star.png");
+            // 
             // dataGridViewImageColumn1
             // 
             this.dataGridViewImageColumn1.FillWeight = 15F;
@@ -558,7 +546,30 @@
             this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
             this.dataGridViewImageColumn1.MinimumWidth = 30;
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewImageColumn1.Width = 78;
+            // 
+            // pictureBoxBookImage
+            // 
+            this.pictureBoxBookImage.Location = new System.Drawing.Point(20, 0);
+            this.pictureBoxBookImage.Margin = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.pictureBoxBookImage.MaximumSize = new System.Drawing.Size(190, 340);
+            this.pictureBoxBookImage.MinimumSize = new System.Drawing.Size(190, 340);
+            this.pictureBoxBookImage.Name = "pictureBoxBookImage";
+            this.pictureBoxBookImage.Size = new System.Drawing.Size(190, 340);
+            this.pictureBoxBookImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxBookImage.TabIndex = 15;
+            this.pictureBoxBookImage.TabStop = false;
+            // 
+            // UserIcon
+            // 
+            this.UserIcon.FillWeight = 10F;
+            this.UserIcon.HeaderText = "UserIcon";
+            this.UserIcon.Image = ((System.Drawing.Image)(resources.GetObject("UserIcon.Image")));
+            this.UserIcon.MinimumWidth = 25;
+            this.UserIcon.Name = "UserIcon";
+            this.UserIcon.ReadOnly = true;
+            this.UserIcon.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // dataGridViewImageColumn2
             // 
@@ -570,16 +581,6 @@
             this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewImageColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewImageColumn2.Width = 106;
-            // 
-            // imageList100
-            // 
-            this.imageList100.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList100.ImageStream")));
-            this.imageList100.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList100.Images.SetKeyName(0, "one_star.png");
-            this.imageList100.Images.SetKeyName(1, "two_star.png");
-            this.imageList100.Images.SetKeyName(2, "three_star.png");
-            this.imageList100.Images.SetKeyName(3, "four_strar.png");
-            this.imageList100.Images.SetKeyName(4, "five_star.png");
             // 
             // DetailProduct
             // 
@@ -596,7 +597,6 @@
             this.tableLayoutPanelMain_All.ResumeLayout(false);
             this.tableLayoutPanelDetailBook.ResumeLayout(false);
             this.flowLayoutPanelBookImage.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBookImage)).EndInit();
             this.flowLayoutPanelBookTitle.ResumeLayout(false);
             this.flowLayoutPanelBookTitle.PerformLayout();
             this.flowLayoutPanelButton.ResumeLayout(false);
@@ -610,6 +610,7 @@
             this.panelAllUserComment.ResumeLayout(false);
             this.panelAllUserComment.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAllUserComment)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBookImage)).EndInit();
             this.ResumeLayout(false);
 
         }
