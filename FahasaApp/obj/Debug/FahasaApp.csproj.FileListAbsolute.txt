@@ -47,3 +47,7 @@ C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaAp
 C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\bin\Debug\ToastNotifications.dll
 C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.Forget_PasswordForm.resources
 C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.csproj.CopyComplete
+C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.CartForm.resources
+C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.AddressForm.resources
+C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.NoticeUserLogin_CartForm.resources
+C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.ChangeAddressForm.resources

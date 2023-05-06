@@ -118,18 +118,27 @@ namespace FahasaApp
                         string Firstname = (string)cmd1.ExecuteScalar();
                         conn.Close();*/
                         conn.Close();
+
+                        MessageBox.Show("Đăng nhập thành công");
+                        // Sync Data to mainForm
                         if (Application.OpenForms.OfType<MainForm>().Any())
                         {
                             // Update and Sync infor user to mainform
                             MainForm mainForm = Application.OpenForms.OfType<MainForm>().FirstOrDefault();
-                            List<string> user = getUserNameByEmail(textBoxUsername.Text, conn);
-                            string userID = user[0];
-                            string username = user[1];
-                            mainForm.SyncDataUser(userID,username);
+                            List<string> user = getAllUserInformationByEmail(textBoxUsername.Text, conn);
+                            mainForm.SyncDataUser(user[0], user[1], user[2], user[3]);
                         }
-
-                        MessageBox.Show("Đăng nhập thành công");
-                        
+                        // Sync Data to cartForm if it is currently opened
+                        if (Application.OpenForms.OfType<CartForm>().Any())
+                        {
+                            // Update and Sync infor user to cartForm
+                            CartForm cartForm = Application.OpenForms.OfType<CartForm>().FirstOrDefault();
+                            AddressForm addressForm = new AddressForm();
+                            cartForm.openChildForm(addressForm);
+                            cartForm.Refresh();
+                            /*cartForm.*/
+                        }
+                                
                         this.Hide();
                     }
                     else
@@ -142,11 +151,7 @@ namespace FahasaApp
             else
             {
                 MessageBox.Show("Bạn vui lòng nhập đầy đủ thông tin để đăng nhập");
-            }    
-            
-            
-            
-          
+            }                                             
         }
 
         private void RegisterButton_Click(object sender, EventArgs e)
@@ -206,15 +211,21 @@ namespace FahasaApp
             return dt;
         }
 
-        private List<string> getUserNameByEmail(string email, SqlConnection conn)
+        private List<string> getAllUserInformationByEmail(string email, SqlConnection conn)
         {
             DataTable dt = getUserByEmail(email, conn);
             DataRow row = dt.Rows[0];
-            string username = row["Firstname"].ToString() + " " + row["Lastname"].ToString();
             string userID = row["CustomerID"].ToString();
+            string username = row["Firstname"].ToString() + " " + row["Lastname"].ToString();
+            string userPhone = row["Phone"].ToString().Trim();
+            string userAddress = row["Address"].ToString();
+
             List<string> user = new List<string>();
             user.Add(userID);
             user.Add(username);
+            user.Add(userPhone);
+            user.Add(userAddress);
+
             return user;
         }
     }

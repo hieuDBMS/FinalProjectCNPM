@@ -30,13 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.FlowLayoutPanel flowLayoutPanelIconUser;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.pictureBoxAccountIcon = new System.Windows.Forms.PictureBox();
             this.tableLayoutShowScreen = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.TitleSearch = new System.Windows.Forms.Label();
+            this.iconFire = new System.Windows.Forms.PictureBox();
             this.comboBoxSearch_DayMonthYear = new System.Windows.Forms.ComboBox();
             this.panelShowBoooks = new System.Windows.Forms.Panel();
             this.txtNoticeBookNotFound = new System.Windows.Forms.Label();
@@ -49,10 +51,17 @@
             this.tableLayoutPanelSearch_Account = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanelSearch = new System.Windows.Forms.FlowLayoutPanel();
             this.searchBox = new System.Windows.Forms.TextBox();
+            this.pictureBoxSearchIcon = new System.Windows.Forms.PictureBox();
+            this.BackButton = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panelUsername_Icon = new System.Windows.Forms.FlowLayoutPanel();
+            this.labelUsername = new System.Windows.Forms.Label();
+            this.pictureBoxIconToggle = new System.Windows.Forms.PictureBox();
             this.panelToggleDownAccount = new System.Windows.Forms.Panel();
             this.btnSignUp = new System.Windows.Forms.Button();
             this.btnSignIn = new System.Windows.Forms.Button();
+            this.pictureBoxFavoriteIcon = new System.Windows.Forms.PictureBox();
+            this.pictureBoxShopCart = new System.Windows.Forms.PictureBox();
             this.panelText_ReferenceBookSubMenu = new System.Windows.Forms.Panel();
             this.btnFindMauGiao = new System.Windows.Forms.Button();
             this.btnFindSachChoGiaoVien = new System.Windows.Forms.Button();
@@ -105,29 +114,28 @@
             this.btnLiteratureBook = new System.Windows.Forms.Button();
             this.btnChildrenBook = new System.Windows.Forms.Button();
             this.btnHome1 = new System.Windows.Forms.Button();
+            this.panelLogoSideMenu = new System.Windows.Forms.Panel();
             this.imageList20 = new System.Windows.Forms.ImageList(this.components);
             this.imageList40 = new System.Windows.Forms.ImageList(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.labelUsername = new System.Windows.Forms.Label();
-            this.panelUsername_Icon = new System.Windows.Forms.FlowLayoutPanel();
-            this.panelLogoSideMenu = new System.Windows.Forms.Panel();
-            this.iconFire = new System.Windows.Forms.PictureBox();
-            this.pictureBoxSearchIcon = new System.Windows.Forms.PictureBox();
-            this.BackButton = new System.Windows.Forms.PictureBox();
-            this.pictureBoxAccountIcon = new System.Windows.Forms.PictureBox();
-            this.pictureBoxIconToggle = new System.Windows.Forms.PictureBox();
-            this.pictureBoxFavoriteIcon = new System.Windows.Forms.PictureBox();
-            this.pictureBoxShopCart = new System.Windows.Forms.PictureBox();
             flowLayoutPanelIconUser = new System.Windows.Forms.FlowLayoutPanel();
             flowLayoutPanelIconUser.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAccountIcon)).BeginInit();
             this.tableLayoutShowScreen.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconFire)).BeginInit();
             this.panelShowBoooks.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBookShow)).BeginInit();
             this.tableLayoutPanelSearch_Account.SuspendLayout();
             this.flowLayoutPanelSearch.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSearchIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BackButton)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
+            this.panelUsername_Icon.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIconToggle)).BeginInit();
             this.panelToggleDownAccount.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFavoriteIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShopCart)).BeginInit();
             this.panelText_ReferenceBookSubMenu.SuspendLayout();
             this.panelForeignLanguageBooksSubMenu.SuspendLayout();
             this.panelBiography_MemoirsSubMenu.SuspendLayout();
@@ -138,14 +146,6 @@
             this.panelLiteratureSubMenu.SuspendLayout();
             this.tableLayoutMain.SuspendLayout();
             this.panelSideMenu.SuspendLayout();
-            this.panelUsername_Icon.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconFire)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSearchIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BackButton)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAccountIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIconToggle)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFavoriteIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShopCart)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanelIconUser
@@ -158,6 +158,17 @@
             flowLayoutPanelIconUser.Name = "flowLayoutPanelIconUser";
             flowLayoutPanelIconUser.Size = new System.Drawing.Size(55, 146);
             flowLayoutPanelIconUser.TabIndex = 1;
+            // 
+            // pictureBoxAccountIcon
+            // 
+            this.pictureBoxAccountIcon.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxAccountIcon.Image")));
+            this.pictureBoxAccountIcon.Location = new System.Drawing.Point(10, 30);
+            this.pictureBoxAccountIcon.Margin = new System.Windows.Forms.Padding(10, 30, 0, 0);
+            this.pictureBoxAccountIcon.Name = "pictureBoxAccountIcon";
+            this.pictureBoxAccountIcon.Size = new System.Drawing.Size(40, 35);
+            this.pictureBoxAccountIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxAccountIcon.TabIndex = 3;
+            this.pictureBoxAccountIcon.TabStop = false;
             // 
             // tableLayoutShowScreen
             // 
@@ -202,6 +213,15 @@
             this.TitleSearch.TabIndex = 2;
             this.TitleSearch.Text = "Các Sách Bán Chạy Nhất Theo";
             this.TitleSearch.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // iconFire
+            // 
+            this.iconFire.Location = new System.Drawing.Point(644, 2);
+            this.iconFire.Margin = new System.Windows.Forms.Padding(215, 2, 0, 0);
+            this.iconFire.Name = "iconFire";
+            this.iconFire.Size = new System.Drawing.Size(40, 40);
+            this.iconFire.TabIndex = 4;
+            this.iconFire.TabStop = false;
             // 
             // comboBoxSearch_DayMonthYear
             // 
@@ -269,15 +289,15 @@
             this.AddShopCart,
             this.BookID});
             this.dataGridViewBookShow.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(5);
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewBookShow.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewBookShow.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewBookShow.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewBookShow.GridColor = System.Drawing.Color.LightSalmon;
             this.dataGridViewBookShow.Location = new System.Drawing.Point(0, 0);
@@ -286,14 +306,14 @@
             this.dataGridViewBookShow.Name = "dataGridViewBookShow";
             this.dataGridViewBookShow.ReadOnly = true;
             this.dataGridViewBookShow.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewBookShow.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewBookShow.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewBookShow.RowHeadersVisible = false;
             this.dataGridViewBookShow.RowHeadersWidth = 51;
             this.dataGridViewBookShow.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
@@ -336,13 +356,13 @@
             // 
             // AddShopCart
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(10, 30, 10, 30);
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.AddShopCart.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(10, 30, 10, 30);
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.AddShopCart.DefaultCellStyle = dataGridViewCellStyle1;
             this.AddShopCart.FillWeight = 25F;
             this.AddShopCart.HeaderText = "Add Cart";
             this.AddShopCart.MinimumWidth = 6;
@@ -410,6 +430,31 @@
             this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
             this.searchBox.Leave += new System.EventHandler(this.searchBox_Leave);
             // 
+            // pictureBoxSearchIcon
+            // 
+            this.pictureBoxSearchIcon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBoxSearchIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.pictureBoxSearchIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBoxSearchIcon.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxSearchIcon.Image")));
+            this.pictureBoxSearchIcon.Location = new System.Drawing.Point(695, 35);
+            this.pictureBoxSearchIcon.Margin = new System.Windows.Forms.Padding(0, 35, 0, 0);
+            this.pictureBoxSearchIcon.Name = "pictureBoxSearchIcon";
+            this.pictureBoxSearchIcon.Size = new System.Drawing.Size(45, 26);
+            this.pictureBoxSearchIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBoxSearchIcon.TabIndex = 2;
+            this.pictureBoxSearchIcon.TabStop = false;
+            // 
+            // BackButton
+            // 
+            this.BackButton.Image = global::FahasaApp.Properties.Resources.back_btn;
+            this.BackButton.Location = new System.Drawing.Point(30, 111);
+            this.BackButton.Margin = new System.Windows.Forms.Padding(30, 30, 0, 0);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Size = new System.Drawing.Size(30, 30);
+            this.BackButton.TabIndex = 4;
+            this.BackButton.TabStop = false;
+            this.BackButton.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
@@ -426,6 +471,40 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(188, 146);
             this.tableLayoutPanel1.TabIndex = 2;
+            // 
+            // panelUsername_Icon
+            // 
+            this.panelUsername_Icon.Controls.Add(this.labelUsername);
+            this.panelUsername_Icon.Controls.Add(this.pictureBoxIconToggle);
+            this.panelUsername_Icon.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelUsername_Icon.Location = new System.Drawing.Point(0, 0);
+            this.panelUsername_Icon.Margin = new System.Windows.Forms.Padding(0);
+            this.panelUsername_Icon.Name = "panelUsername_Icon";
+            this.panelUsername_Icon.Size = new System.Drawing.Size(188, 55);
+            this.panelUsername_Icon.TabIndex = 0;
+            // 
+            // labelUsername
+            // 
+            this.labelUsername.AutoSize = true;
+            this.labelUsername.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUsername.Location = new System.Drawing.Point(10, 35);
+            this.labelUsername.Margin = new System.Windows.Forms.Padding(10, 35, 0, 0);
+            this.labelUsername.Name = "labelUsername";
+            this.labelUsername.Size = new System.Drawing.Size(89, 20);
+            this.labelUsername.TabIndex = 4;
+            this.labelUsername.Text = "Tài Khoản";
+            this.labelUsername.Click += new System.EventHandler(this.labelUsername_Click);
+            // 
+            // pictureBoxIconToggle
+            // 
+            this.pictureBoxIconToggle.Location = new System.Drawing.Point(99, 35);
+            this.pictureBoxIconToggle.Margin = new System.Windows.Forms.Padding(0, 35, 0, 0);
+            this.pictureBoxIconToggle.Name = "pictureBoxIconToggle";
+            this.pictureBoxIconToggle.Size = new System.Drawing.Size(20, 20);
+            this.pictureBoxIconToggle.TabIndex = 5;
+            this.pictureBoxIconToggle.TabStop = false;
+            this.pictureBoxIconToggle.Click += new System.EventHandler(this.pictureBoxIconToggle_Click);
             // 
             // panelToggleDownAccount
             // 
@@ -472,6 +551,26 @@
             this.btnSignIn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSignIn.UseVisualStyleBackColor = true;
             this.btnSignIn.Click += new System.EventHandler(this.OpenLoginForm);
+            // 
+            // pictureBoxFavoriteIcon
+            // 
+            this.pictureBoxFavoriteIcon.ErrorImage = null;
+            this.pictureBoxFavoriteIcon.Location = new System.Drawing.Point(1003, 25);
+            this.pictureBoxFavoriteIcon.Margin = new System.Windows.Forms.Padding(5, 25, 0, 0);
+            this.pictureBoxFavoriteIcon.Name = "pictureBoxFavoriteIcon";
+            this.pictureBoxFavoriteIcon.Size = new System.Drawing.Size(40, 40);
+            this.pictureBoxFavoriteIcon.TabIndex = 3;
+            this.pictureBoxFavoriteIcon.TabStop = false;
+            // 
+            // pictureBoxShopCart
+            // 
+            this.pictureBoxShopCart.Location = new System.Drawing.Point(1058, 25);
+            this.pictureBoxShopCart.Margin = new System.Windows.Forms.Padding(5, 25, 0, 0);
+            this.pictureBoxShopCart.Name = "pictureBoxShopCart";
+            this.pictureBoxShopCart.Size = new System.Drawing.Size(40, 40);
+            this.pictureBoxShopCart.TabIndex = 4;
+            this.pictureBoxShopCart.TabStop = false;
+            this.pictureBoxShopCart.Click += new System.EventHandler(this.pictureBoxShopCart_Click);
             // 
             // panelText_ReferenceBookSubMenu
             // 
@@ -1465,6 +1564,18 @@
             this.btnHome1.UseVisualStyleBackColor = false;
             this.btnHome1.Click += new System.EventHandler(this.btnHome_Click);
             // 
+            // panelLogoSideMenu
+            // 
+            this.panelLogoSideMenu.BackColor = System.Drawing.Color.White;
+            this.panelLogoSideMenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelLogoSideMenu.BackgroundImage")));
+            this.panelLogoSideMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panelLogoSideMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogoSideMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelLogoSideMenu.Margin = new System.Windows.Forms.Padding(0);
+            this.panelLogoSideMenu.Name = "panelLogoSideMenu";
+            this.panelLogoSideMenu.Size = new System.Drawing.Size(290, 150);
+            this.panelLogoSideMenu.TabIndex = 2;
+            // 
             // imageList20
             // 
             this.imageList20.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList20.ImageStream")));
@@ -1487,116 +1598,6 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // labelUsername
-            // 
-            this.labelUsername.AutoSize = true;
-            this.labelUsername.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.labelUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUsername.Location = new System.Drawing.Point(10, 35);
-            this.labelUsername.Margin = new System.Windows.Forms.Padding(10, 35, 0, 0);
-            this.labelUsername.Name = "labelUsername";
-            this.labelUsername.Size = new System.Drawing.Size(89, 20);
-            this.labelUsername.TabIndex = 4;
-            this.labelUsername.Text = "Tài Khoản";
-            this.labelUsername.Click += new System.EventHandler(this.labelUsername_Click);
-            // 
-            // panelUsername_Icon
-            // 
-            this.panelUsername_Icon.Controls.Add(this.labelUsername);
-            this.panelUsername_Icon.Controls.Add(this.pictureBoxIconToggle);
-            this.panelUsername_Icon.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelUsername_Icon.Location = new System.Drawing.Point(0, 0);
-            this.panelUsername_Icon.Margin = new System.Windows.Forms.Padding(0);
-            this.panelUsername_Icon.Name = "panelUsername_Icon";
-            this.panelUsername_Icon.Size = new System.Drawing.Size(188, 55);
-            this.panelUsername_Icon.TabIndex = 0;
-            // 
-            // panelLogoSideMenu
-            // 
-            this.panelLogoSideMenu.BackColor = System.Drawing.Color.White;
-            this.panelLogoSideMenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelLogoSideMenu.BackgroundImage")));
-            this.panelLogoSideMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panelLogoSideMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogoSideMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelLogoSideMenu.Margin = new System.Windows.Forms.Padding(0);
-            this.panelLogoSideMenu.Name = "panelLogoSideMenu";
-            this.panelLogoSideMenu.Size = new System.Drawing.Size(290, 150);
-            this.panelLogoSideMenu.TabIndex = 2;
-            // 
-            // iconFire
-            // 
-            this.iconFire.Location = new System.Drawing.Point(644, 2);
-            this.iconFire.Margin = new System.Windows.Forms.Padding(215, 2, 0, 0);
-            this.iconFire.Name = "iconFire";
-            this.iconFire.Size = new System.Drawing.Size(40, 40);
-            this.iconFire.TabIndex = 4;
-            this.iconFire.TabStop = false;
-            // 
-            // pictureBoxSearchIcon
-            // 
-            this.pictureBoxSearchIcon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBoxSearchIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.pictureBoxSearchIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBoxSearchIcon.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxSearchIcon.Image")));
-            this.pictureBoxSearchIcon.Location = new System.Drawing.Point(695, 35);
-            this.pictureBoxSearchIcon.Margin = new System.Windows.Forms.Padding(0, 35, 0, 0);
-            this.pictureBoxSearchIcon.Name = "pictureBoxSearchIcon";
-            this.pictureBoxSearchIcon.Size = new System.Drawing.Size(45, 26);
-            this.pictureBoxSearchIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBoxSearchIcon.TabIndex = 2;
-            this.pictureBoxSearchIcon.TabStop = false;
-            // 
-            // BackButton
-            // 
-            this.BackButton.Image = global::FahasaApp.Properties.Resources.back_btn;
-            this.BackButton.Location = new System.Drawing.Point(30, 111);
-            this.BackButton.Margin = new System.Windows.Forms.Padding(30, 30, 0, 0);
-            this.BackButton.Name = "BackButton";
-            this.BackButton.Size = new System.Drawing.Size(30, 30);
-            this.BackButton.TabIndex = 4;
-            this.BackButton.TabStop = false;
-            this.BackButton.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // pictureBoxAccountIcon
-            // 
-            this.pictureBoxAccountIcon.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxAccountIcon.Image")));
-            this.pictureBoxAccountIcon.Location = new System.Drawing.Point(10, 30);
-            this.pictureBoxAccountIcon.Margin = new System.Windows.Forms.Padding(10, 30, 0, 0);
-            this.pictureBoxAccountIcon.Name = "pictureBoxAccountIcon";
-            this.pictureBoxAccountIcon.Size = new System.Drawing.Size(40, 35);
-            this.pictureBoxAccountIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxAccountIcon.TabIndex = 3;
-            this.pictureBoxAccountIcon.TabStop = false;
-            // 
-            // pictureBoxIconToggle
-            // 
-            this.pictureBoxIconToggle.Location = new System.Drawing.Point(99, 35);
-            this.pictureBoxIconToggle.Margin = new System.Windows.Forms.Padding(0, 35, 0, 0);
-            this.pictureBoxIconToggle.Name = "pictureBoxIconToggle";
-            this.pictureBoxIconToggle.Size = new System.Drawing.Size(20, 20);
-            this.pictureBoxIconToggle.TabIndex = 5;
-            this.pictureBoxIconToggle.TabStop = false;
-            this.pictureBoxIconToggle.Click += new System.EventHandler(this.pictureBoxIconToggle_Click);
-            // 
-            // pictureBoxFavoriteIcon
-            // 
-            this.pictureBoxFavoriteIcon.ErrorImage = null;
-            this.pictureBoxFavoriteIcon.Location = new System.Drawing.Point(1003, 25);
-            this.pictureBoxFavoriteIcon.Margin = new System.Windows.Forms.Padding(5, 25, 0, 0);
-            this.pictureBoxFavoriteIcon.Name = "pictureBoxFavoriteIcon";
-            this.pictureBoxFavoriteIcon.Size = new System.Drawing.Size(40, 40);
-            this.pictureBoxFavoriteIcon.TabIndex = 3;
-            this.pictureBoxFavoriteIcon.TabStop = false;
-            // 
-            // pictureBoxShopCart
-            // 
-            this.pictureBoxShopCart.Location = new System.Drawing.Point(1058, 25);
-            this.pictureBoxShopCart.Margin = new System.Windows.Forms.Padding(5, 25, 0, 0);
-            this.pictureBoxShopCart.Name = "pictureBoxShopCart";
-            this.pictureBoxShopCart.Size = new System.Drawing.Size(40, 40);
-            this.pictureBoxShopCart.TabIndex = 4;
-            this.pictureBoxShopCart.TabStop = false;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1611,17 +1612,26 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.MainForm_Load);
             flowLayoutPanelIconUser.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAccountIcon)).EndInit();
             this.tableLayoutShowScreen.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconFire)).EndInit();
             this.panelShowBoooks.ResumeLayout(false);
             this.panelShowBoooks.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBookShow)).EndInit();
             this.tableLayoutPanelSearch_Account.ResumeLayout(false);
             this.flowLayoutPanelSearch.ResumeLayout(false);
             this.flowLayoutPanelSearch.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSearchIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BackButton)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.panelUsername_Icon.ResumeLayout(false);
+            this.panelUsername_Icon.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIconToggle)).EndInit();
             this.panelToggleDownAccount.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFavoriteIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShopCart)).EndInit();
             this.panelText_ReferenceBookSubMenu.ResumeLayout(false);
             this.panelForeignLanguageBooksSubMenu.ResumeLayout(false);
             this.panelBiography_MemoirsSubMenu.ResumeLayout(false);
@@ -1632,15 +1642,6 @@
             this.panelLiteratureSubMenu.ResumeLayout(false);
             this.tableLayoutMain.ResumeLayout(false);
             this.panelSideMenu.ResumeLayout(false);
-            this.panelUsername_Icon.ResumeLayout(false);
-            this.panelUsername_Icon.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconFire)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSearchIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BackButton)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAccountIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIconToggle)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFavoriteIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShopCart)).EndInit();
             this.ResumeLayout(false);
 
         }

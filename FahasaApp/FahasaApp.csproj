@@ -61,7 +61,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChangeAddressForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeAddressForm.Designer.cs">
+      <DependentUpon>ChangeAddressForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddressForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddressForm.Designer.cs">
+      <DependentUpon>AddressForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Book.cs" />
+    <Compile Include="CartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CartForm.Designer.cs">
+      <DependentUpon>CartForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DetailProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +98,14 @@
     <Compile Include="LoginForm.designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MySettings.cs" />
+    <Compile Include="NoticeUserLogin_CartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NoticeUserLogin_CartForm.Designer.cs">
+      <DependentUpon>NoticeUserLogin_CartForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShoppingCart.cs" />
     <Compile Include="RegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +120,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ChangeAddressForm.resx">
+      <DependentUpon>ChangeAddressForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddressForm.resx">
+      <DependentUpon>AddressForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CartForm.resx">
+      <DependentUpon>CartForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DetailProduct.resx">
       <DependentUpon>DetailProduct.cs</DependentUpon>
     </EmbeddedResource>
@@ -102,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NoticeUserLogin_CartForm.resx">
+      <DependentUpon>NoticeUserLogin_CartForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
@@ -141,6 +179,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\back_btn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bookmark-plus.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

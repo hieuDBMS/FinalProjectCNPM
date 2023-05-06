@@ -17,6 +17,7 @@ namespace FahasaApp
         private string PublicationDate;
         private string Publisher;
         private string Author;
+        private int BookQuantity = 1;
 
         //Constructor
         public Book(int bookID,string bookTitle, string bookCover, string bookCategory, string bookPrice, string publicationDate, string publisher, string author, byte[] bookImage)
@@ -99,6 +100,14 @@ namespace FahasaApp
         public string setBookPrice
         {
             set { this.BookPrice = value; }
+        }
+        public int getBookQuantity
+        {
+            get { return this.BookQuantity; }
+        }
+        public int setBookQuantity
+        {
+            set { this.BookQuantity = value; }
         }
 
     }

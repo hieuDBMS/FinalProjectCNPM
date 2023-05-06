@@ -46,5 +46,29 @@ namespace FahasaApp.Properties {
                 this["username"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string userPhone {
+            get {
+                return ((string)(this["userPhone"]));
+            }
+            set {
+                this["userPhone"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string userAddress {
+            get {
+                return ((string)(this["userAddress"]));
+            }
+            set {
+                this["userAddress"] = value;
+            }
+        }
     }
 }

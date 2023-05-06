@@ -190,5 +190,15 @@ namespace FahasaApp
                 dataGridViewAllUserComment.ClearSelection();
             }
         }
+
+        private void btnAddCart_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms.OfType<MainForm>().Any())
+            {
+                // Update and Sync infor user to mainform
+                MainForm mainForm = Application.OpenForms.OfType<MainForm>().FirstOrDefault();
+                mainForm.AddRemoveBookToShopCart(bookDetail.getBookID,true);
+            }
+        }
     }
 }

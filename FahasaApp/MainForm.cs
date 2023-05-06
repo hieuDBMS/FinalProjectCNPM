@@ -1,10 +1,13 @@
-﻿using System;
+﻿using FahasaApp.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net;
+using System.Runtime;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -38,6 +41,8 @@ namespace FahasaApp
         public bool dateSearch = false; // for handle search book by day week month year week
         public bool isStartingFocus = true;
         public bool hasDataDetailProductForm = false;
+
+
         public MainForm()
         {
             InitializeComponent();
@@ -47,6 +52,8 @@ namespace FahasaApp
 
             //InitiaForm before login - vin
             InitiaForm();
+ 
+
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
@@ -641,8 +648,9 @@ namespace FahasaApp
                 int rowIndex = e.RowIndex;
                 currentRowCell = rowIndex;
                 DataGridViewRow row = dataGridViewBookShow.Rows[rowIndex];
-                String test = row.Cells[1].Value.ToString();
-                MessageBox.Show(test);
+                int bookID = int.Parse(row.Cells[4].Value.ToString());
+                AddRemoveBookToShopCart(bookID,true);
+
             }
             else
             {
@@ -650,33 +658,61 @@ namespace FahasaApp
                 DataGridViewRow row = dataGridViewBookShow.Rows[currentRowCell];
                 /*byte[] bookImage = (byte[])row.Cells[0].Value;*/
                 int bookID = int.Parse(row.Cells[4].Value.ToString());
-                DataTable bookTable = getBookByID(bookID);
-                if(bookTable.Rows.Count > 0)
+                               
+                /*MessageBox.Show(publicationDate + "/" + publisher + "/" + author);*/
+                Book detailBook = createBookInstance(bookID);
+                if(detailBook != null)
                 {
-                    byte[] bookImage = (byte[])bookTable.Rows[0]["Image"];
-                    DateTime tempPublication = (DateTime)bookTable.Rows[0]["PublicationDate"];
-
-                    string category = getNameCategory((int)bookTable.Rows[0]["CategoryID"]);
-                    string publicationDate = tempPublication.ToString("dd-MM-yyyy");
-                    string publisher = getNamePublisher((int)bookTable.Rows[0]["PublisherID"]);
-                    string author = getNameAuthor((int)bookTable.Rows[0]["AuthorID"]);
-
-
-                    /*MessageBox.Show(publicationDate + "/" + publisher + "/" + author);*/
-                    Book detailBook = new Book(bookID,bookTable.Rows[0]["BookTitle"].ToString(), bookTable.Rows[0]["BookCover"].ToString(),category, bookTable.Rows[0]["Price"].ToString(),
-                        publicationDate, publisher, author, bookImage);
-
-
                     DetailProduct dProduct = new DetailProduct(detailBook);
                     openChildForm(dProduct);
-                }
-                else
-                {
-                    MessageBox.Show("Sách hiện đang không khả dụng !");
-                }
-
+                }              
             }
         }
+
+        public void AddRemoveBookToShopCart(int bookID, bool flagUpdate)
+        {
+            Book book = createBookInstance(bookID);
+
+            Program.updateMySetting(book, flagUpdate);
+            //MessageBox.Show(Program.getQuantity().ToString());
+        }
+
+        public void RemoveBookFromShopCart(int bookID)
+        {
+            Book book = createBookInstance(bookID);
+            Program.updateMySetting(book, false);
+        }
+
+        private Book createBookInstance(int bookID)
+        {
+            Book detailBook = null;
+            DataTable bookTable = getBookByID(bookID);
+
+            if (bookTable.Rows.Count > 0)
+            {
+                byte[] bookImage = (byte[])bookTable.Rows[0]["Image"];
+                DateTime tempPublication = (DateTime)bookTable.Rows[0]["PublicationDate"];
+
+                string category = getNameCategory((int)bookTable.Rows[0]["CategoryID"]);
+                string publicationDate = tempPublication.ToString("dd-MM-yyyy");
+                string publisher = getNamePublisher((int)bookTable.Rows[0]["PublisherID"]);
+                string author = getNameAuthor((int)bookTable.Rows[0]["AuthorID"]);
+
+
+                /*MessageBox.Show(publicationDate + "/" + publisher + "/" + author);*/
+                detailBook = new Book(bookID, bookTable.Rows[0]["BookTitle"].ToString(), bookTable.Rows[0]["BookCover"].ToString(), category, bookTable.Rows[0]["Price"].ToString(),
+                    publicationDate, publisher, author, bookImage);
+                return detailBook;
+            }
+            else
+            {
+                MessageBox.Show("Sách hiện đang không khả dụng !");
+                return null;
+            }
+         
+            
+        }
+
 
         private void dataGridViewBookShow_Scroll(object sender, ScrollEventArgs e)
         {
@@ -1014,15 +1050,16 @@ namespace FahasaApp
 
             }
         }
-        private void BackButton_Click(object sender, EventArgs e)
-        {
-            
-        }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             closeChildFormAndOpenGridView();
         }
 
+        private void pictureBoxShopCart_Click(object sender, EventArgs e)
+        {
+            CartForm cartForm = new CartForm();
+            openChildForm(cartForm);
+        }
         #endregion
 
         #region Vin
@@ -1084,11 +1121,13 @@ namespace FahasaApp
             InitialBTNSigupText = btnSignUp.Text;
         }
 
-        public void SyncDataUser(string userID,string Username)
+        public void SyncDataUser(string userID,string username,string userPhone, string userAddress)
         {
-            labelUsername.Text = Username;
+            labelUsername.Text = username;
             Properties.Settings.Default.userID = userID;
-            Properties.Settings.Default.username= Username;
+            Properties.Settings.Default.username= username;
+            Properties.Settings.Default.userPhone = userPhone;
+            Properties.Settings.Default.userAddress = userAddress;
             btnSignIn.Text = "Thông tin ";
             btnSignUp.Text = "Đăng xuất";
             this.Refresh();
@@ -1104,8 +1143,8 @@ namespace FahasaApp
         }
 
 
-        #endregion
 
+        #endregion
 
     }
 
