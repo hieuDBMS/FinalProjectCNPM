@@ -24,6 +24,7 @@ namespace FahasaApp
 
         private int rowCount = 0;   // for load more data to mainform
         private int rowCountCateogy = 0; // for load more data of category datagridview
+        public int currrentOrderID = -1;
 
         DataTable currentDataTable = new DataTable();
         DataTable currentCategoryTable = new DataTable();

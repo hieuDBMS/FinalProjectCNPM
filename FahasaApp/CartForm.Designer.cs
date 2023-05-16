@@ -58,6 +58,7 @@
             this.btnBank = new Guna.UI2.WinForms.Guna2Button();
             this.panelAddress = new System.Windows.Forms.Panel();
             this.tableLayoutPanelCartFormMain = new System.Windows.Forms.TableLayoutPanel();
+            this.btnPrintBill = new Guna.UI2.WinForms.Guna2Button();
             this.tableLayoutPanelPay.SuspendLayout();
             this.flowLayoutPanelTotalPrice.SuspendLayout();
             this.flowLayoutPanelPayButton.SuspendLayout();
@@ -120,6 +121,7 @@
             // flowLayoutPanelPayButton
             // 
             this.flowLayoutPanelPayButton.Controls.Add(this.btnPay);
+            this.flowLayoutPanelPayButton.Controls.Add(this.btnPrintBill);
             this.flowLayoutPanelPayButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanelPayButton.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.flowLayoutPanelPayButton.Location = new System.Drawing.Point(0, 67);
@@ -402,6 +404,24 @@
             this.tableLayoutPanelCartFormMain.Size = new System.Drawing.Size(1111, 785);
             this.tableLayoutPanelCartFormMain.TabIndex = 0;
             // 
+            // btnPrintBill
+            // 
+            this.btnPrintBill.BorderRadius = 10;
+            this.btnPrintBill.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPrintBill.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnPrintBill.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPrintBill.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnPrintBill.FillColor = System.Drawing.Color.Red;
+            this.btnPrintBill.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrintBill.ForeColor = System.Drawing.Color.White;
+            this.btnPrintBill.Location = new System.Drawing.Point(45, 0);
+            this.btnPrintBill.Margin = new System.Windows.Forms.Padding(0, 0, 650, 0);
+            this.btnPrintBill.Name = "btnPrintBill";
+            this.btnPrintBill.Size = new System.Drawing.Size(180, 45);
+            this.btnPrintBill.TabIndex = 1;
+            this.btnPrintBill.Text = "In Hóa Đơn";
+            this.btnPrintBill.Click += new System.EventHandler(this.btnPrintBill_Click);
+            // 
             // CartForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -448,5 +468,6 @@
         private Guna.UI2.WinForms.Guna2Button btnMoMo;
         private Guna.UI2.WinForms.Guna2Button btnDirectPayment;
         private Guna.UI2.WinForms.Guna2Button btnBank;
+        private Guna.UI2.WinForms.Guna2Button btnPrintBill;
     }
 }

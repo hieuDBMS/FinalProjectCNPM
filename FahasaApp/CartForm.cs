@@ -227,7 +227,9 @@ namespace FahasaApp
                             }
                             MessageBox.Show("Thanh toán thành công!");
                             reFreshCartForm();
+                            Properties.Settings.Default.currentOrderID = OrderID;
                         }
+
                         else
                         {
                             MessageBox.Show("Vui lòng chọn phương thức thanh toán");
@@ -313,6 +315,15 @@ namespace FahasaApp
             btnBank.FillColor = Color.White;
             btnMoMo.FillColor = Color.White;
             btnDirectPayment.FillColor = Color.White;
+        }
+
+        // Print Bill for custumer
+        private void btnPrintBill_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(Properties.Settings.Default.currentOrderID.ToString());
+            int orderID = Properties.Settings.Default.currentOrderID;
+            FormOrderCrypstalReport formOrderCrystalReport = new FormOrderCrypstalReport(orderID);
+            formOrderCrystalReport.Show();
         }
     }
 }

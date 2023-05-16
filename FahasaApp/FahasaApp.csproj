@@ -34,6 +34,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="Guna.Charts.WinForms, Version=1.0.8.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.Charts.WinForms.1.0.8\lib\net48\Guna.Charts.WinForms.dll</HintPath>
     </Reference>
@@ -47,6 +51,7 @@
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Management" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -86,6 +91,11 @@
     <Compile Include="CartForm.Designer.cs">
       <DependentUpon>CartForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DetailProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +107,12 @@
     </Compile>
     <Compile Include="Forget_PasswordForm.Designer.cs">
       <DependentUpon>Forget_PasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOrderCrypstalReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOrderCrypstalReport.Designer.cs">
+      <DependentUpon>FormOrderCrypstalReport.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -110,6 +126,12 @@
     </Compile>
     <Compile Include="NoticeUserLogin_CartForm.Designer.cs">
       <DependentUpon>NoticeUserLogin_CartForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderCrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrderCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="ShoppingCart.cs" />
     <Compile Include="RegisterForm.cs">
@@ -144,11 +166,18 @@
     <EmbeddedResource Include="Forget_PasswordForm.resx">
       <DependentUpon>Forget_PasswordForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormOrderCrypstalReport.resx">
+      <DependentUpon>FormOrderCrypstalReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NoticeUserLogin_CartForm.resx">
       <DependentUpon>NoticeUserLogin_CartForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>OrderCrystalReport.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
@@ -166,6 +195,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -191,6 +231,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bookmark-plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

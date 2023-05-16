@@ -70,5 +70,28 @@ namespace FahasaApp.Properties {
                 this["userAddress"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(local)\\SQLEXPRESS;Initial Catalog=FINAL_PROJECT;Integrated Security=" +
+            "True")]
+        public string FINAL_PROJECTConnectionString {
+            get {
+                return ((string)(this["FINAL_PROJECTConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int currentOrderID {
+            get {
+                return ((int)(this["currentOrderID"]));
+            }
+            set {
+                this["currentOrderID"] = value;
+            }
+        }
     }
 }
