@@ -275,7 +275,8 @@ namespace FahasaApp
 
                             if(textPass.Text == textRepass.Text)
                             {
-                                SqlCommand cmdaddUser = new SqlCommand("INSERT INTO [CUSTOMER] (Firstname, Lastname, Email, Phone, Password, Privilige) VALUES (@Firstname, @Lastname, @Email, @Phone, @Password, @Privilige)", conn);
+                                SqlCommand cmdaddUser = new SqlCommand("[CreateCustomer]", conn);
+                                cmdaddUser.CommandType = CommandType.StoredProcedure;
                                 cmdaddUser.Parameters.AddWithValue("@Firstname", textTen.Text);
                                 cmdaddUser.Parameters.AddWithValue("@Lastname", TextHo.Text);
                                 cmdaddUser.Parameters.AddWithValue("@Email", textEmail.Text);
@@ -283,7 +284,7 @@ namespace FahasaApp
                                 cmdaddUser.Parameters.AddWithValue("@Password", textPass.Text);
                                 cmdaddUser.Parameters.AddWithValue("@Privilige", 0);
                                 conn.Open();
-                                cmdaddUser.ExecuteReader();
+                                cmdaddUser.ExecuteNonQuery();
                                 conn.Close();
                                 MessageBox.Show("Chúc mừng bạn đã đăng ký tài khoản thành công! ");
                                 reloadForm();

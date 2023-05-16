@@ -110,6 +110,45 @@ namespace FahasaApp
                     
                     if (dr.HasRows)
                     {
+                        dr.Close();
+                        conn.Close();
+                        
+                        //GET ROLE USER OR ADMIN
+                        SqlCommand cmd1 = new SqlCommand("[getRolebyEmail]", conn);
+                        cmd1.CommandType = CommandType.StoredProcedure;
+                        cmd1.Parameters.AddWithValue("@UEmail", textBoxUsername.Text);
+                        conn.Open();
+                        int roleResult = (int)cmd1.ExecuteScalar();
+
+                        if (roleResult == 2)
+                        {
+                            //openForm ADMIN
+                        }else if(roleResult == 1)
+                        {
+                            //OpenForm Staff
+                        }    
+                        else{
+                                // Open Customer
+                                // Sync Data to mainForm
+                            if (Application.OpenForms.OfType<MainForm>().Any())
+                            {
+                                // Update and Sync infor user to mainform
+                                MainForm mainForm = Application.OpenForms.OfType<MainForm>().FirstOrDefault();
+                                List<string> user = getAllUserInformationByEmail(textBoxUsername.Text, conn);
+                                mainForm.SyncDataUser(user[0], user[1], user[2], user[3]);
+                            }
+                            // Sync Data to cartForm if it is currently opened
+                            if (Application.OpenForms.OfType<CartForm>().Any())
+                            {
+                                // Update and Sync infor user to cartForm
+                                CartForm cartForm = Application.OpenForms.OfType<CartForm>().FirstOrDefault();
+                                AddressForm addressForm = new AddressForm();
+                                cartForm.openChildForm(addressForm);
+                                cartForm.Refresh();
+                                /*cartForm.*/
+                            }
+                        }    
+
                         /*conn.Close();
                         //Get Firstname by Email
                         SqlCommand cmd1 = new SqlCommand("SELECT Firstname,Lastname FROM [CUSTOMER] WHERE Email=@username ", conn);
@@ -120,24 +159,7 @@ namespace FahasaApp
                         conn.Close();
 
                         MessageBox.Show("Đăng nhập thành công");
-                        // Sync Data to mainForm
-                        if (Application.OpenForms.OfType<MainForm>().Any())
-                        {
-                            // Update and Sync infor user to mainform
-                            MainForm mainForm = Application.OpenForms.OfType<MainForm>().FirstOrDefault();
-                            List<string> user = getAllUserInformationByEmail(textBoxUsername.Text, conn);
-                            mainForm.SyncDataUser(user[0], user[1], user[2], user[3]);
-                        }
-                        // Sync Data to cartForm if it is currently opened
-                        if (Application.OpenForms.OfType<CartForm>().Any())
-                        {
-                            // Update and Sync infor user to cartForm
-                            CartForm cartForm = Application.OpenForms.OfType<CartForm>().FirstOrDefault();
-                            AddressForm addressForm = new AddressForm();
-                            cartForm.openChildForm(addressForm);
-                            cartForm.Refresh();
-                            /*cartForm.*/
-                        }
+                        
                                 
                         this.Hide();
                     }
@@ -228,6 +250,8 @@ namespace FahasaApp
 
             return user;
         }
+
+       
     }
 
 }
