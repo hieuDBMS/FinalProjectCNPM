@@ -220,14 +220,34 @@ namespace FahasaApp
                         ///update order detail of that order by ID                      
                         if (paymentMethod != -1)
                         {
-                            int OrderID = createOrder();
+                            // check book quantity before create order
+                            string messageNotify = "";
                             foreach (Book book in books)
                             {
-                                createOrderDetail(OrderID, book.getBookID, book.getBookQuantity);
+                                messageNotify += checkBookQuantity(book.getBookQuantity, book.getBookID, book.getBookTitle);
                             }
-                            MessageBox.Show("Thanh toán thành công!");
-                            reFreshCartForm();
-                            Properties.Settings.Default.currentOrderID = OrderID;
+                            if(messageNotify == "")
+                            {
+                                int OrderID = createOrder();
+                                foreach (Book book in books)
+                                {
+                                    checkBookQuantity(book.getBookQuantity, book.getBookID, book.getBookTitle);
+                                    createOrderDetail(OrderID, book.getBookID, book.getBookQuantity);
+                                }
+                                MessageBox.Show("Thanh toán thành công!");
+                                reFreshCartForm();
+                                Properties.Settings.Default.currentOrderID = OrderID;
+                                if(paymentMethod == 1)
+                                {
+                                    MessageBox.Show("Hàng sẽ tới sau 3 đến 5 ngày. Xin cảm ơn!");
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Thanh toán không thành công!");
+                            }
+                            
+
                         }
 
                         else
@@ -246,9 +266,23 @@ namespace FahasaApp
                     MessageBox.Show("Vui lòng chọn sách để có thể sử dụng chức năng thanh toán!");
                 }
                     
-            }
-            
+            }          
+        }
 
+        private string checkBookQuantity(int amount, int bookID, string title)
+        {
+            SqlConnection conn = new SqlConnection(Program.getConnectString());
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("[getBookQuantity]", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@BookID", bookID);
+
+            int currentQuantity = (int)cmd.ExecuteScalar();
+            if(currentQuantity - amount < 0)
+            {
+                return "Số lượng sách " + title + " còn lại không đủ, số lượng còn lại là "+ currentQuantity.ToString()+" cuốn \n";
+            }
+            return null;
         }
 
         private int createOrder()
@@ -320,7 +354,7 @@ namespace FahasaApp
         // Print Bill for custumer
         private void btnPrintBill_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(Properties.Settings.Default.currentOrderID.ToString());
+            //MessageBox.Show(Properties.Settings.Default.currentOrderID.ToString());
             int orderID = Properties.Settings.Default.currentOrderID;
             FormOrderCrypstalReport formOrderCrystalReport = new FormOrderCrypstalReport(orderID);
             formOrderCrystalReport.Show();

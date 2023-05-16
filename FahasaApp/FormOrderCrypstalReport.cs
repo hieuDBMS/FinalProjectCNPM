@@ -22,24 +22,22 @@ namespace FahasaApp
 
         private void FormOrderCrypstalReport_Load(object sender, EventArgs e)
         {
-            MessageBox.Show(orderID.ToString());
+            //MessageBox.Show(orderID.ToString());
             try
             {
-                SqlConnection conn = new SqlConnection(Program.getConnectString());
-                conn.Open();
-                SqlCommand cmd = new SqlCommand("[getOrderBill]", conn);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add(new SqlParameter("@OrderID", orderID));
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                SqlDataAdapter da_detail = getDetailBill();
+                SqlDataAdapter da_totalPrice = getTotalPrice();
+
                 DataSet dataReport = new DataSet();
-                da.Fill(dataReport, "ORDER_BILL");
+                da_detail.Fill(dataReport, "ORDER_BILL");
+                da_totalPrice.Fill(dataReport, "TOTALPRICE");
                 if (dataReport == null)
                 {
-                    MessageBox.Show("EMpty");
+                    //MessageBox.Show("EMpty");
                 }
                 else
                 {
-                    MessageBox.Show("Not Empty");
+                    //MessageBox.Show("Not Empty");
                 }
                 //Add data to cryreport
                 OrderCrystalReport Order_Detail_Report = new OrderCrystalReport();
@@ -54,6 +52,29 @@ namespace FahasaApp
             {
                 throw new Exception(ex.Message);
             }
+        }
+
+        private SqlDataAdapter getDetailBill()
+        {
+            SqlConnection conn = new SqlConnection(Program.getConnectString());
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("[getOrderBill]", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@OrderID", orderID));
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            conn.Close();
+            return da;
+        }
+        private SqlDataAdapter getTotalPrice()
+        {
+            SqlConnection conn = new SqlConnection(Program.getConnectString());
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("[getTotalBillPrice]", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@OrderID", orderID));
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            conn.Close();
+            return da;
         }
     }
 }
