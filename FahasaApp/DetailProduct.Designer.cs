@@ -193,6 +193,7 @@
             this.btnBuyNow.Size = new System.Drawing.Size(140, 45);
             this.btnBuyNow.TabIndex = 4;
             this.btnBuyNow.Text = "Mua Ngay";
+            this.btnBuyNow.Click += new System.EventHandler(this.btnBuyNow_Click);
             // 
             // btnAddCart
             // 

@@ -72,7 +72,7 @@ namespace FahasaApp
             //Init first data for Mainform
             try
             {
-                SqlConnection conn = new SqlConnection(Program.getConnectString());
+                    SqlConnection conn = new SqlConnection(Program.getConnectString());
                 conn.Open();
                 SqlCommand cmd = new SqlCommand("[GetFirst10Books]", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -995,7 +995,7 @@ namespace FahasaApp
 /// Section to Detail Book
 /// </summary>
         
-        private void openChildForm(Form childForm)
+        public void openChildForm(Form childForm)
         {
             ///store current Datagridview
             currentDataGridView = dataGridViewBookShow;
@@ -1056,7 +1056,7 @@ namespace FahasaApp
             closeChildFormAndOpenGridView();
         }
 
-        private void pictureBoxShopCart_Click(object sender, EventArgs e)
+        public void pictureBoxShopCart_Click(object sender, EventArgs e)
         {
             CartForm cartForm = new CartForm();
             openChildForm(cartForm);
