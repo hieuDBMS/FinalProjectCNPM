@@ -45,6 +45,10 @@ namespace FahasaApp
 
         private void CartForm_Load(object sender, EventArgs e)
         {
+            if(Properties.Settings.Default.currentOrderID == -1)
+                btnPrintBill.Visible = false;
+            else
+                btnPrintBill.Visible = true;
             checkUserAuthentication();
             showShopCart();
         }
@@ -235,6 +239,7 @@ namespace FahasaApp
                                     createOrderDetail(OrderID, book.getBookID, book.getBookQuantity);
                                 }
                                 MessageBox.Show("Thanh toán thành công!");
+                                btnPrintBill.Visible = true;
                                 reFreshCartForm();
                                 Properties.Settings.Default.currentOrderID = OrderID;
                                 if(paymentMethod == 1)
@@ -354,10 +359,17 @@ namespace FahasaApp
         // Print Bill for custumer
         private void btnPrintBill_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show(Properties.Settings.Default.currentOrderID.ToString());
-            int orderID = Properties.Settings.Default.currentOrderID;
-            FormOrderCrypstalReport formOrderCrystalReport = new FormOrderCrypstalReport(orderID);
-            formOrderCrystalReport.Show();
+            //MessageBox.Show(Properties.Settings.Default.currentOrderID.ToString
+            if (Properties.Settings.Default.currentOrderID!=-1)
+            {
+                int orderID = Properties.Settings.Default.currentOrderID;
+                FormOrderCrypstalReport formOrderCrystalReport = new FormOrderCrypstalReport(orderID);
+                formOrderCrystalReport.Show();
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng đăng nhập và mua hàng để in hóa đơn!");
+            }
         }
     }
 }

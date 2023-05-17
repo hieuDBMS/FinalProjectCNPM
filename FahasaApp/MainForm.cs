@@ -1113,6 +1113,14 @@ namespace FahasaApp
             this.btnSignUp.Click -= new System.EventHandler(this.LogoutAccount);
 
             MessageBox.Show("Bạn đã đăng xuất");
+            Properties.Settings.Default.userID = null;
+            Properties.Settings.Default.username = null;
+            Properties.Settings.Default.userPhone = null;
+            Properties.Settings.Default.userAddress = null;
+            Properties.Settings.Default.currentOrderID = -1;
+            Program.refreshSettings();
+            btnHome_Click(sender, e);
+
         }
 
         private void InitiaForm()
