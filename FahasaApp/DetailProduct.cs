@@ -55,7 +55,7 @@ namespace FahasaApp
             labelBookPublisher.Text = "Nhà xuất bản: "+bookDetail.getPublisher.Trim();
             labelBookPublication.Text = "Ngày xuất bản: "+bookDetail.getPublicationDate.Trim();
             labelBookPrice.Text = bookDetail.getBookPrice.Trim();
-            labelBookCover.Text = "Lọa Bìa Sách: "+bookDetail.getBookCover.Trim();
+            labelBookCover.Text = "Lọai Bìa Sách: "+bookDetail.getBookCover.Trim();
             labelBookCategory.Text = "Thể loại: "+bookDetail.getBookCategory.Trim();
         }
         private void setDataGridView_UserComment(int bookID)
