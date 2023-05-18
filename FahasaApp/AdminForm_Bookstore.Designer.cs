@@ -1,6 +1,6 @@
 ﻿namespace FahasaApp
 {
-    partial class AdminForm
+    partial class AdminForm_Bookstore
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminForm_Bookstore));
             this.ButtonPanel = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.TaikhoanBtn = new Guna.UI2.WinForms.Guna2Button();
             this.DonhangBtn = new Guna.UI2.WinForms.Guna2Button();

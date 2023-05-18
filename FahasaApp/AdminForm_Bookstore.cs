@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace FahasaApp
 {
-    public partial class AdminForm : Form
+    public partial class AdminForm_Bookstore : Form
     {
-        public AdminForm()
+        public AdminForm_Bookstore()
         {
             InitializeComponent();
             LoadData();

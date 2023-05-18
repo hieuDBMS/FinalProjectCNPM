@@ -108,6 +108,12 @@
     <Compile Include="AdminForm_Bill.Designer.cs">
       <DependentUpon>AdminForm_Bill.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminForm_Bookstore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForm_Bookstore.Designer.cs">
+      <DependentUpon>AdminForm_Bookstore.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminForm_Customer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -249,6 +255,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminForm_Bill.resx">
       <DependentUpon>AdminForm_Bill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForm_Bookstore.resx">
+      <DependentUpon>AdminForm_Bookstore.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminForm_Customer.resx">
       <DependentUpon>AdminForm_Customer.cs</DependentUpon>

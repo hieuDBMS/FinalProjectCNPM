@@ -50,7 +50,7 @@ namespace FahasaApp
             }
             else
             {
-                MessageBox.Show("No thing changed, Back to the AddressForm");
+                MessageBox.Show("Không có thay đổi thông tin, quay lại trang chính");
                 BackToAddressForm();
             }
         }
