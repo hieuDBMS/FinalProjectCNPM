@@ -66,11 +66,59 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminForm.cs">
+    <Compile Include="Add_Account.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminForm.Designer.cs">
-      <DependentUpon>AdminForm.cs</DependentUpon>
+    <Compile Include="Add_Account.Designer.cs">
+      <DependentUpon>Add_Account.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add_Bill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_Bill.Designer.cs">
+      <DependentUpon>Add_Bill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add_Book.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_Book.Designer.cs">
+      <DependentUpon>Add_Book.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add_Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_Customer.Designer.cs">
+      <DependentUpon>Add_Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add_NhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_NhanVien.Designer.cs">
+      <DependentUpon>Add_NhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForm_Account.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForm_Account.Designer.cs">
+      <DependentUpon>AdminForm_Account.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForm_Bill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForm_Bill.Designer.cs">
+      <DependentUpon>AdminForm_Bill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForm_Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForm_Customer.Designer.cs">
+      <DependentUpon>AdminForm_Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminFrom_NhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminFrom_NhanVien.Designer.cs">
+      <DependentUpon>AdminFrom_NhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="ChangeAddressForm.cs">
       <SubType>Form</SubType>
@@ -104,6 +152,36 @@
     </Compile>
     <Compile Include="DetailProduct.Designer.cs">
       <DependentUpon>DetailProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_Account.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_Account.Designer.cs">
+      <DependentUpon>Edit_Account.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_Bill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_Bill.Designer.cs">
+      <DependentUpon>Edit_Bill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_Book.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_Book.Designer.cs">
+      <DependentUpon>Edit_Book.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_Customer.Designer.cs">
+      <DependentUpon>Edit_Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_NhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_NhanVien.Designer.cs">
+      <DependentUpon>Edit_NhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="Forget_PasswordForm.cs">
       <SubType>Form</SubType>
@@ -151,8 +229,32 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AdminForm.resx">
-      <DependentUpon>AdminForm.cs</DependentUpon>
+    <EmbeddedResource Include="Add_Account.resx">
+      <DependentUpon>Add_Account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add_Bill.resx">
+      <DependentUpon>Add_Bill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add_Book.resx">
+      <DependentUpon>Add_Book.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add_Customer.resx">
+      <DependentUpon>Add_Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add_NhanVien.resx">
+      <DependentUpon>Add_NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForm_Account.resx">
+      <DependentUpon>AdminForm_Account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForm_Bill.resx">
+      <DependentUpon>AdminForm_Bill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForm_Customer.resx">
+      <DependentUpon>AdminForm_Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminFrom_NhanVien.resx">
+      <DependentUpon>AdminFrom_NhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChangeAddressForm.resx">
       <DependentUpon>ChangeAddressForm.cs</DependentUpon>
@@ -165,6 +267,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DetailProduct.resx">
       <DependentUpon>DetailProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_Account.resx">
+      <DependentUpon>Edit_Account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_Bill.resx">
+      <DependentUpon>Edit_Bill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_Book.resx">
+      <DependentUpon>Edit_Book.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_Customer.resx">
+      <DependentUpon>Edit_Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_NhanVien.resx">
+      <DependentUpon>Edit_NhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forget_PasswordForm.resx">
       <DependentUpon>Forget_PasswordForm.cs</DependentUpon>

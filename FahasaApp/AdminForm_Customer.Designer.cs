@@ -1,6 +1,6 @@
 ﻿namespace FahasaApp
 {
-    partial class AdminForm
+    partial class AdminForm_Customer
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminForm_Customer));
             this.ButtonPanel = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.TaikhoanBtn = new Guna.UI2.WinForms.Guna2Button();
             this.DonhangBtn = new Guna.UI2.WinForms.Guna2Button();
@@ -36,7 +36,7 @@
             this.NhanvienBtn = new Guna.UI2.WinForms.Guna2Button();
             this.KhosachBtn = new Guna.UI2.WinForms.Guna2Button();
             this.NhanVienPanel = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.dataGridView_book = new System.Windows.Forms.DataGridView();
+            this.dataGridView_nhanvien = new System.Windows.Forms.DataGridView();
             this.ButtonPanelOption = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.SuaBtn = new Guna.UI2.WinForms.Guna2Button();
             this.XoaBtn = new Guna.UI2.WinForms.Guna2Button();
@@ -45,7 +45,7 @@
             this.panelLogoSideMenu = new System.Windows.Forms.Panel();
             this.ButtonPanel.SuspendLayout();
             this.NhanVienPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_book)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_nhanvien)).BeginInit();
             this.ButtonPanelOption.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,7 +59,7 @@
             this.ButtonPanel.Location = new System.Drawing.Point(2, 115);
             this.ButtonPanel.Name = "ButtonPanel";
             this.ButtonPanel.Size = new System.Drawing.Size(693, 56);
-            this.ButtonPanel.TabIndex = 23;
+            this.ButtonPanel.TabIndex = 13;
             // 
             // TaikhoanBtn
             // 
@@ -69,7 +69,7 @@
             this.TaikhoanBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.TaikhoanBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.TaikhoanBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.TaikhoanBtn.Font = new System.Drawing.Font("Open Sans SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaikhoanBtn.Font = new System.Drawing.Font("Open Sans Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TaikhoanBtn.ForeColor = System.Drawing.Color.White;
             this.TaikhoanBtn.Location = new System.Drawing.Point(554, 10);
             this.TaikhoanBtn.Name = "TaikhoanBtn";
@@ -85,7 +85,7 @@
             this.DonhangBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.DonhangBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.DonhangBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.DonhangBtn.Font = new System.Drawing.Font("Open Sans SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DonhangBtn.Font = new System.Drawing.Font("Open Sans Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DonhangBtn.ForeColor = System.Drawing.Color.White;
             this.DonhangBtn.Location = new System.Drawing.Point(418, 10);
             this.DonhangBtn.Name = "DonhangBtn";
@@ -100,8 +100,9 @@
             this.KhachhangBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.KhachhangBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.KhachhangBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.KhachhangBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.KhachhangBtn.Font = new System.Drawing.Font("Open Sans SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KhachhangBtn.FillColor = System.Drawing.Color.Maroon;
+            this.KhachhangBtn.FocusedColor = System.Drawing.Color.AliceBlue;
+            this.KhachhangBtn.Font = new System.Drawing.Font("Open Sans Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.KhachhangBtn.ForeColor = System.Drawing.Color.White;
             this.KhachhangBtn.Location = new System.Drawing.Point(282, 10);
             this.KhachhangBtn.Name = "KhachhangBtn";
@@ -117,7 +118,7 @@
             this.NhanvienBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.NhanvienBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.NhanvienBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.NhanvienBtn.Font = new System.Drawing.Font("Open Sans SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NhanvienBtn.Font = new System.Drawing.Font("Open Sans Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NhanvienBtn.ForeColor = System.Drawing.Color.White;
             this.NhanvienBtn.Location = new System.Drawing.Point(146, 10);
             this.NhanvienBtn.Name = "NhanvienBtn";
@@ -133,7 +134,7 @@
             this.KhosachBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.KhosachBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.KhosachBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.KhosachBtn.Font = new System.Drawing.Font("Open Sans SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KhosachBtn.Font = new System.Drawing.Font("Open Sans Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.KhosachBtn.ForeColor = System.Drawing.Color.White;
             this.KhosachBtn.Location = new System.Drawing.Point(10, 10);
             this.KhosachBtn.Name = "KhosachBtn";
@@ -143,25 +144,25 @@
             // 
             // NhanVienPanel
             // 
-            this.NhanVienPanel.Controls.Add(this.dataGridView_book);
+            this.NhanVienPanel.Controls.Add(this.dataGridView_nhanvien);
             this.NhanVienPanel.Location = new System.Drawing.Point(41, 251);
             this.NhanVienPanel.Name = "NhanVienPanel";
             this.NhanVienPanel.Size = new System.Drawing.Size(1143, 428);
-            this.NhanVienPanel.TabIndex = 24;
+            this.NhanVienPanel.TabIndex = 14;
             // 
-            // dataGridView_book
+            // dataGridView_nhanvien
             // 
-            this.dataGridView_book.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView_book.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView_book.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_book.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView_book.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView_book.Name = "dataGridView_book";
-            this.dataGridView_book.RowHeadersWidth = 51;
-            this.dataGridView_book.RowTemplate.Height = 24;
-            this.dataGridView_book.Size = new System.Drawing.Size(1143, 428);
-            this.dataGridView_book.TabIndex = 0;
-            this.dataGridView_book.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_book_CellContentClick);
+            this.dataGridView_nhanvien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView_nhanvien.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView_nhanvien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_nhanvien.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView_nhanvien.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView_nhanvien.Name = "dataGridView_nhanvien";
+            this.dataGridView_nhanvien.RowHeadersWidth = 51;
+            this.dataGridView_nhanvien.RowTemplate.Height = 24;
+            this.dataGridView_nhanvien.Size = new System.Drawing.Size(1143, 428);
+            this.dataGridView_nhanvien.TabIndex = 0;
+            this.dataGridView_nhanvien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_nhanvien_CellContentClick);
             // 
             // ButtonPanelOption
             // 
@@ -171,7 +172,7 @@
             this.ButtonPanelOption.Location = new System.Drawing.Point(768, 177);
             this.ButtonPanelOption.Name = "ButtonPanelOption";
             this.ButtonPanelOption.Size = new System.Drawing.Size(416, 56);
-            this.ButtonPanelOption.TabIndex = 25;
+            this.ButtonPanelOption.TabIndex = 15;
             // 
             // SuaBtn
             // 
@@ -181,7 +182,7 @@
             this.SuaBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.SuaBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.SuaBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.SuaBtn.Font = new System.Drawing.Font("Open Sans SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SuaBtn.Font = new System.Drawing.Font("Open Sans Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SuaBtn.ForeColor = System.Drawing.Color.White;
             this.SuaBtn.Location = new System.Drawing.Point(282, 10);
             this.SuaBtn.Name = "SuaBtn";
@@ -198,7 +199,7 @@
             this.XoaBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.XoaBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.XoaBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.XoaBtn.Font = new System.Drawing.Font("Open Sans SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.XoaBtn.Font = new System.Drawing.Font("Open Sans Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.XoaBtn.ForeColor = System.Drawing.Color.White;
             this.XoaBtn.Location = new System.Drawing.Point(146, 10);
             this.XoaBtn.Name = "XoaBtn";
@@ -215,7 +216,7 @@
             this.ThemBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.ThemBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.ThemBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.ThemBtn.Font = new System.Drawing.Font("Open Sans SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ThemBtn.Font = new System.Drawing.Font("Open Sans Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ThemBtn.ForeColor = System.Drawing.Color.White;
             this.ThemBtn.Location = new System.Drawing.Point(10, 10);
             this.ThemBtn.Name = "ThemBtn";
@@ -229,7 +230,7 @@
             this.UserPanel.Location = new System.Drawing.Point(886, 5);
             this.UserPanel.Name = "UserPanel";
             this.UserPanel.Size = new System.Drawing.Size(311, 107);
-            this.UserPanel.TabIndex = 26;
+            this.UserPanel.TabIndex = 16;
             // 
             // panelLogoSideMenu
             // 
@@ -240,9 +241,9 @@
             this.panelLogoSideMenu.Margin = new System.Windows.Forms.Padding(0);
             this.panelLogoSideMenu.Name = "panelLogoSideMenu";
             this.panelLogoSideMenu.Size = new System.Drawing.Size(326, 107);
-            this.panelLogoSideMenu.TabIndex = 22;
+            this.panelLogoSideMenu.TabIndex = 12;
             // 
-            // AdminForm
+            // AdminForm_Customer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -253,12 +254,12 @@
             this.Controls.Add(this.ButtonPanelOption);
             this.Controls.Add(this.UserPanel);
             this.Controls.Add(this.panelLogoSideMenu);
-            this.Name = "AdminForm";
-            this.Text = "AdminForm";
-            this.Load += new System.EventHandler(this.AdminForm_Load);
+            this.Name = "AdminForm_Customer";
+            this.Text = "AdminForm_Customer";
+            this.Load += new System.EventHandler(this.AdminForm_Customer_Load);
             this.ButtonPanel.ResumeLayout(false);
             this.NhanVienPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_book)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_nhanvien)).EndInit();
             this.ButtonPanelOption.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -273,7 +274,7 @@
         private Guna.UI2.WinForms.Guna2Button NhanvienBtn;
         private Guna.UI2.WinForms.Guna2Button KhosachBtn;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel NhanVienPanel;
-        private System.Windows.Forms.DataGridView dataGridView_book;
+        private System.Windows.Forms.DataGridView dataGridView_nhanvien;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel ButtonPanelOption;
         private Guna.UI2.WinForms.Guna2Button SuaBtn;
         private Guna.UI2.WinForms.Guna2Button XoaBtn;
