@@ -122,7 +122,8 @@ namespace FahasaApp
 
                         if (roleResult == 2)
                         {
-                            //openForm ADMIN
+                            AdminForm_Bookstore adminForm = new AdminForm_Bookstore();
+                            adminForm.Show();
                         }else if(roleResult == 1)
                         {
                             //OpenForm Staff
@@ -135,7 +136,7 @@ namespace FahasaApp
                                 // Update and Sync infor user to mainform
                                 MainForm mainForm = Application.OpenForms.OfType<MainForm>().FirstOrDefault();
                                 List<string> user = getAllUserInformationByEmail(textBoxUsername.Text, conn);
-                                mainForm.SyncDataUser(user[0], user[1], user[2], user[3]);
+                                mainForm.SyncDataUser(user[0], user[1], user[2], user[3], user[4]);
                             }
                             // Sync Data to cartForm if it is currently opened
                             if (Application.OpenForms.OfType<CartForm>().Any())
@@ -241,13 +242,13 @@ namespace FahasaApp
             string username = row["Firstname"].ToString() + " " + row["Lastname"].ToString();
             string userPhone = row["Phone"].ToString().Trim();
             string userAddress = row["Address"].ToString();
-
+            string UserEmail = email;
             List<string> user = new List<string>();
             user.Add(userID);
             user.Add(username);
             user.Add(userPhone);
             user.Add(userAddress);
-
+            user.Add(UserEmail);
             return user;
         }
 

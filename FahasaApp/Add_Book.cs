@@ -20,8 +20,8 @@ namespace FahasaApp
         string bookPublication = null;
         //string bookCategory = null;
         string bookCover = null;
-        private AdminForm adminForm;
-        public Add_Book(AdminForm adminForm)
+        private AdminForm_Bookstore adminForm;
+        public Add_Book(AdminForm_Bookstore adminForm)
         {
             InitializeComponent();
             this.adminForm = adminForm;

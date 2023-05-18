@@ -67,7 +67,7 @@ namespace FahasaApp
             }
         }
 
-        private void saveChangeUserInfor(int UID, string newUsername, string newUserPhone, string newUserAddress)
+        public void saveChangeUserInfor(int UID, string newUsername, string newUserPhone, string newUserAddress)
         {
             List<string> username = getFirstLastUsername(newUsername);
 
@@ -152,7 +152,7 @@ namespace FahasaApp
             {
                 // Update and Sync infor user to mainform
                 MainForm mainForm = Application.OpenForms.OfType<MainForm>().FirstOrDefault();
-                mainForm.SyncDataUser(user[0], user[1], user[2], user[3]);
+                mainForm.SyncDataUser(user[0], user[1], user[2], user[3], null);
             }
             // Sync Data to cartForm if it is currently opened
             if (Application.OpenForms.OfType<CartForm>().Any())

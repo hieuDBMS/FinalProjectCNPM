@@ -651,7 +651,7 @@ namespace FahasaApp
                 DataGridViewRow row = dataGridViewBookShow.Rows[rowIndex];
                 int bookID = int.Parse(row.Cells[4].Value.ToString());
                 AddRemoveBookToShopCart(bookID,true);
-
+                MessageBox.Show("Thêm vào giỏ hàng thành công");
             }
             else
             {
@@ -1073,7 +1073,6 @@ namespace FahasaApp
         {
             LoginForm Loginform = new LoginForm();
             Loginform.Show();
-            
         }
         
         private void OpenRegisterForm(object sender, EventArgs e)
@@ -1090,16 +1089,20 @@ namespace FahasaApp
             //Hide Panel
             pictureBoxIconToggle_Click(sender, e);
 
+            panelParentUser_Info.Visible = true;
 
-            LoginForm Loginform = new LoginForm();
-            Loginform.Show();
+            
+            labelUsername_Info.Text = "Họ và tên: " + Properties.Settings.Default.username.ToString().Trim();
+            labelUserAddress_Info.Text = "Địa chỉ: " + Properties.Settings.Default.userAddress.ToString().Trim();
+            labelUserPhone_Info.Text = "Số điện thoại: " + Properties.Settings.Default.userPhone.ToString().Trim();
+
         }
 
         private void LogoutAccount(object sender, EventArgs e)
         {
             //Hide Panel
             pictureBoxIconToggle_Click(sender, e);
-
+            panelParentUser_Info.Visible = false;
 
             labelUsername.Text = InitialUserName;
             btnSignIn.Text  = InitialBTNSignInText;
@@ -1117,6 +1120,7 @@ namespace FahasaApp
             Properties.Settings.Default.username = null;
             Properties.Settings.Default.userPhone = null;
             Properties.Settings.Default.userAddress = null;
+            Properties.Settings.Default.userEmail = null;
             Properties.Settings.Default.currentOrderID = -1;
             Program.refreshSettings();
             btnHome_Click(sender, e);
@@ -1128,15 +1132,17 @@ namespace FahasaApp
             InitialUserName = labelUsername.Text;
             InitialBTNSignInText = btnSignIn.Text;
             InitialBTNSigupText = btnSignUp.Text;
+            
         }
 
-        public void SyncDataUser(string userID,string username,string userPhone, string userAddress)
+        public void SyncDataUser(string userID,string username,string userPhone, string userAddress, string userEmail)
         {
             labelUsername.Text = username;
             Properties.Settings.Default.userID = userID;
             Properties.Settings.Default.username= username;
             Properties.Settings.Default.userPhone = userPhone;
             Properties.Settings.Default.userAddress = userAddress;
+            Properties.Settings.Default.userEmail = userEmail;
             btnSignIn.Text = "Thông tin ";
             btnSignUp.Text = "Đăng xuất";
             this.Refresh();
@@ -1149,11 +1155,51 @@ namespace FahasaApp
             this.btnSignUp.Click += new System.EventHandler(this.LogoutAccount);
 
             panelToggleDownAccount.Visible= false;
+
+            //static email:
+            labelUseremail_Info.Text = "Email: " + Properties.Settings.Default.userEmail.ToString().Trim();
+        }
+        private void btneditUserInfo_Click(object sender, EventArgs e)
+        {
+            PanelEditUser_Info.Visible = true;
         }
 
+        private void SaveBtnUserInfo_Click(object sender, EventArgs e)
+        {
+            string newUsername = txtUsername_Info.Text.ToString().Trim().Replace("  ", " ");
+            string newUserPhone = txtUserPhone_Info.Text.ToString().Trim().Replace("  ", " ");
+            string newUserAddress = txtUserAddress_Info.Text.ToString().Trim().Replace("  ", " ");
+
+            if (
+                newUsername != Properties.Settings.Default.username.ToString().Trim() ||
+                newUserAddress != Properties.Settings.Default.userAddress.ToString().Trim() ||
+                newUserPhone != Properties.Settings.Default.userPhone.ToString().Trim()
+              )
+            {
+                int UID = int.Parse(Properties.Settings.Default.userID);
+                //save changed
+                ChangeAddressForm caf = new ChangeAddressForm();
+                caf.saveChangeUserInfor(UID, newUsername, newUserPhone, newUserAddress);
+                PanelEditUser_Info.Visible = false;
+                OpenInforUserForm(sender, e);
+            }
+            else
+            {
+                MessageBox.Show("Không có thay đổi thông tin, quay lại trang chính");
+                PanelEditUser_Info.Visible = false;
+            }
+        }
+
+        private void CancelbtnUserInfo_Click(object sender, EventArgs e)
+        {
+            PanelEditUser_Info.Visible = false;
+        }
+
+       
 
 
         #endregion
+
 
     }
 

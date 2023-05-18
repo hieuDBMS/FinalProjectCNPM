@@ -15,9 +15,9 @@ namespace FahasaApp
 {
     public partial class Edit_Book : Form
     {
-        private AdminForm adminForm;  // Add this
+        private AdminForm_Bookstore adminForm;  // Add this
         private int bookId;
-        public Edit_Book(AdminForm adminForm, int bookId)
+        public Edit_Book(AdminForm_Bookstore adminForm, int bookId)
         {
             InitializeComponent();
             this.bookId = bookId;
