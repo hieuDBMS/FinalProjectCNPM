@@ -55,7 +55,6 @@ C:\Users\dongp\Source\Repos\hieuDBMS\FinalProjectCNPM\FahasaApp\obj\Debug\Fahasa
 C:\Users\dongp\Source\Repos\hieuDBMS\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.AddressForm.resources
 C:\Users\dongp\Source\Repos\hieuDBMS\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.CartForm.resources
 C:\Users\dongp\Source\Repos\hieuDBMS\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.NoticeUserLogin_CartForm.resources
-C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.AdminForm.resources
 C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
 C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\bin\Debug\CrystalDecisions.ReportSource.dll
 C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\bin\Debug\CrystalDecisions.Shared.dll
@@ -103,3 +102,18 @@ C:\Users\dongp\source\repos\hieuDBMS\FinalProjectCNPM\FahasaApp\obj\Debug\Fahasa
 C:\Users\dongp\source\repos\hieuDBMS\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.Edit_Book.resources
 C:\Users\dongp\source\repos\hieuDBMS\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.Edit_Customer.resources
 C:\Users\dongp\source\repos\hieuDBMS\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.Edit_NhanVien.resources
+C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.Add_Account.resources
+C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.Add_Bill.resources
+C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.Add_Book.resources
+C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.Add_Customer.resources
+C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.Add_NhanVien.resources
+C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.AdminForm_Account.resources
+C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.AdminForm_Bill.resources
+C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.AdminForm_Bookstore.resources
+C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.AdminForm_Customer.resources
+C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.AdminFrom_NhanVien.resources
+C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.Edit_Account.resources
+C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.Edit_Bill.resources
+C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.Edit_Book.resources
+C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.Edit_Customer.resources
+C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.Edit_NhanVien.resources
