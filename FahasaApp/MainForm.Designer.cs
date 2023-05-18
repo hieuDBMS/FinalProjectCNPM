@@ -31,9 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.FlowLayoutPanel flowLayoutPanelIconUser;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBoxAccountIcon = new System.Windows.Forms.PictureBox();
             this.tableLayoutShowScreen = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -41,15 +41,6 @@
             this.iconFire = new System.Windows.Forms.PictureBox();
             this.comboBoxSearch_DayMonthYear = new System.Windows.Forms.ComboBox();
             this.panelShowBoooks = new System.Windows.Forms.Panel();
-            this.panelParentUser_Info = new Guna.UI2.WinForms.Guna2Panel();
-            this.PanelUser_Info = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.labelUseremail_Info = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.labelUsername_Info = new System.Windows.Forms.Label();
-            this.btnEditUser_Info = new Guna.UI2.WinForms.Guna2Button();
-            this.labelUserAddress_Info = new System.Windows.Forms.Label();
-            this.labelUserPhone_Info = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtNoticeBookNotFound = new System.Windows.Forms.Label();
             this.dataGridViewBookShow = new System.Windows.Forms.DataGridView();
             this.BookImage = new System.Windows.Forms.DataGridViewImageColumn();
@@ -128,15 +119,24 @@
             this.imageList40 = new System.Windows.Forms.ImageList(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.panelParentUser_Info = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.PanelEditUser_Info = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.CancelbtnUser_Info = new Guna.UI2.WinForms.Guna2Button();
+            this.txtUserPhone_Info = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtUserAddress_Info = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtUsername_Info = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.SaveBtnUser_Info = new Guna.UI2.WinForms.Guna2Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtUsername_Info = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtUserAddress_Info = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtUserPhone_Info = new Guna.UI2.WinForms.Guna2TextBox();
-            this.SaveBtnUser_Info = new Guna.UI2.WinForms.Guna2Button();
-            this.CancelbtnUser_Info = new Guna.UI2.WinForms.Guna2Button();
+            this.PanelUser_Info = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.labelUseremail_Info = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.labelUsername_Info = new System.Windows.Forms.Label();
+            this.btnEditUser_Info = new Guna.UI2.WinForms.Guna2Button();
+            this.labelUserAddress_Info = new System.Windows.Forms.Label();
+            this.labelUserPhone_Info = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             flowLayoutPanelIconUser = new System.Windows.Forms.FlowLayoutPanel();
             flowLayoutPanelIconUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAccountIcon)).BeginInit();
@@ -144,9 +144,6 @@
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconFire)).BeginInit();
             this.panelShowBoooks.SuspendLayout();
-            this.panelParentUser_Info.SuspendLayout();
-            this.PanelUser_Info.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBookShow)).BeginInit();
             this.tableLayoutPanelSearch_Account.SuspendLayout();
             this.flowLayoutPanelSearch.SuspendLayout();
@@ -168,7 +165,10 @@
             this.panelLiteratureSubMenu.SuspendLayout();
             this.tableLayoutMain.SuspendLayout();
             this.panelSideMenu.SuspendLayout();
+            this.panelParentUser_Info.SuspendLayout();
             this.PanelEditUser_Info.SuspendLayout();
+            this.PanelUser_Info.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanelIconUser
@@ -176,10 +176,10 @@
             flowLayoutPanelIconUser.Controls.Add(this.pictureBoxAccountIcon);
             flowLayoutPanelIconUser.Dock = System.Windows.Forms.DockStyle.Fill;
             flowLayoutPanelIconUser.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            flowLayoutPanelIconUser.Location = new System.Drawing.Point(1018, 0);
+            flowLayoutPanelIconUser.Location = new System.Drawing.Point(1009, 0);
             flowLayoutPanelIconUser.Margin = new System.Windows.Forms.Padding(0);
             flowLayoutPanelIconUser.Name = "flowLayoutPanelIconUser";
-            flowLayoutPanelIconUser.Size = new System.Drawing.Size(74, 157);
+            flowLayoutPanelIconUser.Size = new System.Drawing.Size(74, 146);
             flowLayoutPanelIconUser.TabIndex = 1;
             // 
             // pictureBoxAccountIcon
@@ -209,7 +209,7 @@
             this.tableLayoutShowScreen.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutShowScreen.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutShowScreen.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.tableLayoutShowScreen.Size = new System.Drawing.Size(1498, 1053);
+            this.tableLayoutShowScreen.Size = new System.Drawing.Size(1485, 977);
             this.tableLayoutShowScreen.TabIndex = 2;
             // 
             // flowLayoutPanel1
@@ -218,10 +218,10 @@
             this.flowLayoutPanel1.Controls.Add(this.iconFire);
             this.flowLayoutPanel1.Controls.Add(this.comboBoxSearch_DayMonthYear);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 157);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 146);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1498, 52);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1485, 48);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // TitleSearch
@@ -277,126 +277,11 @@
             this.panelShowBoooks.Controls.Add(this.dataGridViewBookShow);
             this.panelShowBoooks.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelShowBoooks.ForeColor = System.Drawing.Color.Black;
-            this.panelShowBoooks.Location = new System.Drawing.Point(0, 209);
+            this.panelShowBoooks.Location = new System.Drawing.Point(0, 194);
             this.panelShowBoooks.Margin = new System.Windows.Forms.Padding(0);
             this.panelShowBoooks.Name = "panelShowBoooks";
-            this.panelShowBoooks.Size = new System.Drawing.Size(1498, 844);
+            this.panelShowBoooks.Size = new System.Drawing.Size(1485, 783);
             this.panelShowBoooks.TabIndex = 2;
-            // 
-            // panelParentUser_Info
-            // 
-            this.panelParentUser_Info.BackColor = System.Drawing.Color.White;
-            this.panelParentUser_Info.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.panelParentUser_Info.BorderRadius = 10;
-            this.panelParentUser_Info.BorderThickness = 1;
-            this.panelParentUser_Info.Controls.Add(this.PanelEditUser_Info);
-            this.panelParentUser_Info.Controls.Add(this.PanelUser_Info);
-            this.panelParentUser_Info.Controls.Add(this.label1);
-            this.panelParentUser_Info.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.panelParentUser_Info.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelParentUser_Info.Location = new System.Drawing.Point(0, 0);
-            this.panelParentUser_Info.Margin = new System.Windows.Forms.Padding(0);
-            this.panelParentUser_Info.Name = "panelParentUser_Info";
-            this.panelParentUser_Info.Size = new System.Drawing.Size(1498, 844);
-            this.panelParentUser_Info.TabIndex = 3;
-            this.panelParentUser_Info.Visible = false;
-            // 
-            // PanelUser_Info
-            // 
-            this.PanelUser_Info.Controls.Add(this.labelUseremail_Info);
-            this.PanelUser_Info.Controls.Add(this.pictureBox1);
-            this.PanelUser_Info.Controls.Add(this.labelUsername_Info);
-            this.PanelUser_Info.Controls.Add(this.btnEditUser_Info);
-            this.PanelUser_Info.Controls.Add(this.labelUserAddress_Info);
-            this.PanelUser_Info.Controls.Add(this.labelUserPhone_Info);
-            this.PanelUser_Info.Location = new System.Drawing.Point(570, 120);
-            this.PanelUser_Info.Name = "PanelUser_Info";
-            this.PanelUser_Info.Size = new System.Drawing.Size(415, 248);
-            this.PanelUser_Info.TabIndex = 11;
-            // 
-            // labelUseremail_Info
-            // 
-            this.labelUseremail_Info.AutoSize = true;
-            this.labelUseremail_Info.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUseremail_Info.Location = new System.Drawing.Point(16, 16);
-            this.labelUseremail_Info.Margin = new System.Windows.Forms.Padding(0);
-            this.labelUseremail_Info.Name = "labelUseremail_Info";
-            this.labelUseremail_Info.Size = new System.Drawing.Size(210, 24);
-            this.labelUseremail_Info.TabIndex = 10;
-            this.labelUseremail_Info.Text = "Email: user@gmail.com";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::FahasaApp.Properties.Resources.bookmark_plus;
-            this.pictureBox1.Location = new System.Drawing.Point(286, 196);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            // 
-            // labelUsername_Info
-            // 
-            this.labelUsername_Info.AutoSize = true;
-            this.labelUsername_Info.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUsername_Info.Location = new System.Drawing.Point(16, 60);
-            this.labelUsername_Info.Margin = new System.Windows.Forms.Padding(0);
-            this.labelUsername_Info.Name = "labelUsername_Info";
-            this.labelUsername_Info.Size = new System.Drawing.Size(226, 24);
-            this.labelUsername_Info.TabIndex = 3;
-            this.labelUsername_Info.Text = "Họ và Tên: Trần Thế Luật";
-            // 
-            // btnEditUser_Info
-            // 
-            this.btnEditUser_Info.BorderColor = System.Drawing.Color.OrangeRed;
-            this.btnEditUser_Info.BorderRadius = 10;
-            this.btnEditUser_Info.BorderThickness = 1;
-            this.btnEditUser_Info.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnEditUser_Info.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnEditUser_Info.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnEditUser_Info.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnEditUser_Info.FillColor = System.Drawing.Color.White;
-            this.btnEditUser_Info.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditUser_Info.ForeColor = System.Drawing.Color.Black;
-            this.btnEditUser_Info.Location = new System.Drawing.Point(68, 191);
-            this.btnEditUser_Info.Name = "btnEditUser_Info";
-            this.btnEditUser_Info.Size = new System.Drawing.Size(258, 40);
-            this.btnEditUser_Info.TabIndex = 8;
-            this.btnEditUser_Info.Text = "Sửa thông tin tài khoản";
-            this.btnEditUser_Info.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnEditUser_Info.Click += new System.EventHandler(this.btneditUserInfo_Click);
-            // 
-            // labelUserAddress_Info
-            // 
-            this.labelUserAddress_Info.AutoSize = true;
-            this.labelUserAddress_Info.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUserAddress_Info.Location = new System.Drawing.Point(16, 100);
-            this.labelUserAddress_Info.MaximumSize = new System.Drawing.Size(600, 80);
-            this.labelUserAddress_Info.Name = "labelUserAddress_Info";
-            this.labelUserAddress_Info.Size = new System.Drawing.Size(324, 24);
-            this.labelUserAddress_Info.TabIndex = 4;
-            this.labelUserAddress_Info.Text = "Địa chỉ giao hàng: Nguyễn Hữu Cảnh\r\n";
-            // 
-            // labelUserPhone_Info
-            // 
-            this.labelUserPhone_Info.AutoSize = true;
-            this.labelUserPhone_Info.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUserPhone_Info.Location = new System.Drawing.Point(16, 142);
-            this.labelUserPhone_Info.Name = "labelUserPhone_Info";
-            this.labelUserPhone_Info.Size = new System.Drawing.Size(231, 24);
-            this.labelUserPhone_Info.TabIndex = 5;
-            this.labelUserPhone_Info.Text = "Số điện thoại: 0378203222";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Open Sans Semibold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(606, 45);
-            this.label1.Margin = new System.Windows.Forms.Padding(0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(319, 43);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Thông tin tài khoản";
             // 
             // txtNoticeBookNotFound
             // 
@@ -430,15 +315,15 @@
             this.AddShopCart,
             this.BookID});
             this.dataGridViewBookShow.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle11.Padding = new System.Windows.Forms.Padding(5);
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewBookShow.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            dataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle29.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewBookShow.DefaultCellStyle = dataGridViewCellStyle29;
             this.dataGridViewBookShow.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewBookShow.GridColor = System.Drawing.Color.LightSalmon;
             this.dataGridViewBookShow.Location = new System.Drawing.Point(0, 0);
@@ -447,21 +332,21 @@
             this.dataGridViewBookShow.Name = "dataGridViewBookShow";
             this.dataGridViewBookShow.ReadOnly = true;
             this.dataGridViewBookShow.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewBookShow.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle30.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle30.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle30.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewBookShow.RowHeadersDefaultCellStyle = dataGridViewCellStyle30;
             this.dataGridViewBookShow.RowHeadersVisible = false;
             this.dataGridViewBookShow.RowHeadersWidth = 51;
             this.dataGridViewBookShow.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
             this.dataGridViewBookShow.RowTemplate.Height = 130;
             this.dataGridViewBookShow.RowTemplate.ReadOnly = true;
             this.dataGridViewBookShow.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewBookShow.Size = new System.Drawing.Size(1498, 844);
+            this.dataGridViewBookShow.Size = new System.Drawing.Size(1485, 783);
             this.dataGridViewBookShow.TabIndex = 0;
             this.dataGridViewBookShow.VirtualMode = true;
             this.dataGridViewBookShow.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewBookShow_CellClick);
@@ -497,13 +382,13 @@
             // 
             // AddShopCart
             // 
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.Padding = new System.Windows.Forms.Padding(10, 30, 10, 30);
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.AddShopCart.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle28.Padding = new System.Windows.Forms.Padding(10, 30, 10, 30);
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.AddShopCart.DefaultCellStyle = dataGridViewCellStyle28;
             this.AddShopCart.FillWeight = 25F;
             this.AddShopCart.HeaderText = "Add Cart";
             this.AddShopCart.MinimumWidth = 6;
@@ -540,7 +425,7 @@
             this.tableLayoutPanelSearch_Account.Name = "tableLayoutPanelSearch_Account";
             this.tableLayoutPanelSearch_Account.RowCount = 1;
             this.tableLayoutPanelSearch_Account.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelSearch_Account.Size = new System.Drawing.Size(1498, 157);
+            this.tableLayoutPanelSearch_Account.Size = new System.Drawing.Size(1485, 146);
             this.tableLayoutPanelSearch_Account.TabIndex = 3;
             // 
             // flowLayoutPanelSearch
@@ -552,7 +437,7 @@
             this.flowLayoutPanelSearch.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanelSearch.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanelSearch.Name = "flowLayoutPanelSearch";
-            this.flowLayoutPanelSearch.Size = new System.Drawing.Size(1018, 157);
+            this.flowLayoutPanelSearch.Size = new System.Drawing.Size(1009, 146);
             this.flowLayoutPanelSearch.TabIndex = 0;
             // 
             // searchBox
@@ -604,13 +489,13 @@
             this.tableLayoutPanel1.Controls.Add(this.panelUsername_Icon, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.panelToggleDownAccount, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(1092, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(1083, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(254, 157);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(252, 146);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // panelUsername_Icon
@@ -621,7 +506,7 @@
             this.panelUsername_Icon.Location = new System.Drawing.Point(0, 0);
             this.panelUsername_Icon.Margin = new System.Windows.Forms.Padding(0);
             this.panelUsername_Icon.Name = "panelUsername_Icon";
-            this.panelUsername_Icon.Size = new System.Drawing.Size(254, 68);
+            this.panelUsername_Icon.Size = new System.Drawing.Size(252, 68);
             this.panelUsername_Icon.TabIndex = 0;
             // 
             // labelUsername
@@ -651,7 +536,7 @@
             // 
             this.panelToggleDownAccount.Controls.Add(this.btnSignUp);
             this.panelToggleDownAccount.Controls.Add(this.btnSignIn);
-            this.panelToggleDownAccount.Location = new System.Drawing.Point(13, 78);
+            this.panelToggleDownAccount.Location = new System.Drawing.Point(13, 73);
             this.panelToggleDownAccount.Margin = new System.Windows.Forms.Padding(13, 0, 0, 0);
             this.panelToggleDownAccount.Name = "panelToggleDownAccount";
             this.panelToggleDownAccount.Size = new System.Drawing.Size(145, 68);
@@ -698,7 +583,7 @@
             // pictureBoxFavoriteIcon
             // 
             this.pictureBoxFavoriteIcon.ErrorImage = null;
-            this.pictureBoxFavoriteIcon.Location = new System.Drawing.Point(1353, 31);
+            this.pictureBoxFavoriteIcon.Location = new System.Drawing.Point(1342, 31);
             this.pictureBoxFavoriteIcon.Margin = new System.Windows.Forms.Padding(7, 31, 0, 0);
             this.pictureBoxFavoriteIcon.Name = "pictureBoxFavoriteIcon";
             this.pictureBoxFavoriteIcon.Size = new System.Drawing.Size(53, 49);
@@ -707,7 +592,7 @@
             // 
             // pictureBoxShopCart
             // 
-            this.pictureBoxShopCart.Location = new System.Drawing.Point(1427, 31);
+            this.pictureBoxShopCart.Location = new System.Drawing.Point(1416, 31);
             this.pictureBoxShopCart.Margin = new System.Windows.Forms.Padding(7, 31, 0, 0);
             this.pictureBoxShopCart.Name = "pictureBoxShopCart";
             this.pictureBoxShopCart.Size = new System.Drawing.Size(53, 49);
@@ -1505,8 +1390,8 @@
             this.tableLayoutMain.Name = "tableLayoutMain";
             this.tableLayoutMain.RowCount = 1;
             this.tableLayoutMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 1061F));
-            this.tableLayoutMain.Size = new System.Drawing.Size(1915, 1061);
+            this.tableLayoutMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 985F));
+            this.tableLayoutMain.Size = new System.Drawing.Size(1902, 985);
             this.tableLayoutMain.TabIndex = 1;
             // 
             // panelSideMenu
@@ -1536,7 +1421,7 @@
             this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
             this.panelSideMenu.Margin = new System.Windows.Forms.Padding(0);
             this.panelSideMenu.Name = "panelSideMenu";
-            this.panelSideMenu.Size = new System.Drawing.Size(409, 1061);
+            this.panelSideMenu.Size = new System.Drawing.Size(409, 985);
             this.panelSideMenu.TabIndex = 1;
             // 
             // btnForeignLanguagesBook
@@ -1750,6 +1635,17 @@
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
+            // panelParentUser_Info
+            // 
+            this.panelParentUser_Info.Controls.Add(this.PanelEditUser_Info);
+            this.panelParentUser_Info.Controls.Add(this.PanelUser_Info);
+            this.panelParentUser_Info.Controls.Add(this.label1);
+            this.panelParentUser_Info.Location = new System.Drawing.Point(52, 17);
+            this.panelParentUser_Info.Name = "panelParentUser_Info";
+            this.panelParentUser_Info.Size = new System.Drawing.Size(1257, 595);
+            this.panelParentUser_Info.TabIndex = 2;
+            this.panelParentUser_Info.Visible = false;
+            // 
             // PanelEditUser_Info
             // 
             this.PanelEditUser_Info.Controls.Add(this.CancelbtnUser_Info);
@@ -1760,11 +1656,87 @@
             this.PanelEditUser_Info.Controls.Add(this.SaveBtnUser_Info);
             this.PanelEditUser_Info.Controls.Add(this.label4);
             this.PanelEditUser_Info.Controls.Add(this.label5);
-            this.PanelEditUser_Info.Location = new System.Drawing.Point(570, 165);
+            this.PanelEditUser_Info.Location = new System.Drawing.Point(666, 136);
             this.PanelEditUser_Info.Name = "PanelEditUser_Info";
             this.PanelEditUser_Info.Size = new System.Drawing.Size(462, 205);
-            this.PanelEditUser_Info.TabIndex = 12;
+            this.PanelEditUser_Info.TabIndex = 15;
             this.PanelEditUser_Info.Visible = false;
+            // 
+            // CancelbtnUser_Info
+            // 
+            this.CancelbtnUser_Info.BorderColor = System.Drawing.Color.OrangeRed;
+            this.CancelbtnUser_Info.BorderRadius = 10;
+            this.CancelbtnUser_Info.BorderThickness = 1;
+            this.CancelbtnUser_Info.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.CancelbtnUser_Info.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.CancelbtnUser_Info.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.CancelbtnUser_Info.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.CancelbtnUser_Info.FillColor = System.Drawing.Color.White;
+            this.CancelbtnUser_Info.Font = new System.Drawing.Font("Open Sans Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelbtnUser_Info.ForeColor = System.Drawing.Color.Black;
+            this.CancelbtnUser_Info.Location = new System.Drawing.Point(246, 148);
+            this.CancelbtnUser_Info.Name = "CancelbtnUser_Info";
+            this.CancelbtnUser_Info.Size = new System.Drawing.Size(109, 40);
+            this.CancelbtnUser_Info.TabIndex = 15;
+            this.CancelbtnUser_Info.Text = "    Hủy";
+            this.CancelbtnUser_Info.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // txtUserPhone_Info
+            // 
+            this.txtUserPhone_Info.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUserPhone_Info.DefaultText = "";
+            this.txtUserPhone_Info.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtUserPhone_Info.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtUserPhone_Info.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUserPhone_Info.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUserPhone_Info.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUserPhone_Info.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtUserPhone_Info.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUserPhone_Info.Location = new System.Drawing.Point(179, 99);
+            this.txtUserPhone_Info.Name = "txtUserPhone_Info";
+            this.txtUserPhone_Info.PasswordChar = '\0';
+            this.txtUserPhone_Info.PlaceholderText = "";
+            this.txtUserPhone_Info.SelectedText = "";
+            this.txtUserPhone_Info.Size = new System.Drawing.Size(200, 26);
+            this.txtUserPhone_Info.TabIndex = 13;
+            // 
+            // txtUserAddress_Info
+            // 
+            this.txtUserAddress_Info.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUserAddress_Info.DefaultText = "";
+            this.txtUserAddress_Info.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtUserAddress_Info.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtUserAddress_Info.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUserAddress_Info.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUserAddress_Info.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUserAddress_Info.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtUserAddress_Info.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUserAddress_Info.Location = new System.Drawing.Point(233, 57);
+            this.txtUserAddress_Info.Name = "txtUserAddress_Info";
+            this.txtUserAddress_Info.PasswordChar = '\0';
+            this.txtUserAddress_Info.PlaceholderText = "";
+            this.txtUserAddress_Info.SelectedText = "";
+            this.txtUserAddress_Info.Size = new System.Drawing.Size(200, 26);
+            this.txtUserAddress_Info.TabIndex = 12;
+            // 
+            // txtUsername_Info
+            // 
+            this.txtUsername_Info.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUsername_Info.DefaultText = "";
+            this.txtUsername_Info.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtUsername_Info.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtUsername_Info.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUsername_Info.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUsername_Info.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUsername_Info.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtUsername_Info.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUsername_Info.Location = new System.Drawing.Point(140, 17);
+            this.txtUsername_Info.Name = "txtUsername_Info";
+            this.txtUsername_Info.PasswordChar = '\0';
+            this.txtUsername_Info.PlaceholderText = "";
+            this.txtUsername_Info.SelectedText = "";
+            this.txtUsername_Info.Size = new System.Drawing.Size(200, 26);
+            this.txtUsername_Info.TabIndex = 11;
             // 
             // label3
             // 
@@ -1776,6 +1748,25 @@
             this.label3.Size = new System.Drawing.Size(100, 24);
             this.label3.TabIndex = 3;
             this.label3.Text = "Họ và tên: ";
+            // 
+            // SaveBtnUser_Info
+            // 
+            this.SaveBtnUser_Info.BorderColor = System.Drawing.Color.OrangeRed;
+            this.SaveBtnUser_Info.BorderRadius = 10;
+            this.SaveBtnUser_Info.BorderThickness = 1;
+            this.SaveBtnUser_Info.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.SaveBtnUser_Info.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.SaveBtnUser_Info.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.SaveBtnUser_Info.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.SaveBtnUser_Info.FillColor = System.Drawing.Color.White;
+            this.SaveBtnUser_Info.Font = new System.Drawing.Font("Open Sans Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveBtnUser_Info.ForeColor = System.Drawing.Color.Black;
+            this.SaveBtnUser_Info.Location = new System.Drawing.Point(78, 148);
+            this.SaveBtnUser_Info.Name = "SaveBtnUser_Info";
+            this.SaveBtnUser_Info.Size = new System.Drawing.Size(109, 40);
+            this.SaveBtnUser_Info.TabIndex = 8;
+            this.SaveBtnUser_Info.Text = "    Lưu";
+            this.SaveBtnUser_Info.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // label4
             // 
@@ -1798,117 +1789,118 @@
             this.label5.TabIndex = 5;
             this.label5.Text = "Số điện thoại:";
             // 
-            // txtUsername_Info
+            // PanelUser_Info
             // 
-            this.txtUsername_Info.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtUsername_Info.DefaultText = "";
-            this.txtUsername_Info.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtUsername_Info.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtUsername_Info.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUsername_Info.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUsername_Info.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUsername_Info.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtUsername_Info.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUsername_Info.Location = new System.Drawing.Point(140, 17);
-            this.txtUsername_Info.Name = "txtUsername_Info";
-            this.txtUsername_Info.PasswordChar = '\0';
-            this.txtUsername_Info.PlaceholderText = "";
-            this.txtUsername_Info.SelectedText = "";
-            this.txtUsername_Info.Size = new System.Drawing.Size(200, 26);
-            this.txtUsername_Info.TabIndex = 11;
+            this.PanelUser_Info.Controls.Add(this.labelUseremail_Info);
+            this.PanelUser_Info.Controls.Add(this.pictureBox1);
+            this.PanelUser_Info.Controls.Add(this.labelUsername_Info);
+            this.PanelUser_Info.Controls.Add(this.btnEditUser_Info);
+            this.PanelUser_Info.Controls.Add(this.labelUserAddress_Info);
+            this.PanelUser_Info.Controls.Add(this.labelUserPhone_Info);
+            this.PanelUser_Info.Location = new System.Drawing.Point(666, 91);
+            this.PanelUser_Info.Name = "PanelUser_Info";
+            this.PanelUser_Info.Size = new System.Drawing.Size(415, 248);
+            this.PanelUser_Info.TabIndex = 14;
             // 
-            // txtUserAddress_Info
+            // labelUseremail_Info
             // 
-            this.txtUserAddress_Info.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtUserAddress_Info.DefaultText = "";
-            this.txtUserAddress_Info.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtUserAddress_Info.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtUserAddress_Info.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUserAddress_Info.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUserAddress_Info.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUserAddress_Info.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtUserAddress_Info.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUserAddress_Info.Location = new System.Drawing.Point(233, 57);
-            this.txtUserAddress_Info.Name = "txtUserAddress_Info";
-            this.txtUserAddress_Info.PasswordChar = '\0';
-            this.txtUserAddress_Info.PlaceholderText = "";
-            this.txtUserAddress_Info.SelectedText = "";
-            this.txtUserAddress_Info.Size = new System.Drawing.Size(200, 26);
-            this.txtUserAddress_Info.TabIndex = 12;
+            this.labelUseremail_Info.AutoSize = true;
+            this.labelUseremail_Info.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUseremail_Info.Location = new System.Drawing.Point(16, 16);
+            this.labelUseremail_Info.Margin = new System.Windows.Forms.Padding(0);
+            this.labelUseremail_Info.Name = "labelUseremail_Info";
+            this.labelUseremail_Info.Size = new System.Drawing.Size(210, 24);
+            this.labelUseremail_Info.TabIndex = 10;
+            this.labelUseremail_Info.Text = "Email: user@gmail.com";
             // 
-            // txtUserPhone_Info
+            // pictureBox1
             // 
-            this.txtUserPhone_Info.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtUserPhone_Info.DefaultText = "";
-            this.txtUserPhone_Info.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtUserPhone_Info.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtUserPhone_Info.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUserPhone_Info.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUserPhone_Info.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUserPhone_Info.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtUserPhone_Info.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUserPhone_Info.Location = new System.Drawing.Point(179, 99);
-            this.txtUserPhone_Info.Name = "txtUserPhone_Info";
-            this.txtUserPhone_Info.PasswordChar = '\0';
-            this.txtUserPhone_Info.PlaceholderText = "";
-            this.txtUserPhone_Info.SelectedText = "";
-            this.txtUserPhone_Info.Size = new System.Drawing.Size(200, 26);
-            this.txtUserPhone_Info.TabIndex = 13;
+            this.pictureBox1.Image = global::FahasaApp.Properties.Resources.bookmark_plus;
+            this.pictureBox1.Location = new System.Drawing.Point(286, 196);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
             // 
-            // SaveBtnUser_Info
+            // labelUsername_Info
             // 
-            this.SaveBtnUser_Info.BorderColor = System.Drawing.Color.OrangeRed;
-            this.SaveBtnUser_Info.BorderRadius = 10;
-            this.SaveBtnUser_Info.BorderThickness = 1;
-            this.SaveBtnUser_Info.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.SaveBtnUser_Info.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.SaveBtnUser_Info.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.SaveBtnUser_Info.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.SaveBtnUser_Info.FillColor = System.Drawing.Color.White;
-            this.SaveBtnUser_Info.Font = new System.Drawing.Font("Open Sans Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaveBtnUser_Info.ForeColor = System.Drawing.Color.Black;
-            this.SaveBtnUser_Info.Location = new System.Drawing.Point(78, 148);
-            this.SaveBtnUser_Info.Name = "SaveBtnUser_Info";
-            this.SaveBtnUser_Info.Size = new System.Drawing.Size(109, 40);
-            this.SaveBtnUser_Info.TabIndex = 8;
-            this.SaveBtnUser_Info.Text = "    Lưu";
-            this.SaveBtnUser_Info.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.SaveBtnUser_Info.Click += new System.EventHandler(this.SaveBtnUserInfo_Click);
+            this.labelUsername_Info.AutoSize = true;
+            this.labelUsername_Info.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUsername_Info.Location = new System.Drawing.Point(16, 60);
+            this.labelUsername_Info.Margin = new System.Windows.Forms.Padding(0);
+            this.labelUsername_Info.Name = "labelUsername_Info";
+            this.labelUsername_Info.Size = new System.Drawing.Size(226, 24);
+            this.labelUsername_Info.TabIndex = 3;
+            this.labelUsername_Info.Text = "Họ và Tên: Trần Thế Luật";
             // 
-            // CancelbtnUser_Info
+            // btnEditUser_Info
             // 
-            this.CancelbtnUser_Info.BorderColor = System.Drawing.Color.OrangeRed;
-            this.CancelbtnUser_Info.BorderRadius = 10;
-            this.CancelbtnUser_Info.BorderThickness = 1;
-            this.CancelbtnUser_Info.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.CancelbtnUser_Info.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.CancelbtnUser_Info.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.CancelbtnUser_Info.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.CancelbtnUser_Info.FillColor = System.Drawing.Color.White;
-            this.CancelbtnUser_Info.Font = new System.Drawing.Font("Open Sans Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CancelbtnUser_Info.ForeColor = System.Drawing.Color.Black;
-            this.CancelbtnUser_Info.Location = new System.Drawing.Point(246, 148);
-            this.CancelbtnUser_Info.Name = "CancelbtnUser_Info";
-            this.CancelbtnUser_Info.Size = new System.Drawing.Size(109, 40);
-            this.CancelbtnUser_Info.TabIndex = 15;
-            this.CancelbtnUser_Info.Text = "    Hủy";
-            this.CancelbtnUser_Info.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.CancelbtnUser_Info.Click += new System.EventHandler(this.CancelbtnUserInfo_Click);
+            this.btnEditUser_Info.BorderColor = System.Drawing.Color.OrangeRed;
+            this.btnEditUser_Info.BorderRadius = 10;
+            this.btnEditUser_Info.BorderThickness = 1;
+            this.btnEditUser_Info.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnEditUser_Info.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnEditUser_Info.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnEditUser_Info.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnEditUser_Info.FillColor = System.Drawing.Color.White;
+            this.btnEditUser_Info.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditUser_Info.ForeColor = System.Drawing.Color.Black;
+            this.btnEditUser_Info.Location = new System.Drawing.Point(68, 191);
+            this.btnEditUser_Info.Name = "btnEditUser_Info";
+            this.btnEditUser_Info.Size = new System.Drawing.Size(258, 40);
+            this.btnEditUser_Info.TabIndex = 8;
+            this.btnEditUser_Info.Text = "Sửa thông tin tài khoản";
+            this.btnEditUser_Info.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // labelUserAddress_Info
+            // 
+            this.labelUserAddress_Info.AutoSize = true;
+            this.labelUserAddress_Info.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUserAddress_Info.Location = new System.Drawing.Point(16, 100);
+            this.labelUserAddress_Info.MaximumSize = new System.Drawing.Size(600, 80);
+            this.labelUserAddress_Info.Name = "labelUserAddress_Info";
+            this.labelUserAddress_Info.Size = new System.Drawing.Size(324, 24);
+            this.labelUserAddress_Info.TabIndex = 4;
+            this.labelUserAddress_Info.Text = "Địa chỉ giao hàng: Nguyễn Hữu Cảnh\r\n";
+            // 
+            // labelUserPhone_Info
+            // 
+            this.labelUserPhone_Info.AutoSize = true;
+            this.labelUserPhone_Info.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUserPhone_Info.Location = new System.Drawing.Point(16, 142);
+            this.labelUserPhone_Info.Name = "labelUserPhone_Info";
+            this.labelUserPhone_Info.Size = new System.Drawing.Size(231, 24);
+            this.labelUserPhone_Info.TabIndex = 5;
+            this.labelUserPhone_Info.Text = "Số điện thoại: 0378203222";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Open Sans Semibold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(702, 16);
+            this.label1.Margin = new System.Windows.Forms.Padding(0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(319, 43);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Thông tin tài khoản";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1915, 1061);
+            this.ClientSize = new System.Drawing.Size(1902, 985);
             this.Controls.Add(this.tableLayoutMain);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1915, 1251);
+            this.MaximumSize = new System.Drawing.Size(3000, 1300);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(1915, 1030);
+            this.MinimumSize = new System.Drawing.Size(1918, 1024);
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Form1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MainForm_Load);
             flowLayoutPanelIconUser.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAccountIcon)).EndInit();
@@ -1918,11 +1910,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconFire)).EndInit();
             this.panelShowBoooks.ResumeLayout(false);
             this.panelShowBoooks.PerformLayout();
-            this.panelParentUser_Info.ResumeLayout(false);
-            this.panelParentUser_Info.PerformLayout();
-            this.PanelUser_Info.ResumeLayout(false);
-            this.PanelUser_Info.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBookShow)).EndInit();
             this.tableLayoutPanelSearch_Account.ResumeLayout(false);
             this.flowLayoutPanelSearch.ResumeLayout(false);
@@ -1946,8 +1933,13 @@
             this.panelLiteratureSubMenu.ResumeLayout(false);
             this.tableLayoutMain.ResumeLayout(false);
             this.panelSideMenu.ResumeLayout(false);
+            this.panelParentUser_Info.ResumeLayout(false);
+            this.panelParentUser_Info.PerformLayout();
             this.PanelEditUser_Info.ResumeLayout(false);
             this.PanelEditUser_Info.PerformLayout();
+            this.PanelUser_Info.ResumeLayout(false);
+            this.PanelUser_Info.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2038,24 +2030,24 @@
         private System.Windows.Forms.PictureBox pictureBoxIconToggle;
         private System.Windows.Forms.PictureBox BackButton;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
-        private Guna.UI2.WinForms.Guna2Panel panelParentUser_Info;
-        private System.Windows.Forms.Label labelUseremail_Info;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private Guna.UI2.WinForms.Guna2Button btnEditUser_Info;
-        private System.Windows.Forms.Label labelUserPhone_Info;
-        private System.Windows.Forms.Label labelUserAddress_Info;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label labelUsername_Info;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel PanelUser_Info;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel panelParentUser_Info;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel PanelEditUser_Info;
+        private Guna.UI2.WinForms.Guna2Button CancelbtnUser_Info;
         private Guna.UI2.WinForms.Guna2TextBox txtUserPhone_Info;
         private Guna.UI2.WinForms.Guna2TextBox txtUserAddress_Info;
         private Guna.UI2.WinForms.Guna2TextBox txtUsername_Info;
         private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2Button SaveBtnUser_Info;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private Guna.UI2.WinForms.Guna2Button CancelbtnUser_Info;
-        private Guna.UI2.WinForms.Guna2Button SaveBtnUser_Info;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel PanelUser_Info;
+        private System.Windows.Forms.Label labelUseremail_Info;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label labelUsername_Info;
+        private Guna.UI2.WinForms.Guna2Button btnEditUser_Info;
+        private System.Windows.Forms.Label labelUserAddress_Info;
+        private System.Windows.Forms.Label labelUserPhone_Info;
+        private System.Windows.Forms.Label label1;
     }
 }
 

@@ -1161,7 +1161,7 @@ namespace FahasaApp
         }
         private void btneditUserInfo_Click(object sender, EventArgs e)
         {
-            PanelEditUser_Info.Visible = true;
+            panelParentUser_Info.Visible = true;
         }
 
         private void SaveBtnUserInfo_Click(object sender, EventArgs e)
@@ -1192,7 +1192,7 @@ namespace FahasaApp
 
         private void CancelbtnUserInfo_Click(object sender, EventArgs e)
         {
-            PanelEditUser_Info.Visible = false;
+            panelParentUser_Info.Visible = false;
         }
 
        
