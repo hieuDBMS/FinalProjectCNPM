@@ -58,6 +58,7 @@ namespace FahasaApp
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
+
             //Set Form center Screen
             int screenWidth = Screen.PrimaryScreen.WorkingArea.Width;
             int screenHeight = Screen.PrimaryScreen.WorkingArea.Height;
@@ -69,10 +70,12 @@ namespace FahasaApp
             this.StartPosition = FormStartPosition.Manual;
             this.Location = new Point(left, top);
 
+            this.FormBorderStyle = FormBorderStyle.Sizable;
+
             //Init first data for Mainform
             try
             {
-                    SqlConnection conn = new SqlConnection(Program.getConnectString());
+                SqlConnection conn = new SqlConnection(Program.getConnectString());
                 conn.Open();
                 SqlCommand cmd = new SqlCommand("[GetFirst10Books]", conn);
                 cmd.CommandType = CommandType.StoredProcedure;

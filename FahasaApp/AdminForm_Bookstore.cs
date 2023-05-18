@@ -150,5 +150,15 @@ namespace FahasaApp
             dataGridView_book.Rows[e.RowIndex].DefaultCellStyle.ForeColor = Color.Black;
 
         }
+
+        private void NhanvienBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void KhachhangBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

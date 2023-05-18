@@ -1648,7 +1648,7 @@
             this.tableLayoutMain.Name = "tableLayoutMain";
             this.tableLayoutMain.RowCount = 1;
             this.tableLayoutMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 985F));
+            this.tableLayoutMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 961F));
             this.tableLayoutMain.Size = new System.Drawing.Size(1424, 961);
             this.tableLayoutMain.TabIndex = 1;
             // 
@@ -1897,7 +1897,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1424, 961);
+            this.ClientSize = new System.Drawing.Size(1440, 1000);
             this.Controls.Add(this.tableLayoutMain);
             this.HelpButton = true;
             this.MaximizeBox = false;
@@ -2053,6 +2053,7 @@
         private System.Windows.Forms.Label labelUserAddress_Info;
         private System.Windows.Forms.Label labelUserPhone_Info;
         private System.Windows.Forms.Label label1;
+        
     }
 }
 
