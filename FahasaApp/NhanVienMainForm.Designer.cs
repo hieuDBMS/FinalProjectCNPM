@@ -133,16 +133,18 @@
             // 
             // DonhangBtn
             // 
-            this.DonhangBtn.BorderColor = System.Drawing.Color.OrangeRed;
+            this.DonhangBtn.BorderColor = System.Drawing.Color.Red;
             this.DonhangBtn.BorderRadius = 5;
             this.DonhangBtn.BorderThickness = 2;
             this.DonhangBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.DonhangBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.DonhangBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.DonhangBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.DonhangBtn.FillColor = System.Drawing.Color.White;
+            this.DonhangBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.DonhangBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DonhangBtn.ForeColor = System.Drawing.Color.Red;
+            this.DonhangBtn.ForeColor = System.Drawing.Color.White;
+            this.DonhangBtn.HoverState.FillColor = System.Drawing.Color.Red;
+            this.DonhangBtn.HoverState.ForeColor = System.Drawing.Color.White;
             this.DonhangBtn.Location = new System.Drawing.Point(20, 20);
             this.DonhangBtn.Margin = new System.Windows.Forms.Padding(20, 20, 20, 0);
             this.DonhangBtn.Name = "DonhangBtn";
@@ -153,16 +155,20 @@
             // 
             // KhachhangBtn
             // 
-            this.KhachhangBtn.BorderColor = System.Drawing.Color.OrangeRed;
+            this.KhachhangBtn.BorderColor = System.Drawing.Color.Red;
             this.KhachhangBtn.BorderRadius = 5;
             this.KhachhangBtn.BorderThickness = 2;
+            this.KhachhangBtn.CheckedState.FillColor = System.Drawing.Color.Red;
+            this.KhachhangBtn.CheckedState.ForeColor = System.Drawing.Color.White;
             this.KhachhangBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.KhachhangBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.KhachhangBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.KhachhangBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.KhachhangBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.KhachhangBtn.FillColor = System.Drawing.Color.White;
             this.KhachhangBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.KhachhangBtn.ForeColor = System.Drawing.Color.White;
+            this.KhachhangBtn.ForeColor = System.Drawing.Color.Red;
+            this.KhachhangBtn.HoverState.FillColor = System.Drawing.Color.Red;
+            this.KhachhangBtn.HoverState.ForeColor = System.Drawing.Color.White;
             this.KhachhangBtn.Location = new System.Drawing.Point(190, 20);
             this.KhachhangBtn.Margin = new System.Windows.Forms.Padding(0, 20, 20, 0);
             this.KhachhangBtn.Name = "KhachhangBtn";

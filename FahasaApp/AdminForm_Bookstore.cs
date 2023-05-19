@@ -124,10 +124,7 @@ namespace FahasaApp
                 await Task.Delay(2000); // Wait for 2 seconds
                 LoadData();
             }
-            else
-            {
-                MessageBox.Show("Vui lòng chọn một dòng để xóa!");
-            }
+            
         }
 
 

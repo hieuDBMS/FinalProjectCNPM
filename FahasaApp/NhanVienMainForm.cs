@@ -58,11 +58,25 @@ namespace FahasaApp
         private void DonhangBtn_Click(object sender, EventArgs e)
         {
             ShowChildForm(billForm);
+
+            DonhangBtn.FillColor = Color.Red;
+            DonhangBtn.ForeColor = Color.White;
+
+            KhachhangBtn.FillColor = Color.White;
+            KhachhangBtn.ForeColor = Color.Red;
         }
 
         private void KhachhangBtn_Click(object sender, EventArgs e)
         {
             ShowChildForm(customerForm);
+
+
+            //Change Button color
+            KhachhangBtn.FillColor = Color.Red;
+            KhachhangBtn.ForeColor = Color.White;
+
+            DonhangBtn.FillColor = Color.White;
+            DonhangBtn.ForeColor = Color.Red;
         }
     }
 }
