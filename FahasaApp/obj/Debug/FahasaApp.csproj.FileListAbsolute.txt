@@ -161,3 +161,7 @@ C:\Users\asus\Downloads\Hiếu PC\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp
 C:\Users\asus\Downloads\Hiếu PC\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.QuanLyCustomer_ByNhanVien.resources
 C:\Users\asus\Downloads\Hiếu PC\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.QuanLyDonHang_ByNhanVien.resources
 C:\Users\asus\Downloads\Hiếu PC\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.QuanLyBill_ByNhanVien.resources
+C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.NhanVienMainForm.resources
+C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.QuanLyBill_ByNhanVien.resources
+C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.QuanLyCustomer_ByNhanVien.resources
+C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.QuanLyDonHang_ByNhanVien.resources

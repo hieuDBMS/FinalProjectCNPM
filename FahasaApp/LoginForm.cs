@@ -127,6 +127,8 @@ namespace FahasaApp
                         }else if(roleResult == 1)
                         {
                             //OpenForm Staff
+                            NhanVienMainForm staffForm = new NhanVienMainForm();
+                            staffForm.Show();
                         }    
                         else{
                                 // Open Customer

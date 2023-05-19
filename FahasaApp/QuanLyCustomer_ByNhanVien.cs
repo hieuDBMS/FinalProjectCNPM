@@ -27,6 +27,7 @@ namespace FahasaApp
         private void dataGridView_customer_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             LoadData();
+
         }
 
 
@@ -85,6 +86,7 @@ namespace FahasaApp
                     }
                 }
             }
+            dataGridView_customer.ClearSelection();
         }
 
         private void dataGridView_customer_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)

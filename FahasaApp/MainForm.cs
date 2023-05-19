@@ -1145,7 +1145,10 @@ namespace FahasaApp
             Properties.Settings.Default.username= username;
             Properties.Settings.Default.userPhone = userPhone;
             Properties.Settings.Default.userAddress = userAddress;
-            Properties.Settings.Default.userEmail = userEmail;
+            if(userEmail != null)
+            {
+                Properties.Settings.Default.userEmail = userEmail;
+            }
             btnSignIn.Text = "Thông tin ";
             btnSignUp.Text = "Đăng xuất";
             this.Refresh();
