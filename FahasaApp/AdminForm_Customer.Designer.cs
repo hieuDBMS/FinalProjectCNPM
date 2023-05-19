@@ -69,13 +69,14 @@
             this.TaikhoanBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.TaikhoanBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.TaikhoanBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.TaikhoanBtn.Font = new System.Drawing.Font("Open Sans Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaikhoanBtn.Font = new System.Drawing.Font("Open Sans SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TaikhoanBtn.ForeColor = System.Drawing.Color.White;
             this.TaikhoanBtn.Location = new System.Drawing.Point(554, 10);
             this.TaikhoanBtn.Name = "TaikhoanBtn";
             this.TaikhoanBtn.Size = new System.Drawing.Size(130, 35);
             this.TaikhoanBtn.TabIndex = 4;
             this.TaikhoanBtn.Text = "Tài khoản";
+            this.TaikhoanBtn.Click += new System.EventHandler(this.TaikhoanBtn_Click);
             // 
             // DonhangBtn
             // 
@@ -85,13 +86,14 @@
             this.DonhangBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.DonhangBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.DonhangBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.DonhangBtn.Font = new System.Drawing.Font("Open Sans Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DonhangBtn.Font = new System.Drawing.Font("Open Sans SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DonhangBtn.ForeColor = System.Drawing.Color.White;
             this.DonhangBtn.Location = new System.Drawing.Point(418, 10);
             this.DonhangBtn.Name = "DonhangBtn";
             this.DonhangBtn.Size = new System.Drawing.Size(130, 35);
             this.DonhangBtn.TabIndex = 3;
             this.DonhangBtn.Text = "Đơn hàng";
+            this.DonhangBtn.Click += new System.EventHandler(this.DonhangBtn_Click);
             // 
             // KhachhangBtn
             // 
@@ -102,7 +104,7 @@
             this.KhachhangBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.KhachhangBtn.FillColor = System.Drawing.Color.Maroon;
             this.KhachhangBtn.FocusedColor = System.Drawing.Color.AliceBlue;
-            this.KhachhangBtn.Font = new System.Drawing.Font("Open Sans Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KhachhangBtn.Font = new System.Drawing.Font("Open Sans SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.KhachhangBtn.ForeColor = System.Drawing.Color.White;
             this.KhachhangBtn.Location = new System.Drawing.Point(282, 10);
             this.KhachhangBtn.Name = "KhachhangBtn";
@@ -118,13 +120,14 @@
             this.NhanvienBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.NhanvienBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.NhanvienBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.NhanvienBtn.Font = new System.Drawing.Font("Open Sans Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NhanvienBtn.Font = new System.Drawing.Font("Open Sans SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NhanvienBtn.ForeColor = System.Drawing.Color.White;
             this.NhanvienBtn.Location = new System.Drawing.Point(146, 10);
             this.NhanvienBtn.Name = "NhanvienBtn";
             this.NhanvienBtn.Size = new System.Drawing.Size(130, 35);
             this.NhanvienBtn.TabIndex = 1;
             this.NhanvienBtn.Text = "Nhân viên";
+            this.NhanvienBtn.Click += new System.EventHandler(this.NhanvienBtn_Click);
             // 
             // KhosachBtn
             // 
@@ -134,13 +137,14 @@
             this.KhosachBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.KhosachBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.KhosachBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.KhosachBtn.Font = new System.Drawing.Font("Open Sans Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KhosachBtn.Font = new System.Drawing.Font("Open Sans SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.KhosachBtn.ForeColor = System.Drawing.Color.White;
             this.KhosachBtn.Location = new System.Drawing.Point(10, 10);
             this.KhosachBtn.Name = "KhosachBtn";
             this.KhosachBtn.Size = new System.Drawing.Size(130, 35);
             this.KhosachBtn.TabIndex = 0;
             this.KhosachBtn.Text = "Kho sách";
+            this.KhosachBtn.Click += new System.EventHandler(this.KhosachBtn_Click);
             // 
             // NhanVienPanel
             // 
@@ -182,7 +186,7 @@
             this.SuaBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.SuaBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.SuaBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.SuaBtn.Font = new System.Drawing.Font("Open Sans Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SuaBtn.Font = new System.Drawing.Font("Open Sans SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SuaBtn.ForeColor = System.Drawing.Color.White;
             this.SuaBtn.Location = new System.Drawing.Point(282, 10);
             this.SuaBtn.Name = "SuaBtn";
@@ -199,7 +203,7 @@
             this.XoaBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.XoaBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.XoaBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.XoaBtn.Font = new System.Drawing.Font("Open Sans Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.XoaBtn.Font = new System.Drawing.Font("Open Sans SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.XoaBtn.ForeColor = System.Drawing.Color.White;
             this.XoaBtn.Location = new System.Drawing.Point(146, 10);
             this.XoaBtn.Name = "XoaBtn";
@@ -216,7 +220,7 @@
             this.ThemBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.ThemBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.ThemBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.ThemBtn.Font = new System.Drawing.Font("Open Sans Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ThemBtn.Font = new System.Drawing.Font("Open Sans SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ThemBtn.ForeColor = System.Drawing.Color.White;
             this.ThemBtn.Location = new System.Drawing.Point(10, 10);
             this.ThemBtn.Name = "ThemBtn";

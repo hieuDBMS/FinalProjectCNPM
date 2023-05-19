@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,6 +23,7 @@ namespace FahasaApp
             InitializeComponent();
             this.adminForm = adminForm;
             this.orderID = orderID;
+            TextBox_ID_HD.Text = orderID.ToString(); // Hiển thị giá trị orderID trên TextBox_ID_HD
             TextBox_ID_HD.TextChanged += TextBox_ID_HD_TextChanged;
             LoadOrderData(orderID);
         }
@@ -40,17 +42,26 @@ namespace FahasaApp
             string connectionString = ConfigurationManager.ConnectionStrings["MyConn"].ConnectionString;
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "SELECT * FROM [ORDER] WHERE OrderID = @OrderID";
-                SqlCommand command = new SqlCommand(query, connection);
+                SqlCommand command = new SqlCommand("GetOrderDetailsByID", connection);
+                command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.AddWithValue("@OrderID", orderID);
+
                 connection.Open();
                 SqlDataReader reader = command.ExecuteReader();
                 if (reader.Read())
                 {
                     TextBoxDate.Text = Convert.ToDateTime(reader["OrderDate"]).ToString("dd/MM/yyyy");
                     TextBoxID_DatHang.Text = reader["CustomerID"].ToString();
-                    TextBoxTotalMoney.Text = reader["TotalPrice"].ToString() + " VNĐ";
-                    TextBoxAddress.Text = reader["Address"].ToString();
+
+                    if (float.TryParse(reader["TotalPrice"].ToString(), NumberStyles.Currency, CultureInfo.InvariantCulture, out float totalPrice))
+                    {
+                        TextBoxTotalMoney.Text = totalPrice.ToString("N2") + " VNĐ";
+                    }
+                    else
+                    {
+                        TextBoxTotalMoney.Clear();
+                    }
+
                     TextBoxPaymentID.Text = reader["PaymentID"].ToString();
                 }
                 else
@@ -58,7 +69,6 @@ namespace FahasaApp
                     TextBoxDate.Clear();
                     TextBoxID_DatHang.Clear();
                     TextBoxTotalMoney.Clear();
-                    TextBoxAddress.Clear();
                     TextBoxPaymentID.Clear();
                 }
             }
@@ -96,41 +106,39 @@ namespace FahasaApp
             int orderID = Convert.ToInt32(TextBox_ID_HD.Text);
             DateTime orderDate = DateTime.ParseExact(TextBoxDate.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
             int customerID = Convert.ToInt32(TextBoxID_DatHang.Text);
-            float totalPrice = float.Parse(TextBoxTotalMoney.Text);
-            string address = TextBoxAddress.Text;
+
+            string totalMoneyString = TextBoxTotalMoney.Text.Replace(" VNĐ", ""); // Xóa ký hiệu " VNĐ"
+            float totalPrice = float.Parse(totalMoneyString, CultureInfo.InvariantCulture);
+
             int paymentID = Convert.ToInt32(TextBoxPaymentID.Text);
 
-            // Update the order in the database
+            // Update the order in the database using a stored procedure
             string connectionString = ConfigurationManager.ConnectionStrings["MyConn"].ConnectionString;
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "UPDATE [ORDER] SET OrderDate = @OrderDate, CustomerID = @CustomerID, TotalPrice = @TotalPrice, Address = @Address, PaymentID = @PaymentID WHERE OrderID = @OrderID";
-                SqlCommand command = new SqlCommand(query, connection);
+                SqlCommand command = new SqlCommand("updateOrder", connection);
+                command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.AddWithValue("@OrderID", orderID);
                 command.Parameters.AddWithValue("@OrderDate", orderDate);
                 command.Parameters.AddWithValue("@CustomerID", customerID);
                 command.Parameters.AddWithValue("@TotalPrice", totalPrice);
-                command.Parameters.AddWithValue("@Address", address);
                 command.Parameters.AddWithValue("@PaymentID", paymentID);
+
                 connection.Open();
                 int result = command.ExecuteNonQuery();
 
-                // Check Error
                 if (result < 0)
                     MessageBox.Show("Error updating data into Database!");
                 else
                 {
                     MessageBox.Show("Data has been updated successfully!");
-                    // Refresh the gridview data, you need to implement this method on your own
-                    // For example, if you have a method named LoadData in the parent form, you can call
-                    // parentForm.LoadData();
                     this.Close();  // Close the current form
                 }
             }
         }
         private void btnCancel_Click(object sender, EventArgs e)
         {
-                    this.Close();
+            this.Close();
 
         }
     }

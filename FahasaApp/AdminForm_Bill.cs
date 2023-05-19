@@ -18,7 +18,6 @@ namespace FahasaApp
         {
             InitializeComponent();
             LoadData();
-            XoaBtn.Click += XoaBtn_Click;
             dataGridView_bill.RowPrePaint += dataGridView_bill_RowPrePaint;
             dataGridView_bill.CellPainting += dataGridView_bill_CellPainting;
             dataGridView_bill.EnableHeadersVisualStyles = false;
@@ -26,40 +25,51 @@ namespace FahasaApp
 
         public void LoadData()
         {
-            string connectionString = ConfigurationManager.ConnectionStrings["MyConn"].ConnectionString;
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            SqlConnection conn = new SqlConnection(Program.getConnectString());
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("[GetAllOrdersWithDetails]", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            conn.Close();
+            da.Dispose();
+
+            dataGridView_bill.DataSource = dt;
+
+            if (dataGridView_bill.DataSource != null)
             {
-                SqlCommand command = new SqlCommand("[GetAllOrdersWithCustomerAddress]", connection);
-                command.CommandType = CommandType.StoredProcedure;
-                SqlDataAdapter adapter = new SqlDataAdapter(command);
-                DataTable dataTable = new DataTable();
-                adapter.Fill(dataTable);
-                dataGridView_bill.DataSource = dataTable;
+                dataGridView_bill.RowHeadersVisible = false;
+                dataGridView_bill.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-                if (dataGridView_bill.DataSource != null)
+                // Ẩn các cột không cần thiết
+                foreach (DataGridViewColumn col in dataGridView_bill.Columns)
                 {
-                    // Remove the first column (RowHeader column)
-                    dataGridView_bill.RowHeadersVisible = false;
-
-                    // Set the fill mode
-                    dataGridView_bill.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
-                    // Define the fill weights for columns
-                    dataGridView_bill.Columns["Mã HD"].FillWeight = 5;
-                    dataGridView_bill.Columns["Ngày Đặt"].FillWeight = 15;
-                    dataGridView_bill.Columns["Mã KH"].FillWeight = 7;
-                    dataGridView_bill.Columns["Tổng Tiền"].FillWeight = 15;
-                    dataGridView_bill.Columns["Địa Chỉ"].FillWeight = 23;
-                    dataGridView_bill.Columns["Payment ID"].FillWeight = 9;
-
-                    // Center align for header cells and some specific columns
-                    foreach (DataGridViewColumn col in dataGridView_bill.Columns)
+                    if (col.Name != "Mã HĐ" && col.Name != "Ngày Đặt" && col.Name != "Mã KH" && col.Name != "Tổng Tiền" && col.Name != "Payment ID")
                     {
-                        col.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                        if (col.Name == "Mã HD" || col.Name == "Mã KH" || col.Name == "Payment ID")
-                        {
-                            col.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                        }
+                        col.Visible = false;
+                    }
+                }
+
+                dataGridView_bill.Columns["Mã HĐ"].HeaderText = "Mã HD";
+                dataGridView_bill.Columns["Ngày Đặt"].HeaderText = "Ngày Đặt";
+                dataGridView_bill.Columns["Mã KH"].HeaderText = "Mã KH";
+                dataGridView_bill.Columns["Tổng tiền"].HeaderText = "Tổng Tiền";
+                dataGridView_bill.Columns["Payment ID"].HeaderText = "Payment ID";
+
+                dataGridView_bill.Columns["Mã HĐ"].FillWeight = 5;
+                dataGridView_bill.Columns["Ngày Đặt"].FillWeight = 30;
+                dataGridView_bill.Columns["Mã KH"].FillWeight = 25;
+                dataGridView_bill.Columns["Tổng tiền"].FillWeight = 15;
+                dataGridView_bill.Columns["Payment ID"].FillWeight = 7;
+
+
+                foreach (DataGridViewColumn col in dataGridView_bill.Columns)
+                {
+                    col.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                    if (col.Name == "Mã HĐ" || col.Name == "Mã KH" || col.Name == "Payment ID" || col.Name == "Ngày Đặt")
+                    {
+                        col.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
                     }
                 }
             }
@@ -105,11 +115,11 @@ namespace FahasaApp
             // Kiểm tra dòng được chọn trong DataGridView
             if (dataGridView_bill.CurrentRow != null)
             {
-                int orderID = Convert.ToInt32(dataGridView_bill.CurrentRow.Cells["Mã HD"].Value);
+                int orderID = Convert.ToInt32(dataGridView_bill.CurrentRow.Cells["Mã HĐ"].Value);
 
                 // Xóa dòng từ DataTable
                 DataTable dataTable = (DataTable)dataGridView_bill.DataSource;
-                DataRow rowToDelete = dataTable.AsEnumerable().FirstOrDefault(row => Convert.ToInt32(row["Mã HD"]) == orderID);
+                DataRow rowToDelete = dataTable.AsEnumerable().FirstOrDefault(row => Convert.ToInt32(row["Mã HĐ"]) == orderID);
                 if (rowToDelete != null)
                     dataTable.Rows.Remove(rowToDelete);
 
@@ -145,7 +155,7 @@ namespace FahasaApp
 
         private void SuaBtn_Click(object sender, EventArgs e)
         {
-            int OrderID = Convert.ToInt32(dataGridView_bill.CurrentRow.Cells["Mã HD"].Value);
+            int OrderID = Convert.ToInt32(dataGridView_bill.CurrentRow.Cells["Mã HĐ"].Value);
             Edit_Bill a = new Edit_Bill(this, OrderID);
             a.ShowDialog();
         }
@@ -153,6 +163,37 @@ namespace FahasaApp
         private void dataGridView_bill_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             LoadData();
+        }
+        private void TaikhoanBtn_Click(object sender, EventArgs e)
+        {
+            AdminForm_Account form = new AdminForm_Account();
+            this.Hide();
+            form.ShowDialog();
+            this.Close();
+        }
+
+        private void KhachhangBtn_Click(object sender, EventArgs e)
+        {
+            AdminForm_Customer form = new AdminForm_Customer();
+            this.Hide();
+            form.ShowDialog();
+            this.Close();
+        }
+
+        private void NhanvienBtn_Click(object sender, EventArgs e)
+        {
+            AdminFrom_NhanVien form = new AdminFrom_NhanVien();
+            this.Hide();
+            form.ShowDialog();
+            this.Close();
+        }
+
+        private void KhosachBtn_Click(object sender, EventArgs e)
+        {
+            AdminForm_Bookstore form = new AdminForm_Bookstore();
+            this.Hide();
+            form.ShowDialog();
+            this.Close();
         }
     }
 }

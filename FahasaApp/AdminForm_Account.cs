@@ -175,5 +175,37 @@ namespace FahasaApp
             }
             dataGridView_account.GridColor = Color.White;
         }
+
+        private void KhosachBtn_Click(object sender, EventArgs e)
+        {
+            AdminForm_Bookstore form = new AdminForm_Bookstore();
+            this.Hide();
+            form.ShowDialog();
+            this.Close();
+        }
+
+        private void NhanvienBtn_Click(object sender, EventArgs e)
+        {
+            AdminForm_Customer form = new AdminForm_Customer();
+            this.Hide();
+            form.ShowDialog();
+            this.Close();
+        }
+
+        private void KhachhangBtn_Click(object sender, EventArgs e)
+        {
+            AdminForm_Customer form = new AdminForm_Customer();
+            this.Hide();
+            form.ShowDialog();
+            this.Close();
+        }
+
+        private void DonhangBtn_Click(object sender, EventArgs e)
+        {
+            AdminFrom_NhanVien form = new AdminFrom_NhanVien();
+            this.Hide();
+            form.ShowDialog();
+            this.Close();
+        }
     }
 }

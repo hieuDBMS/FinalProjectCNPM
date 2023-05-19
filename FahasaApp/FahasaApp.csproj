@@ -66,6 +66,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include=".Designer.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Add_Account.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,6 +211,12 @@
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MySettings.cs" />
+    <Compile Include="NhanVienMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanVienMainForm.Designer.cs">
+      <DependentUpon>NhanVienMainForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="NoticeUserLogin_CartForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,6 +228,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>OrderCrystalReport.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="QuanLyBill_ByNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyBill_ByNhanVien.Designer.cs">
+      <DependentUpon>QuanLyBill_ByNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyCustomer_ByNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyCustomer_ByNhanVien.Designer.cs">
+      <DependentUpon>QuanLyCustomer_ByNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyDonHang_ByNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyDonHang_ByNhanVien.Designer.cs">
+      <DependentUpon>QuanLyDonHang_ByNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="ShoppingCart.cs" />
     <Compile Include="RegisterForm.cs">
@@ -301,12 +328,24 @@
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NhanVienMainForm.resx">
+      <DependentUpon>NhanVienMainForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NoticeUserLogin_CartForm.resx">
       <DependentUpon>NoticeUserLogin_CartForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OrderCrystalReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>OrderCrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyBill_ByNhanVien.resx">
+      <DependentUpon>QuanLyBill_ByNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyCustomer_ByNhanVien.resx">
+      <DependentUpon>QuanLyCustomer_ByNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyDonHang_ByNhanVien.resx">
+      <DependentUpon>QuanLyDonHang_ByNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>

@@ -5,6 +5,7 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,15 +27,11 @@ namespace FahasaApp
             string connectionString = ConfigurationManager.ConnectionStrings["MyConn"].ConnectionString;
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "SELECT MAX(OrderID) AS MaxOrderID FROM [ORDER]";
-                SqlCommand command = new SqlCommand(query, connection);
+                SqlCommand command = new SqlCommand("getMaxOrderID", connection);
+                command.CommandType = CommandType.StoredProcedure;
                 connection.Open();
-                SqlDataReader reader = command.ExecuteReader();
-                if (reader.Read())
-                {
-                    int MaxOrderID = reader["MaxOrderID"] == DBNull.Value ? 0 : Convert.ToInt32(reader["MaxOrderID"]);
-                    TextBox_ID_HD.Text = (MaxOrderID + 1).ToString();
-                }
+                int maxOrderID = Convert.ToInt32(command.ExecuteScalar());
+                TextBox_ID_HD.Text = (maxOrderID + 1).ToString();
             }
         }
 
@@ -77,35 +74,34 @@ namespace FahasaApp
         private void btnAdd_Click(object sender, EventArgs e)
         {
             // Get the input values
-            DateTime orderDate = DateTime.ParseExact(TextBoxDate.Text, "dd/MM/yyyy", null);
-            int customerID = Int32.Parse(TextBoxID_DatHang.Text);
-            double totalPrice = Double.Parse(TextBoxTotalMoney.Text.Replace(" VNĐ", ""));
-            string address = TextBoxAddress.Text;
-            int paymentID = Int32.Parse(TextBoxPaymentID.Text);
+            DateTime orderDate = DateTime.ParseExact(TextBoxDate.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+            int customerID = Convert.ToInt32(TextBoxID_DatHang.Text);
+            float totalPrice = float.Parse(TextBoxTotalMoney.Text);
+            int paymentID = Convert.ToInt32(TextBoxPaymentID.Text);
 
-            // Insert the new order into the database
+            // Insert the new order into the database using a stored procedure
             string connectionString = ConfigurationManager.ConnectionStrings["MyConn"].ConnectionString;
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "INSERT INTO [ORDER] (OrderDate, CustomerID, TotalPrice, Address, PaymentID) VALUES (@OrderDate, @CustomerID, @TotalPrice, @Address, @PaymentID)";
-                SqlCommand command = new SqlCommand(query, connection);
+                connection.Open();
+
+                SqlCommand command = new SqlCommand("addOrder", connection);
+                command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.AddWithValue("@OrderDate", orderDate);
                 command.Parameters.AddWithValue("@CustomerID", customerID);
                 command.Parameters.AddWithValue("@TotalPrice", totalPrice);
-                command.Parameters.AddWithValue("@Address", address);
                 command.Parameters.AddWithValue("@PaymentID", paymentID);
-                connection.Open();
-                int result = command.ExecuteNonQuery();
+                SqlParameter newOrderIDParam = new SqlParameter("@NewOrderID", SqlDbType.Int);
+                newOrderIDParam.Direction = ParameterDirection.Output;
+                command.Parameters.Add(newOrderIDParam);
 
-                // Check Error
-                if (result < 0)
-                    MessageBox.Show("Error inserting data into the database!");
-                else
-                {
-                    MessageBox.Show("Data has been inserted successfully!");
-                    adminForm.LoadData();  // Call the method to refresh the gridview data
-                    this.Close();  // Close the current form
-                }
+                command.ExecuteNonQuery();
+
+                connection.Close();
+
+                MessageBox.Show("Data has been inserted successfully!");
+                adminForm.LoadData();  // Refresh the data in the parent form
+                this.Close();  // Close the current form
             }
         }
     }

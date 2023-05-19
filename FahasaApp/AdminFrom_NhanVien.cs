@@ -188,7 +188,39 @@ namespace FahasaApp
 
         private void AdminFrom_NhanVien_Load(object sender, EventArgs e)
         {
+            
+        }
 
+        private void KhosachBtn_Click(object sender, EventArgs e)
+        {
+            AdminForm_Bookstore form = new AdminForm_Bookstore();
+            this.Hide();
+            form.ShowDialog();
+            this.Close();
+        }
+
+        private void KhachhangBtn_Click(object sender, EventArgs e)
+        {
+            AdminForm_Customer form = new AdminForm_Customer();
+            this.Hide();
+            form.ShowDialog();
+            this.Close();
+        }
+
+        private void DonhangBtn_Click(object sender, EventArgs e)
+        {
+            AdminForm_Bill form = new AdminForm_Bill();
+            this.Hide();
+            form.ShowDialog();
+            this.Close();
+        }
+
+        private void TaikhoanBtn_Click(object sender, EventArgs e)
+        {
+            AdminForm_Account form = new AdminForm_Account();
+            this.Hide();
+            form.ShowDialog();
+            this.Close();
         }
     }
 }

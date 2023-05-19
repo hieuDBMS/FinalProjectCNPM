@@ -56,10 +56,10 @@
             this.ButtonPanel.Controls.Add(this.KhachhangBtn);
             this.ButtonPanel.Controls.Add(this.NhanvienBtn);
             this.ButtonPanel.Controls.Add(this.KhosachBtn);
-            this.ButtonPanel.Location = new System.Drawing.Point(2, 93);
-            this.ButtonPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ButtonPanel.Location = new System.Drawing.Point(3, 114);
+            this.ButtonPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ButtonPanel.Name = "ButtonPanel";
-            this.ButtonPanel.Size = new System.Drawing.Size(520, 46);
+            this.ButtonPanel.Size = new System.Drawing.Size(693, 57);
             this.ButtonPanel.TabIndex = 23;
             // 
             // TaikhoanBtn
@@ -72,12 +72,13 @@
             this.TaikhoanBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.TaikhoanBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TaikhoanBtn.ForeColor = System.Drawing.Color.White;
-            this.TaikhoanBtn.Location = new System.Drawing.Point(416, 8);
-            this.TaikhoanBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TaikhoanBtn.Location = new System.Drawing.Point(555, 10);
+            this.TaikhoanBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TaikhoanBtn.Name = "TaikhoanBtn";
-            this.TaikhoanBtn.Size = new System.Drawing.Size(98, 28);
+            this.TaikhoanBtn.Size = new System.Drawing.Size(131, 34);
             this.TaikhoanBtn.TabIndex = 4;
             this.TaikhoanBtn.Text = "Tài khoản";
+            this.TaikhoanBtn.Click += new System.EventHandler(this.TaikhoanBtn_Click);
             // 
             // DonhangBtn
             // 
@@ -89,12 +90,13 @@
             this.DonhangBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.DonhangBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DonhangBtn.ForeColor = System.Drawing.Color.White;
-            this.DonhangBtn.Location = new System.Drawing.Point(314, 8);
-            this.DonhangBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DonhangBtn.Location = new System.Drawing.Point(419, 10);
+            this.DonhangBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DonhangBtn.Name = "DonhangBtn";
-            this.DonhangBtn.Size = new System.Drawing.Size(98, 28);
+            this.DonhangBtn.Size = new System.Drawing.Size(131, 34);
             this.DonhangBtn.TabIndex = 3;
             this.DonhangBtn.Text = "Đơn hàng";
+            this.DonhangBtn.Click += new System.EventHandler(this.DonhangBtn_Click);
             // 
             // KhachhangBtn
             // 
@@ -106,10 +108,10 @@
             this.KhachhangBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.KhachhangBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.KhachhangBtn.ForeColor = System.Drawing.Color.White;
-            this.KhachhangBtn.Location = new System.Drawing.Point(212, 8);
-            this.KhachhangBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.KhachhangBtn.Location = new System.Drawing.Point(283, 10);
+            this.KhachhangBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.KhachhangBtn.Name = "KhachhangBtn";
-            this.KhachhangBtn.Size = new System.Drawing.Size(98, 28);
+            this.KhachhangBtn.Size = new System.Drawing.Size(131, 34);
             this.KhachhangBtn.TabIndex = 2;
             this.KhachhangBtn.Text = "Khách hàng";
             this.KhachhangBtn.Click += new System.EventHandler(this.KhachhangBtn_Click);
@@ -124,10 +126,10 @@
             this.NhanvienBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.NhanvienBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NhanvienBtn.ForeColor = System.Drawing.Color.White;
-            this.NhanvienBtn.Location = new System.Drawing.Point(110, 8);
-            this.NhanvienBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NhanvienBtn.Location = new System.Drawing.Point(147, 10);
+            this.NhanvienBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.NhanvienBtn.Name = "NhanvienBtn";
-            this.NhanvienBtn.Size = new System.Drawing.Size(98, 28);
+            this.NhanvienBtn.Size = new System.Drawing.Size(131, 34);
             this.NhanvienBtn.TabIndex = 1;
             this.NhanvienBtn.Text = "Nhân viên";
             this.NhanvienBtn.Click += new System.EventHandler(this.NhanvienBtn_Click);
@@ -139,23 +141,23 @@
             this.KhosachBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.KhosachBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.KhosachBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.KhosachBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.KhosachBtn.FillColor = System.Drawing.Color.Maroon;
             this.KhosachBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.KhosachBtn.ForeColor = System.Drawing.Color.White;
-            this.KhosachBtn.Location = new System.Drawing.Point(8, 8);
-            this.KhosachBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.KhosachBtn.Location = new System.Drawing.Point(11, 10);
+            this.KhosachBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.KhosachBtn.Name = "KhosachBtn";
-            this.KhosachBtn.Size = new System.Drawing.Size(98, 28);
+            this.KhosachBtn.Size = new System.Drawing.Size(131, 34);
             this.KhosachBtn.TabIndex = 0;
             this.KhosachBtn.Text = "Kho sách";
             // 
             // NhanVienPanel
             // 
             this.NhanVienPanel.Controls.Add(this.dataGridView_book);
-            this.NhanVienPanel.Location = new System.Drawing.Point(31, 204);
-            this.NhanVienPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NhanVienPanel.Location = new System.Drawing.Point(41, 251);
+            this.NhanVienPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.NhanVienPanel.Name = "NhanVienPanel";
-            this.NhanVienPanel.Size = new System.Drawing.Size(857, 348);
+            this.NhanVienPanel.Size = new System.Drawing.Size(1143, 428);
             this.NhanVienPanel.TabIndex = 24;
             // 
             // dataGridView_book
@@ -165,11 +167,11 @@
             this.dataGridView_book.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_book.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView_book.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView_book.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView_book.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView_book.Name = "dataGridView_book";
             this.dataGridView_book.RowHeadersWidth = 51;
             this.dataGridView_book.RowTemplate.Height = 24;
-            this.dataGridView_book.Size = new System.Drawing.Size(857, 348);
+            this.dataGridView_book.Size = new System.Drawing.Size(1143, 428);
             this.dataGridView_book.TabIndex = 0;
             this.dataGridView_book.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_book_CellContentClick);
             // 
@@ -178,10 +180,10 @@
             this.ButtonPanelOption.Controls.Add(this.SuaBtn);
             this.ButtonPanelOption.Controls.Add(this.XoaBtn);
             this.ButtonPanelOption.Controls.Add(this.ThemBtn);
-            this.ButtonPanelOption.Location = new System.Drawing.Point(576, 144);
-            this.ButtonPanelOption.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ButtonPanelOption.Location = new System.Drawing.Point(768, 177);
+            this.ButtonPanelOption.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ButtonPanelOption.Name = "ButtonPanelOption";
-            this.ButtonPanelOption.Size = new System.Drawing.Size(312, 46);
+            this.ButtonPanelOption.Size = new System.Drawing.Size(416, 57);
             this.ButtonPanelOption.TabIndex = 25;
             // 
             // SuaBtn
@@ -194,10 +196,10 @@
             this.SuaBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.SuaBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SuaBtn.ForeColor = System.Drawing.Color.White;
-            this.SuaBtn.Location = new System.Drawing.Point(212, 8);
-            this.SuaBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SuaBtn.Location = new System.Drawing.Point(283, 10);
+            this.SuaBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SuaBtn.Name = "SuaBtn";
-            this.SuaBtn.Size = new System.Drawing.Size(98, 28);
+            this.SuaBtn.Size = new System.Drawing.Size(131, 34);
             this.SuaBtn.TabIndex = 2;
             this.SuaBtn.Text = "Sửa";
             this.SuaBtn.Click += new System.EventHandler(this.SuaBtn_Click);
@@ -212,10 +214,10 @@
             this.XoaBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.XoaBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.XoaBtn.ForeColor = System.Drawing.Color.White;
-            this.XoaBtn.Location = new System.Drawing.Point(110, 8);
-            this.XoaBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.XoaBtn.Location = new System.Drawing.Point(147, 10);
+            this.XoaBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.XoaBtn.Name = "XoaBtn";
-            this.XoaBtn.Size = new System.Drawing.Size(98, 28);
+            this.XoaBtn.Size = new System.Drawing.Size(131, 34);
             this.XoaBtn.TabIndex = 1;
             this.XoaBtn.Text = "Xóa";
             this.XoaBtn.Click += new System.EventHandler(this.XoaBtn_Click);
@@ -230,20 +232,20 @@
             this.ThemBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.ThemBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ThemBtn.ForeColor = System.Drawing.Color.White;
-            this.ThemBtn.Location = new System.Drawing.Point(8, 8);
-            this.ThemBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ThemBtn.Location = new System.Drawing.Point(11, 10);
+            this.ThemBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ThemBtn.Name = "ThemBtn";
-            this.ThemBtn.Size = new System.Drawing.Size(98, 28);
+            this.ThemBtn.Size = new System.Drawing.Size(131, 34);
             this.ThemBtn.TabIndex = 0;
             this.ThemBtn.Text = "Thêm";
             this.ThemBtn.Click += new System.EventHandler(this.ThemBtn_Click);
             // 
             // UserPanel
             // 
-            this.UserPanel.Location = new System.Drawing.Point(664, 4);
-            this.UserPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.UserPanel.Location = new System.Drawing.Point(885, 5);
+            this.UserPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.UserPanel.Name = "UserPanel";
-            this.UserPanel.Size = new System.Drawing.Size(233, 87);
+            this.UserPanel.Size = new System.Drawing.Size(311, 107);
             this.UserPanel.TabIndex = 26;
             // 
             // panelLogoSideMenu
@@ -251,24 +253,24 @@
             this.panelLogoSideMenu.BackColor = System.Drawing.Color.White;
             this.panelLogoSideMenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelLogoSideMenu.BackgroundImage")));
             this.panelLogoSideMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panelLogoSideMenu.Location = new System.Drawing.Point(2, 4);
+            this.panelLogoSideMenu.Location = new System.Drawing.Point(3, 5);
             this.panelLogoSideMenu.Margin = new System.Windows.Forms.Padding(0);
             this.panelLogoSideMenu.Name = "panelLogoSideMenu";
-            this.panelLogoSideMenu.Size = new System.Drawing.Size(244, 87);
+            this.panelLogoSideMenu.Size = new System.Drawing.Size(325, 107);
             this.panelLogoSideMenu.TabIndex = 22;
             // 
             // AdminForm_Bookstore
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(898, 557);
+            this.ClientSize = new System.Drawing.Size(1197, 686);
             this.Controls.Add(this.ButtonPanel);
             this.Controls.Add(this.NhanVienPanel);
             this.Controls.Add(this.ButtonPanelOption);
             this.Controls.Add(this.UserPanel);
             this.Controls.Add(this.panelLogoSideMenu);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AdminForm_Bookstore";
             this.Text = "AdminForm";
             this.Load += new System.EventHandler(this.AdminForm_Load);
