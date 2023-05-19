@@ -165,3 +165,47 @@ C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaAp
 C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.QuanLyBill_ByNhanVien.resources
 C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.QuanLyCustomer_ByNhanVien.resources
 C:\Users\Admin\OneDrive\Documents\C\Cong nghe phan mem\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.QuanLyDonHang_ByNhanVien.resources
+C:\Users\asus\Downloads\Minh Phương\Bản Update\FinalProjectCNPM\FahasaApp\bin\Debug\FahasaApp.exe.config
+C:\Users\asus\Downloads\Minh Phương\Bản Update\FinalProjectCNPM\FahasaApp\bin\Debug\FahasaApp.exe
+C:\Users\asus\Downloads\Minh Phương\Bản Update\FinalProjectCNPM\FahasaApp\bin\Debug\FahasaApp.pdb
+C:\Users\asus\Downloads\Minh Phương\Bản Update\FinalProjectCNPM\FahasaApp\bin\Debug\Guna.Charts.WinForms.dll
+C:\Users\asus\Downloads\Minh Phương\Bản Update\FinalProjectCNPM\FahasaApp\bin\Debug\Guna.UI2.dll
+C:\Users\asus\Downloads\Minh Phương\Bản Update\FinalProjectCNPM\FahasaApp\bin\Debug\ToastNotifications.dll
+C:\Users\asus\Downloads\Minh Phương\Bản Update\FinalProjectCNPM\FahasaApp\bin\Debug\stdole.dll
+C:\Users\asus\Downloads\Minh Phương\Bản Update\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.csproj.AssemblyReference.cache
+C:\Users\asus\Downloads\Minh Phương\Bản Update\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.csproj.SuggestedBindingRedirects.cache
+C:\Users\asus\Downloads\Minh Phương\Bản Update\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.Add_Account.resources
+C:\Users\asus\Downloads\Minh Phương\Bản Update\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.Add_Bill.resources
+C:\Users\asus\Downloads\Minh Phương\Bản Update\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.Add_Book.resources
+C:\Users\asus\Downloads\Minh Phương\Bản Update\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.Add_Customer.resources
+C:\Users\asus\Downloads\Minh Phương\Bản Update\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.Add_NhanVien.resources
+C:\Users\asus\Downloads\Minh Phương\Bản Update\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.AdminForm_Account.resources
+C:\Users\asus\Downloads\Minh Phương\Bản Update\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.AdminForm_Bill.resources
+C:\Users\asus\Downloads\Minh Phương\Bản Update\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.AdminForm_Bookstore.resources
+C:\Users\asus\Downloads\Minh Phương\Bản Update\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.AdminForm_Customer.resources
+C:\Users\asus\Downloads\Minh Phương\Bản Update\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.AdminFrom_NhanVien.resources
+C:\Users\asus\Downloads\Minh Phương\Bản Update\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.ChangeAddressForm.resources
+C:\Users\asus\Downloads\Minh Phương\Bản Update\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.AddressForm.resources
+C:\Users\asus\Downloads\Minh Phương\Bản Update\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.CartForm.resources
+C:\Users\asus\Downloads\Minh Phương\Bản Update\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.DetailProduct.resources
+C:\Users\asus\Downloads\Minh Phương\Bản Update\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.Edit_Account.resources
+C:\Users\asus\Downloads\Minh Phương\Bản Update\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.Edit_Bill.resources
+C:\Users\asus\Downloads\Minh Phương\Bản Update\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.Edit_Book.resources
+C:\Users\asus\Downloads\Minh Phương\Bản Update\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.Edit_Customer.resources
+C:\Users\asus\Downloads\Minh Phương\Bản Update\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.Edit_NhanVien.resources
+C:\Users\asus\Downloads\Minh Phương\Bản Update\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.Forget_PasswordForm.resources
+C:\Users\asus\Downloads\Minh Phương\Bản Update\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.FormOrderCrypstalReport.resources
+C:\Users\asus\Downloads\Minh Phương\Bản Update\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.LoginForm.resources
+C:\Users\asus\Downloads\Minh Phương\Bản Update\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.NhanVienMainForm.resources
+C:\Users\asus\Downloads\Minh Phương\Bản Update\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.NoticeUserLogin_CartForm.resources
+C:\Users\asus\Downloads\Minh Phương\Bản Update\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.QuanLyBill_ByNhanVien.resources
+C:\Users\asus\Downloads\Minh Phương\Bản Update\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.QuanLyCustomer_ByNhanVien.resources
+C:\Users\asus\Downloads\Minh Phương\Bản Update\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.QuanLyDonHang_ByNhanVien.resources
+C:\Users\asus\Downloads\Minh Phương\Bản Update\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.RegisterForm.resources
+C:\Users\asus\Downloads\Minh Phương\Bản Update\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.MainForm.resources
+C:\Users\asus\Downloads\Minh Phương\Bản Update\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.Properties.Resources.resources
+C:\Users\asus\Downloads\Minh Phương\Bản Update\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.csproj.GenerateResource.cache
+C:\Users\asus\Downloads\Minh Phương\Bản Update\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.csproj.CoreCompileInputs.cache
+C:\Users\asus\Downloads\Minh Phương\Bản Update\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.csproj.CopyComplete
+C:\Users\asus\Downloads\Minh Phương\Bản Update\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.exe
+C:\Users\asus\Downloads\Minh Phương\Bản Update\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.pdb

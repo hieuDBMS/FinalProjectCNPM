@@ -222,5 +222,135 @@ namespace FahasaApp
             form.ShowDialog();
             this.Close();
         }
+
+        private void seach_NhanVien_TextChanged(object sender, EventArgs e)
+        {
+            // If the edit was caused by pressing Enter on the keyboard, do not perform a search immediately.
+            if (enterPressed)
+            {
+                enterPressed = false;
+                return;
+            }
+
+            // If the search text is empty, load the data
+            if (string.IsNullOrWhiteSpace(seach_NhanVien.Text))
+            {
+                LoadData();
+                return;
+            }
+
+            // Perform a search after a delay (e.g., 500ms) after stopping typing.
+            if (searchTimer == null)
+            {
+                searchTimer = new Timer();
+                searchTimer.Interval = 500; // Delay before performing a search (milliseconds)
+                searchTimer.Tick += (s, ev) =>
+                {
+                    SearchCustomers();
+                    searchTimer.Stop();
+                };
+            }
+            else
+            {
+                searchTimer.Stop();
+            }
+
+            searchTimer.Start();
+        }
+
+        private bool isNotified = false;
+
+        private void SearchCustomers()
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["MyConn"].ConnectionString;
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand("getAccountsByPrivilige", connection);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.Clear();
+                command.Parameters.AddWithValue("@Privilige", 1); // Assuming the privilege for customers is 0
+
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataTable dataTable = new DataTable();
+                adapter.Fill(dataTable);
+
+                if (dataTable == null || dataTable.Rows.Count == 0)
+                {
+                    MessageBox.Show("Không có dữ liệu được nhập", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                DataTable filteredDataTable;
+
+                // Check if the search text contains any special characters or if it is empty
+                if (!string.IsNullOrWhiteSpace(seach_NhanVien.Text)) // Perform filtering only if the search text is not empty
+                {
+                    var filteredData = dataTable.AsEnumerable()
+                        .Where(row => row.Field<string>("STAFFID").Contains(seach_NhanVien.Text)
+                                      || row.Field<string>("Họ tên").Contains(seach_NhanVien.Text)
+                                      || row.Field<string>("Phone").Contains(seach_NhanVien.Text)
+                                      || row.Field<string>("Email").Contains(seach_NhanVien.Text));
+                    if (!filteredData.Any()) // No data found
+                    {
+                        // Temporarily remove the event handler to prevent infinite loops
+                        seach_NhanVien.TextChanged -= seach_NhanVien_TextChanged;
+                        seach_NhanVien.Text = string.Empty; // Clear the text before showing the error message
+                        seach_NhanVien.TextChanged += seach_NhanVien_TextChanged;
+
+                        MessageBox.Show("Không tìm thấy dữ liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+
+                    filteredDataTable = filteredData.CopyToDataTable(); // Copy filtered data to the new DataTable
+                }
+                else
+                {
+                    // If there is no search text, display the original dataTable
+                    filteredDataTable = dataTable;
+                }
+
+                dataGridView_nhanvien.DataSource = filteredDataTable;
+
+                if (dataGridView_nhanvien.DataSource != null)
+                {
+                    // Set the fill mode
+                    dataGridView_nhanvien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+                    // Define column headers
+                    dataGridView_nhanvien.Columns["STAFFID"].HeaderText = "Mã NV";
+                    dataGridView_nhanvien.Columns["Họ tên"].HeaderText = "Họ Tên";
+                    dataGridView_nhanvien.Columns["Email"].HeaderText = "Email";
+                    dataGridView_nhanvien.Columns["Phone"].HeaderText = "Số Điện Thoại";
+                    dataGridView_nhanvien.Columns["Address"].HeaderText = "Địa Chỉ";
+
+                    // Define the fill weights for columns
+                    dataGridView_nhanvien.Columns["STAFFID"].FillWeight = 7;
+                    dataGridView_nhanvien.Columns["Họ tên"].FillWeight = 23;
+                    dataGridView_nhanvien.Columns["Email"].FillWeight = 23;
+                    dataGridView_nhanvien.Columns["Phone"].FillWeight = 23;
+                    dataGridView_nhanvien.Columns["Address"].FillWeight = 23;
+                }
+            }
+        }
+
+        private bool enterPressed = false;
+        private Timer searchTimer;
+        private void seach_Customer_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (string.IsNullOrWhiteSpace(seach_NhanVien.Text))
+                {
+                    // If the search text is empty, load the data
+                    LoadData();
+                    return;
+                }
+
+                enterPressed = true;
+                SearchCustomers();
+                e.Handled = true; // Mark the event as handled to prevent the KeyPress event from being triggered.
+            }
+        }
     }
 }

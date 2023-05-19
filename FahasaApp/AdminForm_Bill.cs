@@ -195,5 +195,128 @@ namespace FahasaApp
             form.ShowDialog();
             this.Close();
         }
+
+        private void seach_Bill_TextChanged(object sender, EventArgs e)
+        {
+            // If the edit was caused by pressing Enter on the keyboard, do not perform a search immediately.
+            if (enterPressed)
+            {
+                enterPressed = false;
+                return;
+            }
+
+            // If the search text is empty, load the data
+            if (string.IsNullOrWhiteSpace(seach_Bill.Text))
+            {
+                LoadData();
+                return;
+            }
+
+            // Perform a search after a delay (e.g., 500ms) after stopping typing.
+            if (searchTimer == null)
+            {
+                searchTimer = new Timer();
+                searchTimer.Interval = 500; // Delay before performing a search (milliseconds)
+                searchTimer.Tick += (s, ev) =>
+                {
+                    SearchCustomers();
+                    searchTimer.Stop();
+                };
+            }
+            else
+            {
+                searchTimer.Stop();
+            }
+
+            searchTimer.Start();
+        }
+
+        private void SearchCustomers()
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["MyConn"].ConnectionString;
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand("GetAllOrdersWithDetails", connection);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.Clear();
+
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataTable dataTable = new DataTable();
+                adapter.Fill(dataTable);
+
+                if (dataTable == null || dataTable.Rows.Count == 0)
+                {
+                    MessageBox.Show("Không có dữ liệu được nhập", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                DataTable filteredDataTable;
+
+                // Check if the search text contains any special characters or if it is empty
+                if (!string.IsNullOrWhiteSpace(seach_Bill.Text)) // Perform filtering only if the search text is not empty
+                {
+                    var filteredData = dataTable.AsEnumerable()
+                        .Where(row => row.ItemArray.Any(c => c.ToString().Contains(seach_Bill.Text)));
+
+                    if (!filteredData.Any()) // No data found
+                    {
+                        // Temporarily remove the event handler to prevent infinite loops
+                        seach_Bill.TextChanged -= seach_Bill_TextChanged;
+                        seach_Bill.Text = string.Empty; // Clear the text before showing the error message
+                        seach_Bill.TextChanged += seach_Bill_TextChanged;
+
+                        MessageBox.Show("Không tìm thấy dữ liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+
+                    filteredDataTable = filteredData.CopyToDataTable(); // Copy filtered data to the new DataTable
+                }
+                else
+                {
+                    // If there is no search text, display the original dataTable
+                    filteredDataTable = dataTable;
+                }
+
+                dataGridView_bill.DataSource = filteredDataTable;
+
+                if (dataGridView_bill.DataSource != null)
+                {
+                    // Set the fill mode
+                    dataGridView_bill.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+                    dataGridView_bill.Columns["Mã HĐ"].HeaderText = "Mã HD";
+                    dataGridView_bill.Columns["Ngày Đặt"].HeaderText = "Ngày Đặt";
+                    dataGridView_bill.Columns["Mã KH"].HeaderText = "Mã KH";
+                    dataGridView_bill.Columns["Tổng tiền"].HeaderText = "Tổng Tiền";
+                    dataGridView_bill.Columns["Payment ID"].HeaderText = "Payment ID";
+
+                    dataGridView_bill.Columns["Mã HĐ"].FillWeight = 5;
+                    dataGridView_bill.Columns["Ngày Đặt"].FillWeight = 30;
+                    dataGridView_bill.Columns["Mã KH"].FillWeight = 25;
+                    dataGridView_bill.Columns["Tổng tiền"].FillWeight = 15;
+                    dataGridView_bill.Columns["Payment ID"].FillWeight = 7;
+                }
+            }
+        }
+
+        private bool enterPressed = false;
+        private Timer searchTimer;
+        private void seach_Bill_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (string.IsNullOrWhiteSpace(seach_Bill.Text))
+                {
+                    // If the search text is empty, load the data
+                    LoadData();
+                    return;
+                }
+
+                enterPressed = true;
+                SearchCustomers();
+                e.Handled = true; // Mark the event as handled to prevent the KeyPress event from being triggered.
+            }
+        }
     }
 }

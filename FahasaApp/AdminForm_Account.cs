@@ -207,5 +207,141 @@ namespace FahasaApp
             form.ShowDialog();
             this.Close();
         }
+
+        private void seach_Account_TextChanged(object sender, EventArgs e)
+        {
+            // If the edit was caused by pressing Enter on the keyboard, do not perform a search immediately.
+            if (enterPressed)
+            {
+                enterPressed = false;
+                return;
+            }
+
+            // If the search text is empty, load the data
+            if (string.IsNullOrWhiteSpace(seach_Account.Text))
+            {
+                LoadData();
+                return;
+            }
+
+            // Perform a search after a delay (e.g., 500ms) after stopping typing.
+            if (searchTimer == null)
+            {
+                searchTimer = new Timer();
+                searchTimer.Interval = 500; // Delay before performing a search (milliseconds)
+                searchTimer.Tick += (s, ev) =>
+                {
+                    SearchCustomers();
+                    searchTimer.Stop();
+                };
+            }
+            else
+            {
+                searchTimer.Stop();
+            }
+
+            searchTimer.Start();
+        }
+
+        private bool isNotified = false;
+
+        private void SearchCustomers()
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["MyConn"].ConnectionString;
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand("getAllAccount", connection);
+                command.CommandType = CommandType.StoredProcedure;
+
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataTable dataTable = new DataTable();
+                adapter.Fill(dataTable);
+
+                if (dataTable == null || dataTable.Rows.Count == 0)
+                {
+                    MessageBox.Show("Không có dữ liệu được nhập", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                DataTable filteredDataTable;
+
+                if (!string.IsNullOrWhiteSpace(seach_Account.Text))
+                {
+                    IEnumerable<DataRow> filteredData;
+                    if (seach_Account.Text == "0" || seach_Account.Text == "1" || seach_Account.Text == "2")
+                    {
+                        filteredData = dataTable.AsEnumerable()
+                        .Where(row => row.Field<int>("AccountID").ToString() == seach_Account.Text
+                                      || row.Field<int>("Privilige").ToString() == seach_Account.Text);
+                    }
+                    else
+                    {
+                        filteredData = dataTable.AsEnumerable()
+                        .Where(row => row.Field<int>("AccountID").ToString().Contains(seach_Account.Text)
+                                      || row.Field<string>("Email").Contains(seach_Account.Text)
+                                      || row.Field<string>("Phone").Contains(seach_Account.Text)
+                                      || row.Field<string>("Password").Contains(seach_Account.Text)
+                                      || row.Field<int>("Privilige").ToString().Contains(seach_Account.Text));
+                    }
+
+                    if (!filteredData.Any())
+                    {
+                        seach_Account.TextChanged -= seach_Account_TextChanged;
+                        seach_Account.Text = string.Empty;
+                        seach_Account.TextChanged += seach_Account_TextChanged;
+
+                        MessageBox.Show("Không tìm thấy dữ liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+
+                    filteredDataTable = filteredData.CopyToDataTable();
+                }
+                else
+                {
+                    filteredDataTable = dataTable;
+                }
+
+                dataGridView_account.DataSource = filteredDataTable;
+
+                if (dataGridView_account.DataSource != null)
+                {
+                    dataGridView_account.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+                    dataGridView_account.Columns["AccountID"].HeaderText = "Account ID";
+                    dataGridView_account.Columns["Email"].HeaderText = "Email";
+                    dataGridView_account.Columns["Privilige"].HeaderText = "Privilege";
+                    dataGridView_account.Columns["Phone"].HeaderText = "Phone";
+                    dataGridView_account.Columns["Password"].HeaderText = "Password";
+
+                    dataGridView_account.Columns["AccountID"].FillWeight = 7;
+                    dataGridView_account.Columns["Email"].FillWeight = 20;
+                    dataGridView_account.Columns["Privilige"].FillWeight = 7;
+                    dataGridView_account.Columns["Phone"].FillWeight = 20;
+                    dataGridView_account.Columns["Password"].FillWeight = 19;
+                }
+            }
+        }
+
+
+
+        private bool enterPressed = false;
+        private Timer searchTimer;
+        private void seach_Customer_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (string.IsNullOrWhiteSpace(seach_Account.Text))
+                {
+                    // If the search text is empty, load the data
+                    LoadData();
+                    return;
+                }
+
+                enterPressed = true;
+                SearchCustomers();
+                e.Handled = true; // Mark the event as handled to prevent the KeyPress event from being triggered.
+            }
+        }
     }
 }

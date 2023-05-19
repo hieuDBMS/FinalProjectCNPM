@@ -43,6 +43,7 @@
             this.ThemBtn = new Guna.UI2.WinForms.Guna2Button();
             this.UserPanel = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.panelLogoSideMenu = new System.Windows.Forms.Panel();
+            this.seach_Bookstore = new Guna.UI2.WinForms.Guna2TextBox();
             this.ButtonPanel.SuspendLayout();
             this.NhanVienPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_book)).BeginInit();
@@ -64,14 +65,15 @@
             // 
             // TaikhoanBtn
             // 
+            this.TaikhoanBtn.BackColor = System.Drawing.Color.Red;
             this.TaikhoanBtn.BorderRadius = 5;
             this.TaikhoanBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.TaikhoanBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.TaikhoanBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.TaikhoanBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.TaikhoanBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.TaikhoanBtn.FillColor = System.Drawing.Color.White;
             this.TaikhoanBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TaikhoanBtn.ForeColor = System.Drawing.Color.White;
+            this.TaikhoanBtn.ForeColor = System.Drawing.Color.Red;
             this.TaikhoanBtn.Location = new System.Drawing.Point(555, 10);
             this.TaikhoanBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TaikhoanBtn.Name = "TaikhoanBtn";
@@ -82,14 +84,15 @@
             // 
             // DonhangBtn
             // 
+            this.DonhangBtn.BackColor = System.Drawing.Color.Red;
             this.DonhangBtn.BorderRadius = 5;
             this.DonhangBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.DonhangBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.DonhangBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.DonhangBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.DonhangBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.DonhangBtn.FillColor = System.Drawing.Color.White;
             this.DonhangBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DonhangBtn.ForeColor = System.Drawing.Color.White;
+            this.DonhangBtn.ForeColor = System.Drawing.Color.Red;
             this.DonhangBtn.Location = new System.Drawing.Point(419, 10);
             this.DonhangBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DonhangBtn.Name = "DonhangBtn";
@@ -100,14 +103,15 @@
             // 
             // KhachhangBtn
             // 
+            this.KhachhangBtn.BackColor = System.Drawing.Color.Red;
             this.KhachhangBtn.BorderRadius = 5;
             this.KhachhangBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.KhachhangBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.KhachhangBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.KhachhangBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.KhachhangBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.KhachhangBtn.FillColor = System.Drawing.Color.White;
             this.KhachhangBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.KhachhangBtn.ForeColor = System.Drawing.Color.White;
+            this.KhachhangBtn.ForeColor = System.Drawing.Color.Red;
             this.KhachhangBtn.Location = new System.Drawing.Point(283, 10);
             this.KhachhangBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.KhachhangBtn.Name = "KhachhangBtn";
@@ -118,14 +122,15 @@
             // 
             // NhanvienBtn
             // 
+            this.NhanvienBtn.BackColor = System.Drawing.Color.Red;
             this.NhanvienBtn.BorderRadius = 5;
             this.NhanvienBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.NhanvienBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.NhanvienBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.NhanvienBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.NhanvienBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.NhanvienBtn.FillColor = System.Drawing.Color.White;
             this.NhanvienBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NhanvienBtn.ForeColor = System.Drawing.Color.White;
+            this.NhanvienBtn.ForeColor = System.Drawing.Color.Red;
             this.NhanvienBtn.Location = new System.Drawing.Point(147, 10);
             this.NhanvienBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.NhanvienBtn.Name = "NhanvienBtn";
@@ -141,7 +146,7 @@
             this.KhosachBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.KhosachBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.KhosachBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.KhosachBtn.FillColor = System.Drawing.Color.Maroon;
+            this.KhosachBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
             this.KhosachBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.KhosachBtn.ForeColor = System.Drawing.Color.White;
             this.KhosachBtn.Location = new System.Drawing.Point(11, 10);
@@ -188,14 +193,15 @@
             // 
             // SuaBtn
             // 
+            this.SuaBtn.BackColor = System.Drawing.Color.Red;
             this.SuaBtn.BorderRadius = 5;
             this.SuaBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.SuaBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.SuaBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.SuaBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.SuaBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.SuaBtn.FillColor = System.Drawing.Color.White;
             this.SuaBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SuaBtn.ForeColor = System.Drawing.Color.White;
+            this.SuaBtn.ForeColor = System.Drawing.Color.Red;
             this.SuaBtn.Location = new System.Drawing.Point(283, 10);
             this.SuaBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SuaBtn.Name = "SuaBtn";
@@ -206,14 +212,15 @@
             // 
             // XoaBtn
             // 
+            this.XoaBtn.BackColor = System.Drawing.Color.Red;
             this.XoaBtn.BorderRadius = 5;
             this.XoaBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.XoaBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.XoaBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.XoaBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.XoaBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.XoaBtn.FillColor = System.Drawing.Color.White;
             this.XoaBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.XoaBtn.ForeColor = System.Drawing.Color.White;
+            this.XoaBtn.ForeColor = System.Drawing.Color.Red;
             this.XoaBtn.Location = new System.Drawing.Point(147, 10);
             this.XoaBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.XoaBtn.Name = "XoaBtn";
@@ -224,14 +231,15 @@
             // 
             // ThemBtn
             // 
+            this.ThemBtn.BackColor = System.Drawing.Color.Red;
             this.ThemBtn.BorderRadius = 5;
             this.ThemBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.ThemBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.ThemBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.ThemBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.ThemBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.ThemBtn.FillColor = System.Drawing.Color.White;
             this.ThemBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ThemBtn.ForeColor = System.Drawing.Color.White;
+            this.ThemBtn.ForeColor = System.Drawing.Color.Red;
             this.ThemBtn.Location = new System.Drawing.Point(11, 10);
             this.ThemBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ThemBtn.Name = "ThemBtn";
@@ -259,12 +267,34 @@
             this.panelLogoSideMenu.Size = new System.Drawing.Size(325, 107);
             this.panelLogoSideMenu.TabIndex = 22;
             // 
+            // seach_Bookstore
+            // 
+            this.seach_Bookstore.BorderColor = System.Drawing.Color.Red;
+            this.seach_Bookstore.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.seach_Bookstore.DefaultText = "";
+            this.seach_Bookstore.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.seach_Bookstore.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.seach_Bookstore.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.seach_Bookstore.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.seach_Bookstore.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.seach_Bookstore.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.seach_Bookstore.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.seach_Bookstore.Location = new System.Drawing.Point(41, 187);
+            this.seach_Bookstore.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.seach_Bookstore.Name = "seach_Bookstore";
+            this.seach_Bookstore.PasswordChar = '\0';
+            this.seach_Bookstore.PlaceholderText = "";
+            this.seach_Bookstore.SelectedText = "";
+            this.seach_Bookstore.Size = new System.Drawing.Size(648, 36);
+            this.seach_Bookstore.TabIndex = 27;
+            // 
             // AdminForm_Bookstore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1197, 686);
+            this.Controls.Add(this.seach_Bookstore);
             this.Controls.Add(this.ButtonPanel);
             this.Controls.Add(this.NhanVienPanel);
             this.Controls.Add(this.ButtonPanelOption);
@@ -298,5 +328,6 @@
         private Guna.UI2.WinForms.Guna2Button ThemBtn;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel UserPanel;
         private System.Windows.Forms.Panel panelLogoSideMenu;
+        private Guna.UI2.WinForms.Guna2TextBox seach_Bookstore;
     }
 }
