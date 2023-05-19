@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Net.Mail;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -275,20 +276,28 @@ namespace FahasaApp
 
                             if(textPass.Text == textRepass.Text)
                             {
-                                SqlCommand cmdaddUser = new SqlCommand("[CreateCustomer]", conn);
-                                cmdaddUser.CommandType = CommandType.StoredProcedure;
-                                cmdaddUser.Parameters.AddWithValue("@Firstname", textTen.Text);
-                                cmdaddUser.Parameters.AddWithValue("@Lastname", TextHo.Text);
-                                cmdaddUser.Parameters.AddWithValue("@Email", textEmail.Text);
-                                cmdaddUser.Parameters.AddWithValue("@Phone", textSDT.Text);
-                                cmdaddUser.Parameters.AddWithValue("@Password", textPass.Text);
-                                cmdaddUser.Parameters.AddWithValue("@Privilige", 0);
-                                conn.Open();
-                                cmdaddUser.ExecuteNonQuery();
-                                conn.Close();
-                                MessageBox.Show("Chúc mừng bạn đã đăng ký tài khoản thành công! ");
-                                reloadForm();
-                            }else
+                                if ((Regex.IsMatch(textSDT.Text, @"^0\d{9}$")))
+                                {
+                                    SqlCommand cmdaddUser = new SqlCommand("[CreateCustomer]", conn);
+                                    cmdaddUser.CommandType = CommandType.StoredProcedure;
+                                    cmdaddUser.Parameters.AddWithValue("@Firstname", textTen.Text);
+                                    cmdaddUser.Parameters.AddWithValue("@Lastname", TextHo.Text);
+                                    cmdaddUser.Parameters.AddWithValue("@Email", textEmail.Text);
+                                    cmdaddUser.Parameters.AddWithValue("@Phone", textSDT.Text);
+                                    cmdaddUser.Parameters.AddWithValue("@Password", textPass.Text);
+                                    cmdaddUser.Parameters.AddWithValue("@Privilige", 0);
+                                    conn.Open();
+                                    cmdaddUser.ExecuteNonQuery();
+                                    conn.Close();
+                                    MessageBox.Show("Chúc mừng bạn đã đăng ký tài khoản thành công! ");
+                                    reloadForm();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Số điện thoại phải bắt đầu từ 0 và có độ dài là 10");
+                                }
+                            }                                
+                            else
                             {
                                 MessageBox.Show("Xác thực mật khẩu không chính xác!");
                             }    

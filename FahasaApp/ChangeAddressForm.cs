@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
@@ -44,9 +45,16 @@ namespace FahasaApp
                 newUserPhone != Properties.Settings.Default.userPhone.ToString().Trim()
               )
             {
-                int UID = int.Parse(Properties.Settings.Default.userID);
-                //save changed
-                saveChangeUserInfor(UID,newUsername,newUserPhone,newUserAddress);
+                if((!Regex.IsMatch(newUserPhone, @"^0\d{9}$"))){
+                    MessageBox.Show("Số điện thoại phải bắt đầu từ 0 và có độ dài 10 số!");
+                }
+                else
+                {
+                    int UID = int.Parse(Properties.Settings.Default.userID);
+                    //save changed
+                    saveChangeUserInfor(UID, newUsername, newUserPhone, newUserAddress);
+                }
+                
             }
             else
             {
