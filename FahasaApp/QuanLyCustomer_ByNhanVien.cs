@@ -226,7 +226,7 @@ namespace FahasaApp
             searchTimer.Start();
         }
 
-        private bool isNotified = false;
+     
 
         private void SearchCustomers()
         {

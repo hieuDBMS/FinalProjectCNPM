@@ -209,3 +209,7 @@ C:\Users\asus\Downloads\Minh Phương\Bản Update\FinalProjectCNPM\FahasaApp\ob
 C:\Users\asus\Downloads\Minh Phương\Bản Update\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.csproj.CopyComplete
 C:\Users\asus\Downloads\Minh Phương\Bản Update\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.exe
 C:\Users\asus\Downloads\Minh Phương\Bản Update\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.pdb
+C:\Users\dongp\Source\Repos\hieuDBMS\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.NhanVienMainForm.resources
+C:\Users\dongp\Source\Repos\hieuDBMS\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.QuanLyBill_ByNhanVien.resources
+C:\Users\dongp\Source\Repos\hieuDBMS\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.QuanLyCustomer_ByNhanVien.resources
+C:\Users\dongp\Source\Repos\hieuDBMS\FinalProjectCNPM\FahasaApp\obj\Debug\FahasaApp.QuanLyDonHang_ByNhanVien.resources

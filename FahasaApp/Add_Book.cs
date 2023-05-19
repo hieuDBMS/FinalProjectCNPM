@@ -182,7 +182,7 @@ namespace FahasaApp
 
                 if(checkBookExist(bookTitle, bookAuthorID))
                 {
-                    MessageBox.Show("This book already Exist");
+                    MessageBox.Show("Sách đã tồn tại");
                 }
                 else
                 {
@@ -206,6 +206,7 @@ namespace FahasaApp
                     //clear input after add successfully
                     clearInput();
                     clearInput();
+                    MessageBox.Show("Thêm sách thành công!");
                 }
             }
         }

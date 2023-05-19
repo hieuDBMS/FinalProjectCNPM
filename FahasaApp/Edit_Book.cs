@@ -19,7 +19,7 @@ namespace FahasaApp
         private string bookCover = null;
         byte[] bookImage = null;
         string bookPublication = null;
-        int bookID;
+      
         private int bookId;
         public Edit_Book(int BookID)
         {

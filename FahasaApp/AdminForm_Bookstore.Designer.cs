@@ -54,6 +54,9 @@
             // 
             // ButtonPanel
             // 
+            this.ButtonPanel.BorderColor = System.Drawing.Color.Red;
+            this.ButtonPanel.BorderRadius = 5;
+            this.ButtonPanel.BorderThickness = 1;
             this.ButtonPanel.Controls.Add(this.TaikhoanBtn);
             this.ButtonPanel.Controls.Add(this.DonhangBtn);
             this.ButtonPanel.Controls.Add(this.KhachhangBtn);
@@ -67,15 +70,19 @@
             // 
             // TaikhoanBtn
             // 
-            this.TaikhoanBtn.BackColor = System.Drawing.Color.Red;
+            this.TaikhoanBtn.BackColor = System.Drawing.Color.White;
+            this.TaikhoanBtn.BorderColor = System.Drawing.Color.Red;
             this.TaikhoanBtn.BorderRadius = 5;
+            this.TaikhoanBtn.BorderThickness = 1;
             this.TaikhoanBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.TaikhoanBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.TaikhoanBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.TaikhoanBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.TaikhoanBtn.FillColor = System.Drawing.Color.White;
-            this.TaikhoanBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TaikhoanBtn.Font = new System.Drawing.Font("Open Sans Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TaikhoanBtn.ForeColor = System.Drawing.Color.Red;
+            this.TaikhoanBtn.HoverState.FillColor = System.Drawing.Color.Red;
+            this.TaikhoanBtn.HoverState.ForeColor = System.Drawing.Color.White;
             this.TaikhoanBtn.Location = new System.Drawing.Point(416, 8);
             this.TaikhoanBtn.Margin = new System.Windows.Forms.Padding(2);
             this.TaikhoanBtn.Name = "TaikhoanBtn";
@@ -86,15 +93,19 @@
             // 
             // DonhangBtn
             // 
-            this.DonhangBtn.BackColor = System.Drawing.Color.Red;
+            this.DonhangBtn.BackColor = System.Drawing.Color.White;
+            this.DonhangBtn.BorderColor = System.Drawing.Color.Red;
             this.DonhangBtn.BorderRadius = 5;
+            this.DonhangBtn.BorderThickness = 1;
             this.DonhangBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.DonhangBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.DonhangBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.DonhangBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.DonhangBtn.FillColor = System.Drawing.Color.White;
-            this.DonhangBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DonhangBtn.Font = new System.Drawing.Font("Open Sans Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DonhangBtn.ForeColor = System.Drawing.Color.Red;
+            this.DonhangBtn.HoverState.FillColor = System.Drawing.Color.Red;
+            this.DonhangBtn.HoverState.ForeColor = System.Drawing.Color.White;
             this.DonhangBtn.Location = new System.Drawing.Point(314, 8);
             this.DonhangBtn.Margin = new System.Windows.Forms.Padding(2);
             this.DonhangBtn.Name = "DonhangBtn";
@@ -105,15 +116,19 @@
             // 
             // KhachhangBtn
             // 
-            this.KhachhangBtn.BackColor = System.Drawing.Color.Red;
+            this.KhachhangBtn.BackColor = System.Drawing.Color.White;
+            this.KhachhangBtn.BorderColor = System.Drawing.Color.Red;
             this.KhachhangBtn.BorderRadius = 5;
+            this.KhachhangBtn.BorderThickness = 1;
             this.KhachhangBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.KhachhangBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.KhachhangBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.KhachhangBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.KhachhangBtn.FillColor = System.Drawing.Color.White;
-            this.KhachhangBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KhachhangBtn.Font = new System.Drawing.Font("Open Sans Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.KhachhangBtn.ForeColor = System.Drawing.Color.Red;
+            this.KhachhangBtn.HoverState.FillColor = System.Drawing.Color.Red;
+            this.KhachhangBtn.HoverState.ForeColor = System.Drawing.Color.White;
             this.KhachhangBtn.Location = new System.Drawing.Point(212, 8);
             this.KhachhangBtn.Margin = new System.Windows.Forms.Padding(2);
             this.KhachhangBtn.Name = "KhachhangBtn";
@@ -124,15 +139,19 @@
             // 
             // NhanvienBtn
             // 
-            this.NhanvienBtn.BackColor = System.Drawing.Color.Red;
+            this.NhanvienBtn.BackColor = System.Drawing.Color.White;
+            this.NhanvienBtn.BorderColor = System.Drawing.Color.Red;
             this.NhanvienBtn.BorderRadius = 5;
+            this.NhanvienBtn.BorderThickness = 1;
             this.NhanvienBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.NhanvienBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.NhanvienBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.NhanvienBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.NhanvienBtn.FillColor = System.Drawing.Color.White;
-            this.NhanvienBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NhanvienBtn.Font = new System.Drawing.Font("Open Sans Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NhanvienBtn.ForeColor = System.Drawing.Color.Red;
+            this.NhanvienBtn.HoverState.FillColor = System.Drawing.Color.Red;
+            this.NhanvienBtn.HoverState.ForeColor = System.Drawing.Color.White;
             this.NhanvienBtn.Location = new System.Drawing.Point(110, 8);
             this.NhanvienBtn.Margin = new System.Windows.Forms.Padding(2);
             this.NhanvienBtn.Name = "NhanvienBtn";
@@ -149,7 +168,7 @@
             this.KhosachBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.KhosachBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.KhosachBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
-            this.KhosachBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KhosachBtn.Font = new System.Drawing.Font("Open Sans Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.KhosachBtn.ForeColor = System.Drawing.Color.White;
             this.KhosachBtn.Location = new System.Drawing.Point(8, 8);
             this.KhosachBtn.Margin = new System.Windows.Forms.Padding(2);
@@ -224,8 +243,10 @@
             // 
             // SuaBtn
             // 
-            this.SuaBtn.BackColor = System.Drawing.Color.Red;
+            this.SuaBtn.BackColor = System.Drawing.Color.White;
+            this.SuaBtn.BorderColor = System.Drawing.Color.Red;
             this.SuaBtn.BorderRadius = 5;
+            this.SuaBtn.BorderThickness = 1;
             this.SuaBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.SuaBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.SuaBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -233,6 +254,8 @@
             this.SuaBtn.FillColor = System.Drawing.Color.White;
             this.SuaBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SuaBtn.ForeColor = System.Drawing.Color.Red;
+            this.SuaBtn.HoverState.FillColor = System.Drawing.Color.Red;
+            this.SuaBtn.HoverState.ForeColor = System.Drawing.Color.White;
             this.SuaBtn.Location = new System.Drawing.Point(212, 8);
             this.SuaBtn.Margin = new System.Windows.Forms.Padding(2);
             this.SuaBtn.Name = "SuaBtn";
@@ -243,8 +266,10 @@
             // 
             // XoaBtn
             // 
-            this.XoaBtn.BackColor = System.Drawing.Color.Red;
+            this.XoaBtn.BackColor = System.Drawing.Color.White;
+            this.XoaBtn.BorderColor = System.Drawing.Color.Red;
             this.XoaBtn.BorderRadius = 5;
+            this.XoaBtn.BorderThickness = 1;
             this.XoaBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.XoaBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.XoaBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -252,6 +277,8 @@
             this.XoaBtn.FillColor = System.Drawing.Color.White;
             this.XoaBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.XoaBtn.ForeColor = System.Drawing.Color.Red;
+            this.XoaBtn.HoverState.FillColor = System.Drawing.Color.Red;
+            this.XoaBtn.HoverState.ForeColor = System.Drawing.Color.White;
             this.XoaBtn.Location = new System.Drawing.Point(110, 8);
             this.XoaBtn.Margin = new System.Windows.Forms.Padding(2);
             this.XoaBtn.Name = "XoaBtn";
@@ -262,8 +289,10 @@
             // 
             // ThemBtn
             // 
-            this.ThemBtn.BackColor = System.Drawing.Color.Red;
+            this.ThemBtn.BackColor = System.Drawing.Color.White;
+            this.ThemBtn.BorderColor = System.Drawing.Color.Red;
             this.ThemBtn.BorderRadius = 5;
+            this.ThemBtn.BorderThickness = 1;
             this.ThemBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.ThemBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.ThemBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -271,6 +300,8 @@
             this.ThemBtn.FillColor = System.Drawing.Color.White;
             this.ThemBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ThemBtn.ForeColor = System.Drawing.Color.Red;
+            this.ThemBtn.HoverState.FillColor = System.Drawing.Color.Red;
+            this.ThemBtn.HoverState.ForeColor = System.Drawing.Color.White;
             this.ThemBtn.Location = new System.Drawing.Point(8, 8);
             this.ThemBtn.Margin = new System.Windows.Forms.Padding(2);
             this.ThemBtn.Name = "ThemBtn";

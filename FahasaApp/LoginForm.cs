@@ -110,6 +110,7 @@ namespace FahasaApp
                     
                     if (dr.HasRows)
                     {
+                        MessageBox.Show("Đăng nhập thành công");
                         dr.Close();
                         conn.Close();
                         
@@ -161,7 +162,7 @@ namespace FahasaApp
                         conn.Close();*/
                         conn.Close();
 
-                        MessageBox.Show("Đăng nhập thành công");
+                       
                         
                                 
                         this.Hide();

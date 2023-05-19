@@ -31,9 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.FlowLayoutPanel flowLayoutPanelIconUser;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBoxAccountIcon = new System.Windows.Forms.PictureBox();
             this.tableLayoutShowScreen = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -176,10 +176,10 @@
             flowLayoutPanelIconUser.Controls.Add(this.pictureBoxAccountIcon);
             flowLayoutPanelIconUser.Dock = System.Windows.Forms.DockStyle.Fill;
             flowLayoutPanelIconUser.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            flowLayoutPanelIconUser.Location = new System.Drawing.Point(755, 0);
+            flowLayoutPanelIconUser.Location = new System.Drawing.Point(766, 0);
             flowLayoutPanelIconUser.Margin = new System.Windows.Forms.Padding(0);
             flowLayoutPanelIconUser.Name = "flowLayoutPanelIconUser";
-            flowLayoutPanelIconUser.Size = new System.Drawing.Size(55, 143);
+            flowLayoutPanelIconUser.Size = new System.Drawing.Size(56, 149);
             flowLayoutPanelIconUser.TabIndex = 1;
             // 
             // pictureBoxAccountIcon
@@ -208,7 +208,7 @@
             this.tableLayoutShowScreen.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutShowScreen.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutShowScreen.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.tableLayoutShowScreen.Size = new System.Drawing.Size(1111, 955);
+            this.tableLayoutShowScreen.Size = new System.Drawing.Size(1127, 994);
             this.tableLayoutShowScreen.TabIndex = 2;
             // 
             // flowLayoutPanel1
@@ -217,10 +217,10 @@
             this.flowLayoutPanel1.Controls.Add(this.iconFire);
             this.flowLayoutPanel1.Controls.Add(this.comboBoxSearch_DayMonthYear);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 143);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 149);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1111, 47);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1127, 49);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // TitleSearch
@@ -276,10 +276,10 @@
             this.panelShowBoooks.Controls.Add(this.dataGridViewBookShow);
             this.panelShowBoooks.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelShowBoooks.ForeColor = System.Drawing.Color.Black;
-            this.panelShowBoooks.Location = new System.Drawing.Point(0, 190);
+            this.panelShowBoooks.Location = new System.Drawing.Point(0, 198);
             this.panelShowBoooks.Margin = new System.Windows.Forms.Padding(0);
             this.panelShowBoooks.Name = "panelShowBoooks";
-            this.panelShowBoooks.Size = new System.Drawing.Size(1111, 765);
+            this.panelShowBoooks.Size = new System.Drawing.Size(1127, 796);
             this.panelShowBoooks.TabIndex = 2;
             // 
             // panelParentUser_Info
@@ -291,7 +291,7 @@
             this.panelParentUser_Info.Location = new System.Drawing.Point(0, 0);
             this.panelParentUser_Info.Margin = new System.Windows.Forms.Padding(2);
             this.panelParentUser_Info.Name = "panelParentUser_Info";
-            this.panelParentUser_Info.Size = new System.Drawing.Size(1111, 765);
+            this.panelParentUser_Info.Size = new System.Drawing.Size(1127, 796);
             this.panelParentUser_Info.TabIndex = 2;
             this.panelParentUser_Info.Visible = false;
             // 
@@ -331,6 +331,7 @@
             this.CancelbtnUser_Info.TabIndex = 15;
             this.CancelbtnUser_Info.Text = "    Hủy";
             this.CancelbtnUser_Info.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.CancelbtnUser_Info.Click += new System.EventHandler(this.CancelbtnUserInfo_Click);
             // 
             // txtUserPhone_Info
             // 
@@ -422,6 +423,7 @@
             this.SaveBtnUser_Info.TabIndex = 8;
             this.SaveBtnUser_Info.Text = "    Lưu";
             this.SaveBtnUser_Info.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.SaveBtnUser_Info.Click += new System.EventHandler(this.SaveBtnUserInfo_Click);
             // 
             // label4
             // 
@@ -474,7 +476,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::FahasaApp.Properties.Resources.bookmark_plus;
-            this.pictureBox1.Location = new System.Drawing.Point(214, 159);
+            this.pictureBox1.Location = new System.Drawing.Point(265, 159);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(22, 24);
@@ -508,10 +510,11 @@
             this.btnEditUser_Info.Location = new System.Drawing.Point(51, 155);
             this.btnEditUser_Info.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditUser_Info.Name = "btnEditUser_Info";
-            this.btnEditUser_Info.Size = new System.Drawing.Size(194, 32);
+            this.btnEditUser_Info.Size = new System.Drawing.Size(241, 32);
             this.btnEditUser_Info.TabIndex = 8;
             this.btnEditUser_Info.Text = "Sửa thông tin tài khoản";
             this.btnEditUser_Info.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnEditUser_Info.Click += new System.EventHandler(this.btneditUserInfo_Click);
             // 
             // labelUserAddress_Info
             // 
@@ -578,15 +581,15 @@
             this.AddShopCart,
             this.BookID});
             this.dataGridViewBookShow.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(5);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewBookShow.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle20.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewBookShow.DefaultCellStyle = dataGridViewCellStyle20;
             this.dataGridViewBookShow.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewBookShow.GridColor = System.Drawing.Color.LightSalmon;
             this.dataGridViewBookShow.Location = new System.Drawing.Point(0, 0);
@@ -595,21 +598,21 @@
             this.dataGridViewBookShow.Name = "dataGridViewBookShow";
             this.dataGridViewBookShow.ReadOnly = true;
             this.dataGridViewBookShow.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewBookShow.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewBookShow.RowHeadersDefaultCellStyle = dataGridViewCellStyle21;
             this.dataGridViewBookShow.RowHeadersVisible = false;
             this.dataGridViewBookShow.RowHeadersWidth = 51;
             this.dataGridViewBookShow.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
             this.dataGridViewBookShow.RowTemplate.Height = 130;
             this.dataGridViewBookShow.RowTemplate.ReadOnly = true;
             this.dataGridViewBookShow.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewBookShow.Size = new System.Drawing.Size(1111, 765);
+            this.dataGridViewBookShow.Size = new System.Drawing.Size(1127, 796);
             this.dataGridViewBookShow.TabIndex = 0;
             this.dataGridViewBookShow.VirtualMode = true;
             this.dataGridViewBookShow.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewBookShow_CellClick);
@@ -645,13 +648,13 @@
             // 
             // AddShopCart
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(10, 30, 10, 30);
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.AddShopCart.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle19.Padding = new System.Windows.Forms.Padding(10, 30, 10, 30);
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.AddShopCart.DefaultCellStyle = dataGridViewCellStyle19;
             this.AddShopCart.FillWeight = 25F;
             this.AddShopCart.HeaderText = "Add Cart";
             this.AddShopCart.MinimumWidth = 6;
@@ -688,7 +691,7 @@
             this.tableLayoutPanelSearch_Account.Name = "tableLayoutPanelSearch_Account";
             this.tableLayoutPanelSearch_Account.RowCount = 1;
             this.tableLayoutPanelSearch_Account.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelSearch_Account.Size = new System.Drawing.Size(1111, 143);
+            this.tableLayoutPanelSearch_Account.Size = new System.Drawing.Size(1127, 149);
             this.tableLayoutPanelSearch_Account.TabIndex = 3;
             // 
             // flowLayoutPanelSearch
@@ -700,7 +703,7 @@
             this.flowLayoutPanelSearch.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanelSearch.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanelSearch.Name = "flowLayoutPanelSearch";
-            this.flowLayoutPanelSearch.Size = new System.Drawing.Size(755, 143);
+            this.flowLayoutPanelSearch.Size = new System.Drawing.Size(766, 149);
             this.flowLayoutPanelSearch.TabIndex = 0;
             // 
             // searchBox
@@ -752,13 +755,13 @@
             this.tableLayoutPanel1.Controls.Add(this.panelUsername_Icon, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.panelToggleDownAccount, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(810, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(822, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(188, 143);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(191, 149);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // panelUsername_Icon
@@ -769,7 +772,7 @@
             this.panelUsername_Icon.Location = new System.Drawing.Point(0, 0);
             this.panelUsername_Icon.Margin = new System.Windows.Forms.Padding(0);
             this.panelUsername_Icon.Name = "panelUsername_Icon";
-            this.panelUsername_Icon.Size = new System.Drawing.Size(188, 55);
+            this.panelUsername_Icon.Size = new System.Drawing.Size(191, 55);
             this.panelUsername_Icon.TabIndex = 0;
             // 
             // labelUsername
@@ -799,7 +802,7 @@
             // 
             this.panelToggleDownAccount.Controls.Add(this.btnSignUp);
             this.panelToggleDownAccount.Controls.Add(this.btnSignIn);
-            this.panelToggleDownAccount.Location = new System.Drawing.Point(10, 71);
+            this.panelToggleDownAccount.Location = new System.Drawing.Point(10, 74);
             this.panelToggleDownAccount.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.panelToggleDownAccount.Name = "panelToggleDownAccount";
             this.panelToggleDownAccount.Size = new System.Drawing.Size(109, 55);
@@ -844,7 +847,7 @@
             // pictureBoxFavoriteIcon
             // 
             this.pictureBoxFavoriteIcon.ErrorImage = null;
-            this.pictureBoxFavoriteIcon.Location = new System.Drawing.Point(1003, 25);
+            this.pictureBoxFavoriteIcon.Location = new System.Drawing.Point(1018, 25);
             this.pictureBoxFavoriteIcon.Margin = new System.Windows.Forms.Padding(5, 25, 0, 0);
             this.pictureBoxFavoriteIcon.Name = "pictureBoxFavoriteIcon";
             this.pictureBoxFavoriteIcon.Size = new System.Drawing.Size(40, 40);
@@ -853,7 +856,7 @@
             // 
             // pictureBoxShopCart
             // 
-            this.pictureBoxShopCart.Location = new System.Drawing.Point(1058, 25);
+            this.pictureBoxShopCart.Location = new System.Drawing.Point(1074, 25);
             this.pictureBoxShopCart.Margin = new System.Windows.Forms.Padding(5, 25, 0, 0);
             this.pictureBoxShopCart.Name = "pictureBoxShopCart";
             this.pictureBoxShopCart.Size = new System.Drawing.Size(40, 40);
@@ -1648,8 +1651,8 @@
             this.tableLayoutMain.Name = "tableLayoutMain";
             this.tableLayoutMain.RowCount = 1;
             this.tableLayoutMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 961F));
-            this.tableLayoutMain.Size = new System.Drawing.Size(1424, 961);
+            this.tableLayoutMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 1000F));
+            this.tableLayoutMain.Size = new System.Drawing.Size(1440, 1000);
             this.tableLayoutMain.TabIndex = 1;
             // 
             // panelSideMenu
@@ -1679,7 +1682,7 @@
             this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
             this.panelSideMenu.Margin = new System.Windows.Forms.Padding(0);
             this.panelSideMenu.Name = "panelSideMenu";
-            this.panelSideMenu.Size = new System.Drawing.Size(307, 961);
+            this.panelSideMenu.Size = new System.Drawing.Size(307, 1000);
             this.panelSideMenu.TabIndex = 1;
             // 
             // btnForeignLanguagesBook
@@ -1899,6 +1902,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1440, 1000);
             this.Controls.Add(this.tableLayoutMain);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.HelpButton = true;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1440, 1000);

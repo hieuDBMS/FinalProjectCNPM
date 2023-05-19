@@ -183,7 +183,7 @@ namespace FahasaApp
         }
         
 
-        private bool isNotified = false;
+       
 
         private void seach_Bill_TextChanged_1(object sender, EventArgs e)
         {

@@ -9,6 +9,7 @@ using System.Linq;
 using System.Net;
 using System.Runtime;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
@@ -1057,6 +1058,13 @@ namespace FahasaApp
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             closeChildFormAndOpenGridView();
+
+            //
+            if (panelParentUser_Info.Visible == true)
+            {
+                panelParentUser_Info.Visible = false;
+                BackButton.Visible=false;
+            }
         }
 
         public void pictureBoxShopCart_Click(object sender, EventArgs e)
@@ -1093,11 +1101,13 @@ namespace FahasaApp
             pictureBoxIconToggle_Click(sender, e);
 
             panelParentUser_Info.Visible = true;
-
+            BackButton.Visible = true;
             
             labelUsername_Info.Text = "Họ và tên: " + Properties.Settings.Default.username.ToString().Trim();
             labelUserAddress_Info.Text = "Địa chỉ: " + Properties.Settings.Default.userAddress.ToString().Trim();
             labelUserPhone_Info.Text = "Số điện thoại: " + Properties.Settings.Default.userPhone.ToString().Trim();
+
+            getInfoUserForTextbox();
 
         }
 
@@ -1167,7 +1177,9 @@ namespace FahasaApp
         }
         private void btneditUserInfo_Click(object sender, EventArgs e)
         {
-            panelParentUser_Info.Visible = true;
+           
+            PanelEditUser_Info.Visible = true;
+           
         }
 
         private void SaveBtnUserInfo_Click(object sender, EventArgs e)
@@ -1176,32 +1188,48 @@ namespace FahasaApp
             string newUserPhone = txtUserPhone_Info.Text.ToString().Trim().Replace("  ", " ");
             string newUserAddress = txtUserAddress_Info.Text.ToString().Trim().Replace("  ", " ");
 
-            if (
-                newUsername != Properties.Settings.Default.username.ToString().Trim() ||
-                newUserAddress != Properties.Settings.Default.userAddress.ToString().Trim() ||
-                newUserPhone != Properties.Settings.Default.userPhone.ToString().Trim()
-              )
-            {
-                int UID = int.Parse(Properties.Settings.Default.userID);
-                //save changed
-                ChangeAddressForm caf = new ChangeAddressForm();
-                caf.saveChangeUserInfor(UID, newUsername, newUserPhone, newUserAddress);
-                PanelEditUser_Info.Visible = false;
-                OpenInforUserForm(sender, e);
-            }
-            else
-            {
-                MessageBox.Show("Không có thay đổi thông tin, quay lại trang chính");
-                PanelEditUser_Info.Visible = false;
-            }
+            if ((!Regex.IsMatch(newUserPhone, @"^0\d{9}$")))
+                {
+                    MessageBox.Show("Số điện thoại phải bắt đầu từ 0 và có độ dài 10 số!");
+                }
+            else{
+                    if (
+                        newUsername != Properties.Settings.Default.username.ToString().Trim() ||
+                        newUserAddress != Properties.Settings.Default.userAddress.ToString().Trim() ||
+                        newUserPhone != Properties.Settings.Default.userPhone.ToString().Trim()
+                        )
+                    {
+                        int UID = int.Parse(Properties.Settings.Default.userID);
+                        //save changed
+                        ChangeAddressForm caf = new ChangeAddressForm();
+                        caf.saveChangeUserInfor(UID, newUsername, newUserPhone, newUserAddress);
+                        PanelEditUser_Info.Visible = false;
+                        OpenInforUserForm(sender, e);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không có thay đổi thông tin, quay lại trang chính");
+                        PanelEditUser_Info.Visible = false;
+                    }
+                }
+
+            getInfoUserForTextbox();
+
+
         }
 
         private void CancelbtnUserInfo_Click(object sender, EventArgs e)
         {
-            panelParentUser_Info.Visible = false;
+            PanelEditUser_Info.Visible = false;
         }
 
-       
+        private void getInfoUserForTextbox()
+        {
+            txtUsername_Info.Text = Properties.Settings.Default.username;
+            txtUserPhone_Info.Text = Properties.Settings.Default.userPhone;
+            txtUserAddress_Info.Text = Properties.Settings.Default.userAddress;
+
+        }
 
 
         #endregion

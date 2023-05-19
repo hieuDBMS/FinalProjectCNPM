@@ -65,11 +65,11 @@
             this.flowLayoutPanel17 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel18 = new System.Windows.Forms.FlowLayoutPanel();
             this.txtBookTitle = new Guna.UI2.WinForms.Guna2TextBox();
+            this.dateTimePicker = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.comboBoxBookPublisher = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnChooseImage = new Guna.UI2.WinForms.Guna2Button();
             this.flowLayoutPanel19 = new System.Windows.Forms.FlowLayoutPanel();
             this.labelImageName = new System.Windows.Forms.Label();
-            this.dateTimePicker = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.flowLayoutPanel12.SuspendLayout();
             this.flowLayoutPanel11.SuspendLayout();
             this.flowLayoutPanel10.SuspendLayout();
@@ -594,6 +594,22 @@
             this.txtBookTitle.Size = new System.Drawing.Size(512, 39);
             this.txtBookTitle.TabIndex = 4;
             // 
+            // dateTimePicker
+            // 
+            this.dateTimePicker.BorderRadius = 10;
+            this.dateTimePicker.Checked = true;
+            this.dateTimePicker.FillColor = System.Drawing.Color.White;
+            this.dateTimePicker.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dateTimePicker.Location = new System.Drawing.Point(347, 319);
+            this.dateTimePicker.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dateTimePicker.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dateTimePicker.Name = "dateTimePicker";
+            this.dateTimePicker.Size = new System.Drawing.Size(200, 36);
+            this.dateTimePicker.TabIndex = 23;
+            this.dateTimePicker.Value = new System.DateTime(2023, 5, 18, 1, 2, 52, 270);
+            this.dateTimePicker.ValueChanged += new System.EventHandler(this.guna2DateTimePicker1_ValueChanged);
+            // 
             // comboBoxBookPublisher
             // 
             this.comboBoxBookPublisher.BackColor = System.Drawing.Color.Transparent;
@@ -638,28 +654,17 @@
             // 
             // labelImageName
             // 
+            this.labelImageName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelImageName.AutoSize = true;
-            this.labelImageName.Location = new System.Drawing.Point(3, 0);
+            this.labelImageName.Font = new System.Drawing.Font("Open Sans Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelImageName.Location = new System.Drawing.Point(250, 10);
+            this.labelImageName.Margin = new System.Windows.Forms.Padding(250, 10, 10, 0);
             this.labelImageName.Name = "labelImageName";
-            this.labelImageName.Size = new System.Drawing.Size(27, 13);
+            this.labelImageName.Size = new System.Drawing.Size(101, 26);
             this.labelImageName.TabIndex = 0;
-            this.labelImageName.Text = "xxxx";
-            // 
-            // dateTimePicker
-            // 
-            this.dateTimePicker.BorderRadius = 10;
-            this.dateTimePicker.Checked = true;
-            this.dateTimePicker.FillColor = System.Drawing.Color.White;
-            this.dateTimePicker.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dateTimePicker.Location = new System.Drawing.Point(347, 319);
-            this.dateTimePicker.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dateTimePicker.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(200, 36);
-            this.dateTimePicker.TabIndex = 23;
-            this.dateTimePicker.Value = new System.DateTime(2023, 5, 18, 1, 2, 52, 270);
-            this.dateTimePicker.ValueChanged += new System.EventHandler(this.guna2DateTimePicker1_ValueChanged);
+            this.labelImageName.Text = "No Image";
             // 
             // Add_Book
             // 
@@ -744,9 +749,9 @@
         private Guna.UI2.WinForms.Guna2ComboBox comboBoxBookPublisher;
         private Guna.UI2.WinForms.Guna2Button btnChooseImage;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel19;
-        private System.Windows.Forms.Label labelImageName;
         private Guna.UI2.WinForms.Guna2ComboBox comboBoxBookCategory;
         private Guna.UI2.WinForms.Guna2ComboBox comboBoxBookCover;
         private Guna.UI2.WinForms.Guna2DateTimePicker dateTimePicker;
+        private System.Windows.Forms.Label labelImageName;
     }
 }

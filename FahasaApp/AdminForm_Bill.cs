@@ -25,6 +25,22 @@ namespace FahasaApp
 
         public void LoadData()
         {
+
+            //Set Form center Screen
+            int screenWidth = Screen.PrimaryScreen.WorkingArea.Width;
+            int screenHeight = Screen.PrimaryScreen.WorkingArea.Height;
+            int formWidth = this.Width;
+            int formHeight = this.Height;
+            int left = (screenWidth - formWidth) / 2;
+            int top = (screenHeight - formHeight) / 2;
+
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(left, top);
+
+            this.FormBorderStyle = FormBorderStyle.Sizable;
+            //
+
+
             SqlConnection conn = new SqlConnection(Program.getConnectString());
             conn.Open();
             SqlCommand cmd = new SqlCommand("[GetAllOrdersWithDetails]", conn);
