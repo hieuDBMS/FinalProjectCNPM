@@ -26,7 +26,7 @@ namespace FahasaApp
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new NhanVienMainForm());
+            Application.Run(new AdminForm_Bookstore());
         }
 
         private static void initShopcart()

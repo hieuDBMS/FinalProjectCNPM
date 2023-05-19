@@ -104,13 +104,13 @@
             this.txtBookPrice.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtBookPrice.ForeColor = System.Drawing.Color.Red;
             this.txtBookPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBookPrice.Location = new System.Drawing.Point(2, 3);
-            this.txtBookPrice.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtBookPrice.Location = new System.Drawing.Point(3, 4);
+            this.txtBookPrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBookPrice.Name = "txtBookPrice";
             this.txtBookPrice.PasswordChar = '\0';
             this.txtBookPrice.PlaceholderText = "";
             this.txtBookPrice.SelectedText = "";
-            this.txtBookPrice.Size = new System.Drawing.Size(512, 39);
+            this.txtBookPrice.Size = new System.Drawing.Size(683, 48);
             this.txtBookPrice.TabIndex = 3;
             this.txtBookPrice.TextChanged += new System.EventHandler(this.TextBoxNumberBook_TextChanged);
             // 
@@ -118,9 +118,10 @@
             // 
             this.flowLayoutPanel12.Controls.Add(this.txtBookPrice);
             this.flowLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel12.Location = new System.Drawing.Point(347, 270);
+            this.flowLayoutPanel12.Location = new System.Drawing.Point(463, 335);
+            this.flowLayoutPanel12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel12.Name = "flowLayoutPanel12";
-            this.flowLayoutPanel12.Size = new System.Drawing.Size(634, 43);
+            this.flowLayoutPanel12.Size = new System.Drawing.Size(845, 53);
             this.flowLayoutPanel12.TabIndex = 11;
             // 
             // flowLayoutPanel11
@@ -128,9 +129,10 @@
             this.flowLayoutPanel11.Controls.Add(this.label5);
             this.flowLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel11.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel11.Location = new System.Drawing.Point(3, 270);
+            this.flowLayoutPanel11.Location = new System.Drawing.Point(4, 335);
+            this.flowLayoutPanel11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel11.Name = "flowLayoutPanel11";
-            this.flowLayoutPanel11.Size = new System.Drawing.Size(338, 43);
+            this.flowLayoutPanel11.Size = new System.Drawing.Size(451, 53);
             this.flowLayoutPanel11.TabIndex = 10;
             // 
             // label5
@@ -138,10 +140,10 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(250, 10);
-            this.label5.Margin = new System.Windows.Forms.Padding(0, 10, 20, 10);
+            this.label5.Location = new System.Drawing.Point(338, 12);
+            this.label5.Margin = new System.Windows.Forms.Padding(0, 12, 27, 12);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(68, 20);
+            this.label5.Size = new System.Drawing.Size(86, 25);
             this.label5.TabIndex = 1;
             this.label5.Text = "Giá Tiền";
             // 
@@ -158,13 +160,13 @@
             this.txtBookQuantity.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtBookQuantity.ForeColor = System.Drawing.Color.Red;
             this.txtBookQuantity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBookQuantity.Location = new System.Drawing.Point(2, 3);
-            this.txtBookQuantity.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtBookQuantity.Location = new System.Drawing.Point(3, 4);
+            this.txtBookQuantity.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBookQuantity.Name = "txtBookQuantity";
             this.txtBookQuantity.PasswordChar = '\0';
             this.txtBookQuantity.PlaceholderText = "";
             this.txtBookQuantity.SelectedText = "";
-            this.txtBookQuantity.Size = new System.Drawing.Size(512, 39);
+            this.txtBookQuantity.Size = new System.Drawing.Size(683, 48);
             this.txtBookQuantity.TabIndex = 3;
             this.txtBookQuantity.TextChanged += new System.EventHandler(this.TextBoxPriceMoney_TextChanged);
             // 
@@ -172,9 +174,10 @@
             // 
             this.flowLayoutPanel10.Controls.Add(this.txtBookQuantity);
             this.flowLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel10.Location = new System.Drawing.Point(347, 221);
+            this.flowLayoutPanel10.Location = new System.Drawing.Point(463, 274);
+            this.flowLayoutPanel10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel10.Name = "flowLayoutPanel10";
-            this.flowLayoutPanel10.Size = new System.Drawing.Size(634, 43);
+            this.flowLayoutPanel10.Size = new System.Drawing.Size(845, 53);
             this.flowLayoutPanel10.TabIndex = 9;
             // 
             // flowLayoutPanel9
@@ -182,9 +185,10 @@
             this.flowLayoutPanel9.Controls.Add(this.label4);
             this.flowLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel9.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel9.Location = new System.Drawing.Point(3, 221);
+            this.flowLayoutPanel9.Location = new System.Drawing.Point(4, 274);
+            this.flowLayoutPanel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel9.Name = "flowLayoutPanel9";
-            this.flowLayoutPanel9.Size = new System.Drawing.Size(338, 43);
+            this.flowLayoutPanel9.Size = new System.Drawing.Size(451, 53);
             this.flowLayoutPanel9.TabIndex = 8;
             // 
             // label4
@@ -192,10 +196,10 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(246, 10);
-            this.label4.Margin = new System.Windows.Forms.Padding(0, 10, 20, 10);
+            this.label4.Location = new System.Drawing.Point(334, 12);
+            this.label4.Margin = new System.Windows.Forms.Padding(0, 12, 27, 12);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 20);
+            this.label4.Size = new System.Drawing.Size(90, 25);
             this.label4.TabIndex = 1;
             this.label4.Text = "Số lượng";
             // 
@@ -203,9 +207,10 @@
             // 
             this.flowLayoutPanel8.Controls.Add(this.comboBoxBookCover);
             this.flowLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel8.Location = new System.Drawing.Point(347, 172);
+            this.flowLayoutPanel8.Location = new System.Drawing.Point(463, 213);
+            this.flowLayoutPanel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel8.Name = "flowLayoutPanel8";
-            this.flowLayoutPanel8.Size = new System.Drawing.Size(634, 43);
+            this.flowLayoutPanel8.Size = new System.Drawing.Size(845, 53);
             this.flowLayoutPanel8.TabIndex = 7;
             // 
             // comboBoxBookCover
@@ -222,9 +227,10 @@
             this.comboBoxBookCover.Items.AddRange(new object[] {
             "Bìa Cứng",
             "Bìa Mềm"});
-            this.comboBoxBookCover.Location = new System.Drawing.Point(3, 3);
+            this.comboBoxBookCover.Location = new System.Drawing.Point(4, 4);
+            this.comboBoxBookCover.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBoxBookCover.Name = "comboBoxBookCover";
-            this.comboBoxBookCover.Size = new System.Drawing.Size(514, 36);
+            this.comboBoxBookCover.Size = new System.Drawing.Size(684, 36);
             this.comboBoxBookCover.TabIndex = 26;
             this.comboBoxBookCover.SelectedIndexChanged += new System.EventHandler(this.comboBoxBookCover_SelectedIndexChanged);
             // 
@@ -233,9 +239,10 @@
             this.flowLayoutPanel7.Controls.Add(this.label3);
             this.flowLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel7.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel7.Location = new System.Drawing.Point(3, 172);
+            this.flowLayoutPanel7.Location = new System.Drawing.Point(4, 213);
+            this.flowLayoutPanel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel7.Name = "flowLayoutPanel7";
-            this.flowLayoutPanel7.Size = new System.Drawing.Size(338, 43);
+            this.flowLayoutPanel7.Size = new System.Drawing.Size(451, 53);
             this.flowLayoutPanel7.TabIndex = 6;
             // 
             // label3
@@ -243,10 +250,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(245, 10);
-            this.label3.Margin = new System.Windows.Forms.Padding(0, 10, 20, 10);
+            this.label3.Location = new System.Drawing.Point(333, 12);
+            this.label3.Margin = new System.Windows.Forms.Padding(0, 12, 27, 12);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 20);
+            this.label3.Size = new System.Drawing.Size(91, 25);
             this.label3.TabIndex = 1;
             this.label3.Text = "Bìa Sách";
             // 
@@ -254,9 +261,10 @@
             // 
             this.flowLayoutPanel6.Controls.Add(this.comboBoxBookCategory);
             this.flowLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel6.Location = new System.Drawing.Point(347, 123);
+            this.flowLayoutPanel6.Location = new System.Drawing.Point(463, 152);
+            this.flowLayoutPanel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel6.Name = "flowLayoutPanel6";
-            this.flowLayoutPanel6.Size = new System.Drawing.Size(634, 43);
+            this.flowLayoutPanel6.Size = new System.Drawing.Size(845, 53);
             this.flowLayoutPanel6.TabIndex = 5;
             // 
             // comboBoxBookCategory
@@ -270,9 +278,10 @@
             this.comboBoxBookCategory.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.comboBoxBookCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.comboBoxBookCategory.ItemHeight = 30;
-            this.comboBoxBookCategory.Location = new System.Drawing.Point(3, 3);
+            this.comboBoxBookCategory.Location = new System.Drawing.Point(4, 4);
+            this.comboBoxBookCategory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBoxBookCategory.Name = "comboBoxBookCategory";
-            this.comboBoxBookCategory.Size = new System.Drawing.Size(514, 36);
+            this.comboBoxBookCategory.Size = new System.Drawing.Size(684, 36);
             this.comboBoxBookCategory.TabIndex = 25;
             // 
             // flowLayoutPanel5
@@ -280,9 +289,10 @@
             this.flowLayoutPanel5.Controls.Add(this.label9);
             this.flowLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel5.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel5.Location = new System.Drawing.Point(3, 123);
+            this.flowLayoutPanel5.Location = new System.Drawing.Point(4, 152);
+            this.flowLayoutPanel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel5.Name = "flowLayoutPanel5";
-            this.flowLayoutPanel5.Size = new System.Drawing.Size(338, 43);
+            this.flowLayoutPanel5.Size = new System.Drawing.Size(451, 53);
             this.flowLayoutPanel5.TabIndex = 4;
             // 
             // label9
@@ -290,10 +300,10 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(248, 10);
-            this.label9.Margin = new System.Windows.Forms.Padding(0, 10, 20, 10);
+            this.label9.Location = new System.Drawing.Point(335, 12);
+            this.label9.Margin = new System.Windows.Forms.Padding(0, 12, 27, 12);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(70, 20);
+            this.label9.Size = new System.Drawing.Size(89, 25);
             this.label9.TabIndex = 2;
             this.label9.Text = "Thể Loại";
             // 
@@ -302,10 +312,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(20, 20);
-            this.label1.Margin = new System.Windows.Forms.Padding(20, 20, 0, 0);
+            this.label1.Location = new System.Drawing.Point(27, 25);
+            this.label1.Margin = new System.Windows.Forms.Padding(27, 25, 0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 25);
+            this.label1.Size = new System.Drawing.Size(139, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Kho Sách";
             // 
@@ -313,9 +323,10 @@
             // 
             this.flowLayoutPanel1.Controls.Add(this.label1);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(4, 4);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(338, 65);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(451, 79);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel1
@@ -348,6 +359,7 @@
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel19, 1, 10);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 12;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
@@ -362,16 +374,17 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(984, 711);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1312, 875);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
             // flowLayoutPanel15
             // 
             this.flowLayoutPanel15.Controls.Add(this.txtBookAuthor);
             this.flowLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel15.Location = new System.Drawing.Point(347, 368);
+            this.flowLayoutPanel15.Location = new System.Drawing.Point(463, 457);
+            this.flowLayoutPanel15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel15.Name = "flowLayoutPanel15";
-            this.flowLayoutPanel15.Size = new System.Drawing.Size(634, 43);
+            this.flowLayoutPanel15.Size = new System.Drawing.Size(845, 53);
             this.flowLayoutPanel15.TabIndex = 14;
             // 
             // txtBookAuthor
@@ -387,13 +400,13 @@
             this.txtBookAuthor.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtBookAuthor.ForeColor = System.Drawing.Color.Red;
             this.txtBookAuthor.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBookAuthor.Location = new System.Drawing.Point(2, 3);
-            this.txtBookAuthor.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtBookAuthor.Location = new System.Drawing.Point(3, 4);
+            this.txtBookAuthor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBookAuthor.Name = "txtBookAuthor";
             this.txtBookAuthor.PasswordChar = '\0';
             this.txtBookAuthor.PlaceholderText = "";
             this.txtBookAuthor.SelectedText = "";
-            this.txtBookAuthor.Size = new System.Drawing.Size(512, 39);
+            this.txtBookAuthor.Size = new System.Drawing.Size(683, 48);
             this.txtBookAuthor.TabIndex = 4;
             // 
             // flowLayoutPanel2
@@ -401,9 +414,10 @@
             this.flowLayoutPanel2.Controls.Add(this.label2);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 74);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(4, 91);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(338, 43);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(451, 53);
             this.flowLayoutPanel2.TabIndex = 15;
             // 
             // label2
@@ -411,10 +425,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(241, 10);
-            this.label2.Margin = new System.Windows.Forms.Padding(0, 10, 20, 10);
+            this.label2.Location = new System.Drawing.Point(326, 12);
+            this.label2.Margin = new System.Windows.Forms.Padding(0, 12, 27, 12);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 20);
+            this.label2.Size = new System.Drawing.Size(98, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Tên Sách";
             // 
@@ -424,9 +438,10 @@
             this.flowLayoutPanel3.Controls.Add(this.btnCancel);
             this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(347, 564);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(463, 701);
+            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(634, 144);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(845, 170);
             this.flowLayoutPanel3.TabIndex = 16;
             // 
             // btnAdd
@@ -440,10 +455,10 @@
             this.btnAdd.FillColor = System.Drawing.Color.Red;
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(464, 20);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(0, 20, 20, 0);
+            this.btnAdd.Location = new System.Drawing.Point(618, 25);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(0, 25, 27, 0);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(150, 50);
+            this.btnAdd.Size = new System.Drawing.Size(200, 62);
             this.btnAdd.TabIndex = 4;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click_1);
@@ -459,21 +474,23 @@
             this.btnCancel.FillColor = System.Drawing.Color.White;
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.Red;
-            this.btnCancel.Location = new System.Drawing.Point(294, 20);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(0, 20, 20, 0);
+            this.btnCancel.Location = new System.Drawing.Point(391, 25);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(0, 25, 27, 0);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(150, 50);
+            this.btnCancel.Size = new System.Drawing.Size(200, 62);
             this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "Hủy bỏ";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click_1);
             // 
             // flowLayoutPanel4
             // 
             this.flowLayoutPanel4.Controls.Add(this.label6);
             this.flowLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel4.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(3, 319);
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(4, 396);
+            this.flowLayoutPanel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(338, 43);
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(451, 53);
             this.flowLayoutPanel4.TabIndex = 17;
             // 
             // label6
@@ -481,10 +498,10 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(202, 10);
-            this.label6.Margin = new System.Windows.Forms.Padding(0, 10, 20, 10);
+            this.label6.Location = new System.Drawing.Point(280, 12);
+            this.label6.Margin = new System.Windows.Forms.Padding(0, 12, 27, 12);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(116, 20);
+            this.label6.Size = new System.Drawing.Size(144, 25);
             this.label6.TabIndex = 1;
             this.label6.Text = "Ngày Xuất Bản";
             // 
@@ -493,9 +510,10 @@
             this.flowLayoutPanel13.Controls.Add(this.label7);
             this.flowLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel13.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel13.Location = new System.Drawing.Point(3, 368);
+            this.flowLayoutPanel13.Location = new System.Drawing.Point(4, 457);
+            this.flowLayoutPanel13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel13.Name = "flowLayoutPanel13";
-            this.flowLayoutPanel13.Size = new System.Drawing.Size(338, 43);
+            this.flowLayoutPanel13.Size = new System.Drawing.Size(451, 53);
             this.flowLayoutPanel13.TabIndex = 18;
             // 
             // label7
@@ -503,10 +521,10 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(254, 10);
-            this.label7.Margin = new System.Windows.Forms.Padding(0, 10, 20, 10);
+            this.label7.Location = new System.Drawing.Point(343, 12);
+            this.label7.Margin = new System.Windows.Forms.Padding(0, 12, 27, 12);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(64, 20);
+            this.label7.Size = new System.Drawing.Size(81, 25);
             this.label7.TabIndex = 2;
             this.label7.Text = "Tác Giả";
             // 
@@ -515,9 +533,10 @@
             this.flowLayoutPanel14.Controls.Add(this.label8);
             this.flowLayoutPanel14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel14.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel14.Location = new System.Drawing.Point(3, 417);
+            this.flowLayoutPanel14.Location = new System.Drawing.Point(4, 518);
+            this.flowLayoutPanel14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel14.Name = "flowLayoutPanel14";
-            this.flowLayoutPanel14.Size = new System.Drawing.Size(338, 43);
+            this.flowLayoutPanel14.Size = new System.Drawing.Size(451, 53);
             this.flowLayoutPanel14.TabIndex = 19;
             // 
             // label8
@@ -525,10 +544,10 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(209, 10);
-            this.label8.Margin = new System.Windows.Forms.Padding(0, 10, 20, 10);
+            this.label8.Location = new System.Drawing.Point(290, 12);
+            this.label8.Margin = new System.Windows.Forms.Padding(0, 12, 27, 12);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(109, 20);
+            this.label8.Size = new System.Drawing.Size(134, 25);
             this.label8.TabIndex = 3;
             this.label8.Text = "Nhà Xuất Bản";
             // 
@@ -537,9 +556,10 @@
             this.flowLayoutPanel16.Controls.Add(this.label10);
             this.flowLayoutPanel16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel16.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel16.Location = new System.Drawing.Point(3, 466);
+            this.flowLayoutPanel16.Location = new System.Drawing.Point(4, 579);
+            this.flowLayoutPanel16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel16.Name = "flowLayoutPanel16";
-            this.flowLayoutPanel16.Size = new System.Drawing.Size(338, 43);
+            this.flowLayoutPanel16.Size = new System.Drawing.Size(451, 53);
             this.flowLayoutPanel16.TabIndex = 20;
             // 
             // label10
@@ -547,10 +567,10 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(197, 10);
-            this.label10.Margin = new System.Windows.Forms.Padding(0, 10, 20, 10);
+            this.label10.Location = new System.Drawing.Point(272, 12);
+            this.label10.Margin = new System.Windows.Forms.Padding(0, 12, 27, 12);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(121, 20);
+            this.label10.Size = new System.Drawing.Size(152, 25);
             this.label10.TabIndex = 4;
             this.label10.Text = "Chọn Ảnh Sách";
             // 
@@ -558,18 +578,20 @@
             // 
             this.flowLayoutPanel17.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel17.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel17.Location = new System.Drawing.Point(3, 515);
+            this.flowLayoutPanel17.Location = new System.Drawing.Point(4, 640);
+            this.flowLayoutPanel17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel17.Name = "flowLayoutPanel17";
-            this.flowLayoutPanel17.Size = new System.Drawing.Size(338, 43);
+            this.flowLayoutPanel17.Size = new System.Drawing.Size(451, 53);
             this.flowLayoutPanel17.TabIndex = 21;
             // 
             // flowLayoutPanel18
             // 
             this.flowLayoutPanel18.Controls.Add(this.txtBookTitle);
             this.flowLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel18.Location = new System.Drawing.Point(347, 74);
+            this.flowLayoutPanel18.Location = new System.Drawing.Point(463, 91);
+            this.flowLayoutPanel18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel18.Name = "flowLayoutPanel18";
-            this.flowLayoutPanel18.Size = new System.Drawing.Size(634, 43);
+            this.flowLayoutPanel18.Size = new System.Drawing.Size(845, 53);
             this.flowLayoutPanel18.TabIndex = 22;
             // 
             // txtBookTitle
@@ -585,13 +607,13 @@
             this.txtBookTitle.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtBookTitle.ForeColor = System.Drawing.Color.Red;
             this.txtBookTitle.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBookTitle.Location = new System.Drawing.Point(2, 3);
-            this.txtBookTitle.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtBookTitle.Location = new System.Drawing.Point(3, 4);
+            this.txtBookTitle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBookTitle.Name = "txtBookTitle";
             this.txtBookTitle.PasswordChar = '\0';
             this.txtBookTitle.PlaceholderText = "";
             this.txtBookTitle.SelectedText = "";
-            this.txtBookTitle.Size = new System.Drawing.Size(512, 39);
+            this.txtBookTitle.Size = new System.Drawing.Size(683, 48);
             this.txtBookTitle.TabIndex = 4;
             // 
             // dateTimePicker
@@ -601,11 +623,12 @@
             this.dateTimePicker.FillColor = System.Drawing.Color.White;
             this.dateTimePicker.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dateTimePicker.Location = new System.Drawing.Point(347, 319);
+            this.dateTimePicker.Location = new System.Drawing.Point(463, 396);
+            this.dateTimePicker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateTimePicker.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dateTimePicker.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(200, 36);
+            this.dateTimePicker.Size = new System.Drawing.Size(267, 44);
             this.dateTimePicker.TabIndex = 23;
             this.dateTimePicker.Value = new System.DateTime(2023, 5, 18, 1, 2, 52, 270);
             this.dateTimePicker.ValueChanged += new System.EventHandler(this.guna2DateTimePicker1_ValueChanged);
@@ -621,9 +644,10 @@
             this.comboBoxBookPublisher.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.comboBoxBookPublisher.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.comboBoxBookPublisher.ItemHeight = 30;
-            this.comboBoxBookPublisher.Location = new System.Drawing.Point(347, 417);
+            this.comboBoxBookPublisher.Location = new System.Drawing.Point(463, 518);
+            this.comboBoxBookPublisher.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBoxBookPublisher.Name = "comboBoxBookPublisher";
-            this.comboBoxBookPublisher.Size = new System.Drawing.Size(514, 36);
+            this.comboBoxBookPublisher.Size = new System.Drawing.Size(684, 36);
             this.comboBoxBookPublisher.TabIndex = 24;
             // 
             // btnChooseImage
@@ -636,9 +660,10 @@
             this.btnChooseImage.FillColor = System.Drawing.Color.Silver;
             this.btnChooseImage.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChooseImage.ForeColor = System.Drawing.Color.Red;
-            this.btnChooseImage.Location = new System.Drawing.Point(347, 466);
+            this.btnChooseImage.Location = new System.Drawing.Point(463, 579);
+            this.btnChooseImage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnChooseImage.Name = "btnChooseImage";
-            this.btnChooseImage.Size = new System.Drawing.Size(180, 43);
+            this.btnChooseImage.Size = new System.Drawing.Size(240, 53);
             this.btnChooseImage.TabIndex = 25;
             this.btnChooseImage.Text = "Choose Image";
             this.btnChooseImage.Click += new System.EventHandler(this.btnChooseImage_Click);
@@ -647,9 +672,10 @@
             // 
             this.flowLayoutPanel19.Controls.Add(this.labelImageName);
             this.flowLayoutPanel19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel19.Location = new System.Drawing.Point(347, 515);
+            this.flowLayoutPanel19.Location = new System.Drawing.Point(463, 640);
+            this.flowLayoutPanel19.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel19.Name = "flowLayoutPanel19";
-            this.flowLayoutPanel19.Size = new System.Drawing.Size(634, 43);
+            this.flowLayoutPanel19.Size = new System.Drawing.Size(845, 53);
             this.flowLayoutPanel19.TabIndex = 26;
             // 
             // labelImageName
@@ -658,21 +684,21 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelImageName.AutoSize = true;
-            this.labelImageName.Font = new System.Drawing.Font("Open Sans Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelImageName.Location = new System.Drawing.Point(250, 10);
-            this.labelImageName.Margin = new System.Windows.Forms.Padding(250, 10, 10, 0);
+            this.labelImageName.Font = new System.Drawing.Font("Open Sans SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelImageName.Location = new System.Drawing.Point(333, 12);
+            this.labelImageName.Margin = new System.Windows.Forms.Padding(333, 12, 13, 0);
             this.labelImageName.Name = "labelImageName";
-            this.labelImageName.Size = new System.Drawing.Size(101, 26);
+            this.labelImageName.Size = new System.Drawing.Size(126, 33);
             this.labelImageName.TabIndex = 0;
             this.labelImageName.Text = "No Image";
             // 
             // Add_Book
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 711);
+            this.ClientSize = new System.Drawing.Size(1312, 875);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Add_Book";
             this.Text = "Add_Book";
             this.Load += new System.EventHandler(this.Add_Book_Load);

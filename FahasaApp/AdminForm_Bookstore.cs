@@ -115,10 +115,6 @@ namespace FahasaApp
                     {
                         MessageBox.Show("Xóa dữ liệu thành công!");
                     }
-                    else
-                    {
-                        MessageBox.Show("Không tìm thấy dữ liệu để xóa!");
-                    }
                 }
 
                 await Task.Delay(2000); // Wait for 2 seconds
