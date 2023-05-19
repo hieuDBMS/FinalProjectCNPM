@@ -14,6 +14,9 @@ namespace FahasaApp
 {
     public partial class AdminForm_Bookstore : Form
     {
+        DataTable currentTable = new DataTable();
+        DataTable allBookTable = new DataTable();
+        bool isStartingFocus = true;
         public AdminForm_Bookstore()
         {
             InitializeComponent();
@@ -34,6 +37,8 @@ namespace FahasaApp
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
                 DataTable dataTable = new DataTable();
                 adapter.Fill(dataTable);
+                currentTable = dataTable;
+                allBookTable = dataTable;
                 dataGridView_book.DataSource = dataTable;
 
                 if (dataGridView_book.DataSource != null)
@@ -65,7 +70,8 @@ namespace FahasaApp
 
         private void AdminForm_Load(object sender, EventArgs e)
         {
-
+            setFormCenter();
+            LoadData();
         }
 
         private void ThemBtn_Click(object sender, EventArgs e)
@@ -119,7 +125,7 @@ namespace FahasaApp
 
         private void dataGridView_book_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            LoadData();
+            //LoadData();
         }
 
         private void dataGridView_book_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
@@ -182,6 +188,102 @@ namespace FahasaApp
             this.Hide();
             form.ShowDialog();
             this.Close();
+        }
+
+        private void seach_Bookstore_TextChanged(object sender, EventArgs e)
+        {
+            //Format the searchText
+            string searchContent = searchBookStore.Text.ToLower().Trim();
+            // Create a new DataTable with the same schema as the original table
+            DataTable filteredTable = currentTable.Clone();
+            if (!string.IsNullOrEmpty(searchBookStore.Text))
+            {           
+                if(allBookTable.Rows.Count > 0)
+                {
+                    foreach (DataRow row in allBookTable.Rows)
+                    {
+                        //find book title
+                        if (row["Mã Sách"].ToString().ToLower().Trim().Contains(searchContent))
+                        {
+                            filteredTable.ImportRow(row);
+                        }
+                        //Find publication date
+                        else if (row["Tên Sách"].ToString().ToLower().Trim().Contains(searchContent))
+                        {
+                            filteredTable.ImportRow(row);
+                        }
+                        //Find author
+                        else if (row["Giá Tiền"].ToString().ToLower().Trim().Contains(searchContent))
+                        {
+                            filteredTable.ImportRow(row);
+                        }
+                        //Find category
+                        else if (row["Số Lượng"].ToString().ToLower().Trim().Contains(searchContent))
+                        {
+                            filteredTable.ImportRow(row);
+                        }                       
+                    }
+                }               
+            }
+            if (filteredTable.Rows.Count > 0)
+            {
+                labelNoBookFound.Visible = false;
+                currentTable = filteredTable;
+
+            }
+            if (filteredTable.Rows.Count == 0 && searchContent != "")
+            {
+                labelNoBookFound.Visible = true;
+                currentTable = filteredTable;
+                //MessageBox.Show(currentDataTable.Rows.Count.ToString() + "can be found" + "/" + searchContent);
+            }
+            if (filteredTable.Rows.Count == 0 && searchContent == "" && !isStartingFocus)
+            {
+                filteredTable = allBookTable;
+                currentTable = filteredTable;
+            }
+            if (!isStartingFocus)
+            {
+                updateDataGridView(currentTable);
+            }
+            
+        }
+
+        private void updateDataGridView(DataTable dt)
+        {
+            dataGridView_book.DataSource = null;
+            dataGridView_book.Rows.Clear();
+            dataGridView_book.DataSource = dt;
+            dataGridView_book.Refresh();
+            dataGridView_book.Update();
+            dataGridView_book.ClearSelection();
+            dataGridView_book.ClearSelection();
+        }
+
+        private void searchBookStore_MouseClick(object sender, MouseEventArgs e)
+        {
+            isStartingFocus = false;
+        }
+
+        private void searchBookStore_MouseLeave(object sender, EventArgs e)
+        {
+            isStartingFocus = false;
+        }
+
+        private void setFormCenter()
+        {
+            //Set Form center Screen
+            int screenWidth = Screen.PrimaryScreen.WorkingArea.Width;
+            int screenHeight = Screen.PrimaryScreen.WorkingArea.Height;
+            int formWidth = this.Width;
+            int formHeight = this.Height;
+            int left = (screenWidth - formWidth) / 2;
+            int top = (screenHeight - formHeight) / 2;
+
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(left, top);
+
+            this.FormBorderStyle = FormBorderStyle.Sizable;
         }
     }
 }
