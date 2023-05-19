@@ -187,7 +187,6 @@ namespace FahasaApp
                 else
                 {
 
-                    //MessageBox.Show(bookTitle + "/" + bookCover + "/" + bookQuantity + "/" + bookPrice + "/" + bookAuthorID.ToString() + "/" + bookPublisherID.ToString()+"/"+ book_Publication);
                     SqlConnection conn = new SqlConnection(Program.getConnectString());
                     conn.Open();
                     SqlCommand cmd = new SqlCommand("[addNewBook]", conn);

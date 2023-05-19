@@ -119,7 +119,7 @@ namespace FahasaApp
         private void SuaBtn_Click(object sender, EventArgs e)
         {
             int BookID = Convert.ToInt32(dataGridView_book.CurrentRow.Cells["Mã Sách"].Value);
-            Edit_Book a = new Edit_Book(this, BookID);
+            Edit_Book a = new Edit_Book(BookID);
             a.ShowDialog();
         }
 
