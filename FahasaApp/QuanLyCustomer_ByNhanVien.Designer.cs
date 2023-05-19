@@ -59,7 +59,7 @@
             // 
             // dataGridView_customer
             // 
-            this.dataGridView_customer.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridView_customer.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -71,7 +71,7 @@
             this.dataGridView_customer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_customer.GridColor = System.Drawing.Color.Red;
             this.dataGridView_customer.Location = new System.Drawing.Point(29, 98);
-            this.dataGridView_customer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView_customer.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_customer.Name = "dataGridView_customer";
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
@@ -101,11 +101,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1130, 371);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.seach_Customer);
             this.Controls.Add(this.dataGridView_customer);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "QuanLyCustomer_ByNhanVien";
             this.Text = "QuanLyCustomer_ByNhanVien";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_customer)).EndInit();

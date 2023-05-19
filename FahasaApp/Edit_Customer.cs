@@ -117,7 +117,7 @@ namespace FahasaApp
             {
                 SqlCommand command = new SqlCommand("updateCustomer", connection);
                 command.CommandType = CommandType.StoredProcedure;
-                command.Parameters.AddWithValue("@UserID", customerID);
+                command.Parameters.AddWithValue("@CustomerID", customerID);
                 command.Parameters.AddWithValue("@Firstname", firstName);
                 command.Parameters.AddWithValue("@Lastname", lastName);
                 command.Parameters.AddWithValue("@Email", email);
@@ -127,10 +127,10 @@ namespace FahasaApp
                 int result = command.ExecuteNonQuery();
 
                 if (result < 0)
-                    MessageBox.Show("Error updating data into Database!");
+                    MessageBox.Show("Lỗi khi lưu thông tin vào hệ thống!");
                 else
                 {
-                    MessageBox.Show("Data has been updated successfully!");
+                    MessageBox.Show("Thông tin đã cập nhập thành công!");
                     adminForm.LoadData();
                     this.Close();
                 }

@@ -64,7 +64,7 @@
             this.dataGridView_bill.AllowUserToOrderColumns = true;
             this.dataGridView_bill.AllowUserToResizeColumns = false;
             this.dataGridView_bill.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView_bill.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridView_bill.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -76,7 +76,7 @@
             this.dataGridView_bill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_bill.GridColor = System.Drawing.Color.Red;
             this.dataGridView_bill.Location = new System.Drawing.Point(29, 98);
-            this.dataGridView_bill.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView_bill.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_bill.Name = "dataGridView_bill";
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
@@ -104,11 +104,12 @@
             // QuanLyBill_ByNhanVien
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1130, 371);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.seach_Bill);
             this.Controls.Add(this.dataGridView_bill);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "QuanLyBill_ByNhanVien";
             this.Text = "QuanLyBill_ByNhanVien";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_bill)).EndInit();

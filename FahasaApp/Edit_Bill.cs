@@ -128,10 +128,10 @@ namespace FahasaApp
                 int result = command.ExecuteNonQuery();
 
                 if (result < 0)
-                    MessageBox.Show("Error updating data into Database!");
+                    MessageBox.Show("Lỗi khi lưu thông tin vào hệ thống!");
                 else
                 {
-                    MessageBox.Show("Data has been updated successfully!");
+                    MessageBox.Show("Thông tin đã cập nhập thành công!");
                     this.Close();  // Close the current form
                 }
             }

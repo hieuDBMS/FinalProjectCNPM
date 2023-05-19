@@ -34,12 +34,11 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panelLogoSideMenu = new System.Windows.Forms.Panel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.DonhangBtn = new Guna.UI2.WinForms.Guna2Button();
             this.KhachhangBtn = new Guna.UI2.WinForms.Guna2Button();
             this.panelGridView = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -76,7 +75,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 82F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 83F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1146, 83);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
@@ -111,11 +110,21 @@
             this.flowLayoutPanel2.Size = new System.Drawing.Size(567, 77);
             this.flowLayoutPanel2.TabIndex = 1;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(426, 20);
+            this.label1.Margin = new System.Windows.Forms.Padding(20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(121, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Nhân Viên";
+            // 
             // flowLayoutPanel3
             // 
             this.flowLayoutPanel3.Controls.Add(this.DonhangBtn);
             this.flowLayoutPanel3.Controls.Add(this.KhachhangBtn);
-            this.flowLayoutPanel3.Controls.Add(this.menuStrip1);
             this.flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel3.Location = new System.Drawing.Point(3, 92);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
@@ -124,14 +133,16 @@
             // 
             // DonhangBtn
             // 
+            this.DonhangBtn.BorderColor = System.Drawing.Color.OrangeRed;
             this.DonhangBtn.BorderRadius = 5;
+            this.DonhangBtn.BorderThickness = 2;
             this.DonhangBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.DonhangBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.DonhangBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.DonhangBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.DonhangBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(32)))), ((int)(((byte)(43)))));
+            this.DonhangBtn.FillColor = System.Drawing.Color.White;
             this.DonhangBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DonhangBtn.ForeColor = System.Drawing.Color.White;
+            this.DonhangBtn.ForeColor = System.Drawing.Color.Red;
             this.DonhangBtn.Location = new System.Drawing.Point(20, 20);
             this.DonhangBtn.Margin = new System.Windows.Forms.Padding(20, 20, 20, 0);
             this.DonhangBtn.Name = "DonhangBtn";
@@ -142,7 +153,9 @@
             // 
             // KhachhangBtn
             // 
+            this.KhachhangBtn.BorderColor = System.Drawing.Color.OrangeRed;
             this.KhachhangBtn.BorderRadius = 5;
+            this.KhachhangBtn.BorderThickness = 2;
             this.KhachhangBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.KhachhangBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.KhachhangBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -167,33 +180,14 @@
             this.panelGridView.TabIndex = 2;
             this.panelGridView.Paint += new System.Windows.Forms.PaintEventHandler(this.panelGridView_Paint);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(426, 20);
-            this.label1.Margin = new System.Windows.Forms.Padding(20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nhân Viên";
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Location = new System.Drawing.Point(360, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(202, 24);
-            this.menuStrip1.TabIndex = 6;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
             // NhanVienMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1152, 594);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "NhanVienMainForm";
             this.Text = "NhanVienMainForm";
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -202,7 +196,6 @@
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
             this.flowLayoutPanel3.ResumeLayout(false);
-            this.flowLayoutPanel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -219,6 +212,5 @@
         private Guna.UI2.WinForms.Guna2Button DonhangBtn;
         private Guna.UI2.WinForms.Guna2Button KhachhangBtn;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MenuStrip menuStrip1;
     }
 }

@@ -165,7 +165,7 @@ namespace FahasaApp
 
             if (result == DialogResult.OK)
             {
-                var secondResult = MessageBox.Show($"Bạn có chắc chắn muốn chỉnh sửa dữ liệu của khách hàng có mã là {billID} không? Nhấn OK để Sửa & Nhấn No để Xóa Dữ Liệu", "Xác nhận", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+                var secondResult = MessageBox.Show($"Bạn có chắc chắn muốn chỉnh sửa dữ liệu của khách hàng có mã là {billID} không? Nhấn 'Yes' để Sửa hoặc Nhấn 'No' để Xóa Dữ Liệu", "Xác nhận", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
                 if (secondResult == DialogResult.Yes)
                 {
                     AdminForm_Bill a = new AdminForm_Bill();
